@@ -13,6 +13,32 @@ async function extractMock(url) {
   return data.toString();
 }
 
+function createDate(month, day) {
+  const months = {
+    jan: '1',
+    feb: '2',
+    mar: '3',
+    apr: '4',
+    may: '5',
+    jun: '6',
+    jul: '7',
+    aug: '8',
+    sep: '9',
+    oct: '10',
+    nov: '11',
+    dec: '12',
+  }
+
+  const today = new Date();
+  const currentYear = today.getFullYear().toString();
+  const eventDate = new Date(`${currentYear}-${months[month.toLowerCase()]}-${day} 00:00:00`);
+  if (today.getTime() > eventDate.getTime()) {
+    eventDate.setFullYear(eventDate.getFullYear()+1);
+  }
+
+  return eventDate;
+}
+
 function transformEvent(eventElement) {
     const event = cheerio.load(eventElement);
     const title = event('.event-content .card-title').text().trim();
@@ -20,12 +46,15 @@ function transformEvent(eventElement) {
     const event_url = event('.card-img-link').attr('href');
     const image_url = event('.img-cover').attr('data-src');
     const venue = event('.event-meta .tribe-events-venue-details').text().trim();
-    const date = event('.event-meta .tribe-event-schedule-details .tribe-event-date-start').text().trim();
+    const display_date = event('.event-meta .tribe-event-schedule-details .tribe-event-date-start').text().trim();
     const hours = event('.event-meta .tribe-event-schedule-details .tribe-event-time').toArray().map((time) => {
       return cheerio.load(time).text();
     });
+    const month = event('.event-date-badge .month').text().trim();
+    const day = event('.event-date-badge .date').text().trim();
+    const date = createDate(month, day);
     const schedule = {
-      date,
+      display_date,
       start_time: hours[0] ?? '',
       end_time: hours[1] ?? '',
     }
@@ -36,7 +65,8 @@ function transformEvent(eventElement) {
     event_url,
     image_url,
     schedule,
-    venue
+    venue,
+    date: date.toString()
   };
 }
 
