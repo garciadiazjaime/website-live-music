@@ -13,44 +13,34 @@ async function extractMock(url) {
   return data.toString();
 }
 
-function transformDailyEvents(dailyEventsBlock) {
-  const $ = cheerio.load(dailyEventsBlock)
-  const dailyEventsRawList = $('.type-tribe_events').toArray();
+function transformEvent(eventElement) {
+    const event = cheerio.load(eventElement);
+    const title = event('.event-content .card-title').text().trim();
+    const category = event('.event-content .subtitle').text().trim();
+    const event_url = event('.card-img-link').attr('href');
+    const image_url = event('.img-cover').attr('data-src');
+    const schedule = event('.event-meta .tribe-event-schedule-details .tribe-event-date-start').text().trim();
+    const venue = event('.event-meta .tribe-events-venue-details').text().trim();
 
-  const dailyEvents = dailyEventsRawList.map((event) => {
-    const eventElement = $(event);
-    const title = eventElement.find('.event-content .card-title').text().trim();
-    const category = eventElement.find('.event-content .subtitle').text().trim();
-    const event_url = eventElement.find('.card-img-link').attr('href');
-    const image_url = eventElement.find('.img-cover').attr('src');
-    const schedule = eventElement.find('.event-meta .tribe-event-schedule-details .tribe-event-date-start').text().trim();
-    const venue = eventElement.find('.event-meta .tribe-events-venue-details').text().trim();
-
-    return {
-      title,
-      category,
-      event_url,
-      image_url,
-      schedule,
-      venue
-    };
-  });
-
-  return dailyEvents;
+  return {
+    title,
+    category,
+    event_url,
+    image_url,
+    schedule,
+    venue
+  };
 }
 
 function transform(html) {
   const $ = cheerio.load(html);
+  const eventElements = $('.type-tribe_events').toArray();
 
-  const eventsCalendar = $('.js-group-events-day').toArray().map((dailyEventsBlock) => {
-    const dateElement = $(dailyEventsBlock).find('.event-meta .tribe-event-schedule-details .tribe-event-date-start').get(0);
-    const display_date = $(dateElement).text();
-    const events = transformDailyEvents(dailyEventsBlock);
-
-    return { display_date, events };
+  const events = eventElements.map((eventElement) => {
+    return transformEvent(eventElement);
   });
 
-  return eventsCalendar;
+  return events;
 };
 
 const load = (events) =>
