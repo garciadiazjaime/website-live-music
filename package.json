@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "etl": "node support/etl"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "next": "14.0.0",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "react-gtm-module": "^2.0.11"
