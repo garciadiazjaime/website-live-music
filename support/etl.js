@@ -16,11 +16,19 @@ async function extractMock(url) {
 function transformEvent(eventElement) {
     const event = cheerio.load(eventElement);
     const title = event('.event-content .card-title').text().trim();
-    const category = event('.event-content .subtitle').text().trim();
+    const category = event('.event-content .subtitle').text().trim().replace(/ +(?= )/g,'');
     const event_url = event('.card-img-link').attr('href');
     const image_url = event('.img-cover').attr('data-src');
-    const schedule = event('.event-meta .tribe-event-schedule-details .tribe-event-date-start').text().trim();
     const venue = event('.event-meta .tribe-events-venue-details').text().trim();
+    const date = event('.event-meta .tribe-event-schedule-details .tribe-event-date-start').text().trim();
+    const hours = event('.event-meta .tribe-event-schedule-details .tribe-event-time').toArray().map((time) => {
+      return cheerio.load(time).text();
+    });
+    const schedule = {
+      date,
+      start_time: hours[0] ?? '',
+      end_time: hours[1] ?? '',
+    }
 
   return {
     title,
