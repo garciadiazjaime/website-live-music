@@ -1,6 +1,7 @@
 "use client";
 
 import TagManager from "react-gtm-module";
+import Image from "next/image";
 import events from "../public/events.json";
 
 import { useEffect } from "react";
@@ -23,9 +24,15 @@ export default function Home() {
         {events.map((event, index) => (
           <div key={index} style={{ margin: "20px 0", position: "relative" }}>
             <h2>{event.title}</h2>
-            <div style={{ height: 200, width: 200, backgroundColor: "#CCC" }} />
+            <Image
+              src={event.image_url}
+              width={300}
+              height={300}
+              alt={event.title}
+              style={{ objectFit: "cover" }}
+            />
             <p>{event.category}</p>
-            <p>{event.schedule}</p>
+            <p>{event.schedule.display_date}</p>
             <p>{event.venue}</p>
 
             <a
