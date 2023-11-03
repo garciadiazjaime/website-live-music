@@ -1,14 +1,15 @@
 "use client";
+import { useEffect } from "react";
 
 import TagManager from "react-gtm-module";
 import Image from "next/image";
 import events from "../public/events.json";
 
-import { useEffect } from "react";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
 };
+
 
 export default function Home() {
   useEffect(() => {
@@ -20,35 +21,38 @@ export default function Home() {
       <h1 style={{ padding: 12, borderBottom: "1px solid #000" }}>
         Chicago Live Music
       </h1>
+      <hr />
       <section style={{ margin: "20px 0", padding: "0 12px" }}>
-        {events.map((event, index) => (
-          <div key={index} style={{ margin: "20px 0", position: "relative" }}>
-            <h2>{event.title}</h2>
-            <Image
-              src={event.image_url}
-              width={300}
-              height={300}
-              alt={event.title}
-              style={{ objectFit: "cover" }}
-            />
-            <p>{event.category}</p>
-            <p>{event.schedule.display_date}</p>
-            <p>{event.venue}</p>
-
-            <a
-              href={event.event_url}
-              target="_blank"
-              rel="nofollow"
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </div>
-        ))}
+        <h2>Event List</h2>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {events.map((event, index) => (
+            <div key={index} style={{ margin: "20px 0", position: "relative", width: "25%" }}>
+              <h3>{event.title}</h3>
+              <Image
+                src={event.image_url}
+                width={300}
+                height={300}
+                alt={event.title}
+                style={{ objectFit: "cover" }}
+              />
+              <p>{event.category}</p>
+              <p>{event.schedule.display_date}</p>
+              <p>{event.venue}</p>
+              <a
+                href={event.event_url}
+                target="_blank"
+                rel="nofollow"
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </section>
       <footer
         style={{
