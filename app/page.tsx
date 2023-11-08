@@ -4,12 +4,11 @@ import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 import Image from "next/image";
 import events from "../public/events.json";
-
+import styles from "./page.module.css";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
 };
-
 
 export default function Home() {
   useEffect(() => {
@@ -23,23 +22,63 @@ export default function Home() {
       </h1>
       <hr />
       <section style={{ margin: "20px 0", padding: "0 12px" }}>
-        <h2>Event List</h2>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <h2 style={{ margin: "0 0 20px 0" }}>Event List</h2>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 20,
+          }}
+        >
           {events.map((event, index) => (
-            <div key={index} style={{ margin: "20px 0", position: "relative", width: "25%" }}>
-              <h3>{event.title}</h3>
+            <div
+              key={index}
+              style={{ position: "relative", borderTop: "1px solid black" }}
+              className={styles.card}
+            >
+              <h3
+                style={{
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  margin: "6px 0",
+                }}
+                className={styles.title}
+              >
+                {event.name}
+              </h3>
               <Image
-                src={event.image_url}
+                src={event.image!}
                 width={300}
                 height={300}
-                alt={event.title}
-                style={{ objectFit: "cover" }}
+                alt={event.name}
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                }}
               />
-              <p>{event.category}</p>
-              <p>{event.schedule.display_date}</p>
-              <p>{event.venue}</p>
+              <p
+                style={{
+                  margin: "12px 0",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+                className={styles.description}
+              >
+                {event.description}
+              </p>
+              <p style={{ opacity: 0.8 }}>
+                {new Date(event.startDate).toDateString()}
+              </p>
+              <p
+                style={{
+                  margin: "12px 0",
+                  opacity: 0.8,
+                }}
+              >
+                {event.location.name}
+              </p>
               <a
-                href={event.event_url}
+                href={event.url}
                 target="_blank"
                 rel="nofollow"
                 style={{
