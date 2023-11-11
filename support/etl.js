@@ -1,5 +1,10 @@
 const cheerio = require("cheerio");
 const fs = require("fs");
+const async = require("async");
+
+require("dotenv").config();
+
+const EVENTS_API = process.env.EVENTS_API;
 
 async function extract(url) {
   const response = await fetch(url);
@@ -44,8 +49,56 @@ function transform(html) {
   return events;
 }
 
-const load = (events) =>
+async function load(events, city, state) {
   fs.writeFileSync("./public/events.json", JSON.stringify(events));
+
+  await async.eachSeries(events, async (event) => {
+    const payload = {
+      name: event.name,
+      description: event.description,
+      image: event.image,
+      url: event.url,
+      start_date: event.startDate,
+      end_date: event.endDate,
+
+      location: {
+        name: event.location.name,
+        url: event.location.url,
+        telephone: event.location.telephone,
+        address: {
+          street: event.location.address?.streetAddress,
+          locality: event.location.address?.addressLocality,
+          postal: event.location.address?.postalCode,
+          city,
+          state,
+        },
+      },
+    };
+
+    if (event.organizer?.name) {
+      payload.organizer = {
+        name: event.organizer.name,
+      };
+    }
+
+    const response = await fetch(EVENTS_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    if (response.status !== 201) {
+      console.log("Error saving event");
+      console.log(payload);
+      console.log(data);
+    } else {
+      console.log(`event saved: ${event.name}`);
+    }
+  });
+}
 
 async function main() {
   const today = new Date();
@@ -56,6 +109,8 @@ async function main() {
       url: `https://www.choosechicago.com/events/list/?tribe-bar-date=${
         today.toJSON().split("T")[0]
       }&tribe_eventcategory[0]=1242`,
+      city: "CHICAGO",
+      state: "IL",
     },
   ];
 
@@ -64,7 +119,7 @@ async function main() {
     const html = await extract(link.url);
     const events = transform(html);
     console.log(`${events.length} found`);
-    load(events);
+    load(events, link.city, link.state);
   });
 
   await Promise.all(promises);

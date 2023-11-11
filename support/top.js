@@ -1,15 +1,10 @@
 const fs = require("fs");
 
+const { pbcopy } = require("./keyboard");
 const events = require("../public/events.json");
 
 const TOP_EVENTS_LIMIT = 3;
 const TOP_EVENTS_FILE_PATH = "tmp/topEvents.txt";
-
-function pbcopy(data) {
-  const proc = require("child_process").spawn("pbcopy");
-  proc.stdin.write(data);
-  proc.stdin.end();
-}
 
 function getTopEvents() {
   const response = fs.readFileSync(TOP_EVENTS_FILE_PATH, "utf8");
