@@ -117,9 +117,11 @@ async function main() {
   const promises = links.map(async (link) => {
     console.log(`scrapping: ${link.url}`);
     const html = await extract(link.url);
+
     const events = transform(html);
     console.log(`${events.length} found`);
-    load(events, link.city, link.state);
+
+    await load(events, link.city, link.state);
   });
 
   await Promise.all(promises);

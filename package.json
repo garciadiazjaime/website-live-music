@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "etl": "node support/etl",
+    "events": "node support/eventsETL",
     "gpt": "node support/gpt",
-    "gps": "node support/gps.js"
+    "gps": "node support/gps"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",
