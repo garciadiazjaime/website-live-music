@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "etl": "node support/etl",
-    "gpt": "node support/gpt"
+    "gpt": "node support/gpt",
+    "gps": "node support/gps.js"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",

@@ -81,7 +81,7 @@ async function load(events, city, state) {
       };
     }
 
-    const response = await fetch(EVENTS_API, {
+    const response = await fetch(`${EVENTS_API}/events/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
