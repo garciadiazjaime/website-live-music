@@ -4,7 +4,7 @@ const async = require("async");
 
 require("dotenv").config();
 
-const EVENTS_API = process.env.EVENTS_API;
+const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
 
 async function extract(url) {
   const response = await fetch(url);
@@ -50,8 +50,6 @@ function transform(html) {
 }
 
 async function load(events, city, state) {
-  fs.writeFileSync("./public/events.json", JSON.stringify(events));
-
   await async.eachSeries(events, async (event) => {
     const payload = {
       name: event.name,

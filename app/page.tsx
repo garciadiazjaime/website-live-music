@@ -1,27 +1,108 @@
 "use client";
+
 import { useEffect } from "react";
+import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 
 import TagManager from "react-gtm-module";
 import Image from "next/image";
-import events from "../public/events.json";
 import styles from "./page.module.css";
+import events from "../public/events.json";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
 };
+
+interface Event {
+  name: string;
+  image: string;
+  description: string;
+  url: string;
+  start_date: string;
+  location: {
+    name: string;
+    gmaps: {
+      lat: number;
+      lng: number;
+      name: string;
+    };
+  };
+}
+
+function slugify(str: string) {
+  return String(str)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9 -]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
 
 export default function Home() {
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
   }, []);
 
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+  });
+
+  const center = {
+    lat: 41.8777569,
+    lng: -87.6271142,
+  };
+
+  const containerStyle = {
+    width: "100%",
+    height: "400px",
+  };
+
+  const markerClickHandler = (event: Event) => {
+    const element = document.getElementById(slugify(event.name));
+    element?.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
+
   return (
     <main>
-      <h1 style={{ padding: 12, borderBottom: "1px solid #000" }}>
-        Chicago Live Music
-      </h1>
-      <hr />
-      <section style={{ margin: "20px 0", padding: "0 12px" }}>
+      <div
+        style={{
+          height: "50vh",
+          width: "100%",
+          position: "fixed",
+          left: 0,
+          top: 0,
+          zIndex: 1,
+          background: "white",
+        }}
+      >
+        <h1 style={{ padding: 12, borderBottom: "1px solid #000" }}>
+          Chicago Live Music
+        </h1>
+        {isLoaded ? (
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            zoom={10}
+            center={center}
+          >
+            {events.map((event, index) => (
+              <MarkerF
+                key={index}
+                onClick={() => markerClickHandler(event)}
+                position={{
+                  lat: event.location.gmaps.lat,
+                  lng: event.location.gmaps.lng,
+                }}
+              />
+            ))}
+          </GoogleMap>
+        ) : (
+          <></>
+        )}
+      </div>
+
+      <section style={{ margin: "54vh 0 20px" }}>
         <h2 style={{ margin: "0 0 20px 0" }}>Event List</h2>
         <div
           style={{
@@ -35,6 +116,7 @@ export default function Home() {
               key={index}
               style={{ position: "relative", borderTop: "1px solid black" }}
               className={styles.card}
+              id={slugify(event.name)}
             >
               <h3
                 style={{
@@ -67,7 +149,7 @@ export default function Home() {
                 {event.description}
               </p>
               <p style={{ opacity: 0.8 }}>
-                {new Date(event.startDate).toDateString()}
+                {new Date(event.start_date).toDateString()}
               </p>
               <p
                 style={{
@@ -93,6 +175,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
       <footer
         style={{
           borderTop: "1px solid #000",

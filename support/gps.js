@@ -42,7 +42,7 @@ async function main() {
     const params = {
       input: location.name,
       inputtype: "textquery",
-      key: process.env.GOOGLE_MAPS_API_KEY,
+      key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
       fields: ["place_id", "name", "formatted_address", "geometry"],
       locationbias: "41.8336152,-87.8967663,1000",
     };

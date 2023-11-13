@@ -1,4 +1,4 @@
-const EVENTS_API = process.env.EVENTS_API;
+const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
 
 async function getLocations() {
   const response = await fetch(`${EVENTS_API}/locations/`);
