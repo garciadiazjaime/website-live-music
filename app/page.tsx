@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 
 import TagManager from "react-gtm-module";
 import Image from "next/image";
-import styles from "./page.module.css";
 import events from "../public/events.json";
 
 const tagManagerArgs = {
@@ -13,6 +12,7 @@ const tagManagerArgs = {
 };
 
 interface Event {
+  pk: number;
   name: string;
   image: string;
   description: string;
@@ -40,6 +40,8 @@ function slugify(str: string) {
 }
 
 export default function Home() {
+  const [selectedEvent, setSelectedEvent] = useState<Event>();
+
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
   }, []);
@@ -56,125 +58,135 @@ export default function Home() {
 
   const containerStyle = {
     width: "100%",
-    height: "400px",
+    height: "100%",
   };
+
+  const getEventID = (event: Event) =>
+    `${slugify(event.name)}-${event.start_date.split("T")[0]}`;
 
   const markerClickHandler = (event: Event) => {
-    const element = document.getElementById(slugify(event.name));
-    element?.scrollIntoView({ behavior: "smooth", block: "end" });
+    console.log("markerClickHandler", event);
+    setSelectedEvent(event);
+    const element = document.getElementById(getEventID(event));
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  console.log("selectedEvent", selectedEvent);
   return (
-    <main>
-      <div
+    <div>
+      <header style={{ height: 70, borderBottom: "1px solid #000" }}>
+        <h1 style={{ padding: 12 }}>Chicago Live Music</h1>
+      </header>
+
+      <main
         style={{
-          height: "50vh",
-          width: "100%",
-          position: "fixed",
-          left: 0,
-          top: 0,
-          zIndex: 1,
-          background: "white",
+          height: "100%",
         }}
       >
-        <h1 style={{ padding: 12, borderBottom: "1px solid #000" }}>
-          Chicago Live Music
-        </h1>
-        {isLoaded ? (
-          <GoogleMap
-            mapContainerStyle={containerStyle}
-            zoom={10}
-            center={center}
-          >
+        <section style={{ width: "50%", padding: 12 }}>
+          <h2 style={{ margin: "0 0 30px 0" }}>Event List</h2>
+          <div>
             {events.map((event, index) => (
-              <MarkerF
+              <div
                 key={index}
-                onClick={() => markerClickHandler(event)}
-                position={{
-                  lat: event.location.gmaps.lat,
-                  lng: event.location.gmaps.lng,
+                style={{
+                  position: "relative",
+                  padding: "70px 0",
                 }}
-              />
+                id={getEventID(event)}
+              >
+                <Image
+                  src={event.image!}
+                  width={300}
+                  height={300}
+                  alt={event.name}
+                  style={{
+                    objectFit: "cover",
+                    width: "100%",
+                  }}
+                />
+                <div
+                  style={{
+                    borderRight:
+                      selectedEvent?.pk === event.pk ? "4px dotted black" : "",
+                  }}
+                >
+                  <h3
+                    style={{
+                      margin: "12px 0",
+                    }}
+                  >
+                    {event.name}
+                  </h3>
+                  <p
+                    style={{
+                      margin: "12px 0",
+                    }}
+                  >
+                    {event.description}
+                  </p>
+                  <p style={{ opacity: 0.8 }}>
+                    {new Date(event.start_date).toDateString()}
+                  </p>
+                  <p
+                    style={{
+                      margin: "12px 0",
+                      opacity: 0.8,
+                    }}
+                  >
+                    {event.location.name}
+                  </p>
+                </div>
+                <a
+                  href={event.url}
+                  target="_blank"
+                  rel="nofollow"
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    top: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                />
+              </div>
             ))}
-          </GoogleMap>
-        ) : (
-          <></>
-        )}
-      </div>
+          </div>
+        </section>
 
-      <section style={{ margin: "54vh 0 20px" }}>
-        <h2 style={{ margin: "0 0 20px 0" }}>Event List</h2>
-        <div
+        <section
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 20,
+            height: "calc(100vh - 70px)",
+            width: "50%",
+            position: "fixed",
+            top: 70,
+            right: 0,
+            background: "white",
+            zIndex: 1,
           }}
         >
-          {events.map((event, index) => (
-            <div
-              key={index}
-              style={{ position: "relative", borderTop: "1px solid black" }}
-              className={styles.card}
-              id={slugify(event.name)}
+          {isLoaded ? (
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              zoom={10}
+              center={center}
             >
-              <h3
-                style={{
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  margin: "6px 0",
-                }}
-                className={styles.title}
-              >
-                {event.name}
-              </h3>
-              <Image
-                src={event.image!}
-                width={300}
-                height={300}
-                alt={event.name}
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                }}
-              />
-              <p
-                style={{
-                  margin: "12px 0",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                }}
-                className={styles.description}
-              >
-                {event.description}
-              </p>
-              <p style={{ opacity: 0.8 }}>
-                {new Date(event.start_date).toDateString()}
-              </p>
-              <p
-                style={{
-                  margin: "12px 0",
-                  opacity: 0.8,
-                }}
-              >
-                {event.location.name}
-              </p>
-              <a
-                href={event.url}
-                target="_blank"
-                rel="nofollow"
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+              {events.map((event, index) => (
+                <MarkerF
+                  key={index}
+                  onClick={() => markerClickHandler(event)}
+                  position={{
+                    lat: event.location.gmaps.lat,
+                    lng: event.location.gmaps.lng,
+                  }}
+                />
+              ))}
+            </GoogleMap>
+          ) : (
+            <></>
+          )}
+        </section>
+      </main>
 
       <footer
         style={{
@@ -239,6 +251,6 @@ export default function Home() {
           </li>
         </ul>
       </footer>
-    </main>
+    </div>
   );
 }

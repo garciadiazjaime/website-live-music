@@ -9,11 +9,14 @@ const TOP_EVENTS_FILE_PATH = "tmp/topEvents.txt";
 function getTopEvents() {
   const response = fs.readFileSync(TOP_EVENTS_FILE_PATH, "utf8");
   if (!response) {
-    const titles = events.map((item, index) => `[${index + 1}] ${item.name}`);
+    const titles = events.results.map(
+      (item, index) => `[${index + 1}] ${item.name}`
+    );
     const prompt = `Which of following music events are the top ${TOP_EVENTS_LIMIT}? provide just the reference number, nothing else \n${titles.join(
       "\n"
     )}`;
 
+    console.log(prompt);
     pbcopy(prompt);
     console.log(`Top Events prompt copied`);
 
@@ -49,7 +52,7 @@ async function main() {
   console.log("Movie Script prompt copied");
   console.log("ask GPT and create the video");
 
-  fs.truncateSync(TOP_EVENTS_FILE_PATH, 0);
+  // fs.truncateSync(TOP_EVENTS_FILE_PATH, 0);
 }
 
 main().then(() => {
