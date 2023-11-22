@@ -1,8 +1,23 @@
 const fetch = require("node-fetch");
 
 const events = require("../public/events.json");
+const { pbcopy } = require("./keyboard");
 
 const TOP_EVENTS_LIMIT = 2;
+
+async function askGPT() {
+  const addresses = events
+    .slice(0, 1)
+    .map(
+      (item, index) =>
+        `${item.location.name} with address: ${item.location.address.streetAddress}, ${item.location.address.addressLocality}, ${item.location.address.postalCode}`
+    );
+  const prompt = `coordinates and nothing else for: ${addresses.join("\n")}.`;
+
+  pbcopy(prompt);
+  console.log("GPS prompt copied");
+  console.log("ask GPT");
+}
 
 async function main() {
   console.log("starting...");
