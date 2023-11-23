@@ -1,6 +1,6 @@
 const async = require("async");
-const moment = require("moment"); // require
-const { TransformerFactory } = require("./transformers/transformerFactory.js"); // require
+const moment = require("moment");
+const { TransformerFactory } = require("./transformers/transformerFactory.js");
 
 
 require("dotenv").config();
@@ -51,6 +51,12 @@ async function main() {
       city: "CHICAGO",
       state: "IL",
       provider: "CHOOSECHICAGO"
+    },
+    {
+      url: `https://www.songkick.com/metro-areas/9426-us-chicago/this-weekend`,
+      city: "CHICAGO",
+      state: "IL",
+      provider: "SONGKICK"
     },
   ];
 

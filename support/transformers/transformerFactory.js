@@ -1,9 +1,9 @@
 const { ChooseChicagoTransformer } = require("./ChooseChicagoTransformer.js");
-const { SecondSourceTransformer } = require("./SecondSourceTransformer.js");
+const { SongkickTransformer } = require("./SongkickTransformer.js");
 
 const providersMap = {
   'CHOOSECHICAGO': ChooseChicagoTransformer,
-  'SECONDSOURCE': SecondSourceTransformer
+  'SONGKICK': SongkickTransformer
 }
 
 class TransformerFactory {
