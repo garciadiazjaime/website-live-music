@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
+declare global {
+  interface Window { images: string[]; }
+}
+
 interface RGBKineticSliderProps {
   images: string[];
   texts: string[][];
