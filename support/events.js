@@ -1,6 +1,7 @@
-const cheerio = require("cheerio");
 const async = require("async");
-const moment = require("moment"); // require
+const moment = require("moment");
+const { getTransformer } = require("./transformers/transformerFactory.js");
+
 
 require("dotenv").config();
 
@@ -12,51 +13,9 @@ async function extract(url) {
   return await response.text();
 }
 
-function transform(html, site) {
-  const $ = cheerio.load(html);
-
-  const events = $(".type-tribe_events")
-    .toArray()
-    .map((item) => {
-      const name = $(item).find(".card-title").text();
-      const description = $(item).find(".card-body p").text();
-      const image = $(item).find(".img-cover").data("src");
-      const url = $(item).find(".card-img-link").attr("href");
-
-      const date = $(item).find(".tribe-event-date-start").text();
-      const startTime = $(item).find(".tribe-event-time").text();
-      const endTime = $(item).find(".tribe-event-time").last().text();
-      const start_date = moment(
-        `${date} ${startTime}`,
-        "dddd, MMMM Do LT"
-      ).format();
-      const end_date = moment(
-        `${date} ${endTime}`,
-        "dddd, MMMM Do LT"
-      ).format();
-
-      const addressName = $(item)
-        .find(".tribe-events-venue-details b")
-        .text()
-        .split(",")[0];
-      const address = $(item).find(".tribe-events-venue-details");
-      address.find("b").remove();
-
-      return {
-        name,
-        description,
-        image,
-        url,
-        start_date,
-        end_date,
-        location: {
-          name: addressName,
-          address: address.text(),
-          city: site.city,
-          state: site.state,
-        },
-      };
-    });
+function transform(html, link) {
+  const transformer = getTransformer(link.provider);
+  const events = transformer(html, link);
 
   return events;
 }
@@ -90,6 +49,13 @@ async function main() {
       url: `https://www.choosechicago.com/events/?tribe-bar-date=${today}&tribe_eventcategory[0]=1242`,
       city: "CHICAGO",
       state: "IL",
+      provider: "CHOOSECHICAGO"
+    },
+    {
+      url: `https://www.songkick.com/metro-areas/9426-us-chicago/this-weekend`,
+      city: "CHICAGO",
+      state: "IL",
+      provider: "SONGKICK"
     },
   ];
 
