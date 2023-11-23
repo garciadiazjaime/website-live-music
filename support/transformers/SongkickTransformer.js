@@ -1,17 +1,16 @@
 const cheerio = require("cheerio");
 const moment = require("moment");
 
-const PROVIDER_HOST = "https://www.songkick.com";
-
 function SongkickTransformer(html, link) {
   const $ = cheerio.load(html);
+  const providerUrl = new URL(link.url);
 
   const events = $(".event-listings-element")
     .toArray()
     .map((item) => {
       const name = $(item).find(".artists strong").text();
       const image = `https:${$(item).find(".artist-profile-image").data("src")}`;
-      const url = `${PROVIDER_HOST}${$(item).find(".event-link").attr("href")}`;
+      const url = `${providerUrl.origin}${$(link.urltem).find(".event-link").attr("href")}`;
       const venueName = $(item).find(".venue-link").text();
       const timestamp = $(item).find("time").attr("datetime");
       const start_date = moment(timestamp).format();
