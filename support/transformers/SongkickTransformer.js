@@ -10,7 +10,7 @@ function SongkickTransformer(html, link) {
     .map((item) => {
       const name = $(item).find(".artists strong").text();
       const image = `https:${$(item).find(".artist-profile-image").data("src")}`;
-      const url = `${providerUrl.origin}${$(link.urltem).find(".event-link").attr("href")}`;
+      const url = `${providerUrl.origin}${$(item).find(".event-link").attr("href")}`;
       const venueName = $(item).find(".venue-link").text();
       const timestamp = $(item).find("time").attr("datetime");
       const start_date = moment(timestamp).format();
