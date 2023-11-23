@@ -1,6 +1,6 @@
 const async = require("async");
 const moment = require("moment");
-const { TransformerFactory } = require("./transformers/transformerFactory.js");
+const { getTransformer } = require("./transformers/transformerFactory.js");
 
 
 require("dotenv").config();
@@ -14,8 +14,7 @@ async function extract(url) {
 }
 
 function transform(html, link) {
-  const transformerFactory = new TransformerFactory();
-  const transformer = transformerFactory.getTransformer(link.provider);
+  const transformer = getTransformer(link.provider);
   const events = transformer(html, link);
 
   return events;

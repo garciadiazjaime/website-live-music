@@ -6,10 +6,8 @@ const providersMap = {
   'SONGKICK': SongkickTransformer
 }
 
-class TransformerFactory {
-  getTransformer(provider){
-    return providersMap[provider];
-  }
+function getTransformer(provider){
+  return providersMap[provider];
 }
 
-module.exports = { TransformerFactory }
+module.exports = { getTransformer }

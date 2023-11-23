@@ -18,14 +18,12 @@ function SongkickTransformer(html, link) {
 
       return {
         name,
-        description: "Test description.",
         image,
         url,
         start_date,
         end_date: start_date,
         location: {
           name: venueName,
-          address: "",
           city: link.city,
           state: link.state,
         },
