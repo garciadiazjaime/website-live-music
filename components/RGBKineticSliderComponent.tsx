@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 declare global {
-  interface Window { images: string[]; }
+  interface Window {
+    images: string[];
+    TweenMax: any;
+    PIXI: any;
+    rgbKineticSlider: any;
+  }
+  interface Element {
+    captureStream: any;
+  }
 }
 
 interface RGBKineticSliderProps {
