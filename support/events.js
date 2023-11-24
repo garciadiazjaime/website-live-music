@@ -1,8 +1,6 @@
 const async = require("async");
 const moment = require("moment");
-const { getTransformer } = require("./transformers/transformerFactory.js");
-
-
+const { getTransformer, getPaginator } = require("./transformers/factories.js");
 require("dotenv").config();
 
 const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
@@ -43,33 +41,42 @@ async function load(events) {
 
 async function main() {
   console.log("starting...\n");
-  const today = moment().format("YYYY-M-D");
+  const today = moment();
+  const daysUntilNextSunday = 7 - today.day();
+  const endDate = moment().add(daysUntilNextSunday, 'days');
   const links = [
     {
-      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today}&tribe_eventcategory[0]=1242`,
+      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format("YYYY-M-D")}&tribe_eventcategory[0]=1242`,
       city: "CHICAGO",
       state: "IL",
       provider: "CHOOSECHICAGO"
     },
     {
-      url: `https://www.songkick.com/metro-areas/9426-us-chicago/this-weekend`,
+      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format("M/D/YYYY")}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
       city: "CHICAGO",
       state: "IL",
       provider: "SONGKICK"
     },
   ];
 
-  const promises = links.map(async (link) => {
-    console.log(`scrapping: ${link.url}`);
-    const html = await extract(link.url);
+  await etl(links);
+}
 
+async function etl(links, getPages = true) {
+  await async.eachSeries(links, async (link) => {
+    console.log(`scrapping: ${link.url}, getPages: ${getPages}`);
+    const html = await extract(link.url);
     const events = transform(html, link);
     console.log(`${events.length} found`);
 
     await load(events);
-  });
 
-  await Promise.all(promises);
+    if (getPages) {
+      const paginator = getPaginator(link.provider);
+      const paginatorLinks = paginator(html, link);
+      await etl(paginatorLinks, false);
+    }
+  });
 }
 
 main().then(() => console.log("\nFinished!"));
