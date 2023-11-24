@@ -1,6 +1,6 @@
 const async = require("async");
 const moment = require("moment");
-const { getTransformer, getPaginator } = require("./transformers/factories.js");
+const { getTransformer, getPaginator } = require("./providers/factories.js");
 require("dotenv").config();
 
 const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
@@ -42,8 +42,7 @@ async function load(events) {
 async function main() {
   console.log("starting...\n");
   const today = moment();
-  const daysUntilNextSunday = 7 - today.day();
-  const endDate = moment().add(daysUntilNextSunday, 'days');
+  const endDate = moment().add(7, 'days');
   const links = [
     {
       url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format("YYYY-M-D")}&tribe_eventcategory[0]=1242`,

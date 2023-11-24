@@ -37,7 +37,7 @@ async function main() {
             lat: 41.8336152,
             lng: -87.8967663,
           },
-          radius: 30000, // Radius in meters
+          radius: 30_000, // Radius in meters
         },
       },
     };

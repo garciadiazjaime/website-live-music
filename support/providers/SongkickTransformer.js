@@ -6,13 +6,12 @@ function getOriginFromUrl(url) {
   return providerUrl.origin;
 }
 
-function getSongkickPages(html, originalLink) {
+function SongkickPages(html, originalLink) {
   const $ = cheerio.load(html);
   const paginatorLinks = $(".pagination a")
     .toArray()
-    .filter((pageLink) => {
-      return pageLink.attribs["aria-label"]?.includes("Page");
-    }).map((pageLink) => {
+    .filter((pageLink) => pageLink.attribs["aria-label"]?.includes("Page"))
+     .map((pageLink) => {
       const url = `${getOriginFromUrl(originalLink.url)}${pageLink.attribs.href}`;
 
       return {
@@ -56,4 +55,4 @@ function SongkickTransformer(html, link) {
   return events;
 }
 
-module.exports = { SongkickTransformer, getSongkickPages };
+module.exports = { SongkickTransformer, SongkickPages };

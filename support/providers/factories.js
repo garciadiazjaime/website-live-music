@@ -1,5 +1,5 @@
 const { ChooseChicagoTransformer } = require("./ChooseChicagoTransformer.js");
-const { SongkickTransformer, getSongkickPages } = require("./SongkickTransformer.js");
+const { SongkickTransformer, SongkickPages } = require("./SongkickTransformer.js");
 
 const transformerProvidersMap = {
   'CHOOSECHICAGO': ChooseChicagoTransformer,
@@ -8,7 +8,7 @@ const transformerProvidersMap = {
 
 const paginatorProvidersMap = {
   'CHOOSECHICAGO': () => [],
-  'SONGKICK': getSongkickPages,
+  'SONGKICK': SongkickPages,
 }
 
 function getTransformer(provider){
