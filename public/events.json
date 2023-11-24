@@ -1,101 +1,5 @@
 [
   {
-    "name": "Live Jazz on Wednesdays with Myles Hayes at The Ritz-Carlton, Chicago",
-    "description": "Join local jazz musician Myles Hayes every Wednesday from 5 – 8:30 p.m. at The Ritz-Carlton, Chicago and enjoy live music, drinks and bites. Guests…",
-    "image": "https://cdn.choosechicago.com/uploads/2023/05/Screen-Shot-2023-05-04-at-1.13.00-PM-900x505.png",
-    "url": "https://www.choosechicago.com/event/live-jazz-on-wednesdays-with-myles-hayes-at-the-ritz-carlton-chicago/2023-11-22/",
-    "start_date": "2023-11-22T23:00:00Z",
-    "end_date": "2023-11-23T02:30:00Z",
-    "location": {
-      "name": "The Ritz-Carlton",
-      "address": "160 East Pearson Street at Water Tower Place",
-      "city": "CHICAGO",
-      "state": "IL",
-      "gmaps": {
-        "lat": 41.8977726,
-        "lng": -87.622398,
-        "formatted_address": "At Water Tower Place, 160 E Pearson St, Chicago, IL 60611, United States",
-        "name": "The Ritz-Carlton, Chicago",
-        "place_id": "ChIJXajiYVTTD4gRriAjGeRH7tQ"
-      },
-      "gmaps_tries": 1,
-      "pk": 27
-    },
-    "pk": 33
-  },
-  {
-    "name": "Teatro Zinzanni",
-    "description": "A spectacle of unforgettable performances, fantastic cuisine, and premium entertainment await you within the velvet walls of the Antique Belgian Spiegeltent in the heart of…",
-    "image": "https://cdn.choosechicago.com/uploads/2019/08/placehoder-900x425.jpg",
-    "url": "https://www.choosechicago.com/event/teatro-zinzanni-4/2023-11-22/",
-    "start_date": "2023-11-23T00:30:00Z",
-    "end_date": "2023-11-23T04:00:00Z",
-    "location": {
-      "name": "32 W Randolph St",
-      "address": "32 W Randolph St",
-      "city": "CHICAGO",
-      "state": "IL",
-      "gmaps": {
-        "lat": 41.884718,
-        "lng": -87.629058,
-        "formatted_address": "32 W Randolph St, Chicago, IL 60601, USA",
-        "name": "32 W Randolph St",
-        "place_id": "ChIJH37_rrosDogR7OqirL-z1RM"
-      },
-      "gmaps_tries": 1,
-      "pk": 28
-    },
-    "pk": 34
-  },
-  {
-    "name": "Teatro Zinzanni",
-    "description": "A spectacle of unforgettable performances, fantastic cuisine, and premium entertainment await you within the velvet walls of the Antique Belgian Spiegeltent in the heart of…",
-    "image": "https://cdn.choosechicago.com/uploads/2019/08/placehoder-900x425.jpg",
-    "url": "https://www.choosechicago.com/event/teatro-zinzanni-4/2023-11-23/",
-    "start_date": "2023-11-24T00:30:00Z",
-    "end_date": "2023-11-24T04:00:00Z",
-    "location": {
-      "name": "32 W Randolph St",
-      "address": "32 W Randolph St",
-      "city": "CHICAGO",
-      "state": "IL",
-      "gmaps": {
-        "lat": 41.884718,
-        "lng": -87.629058,
-        "formatted_address": "32 W Randolph St, Chicago, IL 60601, USA",
-        "name": "32 W Randolph St",
-        "place_id": "ChIJH37_rrosDogR7OqirL-z1RM"
-      },
-      "gmaps_tries": 1,
-      "pk": 28
-    },
-    "pk": 35
-  },
-  {
-    "name": "Soumates at iO: Improv Duo Showcase",
-    "description": "Chemistry is everything, especially in comedy! Our weekly Thursday night showcase features some of Chicago’s best established improv duos, and a performance with a brand…Lincoln Park",
-    "image": "https://cdn.choosechicago.com/uploads/2023/04/Tosca-Modern-Soul-Buddies-Hoodie-800x800.png",
-    "url": "https://www.choosechicago.com/event/soumates-at-io-improv-duo-showcase/2023-11-23/",
-    "start_date": "2023-11-24T04:00:00Z",
-    "end_date": "2023-11-24T05:00:00Z",
-    "location": {
-      "name": "iO Theater",
-      "address": "1501 N. Kingsbury St.",
-      "city": "CHICAGO",
-      "state": "IL",
-      "gmaps": {
-        "lat": 41.908536,
-        "lng": -87.6519617,
-        "formatted_address": "1501 N Kingsbury St, Chicago, IL 60642, United States",
-        "name": "The iO Theater",
-        "place_id": "ChIJE9IESSTTD4gRFXNotCW2Sf0"
-      },
-      "gmaps_tries": 1,
-      "pk": 29
-    },
-    "pk": 36
-  },
-  {
     "name": "Teatro Zinzanni",
     "description": "A spectacle of unforgettable performances, fantastic cuisine, and premium entertainment await you within the velvet walls of the Antique Belgian Spiegeltent in the heart of…",
     "image": "https://cdn.choosechicago.com/uploads/2019/08/placehoder-900x425.jpg",
@@ -115,9 +19,9 @@
         "place_id": "ChIJH37_rrosDogR7OqirL-z1RM"
       },
       "gmaps_tries": 1,
-      "pk": 28
+      "pk": 425
     },
-    "pk": 37
+    "pk": 1251
   },
   {
     "name": "Improvised DCOM",
@@ -139,9 +43,9 @@
         "place_id": "ChIJE9IESSTTD4gRFXNotCW2Sf0"
       },
       "gmaps_tries": 1,
-      "pk": 29
+      "pk": 426
     },
-    "pk": 38
+    "pk": 1252
   },
   {
     "name": "The Infinite Wrench",
@@ -163,9 +67,9 @@
         "place_id": "ChIJnVQXiifSD4gR6kTLZjehw4A"
       },
       "gmaps_tries": 1,
-      "pk": 30
+      "pk": 427
     },
-    "pk": 39
+    "pk": 1253
   },
   {
     "name": "Fantasia in Concert",
@@ -187,9 +91,9 @@
         "place_id": "ChIJ03xbwqMsDogRn80hvd2Xg18"
       },
       "gmaps_tries": 1,
-      "pk": 31
+      "pk": 428
     },
-    "pk": 40
+    "pk": 1254
   },
   {
     "name": "Love Changes Everything: A 75th Birthday Celebration of Andrew Lloyd Webber",
@@ -211,9 +115,9 @@
         "place_id": "ChIJ4bfTEhjPD4gRvrCvmKlzUCo"
       },
       "gmaps_tries": 1,
-      "pk": 32
+      "pk": 429
     },
-    "pk": 41
+    "pk": 1255
   },
   {
     "name": "Hedex",
@@ -235,9 +139,9 @@
         "place_id": "ChIJM1I4uLjSD4gRMTnmnLFdHyE"
       },
       "gmaps_tries": 1,
-      "pk": 33
+      "pk": 430
     },
-    "pk": 42
+    "pk": 1256
   },
   {
     "name": "Voila: The Improvised Musical",
@@ -259,9 +163,9 @@
         "place_id": "ChIJE9IESSTTD4gRFXNotCW2Sf0"
       },
       "gmaps_tries": 1,
-      "pk": 34
+      "pk": 431
     },
-    "pk": 43
+    "pk": 1257
   },
   {
     "name": "Teatro Zinzanni",
@@ -283,9 +187,9 @@
         "place_id": "ChIJrU7gr7osDogRY1NoNI9zcq0"
       },
       "gmaps_tries": 1,
-      "pk": 35
+      "pk": 432
     },
-    "pk": 44
+    "pk": 1258
   },
   {
     "name": "Vienna Boys Choir: Christmas in Vienna",
@@ -307,9 +211,9 @@
         "place_id": "ChIJ03xbwqMsDogRn80hvd2Xg18"
       },
       "gmaps_tries": 1,
-      "pk": 31
+      "pk": 428
     },
-    "pk": 45
+    "pk": 1259
   },
   {
     "name": "Teatro Zinzanni",
@@ -331,9 +235,9 @@
         "place_id": "ChIJH37_rrosDogR7OqirL-z1RM"
       },
       "gmaps_tries": 1,
-      "pk": 28
+      "pk": 425
     },
-    "pk": 46
+    "pk": 1260
   },
   {
     "name": "The Infinite Wrench",
@@ -355,9 +259,9 @@
         "place_id": "ChIJnVQXiifSD4gR6kTLZjehw4A"
       },
       "gmaps_tries": 1,
-      "pk": 30
+      "pk": 427
     },
-    "pk": 47
+    "pk": 1261
   },
   {
     "name": "Léo Lins comes to the Den Theatre",
@@ -379,9 +283,9 @@
         "place_id": "ChIJsxdugMXSD4gRYXZPrSF9scA"
       },
       "gmaps_tries": 1,
-      "pk": 36
+      "pk": 433
     },
-    "pk": 48
+    "pk": 1262
   },
   {
     "name": "Baby Wants Candy! The Original Completely Improvised Musical",
@@ -403,9 +307,9 @@
         "place_id": "ChIJFR3zFUHTD4gRiSGHi3J4B7Y"
       },
       "gmaps_tries": 1,
-      "pk": 37
+      "pk": 434
     },
-    "pk": 49
+    "pk": 1263
   },
   {
     "name": "Clued In",
@@ -427,9 +331,9 @@
         "place_id": "ChIJFR3zFUHTD4gRiSGHi3J4B7Y"
       },
       "gmaps_tries": 1,
-      "pk": 38
+      "pk": 435
     },
-    "pk": 50
+    "pk": 1264
   },
   {
     "name": "Fantasia in Concert",
@@ -451,9 +355,9 @@
         "place_id": "ChIJ03xbwqMsDogRn80hvd2Xg18"
       },
       "gmaps_tries": 1,
-      "pk": 31
+      "pk": 428
     },
-    "pk": 51
+    "pk": 1265
   },
   {
     "name": "Tales and Tunes",
@@ -475,8 +379,104 @@
         "place_id": "ChIJ4bfTEhjPD4gRvrCvmKlzUCo"
       },
       "gmaps_tries": 1,
-      "pk": 32
+      "pk": 429
     },
-    "pk": 52
+    "pk": 1266
+  },
+  {
+    "name": "Best Of Annoyance Sketch",
+    "description": "Enjoy the best sketch comedy Chicago has to offer! The Annoyance Theatre has been at the crux of the comedy scene in Chicago for over…Lakeview",
+    "image": "https://cdn.choosechicago.com/uploads/2023/08/5A42D41C-28AE-4F80-AFE5-89496E1FD7A2-1-800x800.png",
+    "url": "https://www.choosechicago.com/event/best-of-annoyance-sketch/2023-11-25/",
+    "start_date": "2023-11-26T03:30:00Z",
+    "end_date": "2023-11-26T04:30:00Z",
+    "location": {
+      "name": "The Annoyance Theatre",
+      "address": "851 W. Belmont Ave.",
+      "city": "CHICAGO",
+      "state": "IL",
+      "gmaps": {
+        "lat": 41.9398586,
+        "lng": -87.6513836,
+        "formatted_address": "851 W Belmont Ave, Chicago, IL 60657, United States",
+        "name": "Annoyance Theatre & Bar",
+        "place_id": "ChIJR3WzOqnTD4gRJTxaC0gORME"
+      },
+      "gmaps_tries": 1,
+      "pk": 436
+    },
+    "pk": 1267
+  },
+  {
+    "name": "Riff: Chicago’s Music Improv Drinking Party",
+    "description": "Fast paced music improv with a live band & a cast that drinks along with the audience!",
+    "image": "https://cdn.choosechicago.com/uploads/2023/07/d7839b36-a411-43c7-a12d-775a05ffe2e0.png",
+    "url": "https://www.choosechicago.com/event/riff-chicagos-music-improv-drinking-party/2023-11-25/",
+    "start_date": "2023-11-26T04:00:00Z",
+    "end_date": "2023-11-26T05:00:00Z",
+    "location": {
+      "name": "The iO Theater",
+      "address": "The iO Theater, 1501 N Kingsbury St, Chicago, IL 60642, USA,",
+      "city": "CHICAGO",
+      "state": "IL",
+      "gmaps": {
+        "lat": 41.908536,
+        "lng": -87.6519617,
+        "formatted_address": "1501 N Kingsbury St, Chicago, IL 60642, United States",
+        "name": "The iO Theater",
+        "place_id": "ChIJE9IESSTTD4gRFXNotCW2Sf0"
+      },
+      "gmaps_tries": 1,
+      "pk": 431
+    },
+    "pk": 1268
+  },
+  {
+    "name": "Experience Elf in Concert at Rosemont Theatre",
+    "description": "Immerse yourself in the festive spirit as Buddy the Elf spreads Christmas cheer with a live symphony on Sunday, Nov. 26, at 2 p.m. at…",
+    "image": "https://cdn.choosechicago.com/uploads/2019/08/placehoder-900x425.jpg",
+    "url": "https://www.choosechicago.com/event/experience-elf-in-concert-at-rosemont-theatre/",
+    "start_date": "2023-11-26T20:00:00Z",
+    "end_date": "2023-11-26T22:00:00Z",
+    "location": {
+      "name": "Rosemont Theatre",
+      "address": "",
+      "city": "CHICAGO",
+      "state": "IL",
+      "gmaps": {
+        "lat": 41.9761924,
+        "lng": -87.8641801,
+        "formatted_address": "5400 N River Rd, Rosemont, IL 60018, United States",
+        "name": "Rosemont Theatre",
+        "place_id": "ChIJF-6a3_y1D4gR8YepMhxDCSs"
+      },
+      "gmaps_tries": 1,
+      "pk": 437
+    },
+    "pk": 1269
+  },
+  {
+    "name": "Fantasia in Concert",
+    "description": "Join us for a thrilling performance of Disney’s groundbreaking marriage of symphonic music and animation, Fantasia. Magnificent repertoire from the original 1940 version and Fantasia 2000, including The…",
+    "image": "https://cdn.choosechicago.com/uploads/2023/10/9soejpvm-900x497.png",
+    "url": "https://www.choosechicago.com/event/fantasia-in-concert/2023-11-26/",
+    "start_date": "2023-11-26T21:00:00Z",
+    "end_date": "2023-11-26T23:00:00Z",
+    "location": {
+      "name": "Chicago Symphony Orchestra",
+      "address": "220 S. Michigan, Chicago, IL, 60604",
+      "city": "CHICAGO",
+      "state": "IL",
+      "gmaps": {
+        "lat": 41.8789876,
+        "lng": -87.625065,
+        "formatted_address": "220 S Michigan Ave, Chicago, IL 60604, United States",
+        "name": "Chicago Symphony Orchestra",
+        "place_id": "ChIJ03xbwqMsDogRn80hvd2Xg18"
+      },
+      "gmaps_tries": 1,
+      "pk": 428
+    },
+    "pk": 1270
   }
 ]

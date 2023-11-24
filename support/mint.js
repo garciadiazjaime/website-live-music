@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const EVENTS_API = `${process.env.NEXT_PUBLIC_EVENTS_API}/events`;
 
 async function getLocations(query) {
