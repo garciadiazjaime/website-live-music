@@ -9,7 +9,7 @@ const { getLocations, updateLocationRetries, upsertGmaps } = require("./mint");
 
 async function main() {
   console.log("starting gps...");
-  const query = "gmaps_empty=true&gmaps_tries=3";
+  const query = "gmaps_empty=true&gmaps_tries=3&limit=100";
   const locations = await getLocations(query).catch((error) => {
     console.log(error);
   });

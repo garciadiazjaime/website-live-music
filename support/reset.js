@@ -6,7 +6,7 @@ async function main() {
   console.log("resetting...");
 
   const today = new Date().toJSON().split("T")[0];
-  const query = `gmaps_empty=false&start_date=${today}`;
+  const query = `gmaps_empty=false&start_date=${today}&limit=1000`;
   const events = await getEvents(query);
 
   fs.writeFileSync(`./public/events.json`, JSON.stringify(events, null, 2));

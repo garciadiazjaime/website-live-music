@@ -1,13 +1,5 @@
-@media (min-width: 701px) {
-  .card {
-    flex: 1 0 21%;
-  }
-
-  .description {
-    height: 60px;
-  }
-
-  .title {
-    height: 45px;
+@media (max-width: 700px) {
+  .h1 {
+    display: none;
   }
 }
