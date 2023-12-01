@@ -15,11 +15,29 @@ const tagManagerArgs = {
 
 interface Event {
   pk: number;
-  name: string;
   image: string;
   description: string;
   url: string;
   start_date: string;
+  artist: {
+    name: string;
+    image: string|null;
+    twitter: string|null;
+    facebook: string|null;
+    youtube: string|null;
+    instagram: string|null;
+    tiktok: string|null;
+    soundcloud: string|null;
+    spotify: string|null;
+    appleMusic: string|null;
+    email: string|null;
+    title: string|null;
+    description: string|null;
+    type: string|null;
+    wiki_page_id: string|null;
+    wiki_title: string|null;
+    wiki_description: string|null;
+  }
   location: {
     name: string;
     gmaps: {
@@ -45,9 +63,6 @@ const center = {
   lat: 41.8777569,
   lng: -87.6271142,
 };
-
-const getEventID = (event: Event) =>
-  `${slugify(event.name)}-${event.start_date.split("T")[0]}`;
 
 const days = [
   "Monday",
@@ -98,6 +113,9 @@ export default function Home() {
     width: "100%",
     height: "100%",
   };
+
+  const getEventID = (event: Event) =>
+    `${slugify(event.artist.name)}-${event.start_date.split("T")[0]}`;
 
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
@@ -181,7 +199,7 @@ export default function Home() {
                   src={event.image!}
                   width={300}
                   height={300}
-                  alt={event.name}
+                  alt={event.artist.name}
                   style={{
                     objectFit: "cover",
                     width: "100%",
@@ -198,7 +216,7 @@ export default function Home() {
                       margin: "12px 0",
                     }}
                   >
-                    {event.name}
+                    {event.artist.name}
                   </h3>
                   <p
                     style={{
