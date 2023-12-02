@@ -8,10 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "events": "node support/events",
-    "gpt": "node support/gpt",
     "gps": "node support/gps",
     "reset": "node support/reset",
-    "wiki": "node support/wiki"
+    "metadata": "node support/metadata"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",
