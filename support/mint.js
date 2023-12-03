@@ -11,6 +11,25 @@ async function getLocations(query) {
   return data.results;
 }
 
+async function saveLocationMetadata(payload) {
+  const response = await fetch(`${EVENTS_API}/locations/metadata`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (response.status > 201) {
+    console.log("Error saving location metadata");
+    console.log(payload);
+    const data = await response.json();
+    console.log(data);
+  } else {
+    console.log(`metadata saved: ${payload.location}`);
+  }
+}
+
 async function upsertGmaps(payload) {
   const response = await fetch(`${EVENTS_API}/locations/gmaps/`, {
     method: "POST",
@@ -23,13 +42,22 @@ async function upsertGmaps(payload) {
   return response;
 }
 
-async function updateLocationRetries(locationPk) {
+async function updateLocationRetries(locationPk, payload) {
   const response = await fetch(`${EVENTS_API}/locations/${locationPk}/`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify(payload),
   });
+
+  if (response.status > 201) {
+    console.log(`Error updating location: ${locationPk}`);
+    const data = await response.json();
+    console.log(data);
+  } else {
+    console.log(`location updated: ${locationPk}`);
+  }
 
   return response;
 }
@@ -50,31 +78,50 @@ async function getArtists(query) {
   return data.results;
 }
 
-async function saveArtistMetadata(artist) {
-  const response = await fetch(`${ARTIST_API}/`, {
+async function updateArtist(artistPK, payload) {
+  const response = await fetch(`${ARTIST_API}/${artistPK}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (response.status > 201) {
+    console.log("Error updating artist");
+    console.log({ artistPK, payload });
+
+    return;
+  }
+
+  console.log(`artist updated: ${artistPK}`);
+}
+
+async function saveArtistMetadata(payload) {
+  const response = await fetch(`${ARTIST_API}/metadata`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(artist),
+    body: JSON.stringify(payload),
   });
 
-  const data = await response.json();
-  if (response.status !== 201) {
+  if (response.status > 201) {
     console.log("Error saving artist metadata");
-    console.log(artist);
-    console.log(data);
+    console.log(payload);
     return;
   }
 
-  console.log(`matadata saved: ${artist.name}`);
+  console.log(`metadata saved: ${payload.artist}`);
 }
 
 module.exports = {
   getLocations,
   updateLocationRetries,
+  saveLocationMetadata,
   upsertGmaps,
   getEvents,
   getArtists,
   saveArtistMetadata,
+  updateArtist,
 };

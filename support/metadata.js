@@ -2,7 +2,14 @@ const cheerio = require("cheerio");
 const async = require("async");
 require("dotenv").config();
 
-const { getArtists, saveArtistMetadata } = require("./mint");
+const {
+  getArtists,
+  saveArtistMetadata,
+  updateArtist,
+  getLocations,
+  saveLocationMetadata,
+  updateLocationRetries,
+} = require("./mint");
 
 async function getPageId(artistName) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=1&gsrsearch=%27${artistName}%27`;
@@ -133,65 +140,112 @@ async function getArtistMetadata(website) {
 
 const snakeCase = (value) => value.trim().replace(/ /g, "_");
 
-async function processArtist(artist, index = 0) {
-  if (index > 1) {
-    return;
-  }
+async function processArtists() {
+  const query = `metadata_empty=true&wiki_tries=3&ordering=wiki_tries&limit=100`;
+  const artists = await getArtists(query);
+  console.log(`artist: ${artists.length}`);
+  let index = 0;
 
-  const artistName = snakeCase(index === 0 ? artist.name : artist.location);
-  console.log(`processing[${index}]: ${artistName}`);
-  console.log(`event: ${artist.event}`);
-  const pageId = await getPageId(artistName);
-  if (!pageId) {
-    console.log(`no wiki found for: ${artistName}`);
+  await async.eachSeries(artists, async (artist) => {
+    index += 1;
+    console.log(`\n${index} / ${artists.length}...`);
 
-    await saveArtistMetadata({ name: artist.name });
-    await processArtist(artist, index + 1);
-    return;
-  }
+    const artistName = snakeCase(artist.name);
+    console.log(`processing[${artist.pk}]: ${artistName}`);
 
-  const wikiData = await getWikiData(pageId);
-  if (!wikiData) {
-    console.log(`no wikiData for ${artistName}:${pageId}`);
-  }
+    const pageId = await getPageId(artistName);
+    if (!pageId) {
+      console.log(`no wiki found for: ${artistName}`);
 
-  const website = await getWebsite(pageId);
-  if (!website) {
-    console.log(`no website for ${artistName}:${pageId}`);
-  }
+      await updateArtist(artist.pk);
+      return;
+    }
 
-  const payload = {
-    name: artist.name,
-    wiki_page_id: pageId,
-    ...wikiData,
-    website,
-  };
+    const wikiData = await getWikiData(pageId);
+    if (!wikiData) {
+      console.log(`no wikiData for ${artistName}:${pageId}`);
+    }
 
-  const socialMedia = await getArtistMetadata(website);
-  if (
-    !socialMedia ||
-    !Object.keys(socialMedia).find((key) => !!socialMedia[key])
-  ) {
-    console.log(`no social-media for ${artistName}:${pageId}`);
+    const website = await getWebsite(pageId);
+    if (!website) {
+      console.log(`no website for ${artistName}:${pageId}`);
+    }
+
+    const socialMedia = await getArtistMetadata(website);
+    if (
+      !socialMedia ||
+      !Object.keys(socialMedia).find((key) => !!socialMedia[key])
+    ) {
+      console.log(`no social-media for ${artistName}:${pageId}`);
+    }
+
+    const payload = {
+      artist: artist.pk,
+      wiki_page_id: pageId,
+      ...wikiData,
+      website: urlValidRegex.test(website) ? website : undefined,
+      ...socialMedia,
+    };
 
     await saveArtistMetadata(payload);
-    await processArtist(artist, index + 1);
-    return;
-  }
+  });
+}
 
-  await saveArtistMetadata({ ...payload, ...socialMedia });
+async function processLocations() {
+  const query = `metadata_empty=true&wiki_tries=3&ordering=wiki_tries&limit=100`;
+  const locations = await getLocations(query);
+  console.log(`locations: ${locations.length}`);
+  let index = 0;
+
+  await async.eachSeries(locations.slice(0, 5), async (location) => {
+    index += 1;
+    console.log(`\n${index} / ${locations.length}...`);
+
+    const locationName = snakeCase(location.name);
+    console.log(`processing[${location.pk}]: ${locationName}`);
+
+    const pageId = await getPageId(locationName);
+    if (!pageId) {
+      console.log(`no wiki found for: ${locationName}`);
+
+      await updateLocationRetries(location.pk, { wiki_tries: 1 });
+      return;
+    }
+
+    const wikiData = await getWikiData(pageId);
+    if (!wikiData) {
+      console.log(`no wikiData for ${locationName}:${pageId}`);
+    }
+
+    const website = await getWebsite(pageId);
+    if (!website) {
+      console.log(`no website for ${locationName}:${pageId}`);
+    }
+
+    const socialMedia = await getArtistMetadata(website);
+    if (
+      !socialMedia ||
+      !Object.keys(socialMedia).find((key) => !!socialMedia[key])
+    ) {
+      console.log(`no social-media for ${locationName}:${pageId}`);
+    }
+
+    const payload = {
+      location: location.pk,
+      wiki_page_id: pageId,
+      ...wikiData,
+      website: urlValidRegex.test(website) ? website : undefined,
+      ...socialMedia,
+    };
+
+    await saveLocationMetadata(payload);
+  });
 }
 
 async function main() {
-  const query = `wiki_empty=true&wiki_tries=3&limit=100`;
-  const artists = await getArtists(query);
-  console.log(`artist: ${artists.length}`);
-  let index = 1;
-  await async.eachSeries(artists, async (artist) => {
-    console.log(`\n${index} / ${artists.length}...`);
-    await processArtist(artist);
-    index += 1;
-  });
+  await processArtists();
+
+  await processLocations();
 }
 
 main().then(() => {
