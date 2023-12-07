@@ -20,14 +20,16 @@ async function saveLocationMetadata(payload) {
     body: JSON.stringify(payload),
   });
 
+  const data = await response.json();
+
   if (response.status > 201) {
     console.log("Error saving location metadata");
     console.log(payload);
-    const data = await response.json();
     console.log(data);
-  } else {
-    console.log(`metadata saved: ${payload.location}`);
+    return;
   }
+
+  console.log(`location metadata saved: ${payload.location}`);
 }
 
 async function upsertGmaps(payload) {
@@ -106,13 +108,31 @@ async function saveArtistMetadata(payload) {
     body: JSON.stringify(payload),
   });
 
+  const data = await response.json();
+
   if (response.status > 201) {
     console.log("Error saving artist metadata");
     console.log(payload);
+    console.log(data);
     return;
   }
 
-  console.log(`metadata saved: ${payload.artist}`);
+  console.log(`artist metadata saved: ${payload.artist}`);
+
+  return response;
+}
+
+async function rankEvents(payload) {
+  const response = await fetch(`${EVENTS_API}/rank/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  console.log(data);
 }
 
 module.exports = {
@@ -124,4 +144,5 @@ module.exports = {
   getArtists,
   saveArtistMetadata,
   updateArtist,
+  rankEvents,
 };

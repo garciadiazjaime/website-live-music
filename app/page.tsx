@@ -1,52 +1,19 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 
 import TagManager from "react-gtm-module";
 import Image from "next/image";
-import events from "../public/events.json";
 
+import SocialLinks from "../components/socialLinks";
+import events from "../public/events.json";
+import { Event } from "../support/types";
 import styles from "./page.module.css";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
 };
-
-interface Event {
-  pk: number;
-  image: string;
-  description: string;
-  url: string;
-  start_date: string;
-  artist: {
-    name: string;
-    image: string|null;
-    twitter: string|null;
-    facebook: string|null;
-    youtube: string|null;
-    instagram: string|null;
-    tiktok: string|null;
-    soundcloud: string|null;
-    spotify: string|null;
-    appleMusic: string|null;
-    email: string|null;
-    title: string|null;
-    description: string|null;
-    type: string|null;
-    wiki_page_id: string|null;
-    wiki_title: string|null;
-    wiki_description: string|null;
-  }
-  location: {
-    name: string;
-    gmaps: {
-      lat: number;
-      lng: number;
-      name: string;
-    };
-  };
-}
 
 function slugify(str: string) {
   return String(str)
@@ -73,6 +40,29 @@ const days = [
   "Saturday",
   "Sunday",
 ];
+
+const containerStyle = {
+  width: "100%",
+  height: "100%",
+};
+
+const getEventID = (event: Event) =>
+  `${slugify(event.artist.name)}-${event.start_date.split("T")[0]}`;
+
+const getImage = (event: Event): string => {
+  console.log(event);
+  if (event.artist?.metadata?.image) {
+    return event.artist.metadata.image;
+  }
+
+  if (event.location?.metadata?.image) {
+    return event.location.metadata.image;
+  }
+
+  return event.image;
+};
+
+const eventHandler = (event: Event) => window.open(event.url, "_blank");
 
 export default function Home() {
   const [selectedEvents, setSelectedEvents] = useState<Event[]>([]);
@@ -108,14 +98,6 @@ export default function Home() {
 
     map.fitBounds(bounds);
   }, [map, selectedEvents]);
-
-  const containerStyle = {
-    width: "100%",
-    height: "100%",
-  };
-
-  const getEventID = (event: Event) =>
-    `${slugify(event.artist.name)}-${event.start_date.split("T")[0]}`;
 
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
@@ -155,7 +137,7 @@ export default function Home() {
           display: "flex",
         }}
       >
-        <h1 style={{ padding: 12 }}>
+        <h1 style={{ padding: 12, fontSize: 36 }}>
           Chicago <span className={styles.h1}>Live Music</span>
         </h1>
         <select
@@ -183,72 +165,106 @@ export default function Home() {
         }}
       >
         <section style={{ width: "50%", padding: 12, marginTop: 70 }}>
-          <h2 style={{ margin: "0 0 30px 0" }}>Event List</h2>
+          <h2 style={{ margin: "0 0 30px 0", fontSize: 30 }}>Event List</h2>
           <div>
             {selectedEvents.map((event, index) => (
               <div
                 key={index}
                 style={{
-                  position: "relative",
-                  padding: "70px 0",
+                  margin: "70px 0",
+                  display: "flex",
+                  border: "1px dashed #000",
                 }}
                 id={getEventID(event)}
               >
                 <Image
                   priority={index === 0}
-                  src={event.image!}
+                  src={getImage(event)}
                   width={300}
-                  height={300}
+                  height={150}
                   alt={event.artist.name}
                   style={{
                     objectFit: "cover",
-                    width: "100%",
+                    width: 300,
+                    height: 300,
+                    flex: 1,
                   }}
                 />
                 <div
                   style={{
                     borderRight:
                       selectedEvent?.pk === event.pk ? "6px dashed red" : "",
+                    flex: 1,
+                    padding: "0 12px",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                 >
-                  <h3
-                    style={{
-                      margin: "12px 0",
-                    }}
-                  >
-                    {event.artist.name}
-                  </h3>
                   <p
                     style={{
-                      margin: "12px 0",
-                    }}
-                  >
-                    {event.description}
-                  </p>
-                  <p style={{ opacity: 0.8 }}>
-                    {new Date(event.start_date).toDateString()}
-                  </p>
-                  <p
-                    style={{
-                      margin: "12px 0",
+                      margin: 0,
                       opacity: 0.8,
+                      fontSize: 20,
+                      maxHeight: 30,
+                      overflow: "hidden",
                     }}
                   >
                     {event.location.name}
                   </p>
+                  <h3
+                    style={{
+                      margin: 0,
+                      fontSize: 42,
+                      lineHeight: "42px",
+                      maxHeight: 84,
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    {event.artist.name.toLowerCase()}
+                  </h3>
+                  <p
+                    style={{
+                      margin: "12px 0",
+                      maxHeight: 100,
+                      overflow: "hidden",
+                    }}
+                  >
+                    {event.description}
+                  </p>
+                  <div
+                    onClick={() => eventHandler(event)}
+                    style={{
+                      marginTop: "auto",
+                      fontSize: 30,
+
+                      display: "flex",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        marginTop: "auto",
+                        marginBottom: 6,
+                        flex: 1,
+                      }}
+                    >
+                      <SocialLinks event={event} />
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        cursor: "pointer",
+                        textDecoration: "underline",
+                        textAlign: "right",
+                      }}
+                    >
+                      See More
+                    </div>
+                  </div>
                 </div>
-                <a
-                  href={event.url}
-                  target="_blank"
-                  rel="nofollow"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
               </div>
             ))}
           </div>

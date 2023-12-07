@@ -10,7 +10,8 @@
     "events": "node support/events",
     "gps": "node support/gps",
     "reset": "node support/reset",
-    "metadata": "node support/metadata"
+    "metadata": "node support/metadata",
+    "rank": "node support/rank"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",

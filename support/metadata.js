@@ -140,8 +140,7 @@ async function getArtistMetadata(website) {
 
 const snakeCase = (value) => value.trim().replace(/ /g, "_");
 
-async function processArtists() {
-  const query = `metadata_empty=true&wiki_tries=3&ordering=wiki_tries&limit=100`;
+async function processArtists(query) {
   const artists = await getArtists(query);
   console.log(`artist: ${artists.length}`);
   let index = 0;
@@ -151,7 +150,7 @@ async function processArtists() {
     console.log(`\n${index} / ${artists.length}...`);
 
     const artistName = snakeCase(artist.name);
-    console.log(`processing[${artist.pk}]: ${artistName}`);
+    console.log(`processing_artist[${artist.pk}]: ${artistName}`);
 
     const pageId = await getPageId(artistName);
     if (!pageId) {
@@ -191,13 +190,12 @@ async function processArtists() {
   });
 }
 
-async function processLocations() {
-  const query = `metadata_empty=true&wiki_tries=3&ordering=wiki_tries&limit=100`;
+async function processLocations(query) {
   const locations = await getLocations(query);
   console.log(`locations: ${locations.length}`);
   let index = 0;
 
-  await async.eachSeries(locations.slice(0, 5), async (location) => {
+  await async.eachSeries(locations, async (location) => {
     index += 1;
     console.log(`\n${index} / ${locations.length}...`);
 
@@ -243,9 +241,10 @@ async function processLocations() {
 }
 
 async function main() {
-  await processArtists();
+  const query = `metadata_empty=true&wiki_tries=3&ordering=wiki_tries&limit=100`;
+  await processArtists(query);
 
-  await processLocations();
+  await processLocations(query);
 }
 
 main().then(() => {
