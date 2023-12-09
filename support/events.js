@@ -1,11 +1,9 @@
 const async = require("async");
 const moment = require("moment");
 
+const { saveEvent } = require("./mint.js");
 const { getTransformer, getPaginator } = require("./providers/factories.js");
 const logger = require("./logger.js")("events");
-require("dotenv").config();
-
-const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
 
 async function extract(url) {
   const response = await fetch(url);
@@ -22,21 +20,24 @@ function transform(html, link) {
 
 async function load(events) {
   await async.eachSeries(events, async (payload) => {
-    const response = await fetch(`${EVENTS_API}/events/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
+    await saveEvent(payload);
+  });
+}
 
-    const data = await response.json();
-    if (response.status > 201) {
-      logger.info("Error saving event", { payload, data });
-      return;
+async function etl(links, getPages = true) {
+  await async.eachSeries(links, async (link) => {
+    logger.info(`scrapping event`, { url: link.url, getPages });
+    const html = await extract(link.url);
+    const events = transform(html, link);
+    logger.info(`events found`, { total: events.length });
+
+    await load(events);
+
+    if (getPages) {
+      const paginator = getPaginator(link.provider);
+      const paginatorLinks = paginator(html, link);
+      await etl(paginatorLinks, false);
     }
-
-    logger.info(`event saved`, data.slug);
   });
 }
 
@@ -62,23 +63,6 @@ async function main() {
   ];
 
   await etl(links);
-}
-
-async function etl(links, getPages = true) {
-  await async.eachSeries(links, async (link) => {
-    logger.info(`scrapping event`, { url: link.url, getPages });
-    const html = await extract(link.url);
-    const events = transform(html, link);
-    logger.info(`events found`, { total: events.length });
-
-    await load(events);
-
-    if (getPages) {
-      const paginator = getPaginator(link.provider);
-      const paginatorLinks = paginator(html, link);
-      await etl(paginatorLinks, false);
-    }
-  });
 }
 
 main().then(() => {

@@ -7,11 +7,11 @@
 function logger(reference) {
   return {
     info: (msg, payload) => {
-      console.log(msg, payload);
+      console.log(reference, msg, payload);
       // logtail.info(`${reference}:${msg}`, payload);
     },
-    error: (msg) => {
-      console.table({ reference, msg });
+    error: (msg, payload) => {
+      console.log(reference, msg, payload);
       // logtail.error(reference, msg);
     },
     flush: () => {
