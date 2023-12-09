@@ -7,8 +7,7 @@
 function logger(reference) {
   return {
     info: (msg, payload) => {
-      const data = [reference, msg, payload];
-      console.table(data);
+      console.log(msg, payload);
       // logtail.info(`${reference}:${msg}`, payload);
     },
     error: (msg) => {

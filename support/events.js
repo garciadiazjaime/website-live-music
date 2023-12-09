@@ -21,21 +21,22 @@ function transform(html, link) {
 }
 
 async function load(events) {
-  await async.eachSeries(events, async (event) => {
+  await async.eachSeries(events, async (payload) => {
     const response = await fetch(`${EVENTS_API}/events/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(event),
+      body: JSON.stringify(payload),
     });
 
     const data = await response.json();
-    if (response.status !== 201) {
-      logger.info("Error saving event", { event, data });
-    } else {
-      logger.info(`event saved`, { name: event.name });
+    if (response.status > 201) {
+      logger.info("Error saving event", { payload, data });
+      return;
     }
+
+    logger.info(`event saved`, data.slug);
   });
 }
 
@@ -49,7 +50,6 @@ async function main() {
         "YYYY-M-D"
       )}&tribe_eventcategory[0]=1242`,
       city: "CHICAGO",
-      state: "IL",
       provider: "CHOOSECHICAGO",
     },
     {
@@ -57,7 +57,6 @@ async function main() {
         "M/D/YYYY"
       )}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
       city: "CHICAGO",
-      state: "IL",
       provider: "SONGKICK",
     },
   ];
