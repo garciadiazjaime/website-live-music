@@ -2,6 +2,8 @@ const cheerio = require("cheerio");
 const async = require("async");
 require("dotenv").config();
 
+const logger = require("./logger.js")("metadata");
+
 const {
   getArtists,
   saveArtistMetadata,
@@ -10,10 +12,11 @@ const {
   saveLocationMetadata,
   updateLocationRetries,
 } = require("./mint");
+const { snakeCase } = require("./misc");
 
 async function getPageId(artistName) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=1&gsrsearch=%27${artistName}%27`;
-  console.log(`getting pageId: ${url}`);
+  logger.info(`getting pageId`, { url });
   const response = await fetch(url);
 
   const data = await response.json();
@@ -29,7 +32,7 @@ async function getPageId(artistName) {
 
 async function getWikiData(pageId) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&prop=description&pageids=${pageId}&origin=*&format=json`;
-  console.log(`getting description: ${url}`);
+  logger.info(`getting description`, { url });
 
   const response = await fetch(url);
 
@@ -45,7 +48,7 @@ async function getWikiData(pageId) {
 
 async function getWebsite(pageId) {
   const url = `https://en.wikipedia.org/wiki?curid=${pageId}`;
-  console.log(`getting website: ${url}`);
+  logger.info(`getting website`, { url });
 
   const response = await fetch(url);
 
@@ -84,8 +87,8 @@ async function getArtistMetadata(website) {
   if (!website) {
     return;
   }
-  console.log(`getting artist metadata: ${website}`);
-  const response = await fetch(website).catch((error) => console.log(error));
+  logger.info(`getting artist metadata`, { website });
+  const response = await fetch(website).catch((error) => logger.error(error));
   if (!response) {
     return;
   }
@@ -138,23 +141,26 @@ async function getArtistMetadata(website) {
   };
 }
 
-const snakeCase = (value) => value.trim().replace(/ /g, "_");
-
 async function processArtists(query) {
   const artists = await getArtists(query);
-  console.log(`artist: ${artists.length}`);
+  logger.info(`artists found`, { total: artists.length });
   let index = 0;
 
   await async.eachSeries(artists, async (artist) => {
     index += 1;
-    console.log(`\n${index} / ${artists.length}...`);
 
     const artistName = snakeCase(artist.name);
-    console.log(`processing_artist[${artist.pk}]: ${artistName}`);
+
+    logger.info(`processing artist`, {
+      index,
+      total: artists.length,
+      pk: artist.pk,
+      artistName,
+    });
 
     const pageId = await getPageId(artistName);
     if (!pageId) {
-      console.log(`no wiki found for: ${artistName}`);
+      logger.info(`no wiki found for`, { artistName });
 
       await updateArtist(artist.pk);
       return;
@@ -162,12 +168,18 @@ async function processArtists(query) {
 
     const wikiData = await getWikiData(pageId);
     if (!wikiData) {
-      console.log(`no wikiData for ${artistName}:${pageId}`);
+      logger.info(`no wikiData`, {
+        artistName,
+        pageId,
+      });
     }
 
     const website = await getWebsite(pageId);
     if (!website) {
-      console.log(`no website for ${artistName}:${pageId}`);
+      logger.info(`no website`, {
+        artistName,
+        pageId,
+      });
     }
 
     const socialMedia = await getArtistMetadata(website);
@@ -175,7 +187,10 @@ async function processArtists(query) {
       !socialMedia ||
       !Object.keys(socialMedia).find((key) => !!socialMedia[key])
     ) {
-      console.log(`no social-media for ${artistName}:${pageId}`);
+      logger.info(`no social media`, {
+        artistName,
+        pageId,
+      });
     }
 
     const payload = {
@@ -192,19 +207,26 @@ async function processArtists(query) {
 
 async function processLocations(query) {
   const locations = await getLocations(query);
-  console.log(`locations: ${locations.length}`);
+  logger.info(`locations found`, {
+    total: locations.length,
+  });
   let index = 0;
 
   await async.eachSeries(locations, async (location) => {
     index += 1;
-    console.log(`\n${index} / ${locations.length}...`);
 
     const locationName = snakeCase(location.name);
-    console.log(`processing[${location.pk}]: ${locationName}`);
+
+    logger.info(`processing location`, {
+      index,
+      total: locations.length,
+      pk: location.pk,
+      locationName,
+    });
 
     const pageId = await getPageId(locationName);
     if (!pageId) {
-      console.log(`no wiki found for: ${locationName}`);
+      logger.info(`no wiki found for`, { locationName });
 
       await updateLocationRetries(location.pk, { wiki_tries: 1 });
       return;
@@ -212,12 +234,18 @@ async function processLocations(query) {
 
     const wikiData = await getWikiData(pageId);
     if (!wikiData) {
-      console.log(`no wikiData for ${locationName}:${pageId}`);
+      logger.info(`no wikiData`, {
+        locationName,
+        pageId,
+      });
     }
 
     const website = await getWebsite(pageId);
     if (!website) {
-      console.log(`no website for ${locationName}:${pageId}`);
+      logger.info(`no website`, {
+        locationName,
+        pageId,
+      });
     }
 
     const socialMedia = await getArtistMetadata(website);
@@ -225,7 +253,10 @@ async function processLocations(query) {
       !socialMedia ||
       !Object.keys(socialMedia).find((key) => !!socialMedia[key])
     ) {
-      console.log(`no social-media for ${locationName}:${pageId}`);
+      logger.info(`no social media`, {
+        locationName,
+        pageId,
+      });
     }
 
     const payload = {
@@ -248,5 +279,6 @@ async function main() {
 }
 
 main().then(() => {
-  console.log("end");
+  logger.info("finished metadata");
+  logger.flush();
 });

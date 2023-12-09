@@ -1,9 +1,10 @@
 const moment = require("moment");
 
 const { rankEvents } = require("./mint");
+const logger = require("./logger.js")("rank");
 
 async function main() {
-  console.log("rank...");
+  logger.info("rank starting");
 
   const start_date = moment().subtract(7, "days");
 
@@ -12,4 +13,7 @@ async function main() {
   });
 }
 
-main().then(() => console.log("end"));
+main().then(() => {
+  logger.info("finished rank");
+  logger.flush();
+});

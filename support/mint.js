@@ -3,6 +3,8 @@ require("dotenv").config();
 const EVENTS_API = `${process.env.NEXT_PUBLIC_EVENTS_API}/events`;
 const ARTIST_API = `${EVENTS_API}/artists`;
 
+const logger = require("./logger.js")("mint");
+
 async function getLocations(query) {
   const response = await fetch(`${EVENTS_API}/locations/?${query}`);
 
@@ -23,13 +25,16 @@ async function saveLocationMetadata(payload) {
   const data = await response.json();
 
   if (response.status > 201) {
-    console.log("Error saving location metadata");
-    console.log(payload);
-    console.log(data);
+    logger.error(`Error saving location metadata`, {
+      payload,
+      data,
+    });
     return;
   }
 
-  console.log(`location metadata saved: ${payload.location}`);
+  logger.info(`location metadata saved`, {
+    location: payload.location,
+  });
 }
 
 async function upsertGmaps(payload) {
@@ -54,11 +59,13 @@ async function updateLocationRetries(locationPk, payload) {
   });
 
   if (response.status > 201) {
-    console.log(`Error updating location: ${locationPk}`);
     const data = await response.json();
-    console.log(data);
+    logger.error(`Error updating location:`, {
+      locationPk,
+      data,
+    });
   } else {
-    console.log(`location updated: ${locationPk}`);
+    logger.info(`location updated`, { locationPk });
   }
 
   return response;
@@ -90,13 +97,15 @@ async function updateArtist(artistPK, payload) {
   });
 
   if (response.status > 201) {
-    console.log("Error updating artist");
-    console.log({ artistPK, payload });
+    logger.error("Error updating artist", {
+      artistPK,
+      payload,
+    });
 
     return;
   }
 
-  console.log(`artist updated: ${artistPK}`);
+  logger.info(`artist updated`, { artistPK });
 }
 
 async function saveArtistMetadata(payload) {
@@ -111,13 +120,16 @@ async function saveArtistMetadata(payload) {
   const data = await response.json();
 
   if (response.status > 201) {
-    console.log("Error saving artist metadata");
-    console.log(payload);
-    console.log(data);
+    logger.error("Error saving artist metadata", {
+      data,
+      payload,
+    });
     return;
   }
 
-  console.log(`artist metadata saved: ${payload.artist}`);
+  logger.info(`artist metadata saved`, {
+    artist: payload.artist,
+  });
 
   return response;
 }
@@ -132,7 +144,8 @@ async function rankEvents(payload) {
   });
 
   const data = await response.json();
-  console.log(data);
+
+  logger.info("events ranked", data);
 }
 
 module.exports = {

@@ -11,10 +11,12 @@
     "gps": "node support/gps",
     "reset": "node support/reset",
     "metadata": "node support/metadata",
-    "rank": "node support/rank"
+    "rank": "node support/rank",
+    "brainz": "node support/brainz"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",
+    "@logtail/node": "^0.4.17",
     "@react-google-maps/api": "^2.19.2",
     "async": "^3.2.5",
     "cheerio": "^1.0.0-rc.12",
@@ -22,6 +24,7 @@
     "moment": "^2.29.4",
     "next": "14.0.0",
     "node-fetch": "^2.7.0",
+    "node-nlp": "^4.27.0",
     "react": "^18",
     "react-dom": "^18",
     "react-gtm-module": "^2.0.11"

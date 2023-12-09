@@ -2,24 +2,25 @@ const { Client } = require("@googlemaps/google-maps-services-js");
 const async = require("async");
 
 const { sleep } = require("./misc");
+const logger = require("./logger.js")("gps");
 
 require("dotenv").config();
 
 const { getLocations, updateLocationRetries, upsertGmaps } = require("./mint");
 
 async function main() {
-  console.log("starting gps...");
+  logger.info("starting gps");
   const query = "gmaps_empty=true&gmaps_tries=3&ordering=gmaps_tries&limit=100";
   const locations = await getLocations(query).catch((error) => {
-    console.log(error);
+    logger.error(error);
   });
 
   if (!Array.isArray(locations) || !locations.length) {
-    console.log("no locations to process");
+    logger.info("no locations to process");
     return;
   }
 
-  console.log(`${locations.length} locations found`);
+  logger.info(`locations found`, { total: locations.length });
 
   const client = new Client({});
 
@@ -44,25 +45,31 @@ async function main() {
 
     const gmapsResponse = await client
       .findPlaceFromText({ params })
-      .catch((error) => console.log(error));
+      .catch((error) => logger.error(error));
 
     if (
       !Array.isArray(gmapsResponse.data?.candidates) ||
       !gmapsResponse.data.candidates.length
     ) {
-      console.log(
-        `gmaps didn't find gps for[${location.pk}]: ${location.name}`
-      );
+      logger.info(`gps not found`, {
+        pk: location.pk,
+        name: location.name,
+      });
 
       const response = await updateLocationRetries(location.pk);
 
-      console.log(
-        `gps tries saved[${location.pk}]: ${location.name}, status: ${response.status}`
-      );
+      logger.info(`gps tries saved`, {
+        pk: location.pk,
+        name: location.name,
+        status: response.status,
+      });
       return;
     }
 
-    console.log(`processing[${location.pk}]: ${location.name}`);
+    logger.info(`processing location`, {
+      pk: location.pk,
+      name: location.name,
+    });
 
     const { formatted_address, geometry, name, place_id } =
       gmapsResponse.data.candidates[0];
@@ -80,16 +87,23 @@ async function main() {
     const data = await response.json();
 
     if (response.status !== 201) {
-      console.log(`Error saving gps for ${location.pk}`);
-      console.log("gmapsResponse", gmapsResponse.status, gmapsResponse.data);
-      console.log(payload);
-      console.log(data);
+      logger.error(`Error saving gps`, {
+        pk: location.pk,
+        status: gmapsResponse.status,
+        gmaps: gmapsResponse.data,
+        payload,
+        response: data,
+      });
     } else {
-      console.log(`gps saved[${location.pk}]: ${location.name}`);
+      logger.info(`gps saved`, {
+        pk: location.pk,
+        name: location.name,
+      });
     }
   });
 }
 
 main().then(() => {
-  console.log("end");
+  logger.info("finished gps");
+  logger.flush();
 });

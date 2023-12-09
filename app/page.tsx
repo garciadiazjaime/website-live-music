@@ -50,7 +50,6 @@ const getEventID = (event: Event) =>
   `${slugify(event.artist.name)}-${event.start_date.split("T")[0]}`;
 
 const getImage = (event: Event): string => {
-  console.log(event);
   if (event.artist?.metadata?.image) {
     return event.artist.metadata.image;
   }
@@ -64,10 +63,19 @@ const getImage = (event: Event): string => {
 
 const eventHandler = (event: Event) => window.open(event.url, "_blank");
 
+const filterEventsByDate = (events: Event[], date: Date) =>
+  events.filter(
+    (event) =>
+      new Date(event.start_date).toLocaleDateString() ===
+      date.toLocaleDateString()
+  );
+
 export default function Home() {
-  const [selectedEvents, setSelectedEvents] = useState<Event[]>([]);
-  const [selectedEvent, setSelectedEvent] = useState<Event>();
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [selectedEvents, setSelectedEvents] = useState<Event[]>(
+    filterEventsByDate(events, selectedDate)
+  );
+  const [selectedEvent, setSelectedEvent] = useState<Event>();
   const [map, setMap] = useState<google.maps.Map>();
 
   const currentDay = new Date().getDay() - 1;
@@ -106,11 +114,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const _events = events.filter(
-      (event) =>
-        new Date(event.start_date).toLocaleDateString() ===
-        selectedDate.toLocaleDateString()
-    );
+    const _events = filterEventsByDate(events, selectedDate);
     setSelectedEvents(_events);
   }, [selectedDate]);
 
@@ -165,7 +169,9 @@ export default function Home() {
         }}
       >
         <section style={{ width: "50%", padding: 12, marginTop: 70 }}>
-          <h2 style={{ margin: "0 0 30px 0", fontSize: 30 }}>Event List</h2>
+          <h2 style={{ margin: "0 0 30px 0", fontSize: 30 }}>
+            {selectedEvents.length} Events
+          </h2>
           <div>
             {selectedEvents.map((event, index) => (
               <div
@@ -200,23 +206,35 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <p
+                  <div
                     style={{
-                      margin: 0,
+                      display: "flex",
                       opacity: 0.8,
                       fontSize: 20,
-                      maxHeight: 30,
-                      overflow: "hidden",
+                      justifyContent: "space-between",
                     }}
                   >
-                    {event.location.name}
-                  </p>
+                    <div style={{ maxWidth: "75%" }}>{event.location.name}</div>
+                    <div>
+                      {`${
+                        new Date(event.start_date)
+                          .toLocaleDateString()
+                          .split("/20")[0]
+                      }
+                        ${
+                          new Date(event.start_date)
+                            .toLocaleTimeString()
+                            .split(":")[0]
+                        }PM
+                          `}
+                    </div>
+                  </div>
                   <h3
                     style={{
                       margin: 0,
                       fontSize: 42,
-                      lineHeight: "42px",
-                      maxHeight: 84,
+                      lineHeight: "48px",
+                      maxHeight: 98,
                       overflow: "hidden",
                       textOverflow: "ellipsis",
                       textTransform: "capitalize",

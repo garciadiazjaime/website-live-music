@@ -134,7 +134,11 @@ export default function SocialLinks(props: { event: Event }) {
   const links = getLinks(props.event);
 
   return links.map((link) => (
-    <div onClick={() => clickHandler(link.url!)} style={{ cursor: "pointer" }}>
+    <div
+      key={link.url}
+      onClick={() => clickHandler(link.url!)}
+      style={{ cursor: "pointer" }}
+    >
       {link.logo}
     </div>
   ));

@@ -1,6 +1,8 @@
 const async = require("async");
 const moment = require("moment");
+
 const { getTransformer, getPaginator } = require("./providers/factories.js");
+const logger = require("./logger.js")("events");
 require("dotenv").config();
 
 const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
@@ -30,31 +32,33 @@ async function load(events) {
 
     const data = await response.json();
     if (response.status !== 201) {
-      console.log("Error saving event");
-      console.log(event);
-      console.log(data);
+      logger.info("Error saving event", { event, data });
     } else {
-      console.log(`event saved: ${event.name}`);
+      logger.info(`event saved`, { name: event.name });
     }
   });
 }
 
 async function main() {
-  console.log("starting...\n");
+  logger.info("starting events");
   const today = moment();
-  const endDate = moment().add(7, 'days');
+  const endDate = moment().add(7, "days");
   const links = [
     {
-      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format("YYYY-M-D")}&tribe_eventcategory[0]=1242`,
+      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format(
+        "YYYY-M-D"
+      )}&tribe_eventcategory[0]=1242`,
       city: "CHICAGO",
       state: "IL",
-      provider: "CHOOSECHICAGO"
+      provider: "CHOOSECHICAGO",
     },
     {
-      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format("M/D/YYYY")}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
+      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format(
+        "M/D/YYYY"
+      )}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
       city: "CHICAGO",
       state: "IL",
-      provider: "SONGKICK"
+      provider: "SONGKICK",
     },
   ];
 
@@ -63,10 +67,10 @@ async function main() {
 
 async function etl(links, getPages = true) {
   await async.eachSeries(links, async (link) => {
-    console.log(`scrapping: ${link.url}, getPages: ${getPages}`);
+    logger.info(`scrapping event`, { url: link.url, getPages });
     const html = await extract(link.url);
     const events = transform(html, link);
-    console.log(`${events.length} found`);
+    logger.info(`events found`, { total: events.length });
 
     await load(events);
 
@@ -78,4 +82,7 @@ async function etl(links, getPages = true) {
   });
 }
 
-main().then(() => console.log("\nFinished!"));
+main().then(() => {
+  logger.info("finished events");
+  logger.flush();
+});
