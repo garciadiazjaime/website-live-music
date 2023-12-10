@@ -1,17 +1,21 @@
 const { Client } = require("@googlemaps/google-maps-services-js");
 const async = require("async");
+const slugify = require("slugify");
 
+const { getLocations } = require("./mint.js");
 const { sleep } = require("./misc");
 const logger = require("./logger.js")("gps");
 
 require("dotenv").config();
 
-const { getEvents, updateEvents, saveLocation } = require("./mint");
+const { getEvents, updateEvent, saveLocation } = require("./mint");
 
 async function main() {
-  logger.info("starting gps");
+  const chalk = (await import("chalk").then((mod) => mod)).default;
+
+  logger.info("starting");
   const query =
-    "location_empty=true&gmaps_tries=3&ordering=gmaps_tries&limit=1";
+    "location_empty=true&gmaps_tries=3&ordering=gmaps_tries&limit=100";
   const events = await getEvents(query);
 
   if (!Array.isArray(events) || !events.length) {
@@ -25,6 +29,26 @@ async function main() {
 
   await async.eachSeries(events, async (event) => {
     await sleep();
+
+    logger.info(`processing event`, {
+      pk: event.pk,
+      venue: event.venue,
+    });
+
+    const slug_venue = slugify(event.venue, { lower: true, strict: true });
+    const query = `slug_venue=${slug_venue}`;
+    const [location] = await getLocations(query);
+
+    logger.info(`internal location search`, {
+      slug_venue,
+      location: !!location,
+    });
+
+    if (location) {
+      logger.info(chalk.green("location found"), { slug: location.slug });
+      await updateEvent(event.pk, { gmaps_tries: 1, location_pk: location.pk });
+      return;
+    }
 
     const params = {
       input: event.venue,
@@ -50,19 +74,13 @@ async function main() {
       !Array.isArray(gmapsResponse.data?.candidates) ||
       !gmapsResponse.data.candidates.length
     ) {
-      logger.info(`gps not found`, {
-        pk: event.pk,
-        name: event.name,
+      logger.info(chalk.red(`gps not found`), {
+        venue: event.venue,
       });
 
-      await updateEvents(event.pk, { gmaps_tries: 1 });
+      await updateEvent(event.pk, { gmaps_tries: 1 });
       return;
     }
-
-    logger.info(`processing location`, {
-      eventPk: event.pk,
-      eventName: event.slug,
-    });
 
     const { formatted_address, geometry, name, place_id } =
       gmapsResponse.data.candidates[0];
@@ -73,16 +91,17 @@ async function main() {
       lng: geometry.location.lng.toFixed(6),
       place_id,
       event: event.pk,
+      slug_venue,
     };
 
     const response = await saveLocation(payload);
     if (!response) {
-      await updateEvents(event.pk, { gmaps_tries: 1 });
+      await updateEvent(event.pk, { gmaps_tries: 1 });
     }
   });
 }
 
 main().then(() => {
-  logger.info("finished gps");
+  logger.info("finished");
   logger.flush();
 });

@@ -33,7 +33,7 @@ async function getEvents(query) {
   return data.results;
 }
 
-async function updateEvents(eventPk, payload) {
+async function updateEvent(eventPk, payload) {
   const response = await fetch(`${EVENTS_API}/${eventPk}/`, {
     method: "PUT",
     headers: {
@@ -75,18 +75,18 @@ async function saveLocation(payload) {
     return;
   }
 
-  logger.info(`location saved`, { pk: data.pk, slug: data.slug });
+  logger.info(`location saved`, { slug: data.slug });
 
   return response;
 }
 
-// async function getLocations(query) {
-//   const response = await fetch(`${EVENTS_API}/locations/?${query}`);
+async function getLocations(query) {
+  const response = await fetch(`${EVENTS_API}/locations/?${query}`);
 
-//   const data = await response.json();
+  const data = await response.json();
 
-//   return data.results;
-// }
+  return data.results;
+}
 
 // async function saveLocationMetadata(payload) {
 //   const response = await fetch(`${EVENTS_API}/locations/metadata`, {
@@ -192,9 +192,9 @@ async function saveLocation(payload) {
 module.exports = {
   saveEvent,
   getEvents,
-  updateEvents,
+  updateEvent,
   saveLocation,
-  // getLocations,
+  getLocations,
   // updateLocationRetries,
   // saveLocationMetadata,
   // upsertGmaps,
