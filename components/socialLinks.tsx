@@ -95,11 +95,15 @@ const socials = [
 ];
 
 const getLinks = (event: Event) => {
-  const { artist, location } = event;
+  const { artists, location } = event;
 
   const links: { logo: React.ReactElement; url: string }[] = [];
 
-  if (artist.metadata) {
+  artists?.forEach((artist) => {
+    if (!artist.metadata) {
+      return;
+    }
+
     const { metadata } = artist;
 
     socials.forEach((social) => {
@@ -111,7 +115,7 @@ const getLinks = (event: Event) => {
         });
       }
     });
-  }
+  });
 
   if (location.metadata) {
     const { metadata } = location;
@@ -137,7 +141,7 @@ export default function SocialLinks(props: { event: Event }) {
     <div
       key={link.url}
       onClick={() => clickHandler(link.url!)}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "pointer", marginRight: 32 }}
     >
       {link.logo}
     </div>

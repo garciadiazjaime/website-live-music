@@ -9,7 +9,7 @@ async function main() {
 
   const today = moment().subtract(1, "days").format("YYYY-MM-DD");
 
-  const query = `gmaps_empty=false&start_date=${today}&ordering=-rank&limit=1000`;
+  const query = `location_empty=false&start_date=${today}&ordering=-rank&limit=1000`;
 
   const events = await getEvents(query);
 

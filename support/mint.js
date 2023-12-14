@@ -144,65 +144,19 @@ async function getArtists(query) {
   return data.results;
 }
 
-// async function saveArtist(payload) {
-//   const response = await fetch(`${EVENTS_API}/artists/`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(payload),
-//   });
+async function rankEvents(payload) {
+  const response = await fetch(`${EVENTS_API}/rank/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
 
-//   const data = await response.json();
-//   if (response.status > 201) {
-//     logger.error("Error saving artist", {
-//       payload,
-//       data,
-//     });
-//     return;
-//   }
+  const data = await response.json();
 
-//   logger.info(`artist saved`, {
-//     artist: data.slug,
-//   });
-
-//   return response;
-// }
-
-// async function updateArtist(artistPK, payload) {
-//   const response = await fetch(`${ARTIST_API}/${artistPK}/`, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(payload),
-//   });
-
-//   if (response.status > 201) {
-//     logger.error("Error updating artist", {
-//       artistPK,
-//       payload,
-//     });
-
-//     return;
-//   }
-
-//   logger.info(`artist updated`, { artistPK });
-// }
-
-// async function rankEvents(payload) {
-//   const response = await fetch(`${EVENTS_API}/rank/`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(payload),
-//   });
-
-//   const data = await response.json();
-
-//   logger.info("events ranked", data);
-// }
+  logger.info("events ranked", data);
+}
 
 module.exports = {
   saveEvent,
@@ -213,13 +167,5 @@ module.exports = {
   updateLocation,
   saveMetadata,
   getArtists,
-  // saveArtist,
-  // updateLocationRetries,
-  // saveLocationMetadata,
-  // upsertGmaps,
-  // getEvents,
-  // getArtists,
-  // saveArtistMetadata,
-  // updateArtist,
-  // rankEvents,
+  rankEvents,
 };

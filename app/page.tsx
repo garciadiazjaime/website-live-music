@@ -47,11 +47,12 @@ const containerStyle = {
 };
 
 const getEventID = (event: Event) =>
-  `${slugify(event.artist.name)}-${event.start_date.split("T")[0]}`;
+  `${slugify(event.name)}-${event.start_date.split("T")[0]}`;
 
 const getImage = (event: Event): string => {
-  if (event.artist?.metadata?.image) {
-    return event.artist.metadata.image;
+  const artist = event.artists?.find((artist) => artist.metadata?.image);
+  if (artist) {
+    return artist.metadata?.image!;
   }
 
   if (event.location?.metadata?.image) {
@@ -97,8 +98,8 @@ export default function Home() {
 
     selectedEvents.forEach((event) => {
       const latlng = new window.google.maps.LatLng(
-        event.location.gmaps.lat,
-        event.location.gmaps.lng
+        event.location.lat,
+        event.location.lng
       );
 
       bounds.extend(latlng);
@@ -188,8 +189,9 @@ export default function Home() {
                   src={getImage(event)}
                   width={300}
                   height={150}
-                  alt={event.artist.name}
+                  alt={event.name}
                   style={{
+                    backgroundColor: "#333",
                     objectFit: "cover",
                     width: 300,
                     height: 300,
@@ -240,7 +242,7 @@ export default function Home() {
                       textTransform: "capitalize",
                     }}
                   >
-                    {event.artist.name.toLowerCase()}
+                    {event.name.toLowerCase()}
                   </h3>
                   <p
                     style={{
@@ -263,7 +265,6 @@ export default function Home() {
                     <div
                       style={{
                         display: "flex",
-                        justifyContent: "space-between",
                         marginTop: "auto",
                         marginBottom: 6,
                         flex: 1,
@@ -374,8 +375,8 @@ export default function Home() {
                   key={index}
                   onClick={() => markerClickHandler(event)}
                   position={{
-                    lat: event.location.gmaps.lat,
-                    lng: event.location.gmaps.lng,
+                    lat: event.location.lat,
+                    lng: event.location.lng,
                   }}
                 />
               ))}
