@@ -12,7 +12,7 @@
     "reset": "node support/reset",
     "metadata": "node support/metadata",
     "rank": "node support/rank",
-    "brainz": "node support/brainz"
+    "artist": "node support/artist"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",
@@ -25,7 +25,6 @@
     "moment": "^2.29.4",
     "next": "14.0.0",
     "node-fetch": "^2.7.0",
-    "node-nlp": "^4.27.0",
     "react": "^18",
     "react-dom": "^18",
     "react-gtm-module": "^2.0.11",

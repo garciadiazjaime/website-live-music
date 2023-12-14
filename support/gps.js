@@ -45,7 +45,10 @@ async function main() {
     });
 
     if (location) {
-      logger.info(chalk.green("location found"), { slug: location.slug });
+      logger.info(chalk.green("location found"), {
+        slug: location.slug,
+        website: location.website,
+      });
       await updateEvent(event.pk, { gmaps_tries: 1, location_pk: location.pk });
       return;
     }
@@ -84,6 +87,19 @@ async function main() {
 
     const { formatted_address, geometry, name, place_id } =
       gmapsResponse.data.candidates[0];
+
+    const paramsDetails = {
+      place_id,
+      key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+      fields: ["website"],
+    };
+    const detailsResponse = await client.placeDetails({
+      params: paramsDetails,
+    });
+
+    const { website } = detailsResponse.data.result;
+    logger.info("website found", { website });
+
     const payload = {
       name,
       address: formatted_address,
@@ -92,6 +108,7 @@ async function main() {
       place_id,
       event: event.pk,
       slug_venue,
+      website,
     };
 
     const response = await saveLocation(payload);

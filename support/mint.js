@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const EVENTS_API = `${process.env.NEXT_PUBLIC_EVENTS_API}/events`;
-const ARTIST_API = `${EVENTS_API}/artists`;
 
 const logger = require("./logger.js")("mint");
 
@@ -88,8 +87,65 @@ async function getLocations(query) {
   return data.results;
 }
 
-// async function saveLocationMetadata(payload) {
-//   const response = await fetch(`${EVENTS_API}/locations/metadata`, {
+async function updateLocation(pk, payload) {
+  const response = await fetch(`${EVENTS_API}/locations/${pk}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`error updating location:`, {
+      pk,
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`location updated`, { pk: data.pk });
+
+  return response;
+}
+
+async function saveMetadata(payload) {
+  const response = await fetch(`${EVENTS_API}/metadata/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`Error saving metadata`, {
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`metadata saved`, {
+    slug: data.slug,
+  });
+
+  return response;
+}
+
+async function getArtists(query) {
+  const response = await fetch(`${EVENTS_API}/artists/?${query}`);
+
+  const data = await response.json();
+
+  return data.results;
+}
+
+// async function saveArtist(payload) {
+//   const response = await fetch(`${EVENTS_API}/artists/`, {
 //     method: "POST",
 //     headers: {
 //       "Content-Type": "application/json",
@@ -98,34 +154,19 @@ async function getLocations(query) {
 //   });
 
 //   const data = await response.json();
-
 //   if (response.status > 201) {
-//     logger.error(`Error saving location metadata`, {
+//     logger.error("Error saving artist", {
 //       payload,
 //       data,
 //     });
 //     return;
 //   }
 
-//   logger.info(`location metadata saved`, {
-//     location: payload.location,
+//   logger.info(`artist saved`, {
+//     artist: data.slug,
 //   });
-// }
 
-// async function getEvents(query) {
-//   const response = await fetch(`${EVENTS_API}/?${query}`);
-
-//   const data = await response.json();
-
-//   return data.results;
-// }
-
-// async function getArtists(query) {
-//   const response = await fetch(`${ARTIST_API}/?${query}`);
-
-//   const data = await response.json();
-
-//   return data.results;
+//   return response;
 // }
 
 // async function updateArtist(artistPK, payload) {
@@ -149,32 +190,6 @@ async function getLocations(query) {
 //   logger.info(`artist updated`, { artistPK });
 // }
 
-// async function saveArtistMetadata(payload) {
-//   const response = await fetch(`${ARTIST_API}/metadata`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(payload),
-//   });
-
-//   const data = await response.json();
-
-//   if (response.status > 201) {
-//     logger.error("Error saving artist metadata", {
-//       data,
-//       payload,
-//     });
-//     return;
-//   }
-
-//   logger.info(`artist metadata saved`, {
-//     artist: payload.artist,
-//   });
-
-//   return response;
-// }
-
 // async function rankEvents(payload) {
 //   const response = await fetch(`${EVENTS_API}/rank/`, {
 //     method: "POST",
@@ -195,6 +210,10 @@ module.exports = {
   updateEvent,
   saveLocation,
   getLocations,
+  updateLocation,
+  saveMetadata,
+  getArtists,
+  // saveArtist,
   // updateLocationRetries,
   // saveLocationMetadata,
   // upsertGmaps,
