@@ -158,6 +158,30 @@ async function rankEvents(payload) {
   logger.info("events ranked", data);
 }
 
+async function updateSpotify(payload, pk) {
+  const response = await fetch(`${EVENTS_API}/spotify/${pk}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`error updating spotify:`, {
+      pk,
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`spotify updated`, { pk: data.pk });
+
+  return response;
+}
+
 module.exports = {
   saveEvent,
   getEvents,
@@ -168,4 +192,5 @@ module.exports = {
   saveMetadata,
   getArtists,
   rankEvents,
+  updateSpotify,
 };

@@ -12,7 +12,8 @@
     "reset": "node support/reset",
     "metadata": "node support/metadata",
     "rank": "node support/rank",
-    "artist": "node support/artist"
+    "artist": "node support/artist",
+    "spotify": "node support/spotify"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",

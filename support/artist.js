@@ -159,15 +159,11 @@ async function main() {
         twitter: musicbrainz.twitter || website.twitter,
         facebook: musicbrainz.facebook || website.facebook,
         soundcloud: musicbrainz.soundcloud || website.soundcloud,
-        spotify: musicbrainz.spotify || website.spotify,
+        spotify_url: musicbrainz.spotify || website.spotify,
         youtube: musicbrainz.youtube || website.youtube,
         image: musicbrainz.image || website.image,
         type: "ARTIST",
       };
-
-      if (!payload.image && payload.spotify) {
-        payload.image = await getImageFromURL(payload.spotify, "spotify");
-      }
 
       if (!payload.image && payload.soundcloud) {
         payload.image = await getImageFromURL(payload.soundcloud, "soundcloud");
