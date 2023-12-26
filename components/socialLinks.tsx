@@ -1,4 +1,4 @@
-import { Event, Social } from "../support/types";
+import { Event, Social, SocialMedia, Spotify } from "../support/types";
 
 const logos = {
   twitter: (
@@ -84,14 +84,14 @@ const logos = {
 const clickHandler = (url: string) => window.open(url, "_blank");
 
 const socials = [
-  "spotify",
-  "soundcloud",
-  "instagram",
-  "youtube",
-  "appleMusic",
   "twitter",
   "facebook",
+  "youtube",
+  "instagram",
   "tiktok",
+  "soundcloud",
+  "spotify",
+  "appleMusic",
 ];
 
 const getLinks = (event: Event) => {
@@ -107,11 +107,19 @@ const getLinks = (event: Event) => {
     const { metadata } = artist;
 
     socials.forEach((social) => {
-      const _link = metadata[social as keyof Social];
+      const _link: string | Spotify | null = metadata[social as keyof Social];
       if (_link && links.length < 4) {
+        if (social === "spotify") {
+          links.push({
+            logo: logos[social as keyof SocialMedia],
+            url: (_link as Spotify).url,
+          });
+          return;
+        }
+
         links.push({
-          logo: logos[social as keyof Social],
-          url: _link,
+          logo: logos[social as keyof SocialMedia],
+          url: _link as string,
         });
       }
     });
@@ -124,8 +132,8 @@ const getLinks = (event: Event) => {
       const _link = metadata[social as keyof Social];
       if (_link && links.length < 4) {
         links.push({
-          logo: logos[social as keyof Social],
-          url: _link,
+          logo: logos[social as keyof SocialMedia],
+          url: _link as string,
         });
       }
     });

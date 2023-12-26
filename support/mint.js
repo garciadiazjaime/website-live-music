@@ -168,6 +168,7 @@ async function updateSpotify(payload, pk) {
   });
 
   const data = await response.json();
+
   if (response.status > 201) {
     logger.error(`error updating spotify:`, {
       pk,
@@ -179,7 +180,7 @@ async function updateSpotify(payload, pk) {
 
   logger.info(`spotify updated`, { pk: data.pk });
 
-  return response;
+  return data;
 }
 
 module.exports = {

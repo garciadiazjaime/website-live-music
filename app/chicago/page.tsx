@@ -6,9 +6,9 @@ import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 import TagManager from "react-gtm-module";
 import Image from "next/image";
 
-import SocialLinks from "../components/socialLinks";
-import events from "../public/events.json";
-import { Event } from "../support/types";
+import SocialLinks from "../../components/socialLinks";
+import events from "../../public/events.json";
+import { Event } from "../../support/types";
 import styles from "./page.module.css";
 
 const tagManagerArgs = {
