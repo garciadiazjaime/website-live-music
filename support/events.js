@@ -1,8 +1,8 @@
 const async = require("async");
-const moment = require("moment");
 
 const { saveEvent } = require("./mint.js");
 const { getTransformer, getPaginator } = require("./providers/factories.js");
+const { getLinks } = require("./links.js");
 const logger = require("./logger.js")("events");
 
 async function extract(url) {
@@ -43,25 +43,7 @@ async function etl(links, getPages = true) {
 
 async function main() {
   logger.info("starting events");
-  const today = moment();
-  const endDate = moment().add(7, "days");
-  const links = [
-    {
-      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format(
-        "YYYY-M-D"
-      )}&tribe_eventcategory[0]=1242`,
-      city: "CHICAGO",
-      provider: "CHOOSECHICAGO",
-    },
-    {
-      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format(
-        "M/D/YYYY"
-      )}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
-      city: "CHICAGO",
-      provider: "SONGKICK",
-    },
-  ];
-
+  const links = getLinks();
   await etl(links);
 }
 
