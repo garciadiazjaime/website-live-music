@@ -1,0 +1,793 @@
+[
+  {
+    "pk": 74,
+    "name": "Raheem DeVaughn",
+    "slug": "raheem-devaughn",
+    "metadata": {
+      "website": "http://raheemdevaughn.com/",
+      "image": "",
+      "twitter": "https://twitter.com/Raheem_DeVaughn",
+      "facebook": "",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 38,
+        "followers": 520358,
+        "genres": [
+          {
+            "name": "contemporary r&b"
+          },
+          {
+            "name": "neo soul"
+          },
+          {
+            "name": "new jack swing"
+          },
+          {
+            "name": "r&b"
+          },
+          {
+            "name": "urban contemporary"
+          }
+        ],
+        "popularity": 44,
+        "url": "https://open.spotify.com/artist/59NO6KX7wQCG7jGdtH1NtL",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/59NO6KX7wQCG7jGdtH1NtL",
+      "appleMusic": "",
+      "slug": "raheem-devaughn",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 76,
+    "name": "Patti Smith",
+    "slug": "patti-smith",
+    "metadata": {
+      "website": "http://www.pattismith.net/",
+      "image": "https://i1.sndcdn.com/avatars-000016256067-p5dy7i-t500x500.jpg",
+      "twitter": "",
+      "facebook": "https://www.facebook.com/pages/Patti-Smith/212587898832647",
+      "youtube": "https://www.youtube.com/channel/UCZ75jeE46GMKNBvXXKiUCiA",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/pattismithmusic",
+      "spotify": {
+        "pk": 40,
+        "followers": 1066070,
+        "genres": [
+          {
+            "name": "permanent wave"
+          },
+          {
+            "name": "singer-songwriter"
+          },
+          {
+            "name": "art punk"
+          },
+          {
+            "name": "protopunk"
+          }
+        ],
+        "popularity": 55,
+        "url": "https://open.spotify.com/artist/0vYkHhJ48Bs3jWcvZXvOrP",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/0vYkHhJ48Bs3jWcvZXvOrP",
+      "appleMusic": "",
+      "slug": "patti-smith",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 77,
+    "name": "Tchami",
+    "slug": "tchami",
+    "metadata": {
+      "website": "",
+      "image": "https://i1.sndcdn.com/avatars-FursyaxMLJ0KyJxc-CGxAtA-t500x500.jpg",
+      "twitter": "https://twitter.com/iamTchami",
+      "facebook": "https://www.facebook.com/iamTchami",
+      "youtube": "https://www.youtube.com/channel/UCRgn1KPoJrvRqLxj0t0JQgA",
+      "instagram": "https://www.instagram.com/tchami/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/iamtchami",
+      "spotify": {
+        "pk": 41,
+        "followers": 404258,
+        "genres": [
+          {
+            "name": "edm"
+          },
+          {
+            "name": "house"
+          },
+          {
+            "name": "pop dance"
+          },
+          {
+            "name": "progressive house"
+          },
+          {
+            "name": "electro house"
+          },
+          {
+            "name": "deep groove house"
+          },
+          {
+            "name": "future house"
+          }
+        ],
+        "popularity": 55,
+        "url": "https://open.spotify.com/artist/1KpCi9BOfviCVhmpI4G2sY",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/1KpCi9BOfviCVhmpI4G2sY",
+      "appleMusic": "",
+      "slug": "tchami",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 81,
+    "name": "Lydia Cash",
+    "slug": "lydia-cash",
+    "metadata": {
+      "website": "https://www.johnnycash.com/",
+      "image": "https://cdn.smehost.net/johnnycashonlinecom-uslegacyprod/wp-content/uploads/2019/07/190724_johnnycash_og.jpg",
+      "twitter": "https://twitter.com/JohnnyCash",
+      "facebook": "https://www.facebook.com/johnnycash",
+      "youtube": "https://www.youtube.com/user/JohnnyCashVEVO",
+      "instagram": "https://www.instagram.com/johnnycash/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/johnnycash",
+      "spotify": {
+        "pk": 44,
+        "followers": 6096187,
+        "genres": [
+          {
+            "name": "rock"
+          },
+          {
+            "name": "arkansas country"
+          },
+          {
+            "name": "outlaw country"
+          }
+        ],
+        "popularity": 72,
+        "url": "https://open.spotify.com/artist/6kACVPfCOnqzgfEF5ryl0x",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/6kACVPfCOnqzgfEF5ryl0x",
+      "appleMusic": "",
+      "slug": "lydia-cash",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 82,
+    "name": "Mt. Joy",
+    "slug": "mt-joy",
+    "metadata": {
+      "website": "http://www.mtjoyband.com/",
+      "image": "https://i1.sndcdn.com/avatars-000401039334-rfk9eb-t500x500.jpg",
+      "twitter": "https://twitter.com/MtJoyBand",
+      "facebook": "https://www.facebook.com/mtjoyband",
+      "youtube": "https://www.youtube.com/c/MtJoyOfficial",
+      "instagram": "https://www.instagram.com/mtjoyband/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/mtjoyband",
+      "spotify": {
+        "pk": 45,
+        "followers": 435062,
+        "genres": [
+          {
+            "name": "stomp and holler"
+          }
+        ],
+        "popularity": 68,
+        "url": "https://open.spotify.com/artist/69tiO1fG8VWduDl3ji2qhI",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/69tiO1fG8VWduDl3ji2qhI",
+      "appleMusic": "",
+      "slug": "mt-joy",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 83,
+    "name": "Chromeo",
+    "slug": "chromeo",
+    "metadata": {
+      "website": "http://chromeo.net/",
+      "image": "http://static1.squarespace.com/static/63d31ce0f5454455cd56acff/t/6515a3e96f0e5e10c35fa569/1695917033337/blank-logo.png?format=1500w",
+      "twitter": "https://twitter.com/chromeo",
+      "facebook": "https://www.facebook.com/chromeo",
+      "youtube": "https://www.youtube.com/user/chromeo",
+      "instagram": "https://www.instagram.com/chromeo/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/chromeo",
+      "spotify": {
+        "pk": 46,
+        "followers": 388725,
+        "genres": [
+          {
+            "name": "alternative dance"
+          },
+          {
+            "name": "dance rock"
+          },
+          {
+            "name": "filter house"
+          },
+          {
+            "name": "indietronica"
+          },
+          {
+            "name": "neo-synthpop"
+          },
+          {
+            "name": "new rave"
+          },
+          {
+            "name": "nu disco"
+          }
+        ],
+        "popularity": 52,
+        "url": "https://open.spotify.com/artist/2mV8aJphiSHYJf43DxL7Gt",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/2mV8aJphiSHYJf43DxL7Gt",
+      "appleMusic": "",
+      "slug": "chromeo",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 84,
+    "name": "Purple Disco Machine",
+    "slug": "purple-disco-machine",
+    "metadata": {
+      "website": "http://www.purplediscomachine.com/",
+      "image": "https://cdn.shopify.com/s/files/1/0569/9659/3826/files/logo_black_rendered.jpg?v=1639406319",
+      "twitter": "",
+      "facebook": "https://www.facebook.com/purplediscomachine",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/purplediscomachine",
+      "spotify": {
+        "pk": 47,
+        "followers": 606847,
+        "genres": [
+          {
+            "name": "house"
+          },
+          {
+            "name": "deep house"
+          }
+        ],
+        "popularity": 71,
+        "url": "https://open.spotify.com/artist/2WBJQGf1bT1kxuoqziH5g4",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/2WBJQGf1bT1kxuoqziH5g4",
+      "appleMusic": "",
+      "slug": "purple-disco-machine",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 85,
+    "name": "Trans-Siberian Orchestra",
+    "slug": "trans-siberian-orchestra",
+    "metadata": {
+      "website": "http://www.trans-siberian.com/",
+      "image": "https://cdn.ontourmedia.io/tso/non_secure/site/TSO_Generic_Artist_Tile1920x1080.jpg",
+      "twitter": "https://twitter.com/trans_siberian",
+      "facebook": "https://www.facebook.com/TSO",
+      "youtube": "https://www.youtube.com/transsiberianorchestra",
+      "instagram": "https://www.instagram.com/transsiberianorchestra/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/trans-siberian-orchestra",
+      "spotify": {
+        "pk": 48,
+        "followers": 333000,
+        "genres": [
+          {
+            "name": "neo classical metal"
+          },
+          {
+            "name": "progressive metal"
+          }
+        ],
+        "popularity": 67,
+        "url": "https://open.spotify.com/artist/5OSQDUNmll299ldFIF1Dau",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/5OSQDUNmll299ldFIF1Dau",
+      "appleMusic": "",
+      "slug": "trans-siberian-orchestra",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 86,
+    "name": "The Guess Who",
+    "slug": "the-guess-who",
+    "metadata": {
+      "website": "http://www.theguesswho.com/",
+      "image": "https://www.theguesswho.com/wp-content/uploads/2023/11/GW_2024-1024x371.jpg",
+      "twitter": "https://twitter.com/theguesswho",
+      "facebook": "https://www.facebook.com/theguesswho",
+      "youtube": "https://www.youtube.com/user/TheGuessWhoTV",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 49,
+        "followers": 684788,
+        "genres": [
+          {
+            "name": "singer-songwriter"
+          },
+          {
+            "name": "classic rock"
+          },
+          {
+            "name": "rock"
+          },
+          {
+            "name": "album rock"
+          },
+          {
+            "name": "classic canadian rock"
+          },
+          {
+            "name": "country rock"
+          },
+          {
+            "name": "folk rock"
+          },
+          {
+            "name": "hard rock"
+          },
+          {
+            "name": "heartland rock"
+          },
+          {
+            "name": "mellow gold"
+          },
+          {
+            "name": "soft rock"
+          }
+        ],
+        "popularity": 53,
+        "url": "https://open.spotify.com/artist/0cQuYRSzlItquYxsQKDvVc",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/0cQuYRSzlItquYxsQKDvVc",
+      "appleMusic": "",
+      "slug": "the-guess-who",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 87,
+    "name": "Glassjaw",
+    "slug": "glassjaw",
+    "metadata": {
+      "website": "",
+      "image": "",
+      "twitter": "https://twitter.com/glassjaw1993",
+      "facebook": "https://www.facebook.com/glassjaw",
+      "youtube": "",
+      "instagram": "https://www.instagram.com/glassjaw/",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 50,
+        "followers": 150587,
+        "genres": [
+          {
+            "name": "emo"
+          },
+          {
+            "name": "long island punk"
+          },
+          {
+            "name": "post-hardcore"
+          },
+          {
+            "name": "screamo"
+          }
+        ],
+        "popularity": 51,
+        "url": "https://open.spotify.com/artist/7nt6S4klYHg4I7Q4lTSmc0",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/7nt6S4klYHg4I7Q4lTSmc0",
+      "appleMusic": "",
+      "slug": "glassjaw",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 89,
+    "name": "Mustard Plug",
+    "slug": "mustard-plug",
+    "metadata": {
+      "website": "http://www.mustardplug.com/",
+      "image": "",
+      "twitter": "https://twitter.com/mustard_plug",
+      "facebook": "https://www.facebook.com/mustardplug",
+      "youtube": "https://www.youtube.com/user/MustardPlugVideo",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 51,
+        "followers": 75401,
+        "genres": [
+          {
+            "name": "grand rapids indie"
+          },
+          {
+            "name": "ska"
+          },
+          {
+            "name": "ska punk"
+          }
+        ],
+        "popularity": 35,
+        "url": "https://open.spotify.com/artist/5UDSYxxqcF7prMrO2opRhu",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/5UDSYxxqcF7prMrO2opRhu",
+      "appleMusic": "",
+      "slug": "mustard-plug",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 90,
+    "name": "Mike Pinto",
+    "slug": "mike-pinto",
+    "metadata": {
+      "website": "http://www.mikepintomusic.com/",
+      "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/27876/b9ac901496793f7e7b89dcba51d6abdd58e33dd7/original/2022-press-pic-best.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
+      "twitter": "https://twitter.com/mikepinto82",
+      "facebook": "https://www.facebook.com/mikepintomusic",
+      "youtube": "",
+      "instagram": "https://www.instagram.com/mikepintomusic/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/mikepintomusic",
+      "spotify": {
+        "pk": 52,
+        "followers": 42987,
+        "genres": [
+          {
+            "name": "reggae rock"
+          }
+        ],
+        "popularity": 30,
+        "url": "https://open.spotify.com/artist/1GO9LmsSPXbqZjWkfViwIl",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/1GO9LmsSPXbqZjWkfViwIl",
+      "appleMusic": "",
+      "slug": "mike-pinto",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 91,
+    "name": "The Palmer Squares",
+    "slug": "the-palmer-squares",
+    "metadata": {
+      "website": "http://thepalmersquares.com/",
+      "image": "http://static1.squarespace.com/static/5709e87b86db439cd7687dda/t/5e3b22c60076e851683422bc/1580933831882/TPS_squarelogo+copycopy.png?format=1500w",
+      "twitter": "https://twitter.com/PalmerSquares",
+      "facebook": "https://www.facebook.com/ThePalmerSquares",
+      "youtube": "https://www.youtube.com/ThePalmerSquares",
+      "instagram": "https://www.instagram.com/PalmerSquares/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/ThePalmerSquares",
+      "spotify": {
+        "pk": 53,
+        "followers": 35601,
+        "genres": [
+          {
+            "name": "chicago rap"
+          },
+          {
+            "name": "indie pop rap"
+          }
+        ],
+        "popularity": 33,
+        "url": "https://open.spotify.com/artist/0W7bHqLjZ2UVlUSEWSMTXZ",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/0W7bHqLjZ2UVlUSEWSMTXZ",
+      "appleMusic": "",
+      "slug": "the-palmer-squares",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 98,
+    "name": "DJ SKOLi",
+    "slug": "dj-skoli",
+    "metadata": {
+      "website": "http://www.djpaulelstak.nl/",
+      "image": "",
+      "twitter": "https://twitter.com/djpaulelstak",
+      "facebook": "https://www.facebook.com/officialpaulelstak",
+      "youtube": "https://www.youtube.com/user/officialpaulelstak",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 55,
+        "followers": 3640,
+        "genres": [
+          {
+            "name": "gabber"
+          },
+          {
+            "name": "happy hardcore"
+          }
+        ],
+        "popularity": 40,
+        "url": "https://open.spotify.com/artist/6T9QVklRmYwXCCesJI0T54",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/6T9QVklRmYwXCCesJI0T54",
+      "appleMusic": "",
+      "slug": "dj-skoli",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 99,
+    "name": "Mia Panic",
+    "slug": "mia-panic",
+    "metadata": {
+      "website": "http://www.miauk.com/",
+      "image": "https://i1.sndcdn.com/avatars-000009902510-5gjc4g-t500x500.jpg",
+      "twitter": "https://twitter.com/MIAuniverse",
+      "facebook": "https://www.facebook.com/miauk",
+      "youtube": "https://www.youtube.com/user/MIAVEVO",
+      "instagram": "https://www.instagram.com/miamatangi/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/miauk",
+      "spotify": {
+        "pk": 56,
+        "followers": 1286674,
+        "genres": [
+          {
+            "name": "indietronica"
+          },
+          {
+            "name": "new rave"
+          },
+          {
+            "name": "escape room"
+          }
+        ],
+        "popularity": 65,
+        "url": "https://open.spotify.com/artist/0QJIPDAEDILuo8AIq3pMuU",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/0QJIPDAEDILuo8AIq3pMuU",
+      "appleMusic": "",
+      "slug": "mia-panic",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 101,
+    "name": "Cornelius Kite",
+    "slug": "cornelius-kite",
+    "metadata": {
+      "website": "http://www.corneliusjapan.com/",
+      "image": "http://static1.squarespace.com/static/56bce92a3c44d8eb5061f179/t/5916056d6a4963fbaa2b2f97/1494615405877/Cornelius_logo_crop.png?format=1500w",
+      "twitter": "https://twitter.com/corneliusjapan",
+      "facebook": "https://www.facebook.com/corneliusofficial",
+      "youtube": "https://www.youtube.com/user/corneliusofficial",
+      "instagram": "https://www.instagram.com/corneliusofficial/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/cornelius",
+      "spotify": {
+        "pk": 57,
+        "followers": 149614,
+        "genres": [
+          {
+            "name": "indietronica"
+          },
+          {
+            "name": "j-ambient"
+          },
+          {
+            "name": "japanese alternative pop"
+          },
+          {
+            "name": "shibuya-kei"
+          }
+        ],
+        "popularity": 39,
+        "url": "https://open.spotify.com/artist/2vJObElaIZWYDLpiXiJMo9",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/2vJObElaIZWYDLpiXiJMo9",
+      "appleMusic": "",
+      "slug": "cornelius-kite",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 105,
+    "name": "Zedd",
+    "slug": "zedd",
+    "metadata": {
+      "website": "http://www.zedd.net/",
+      "image": "https://i1.sndcdn.com/avatars-No7yEX6IzqBvjP5Q-ym1t7Q-t500x500.jpg",
+      "twitter": "https://twitter.com/Zedd",
+      "facebook": "https://www.facebook.com/Zedd",
+      "youtube": "https://www.youtube.com/user/ZEDDVEVO",
+      "instagram": "https://www.instagram.com/zedd/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/zedd",
+      "spotify": {
+        "pk": 58,
+        "followers": 5967733,
+        "genres": [
+          {
+            "name": "edm"
+          },
+          {
+            "name": "pop dance"
+          },
+          {
+            "name": "complextro"
+          },
+          {
+            "name": "german techno"
+          },
+          {
+            "name": "pop"
+          }
+        ],
+        "popularity": 72,
+        "url": "https://open.spotify.com/artist/2qxJFvFYMEDqd7ui6kSAcq",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/2qxJFvFYMEDqd7ui6kSAcq",
+      "appleMusic": "",
+      "slug": "zedd",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 106,
+    "name": "Nelly",
+    "slug": "nelly",
+    "metadata": {
+      "website": "http://www.nelly.net/",
+      "image": "https://nelly.net/images/og.jpg",
+      "twitter": "https://twitter.com/nelly_mo",
+      "facebook": "https://www.facebook.com/nelly",
+      "youtube": "https://www.youtube.com/user/NellyVEVO",
+      "instagram": "https://www.instagram.com/nelly/",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/nelly-official",
+      "spotify": {
+        "pk": 59,
+        "followers": 2605444,
+        "genres": [
+          {
+            "name": "urban contemporary"
+          },
+          {
+            "name": "dance pop"
+          },
+          {
+            "name": "gangster rap"
+          },
+          {
+            "name": "hip hop"
+          },
+          {
+            "name": "pop rap"
+          },
+          {
+            "name": "rap"
+          },
+          {
+            "name": "st louis rap"
+          }
+        ],
+        "popularity": 72,
+        "url": "https://open.spotify.com/artist/2gBjLmx6zQnFGQJCAQpRgw",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/2gBjLmx6zQnFGQJCAQpRgw",
+      "appleMusic": "",
+      "slug": "nelly",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 108,
+    "name": "The Lemonheads",
+    "slug": "the-lemonheads",
+    "metadata": {
+      "website": "http://www.thelemonheads.net/",
+      "image": "https://static.wixstatic.com/media/db18c5_69273a023cf64ab48ea633c2c1065ce3%7Emv2.png/v1/fit/w_2500,h_1330,al_c/db18c5_69273a023cf64ab48ea633c2c1065ce3%7Emv2.png",
+      "twitter": "https://twitter.com/TheLemonheads",
+      "facebook": "https://www.facebook.com/TheLemonheads",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 60,
+        "followers": 247880,
+        "genres": [
+          {
+            "name": "alternative rock"
+          },
+          {
+            "name": "boston rock"
+          },
+          {
+            "name": "power pop"
+          }
+        ],
+        "popularity": 47,
+        "url": "https://open.spotify.com/artist/6w7fc6IZlo5zwBaKT5jU1X",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/6w7fc6IZlo5zwBaKT5jU1X",
+      "appleMusic": "",
+      "slug": "the-lemonheads",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 109,
+    "name": "Umphrey's McGee",
+    "slug": "umphreys-mcgee",
+    "metadata": {
+      "website": "http://umphreys.com/",
+      "image": "",
+      "twitter": "https://twitter.com/umphreysmcgee",
+      "facebook": "https://www.facebook.com/umphreysmcgee",
+      "youtube": "https://www.youtube.com/user/umvideo",
+      "instagram": "https://www.instagram.com/umphreysmcgee/",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 61,
+        "followers": 198987,
+        "genres": [
+          {
+            "name": "jam band"
+          }
+        ],
+        "popularity": 40,
+        "url": "https://open.spotify.com/artist/7mQilAy42MqNPqUFqK4Z0o",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/7mQilAy42MqNPqUFqK4Z0o",
+      "appleMusic": "",
+      "slug": "umphreys-mcgee",
+      "type": "ARTIST"
+    }
+  }
+]

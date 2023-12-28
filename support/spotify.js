@@ -69,11 +69,12 @@ async function main() {
     return;
   }
 
-  const query = "&spotify_empty=false&limit=1";
+  const query =
+    "&spotify_empty=false&spotify_tries=3&spotify_genres_empty=true&ordering=metadata__spotify__tries&limit=100";
   const artists = await getArtists(query);
   logger.info(`artist found`, { total: artists.length });
   await async.eachSeries(artists, async (artist) => {
-    logger.info(`processing location`, {
+    logger.info(`processing artist`, {
       pk: artist.pk,
       name: artist.name,
       spotify: artist.metadata?.spotify_url_read,
@@ -82,6 +83,15 @@ async function main() {
     const id = artist.metadata.spotify_url_read.split("/").pop();
     const details = await getArtistDetails(token, id);
 
+    if (!details) {
+      logger.info(`invalid artist`, { id });
+      const payload = {
+        tries: 1,
+      };
+      await updateSpotify(payload, artist.metadata.spotify.pk);
+      return;
+    }
+
     const payload = {
       followers: details.followers.total,
       image: details.images[0]?.url,
@@ -89,7 +99,7 @@ async function main() {
       genres: details.genres,
     };
 
-    await updateSpotify(payload, artist.metadata.spotify);
+    await updateSpotify(payload, artist.metadata.spotify.pk);
   });
 }
 

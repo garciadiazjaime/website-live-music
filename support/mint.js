@@ -168,6 +168,7 @@ async function updateSpotify(payload, pk) {
   });
 
   const data = await response.json();
+
   if (response.status > 201) {
     logger.error(`error updating spotify:`, {
       pk,
@@ -179,7 +180,15 @@ async function updateSpotify(payload, pk) {
 
   logger.info(`spotify updated`, { pk: data.pk });
 
-  return response;
+  return data;
+}
+
+async function getArtistMetadata(query) {
+  const response = await fetch(`${EVENTS_API}/artists/metadata?${query}`);
+
+  const data = await response.json();
+
+  return data.results;
 }
 
 module.exports = {
@@ -193,4 +202,5 @@ module.exports = {
   getArtists,
   rankEvents,
   updateSpotify,
+  getArtistMetadata,
 };
