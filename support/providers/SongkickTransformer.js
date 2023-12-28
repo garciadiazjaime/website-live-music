@@ -48,7 +48,6 @@ function SongkickTransformer(html, link) {
         image,
         url,
         start_date,
-        end_date: start_date,
         venue,
         city: link.city,
         provider: link.provider,

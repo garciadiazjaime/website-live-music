@@ -1,10 +1,16 @@
 const moment = require("moment");
-const { program } = require('commander');
+const { program } = require("commander");
 
 function getLinks() {
-  program.option('-p, --provider [providers...]', 'Event provider list (e.g. CHOOSECHICAGO, SONGKICK)');
-  program.option('-c, --city [cities...]', 'Event cities (e.g. CHICAGO, TIJUANA)');
-  program.option('-l --limit <number>', 'Results limit (default: no limit)');
+  program.option(
+    "-p, --provider [providers...]",
+    "Event provider list (e.g. CHOOSECHICAGO, SONGKICK)"
+  );
+  program.option(
+    "-c, --city [cities...]",
+    "Event cities (e.g. CHICAGO, TIJUANA)"
+  );
+  program.option("-l --limit <number>", "Results limit (default: no limit)");
   program.parse();
   const options = program.opts();
 
@@ -33,7 +39,9 @@ function getLinks() {
   ];
 
   return providerLinks
-    .filter((link) => (options.provider ? options.provider.includes(link.provider) : true))
+    .filter((link) =>
+      options.provider ? options.provider.includes(link.provider) : true
+    )
     .filter((link) => (options.city ? options.city.includes(link.city) : true))
     .slice(0, options.limit);
 }

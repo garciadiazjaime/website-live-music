@@ -13,17 +13,21 @@ function ChooseChicagoTransformer(html, link) {
       const url = $(item).find(".card-img-link").attr("href");
 
       const date = $(item).find(".tribe-event-date-start").text();
-      const startTime = $(item).find(".tribe-event-time").text();
+      const startTime = $(item).find(".tribe-event-time").first().text();
       const endTime = $(item).find(".tribe-event-time").last().text();
-      const start_date = moment(
-        `${date} ${startTime}`,
-        "dddd, MMMM Do LT"
-      ).format();
-      const end_date = moment(
-        `${date} ${endTime}`,
-        "dddd, MMMM Do LT"
-      ).format();
-
+      const start_date =
+        moment(`${date} ${startTime}`, "dddd, MMMM Do LT").format() !==
+        "Invalid date"
+          ? moment(`${date} ${startTime}`, "dddd, MMMM Do LT")
+          : moment(`${date} ${startTime}`, "dddd MMMM Do, YYYY LT");
+      const end_date =
+        moment(`${date} ${endTime}`, "dddd, MMMM Do LT").format() !==
+        "Invalid date"
+          ? moment(`${date} ${endTime}`, "dddd, MMMM Do LT")
+          : moment(`${date} ${endTime}`, "dddd MMMM Do, YYYY LT");
+      if (end_date < start_date) {
+        end_date.add(1, "days");
+      }
       const venue = $(item)
         .find(".tribe-events-venue-details b")
         .text()
@@ -36,8 +40,8 @@ function ChooseChicagoTransformer(html, link) {
         description,
         image,
         url,
-        start_date,
-        end_date,
+        start_date: start_date.format(),
+        end_date: end_date.format(),
         venue,
         address: address.text(),
         city: link.city,
