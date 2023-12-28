@@ -183,6 +183,14 @@ async function updateSpotify(payload, pk) {
   return data;
 }
 
+async function getArtistMetadata(query) {
+  const response = await fetch(`${EVENTS_API}/artists/metadata?${query}`);
+
+  const data = await response.json();
+
+  return data.results;
+}
+
 module.exports = {
   saveEvent,
   getEvents,
@@ -194,4 +202,5 @@ module.exports = {
   getArtists,
   rankEvents,
   updateSpotify,
+  getArtistMetadata,
 };

@@ -66,7 +66,7 @@ interface Location {
   metadata: Metadata | null;
 }
 
-interface Artist {
+export interface Artist {
   pk: number;
   name: string;
   metadata: Metadata | null;
