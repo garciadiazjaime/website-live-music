@@ -1,22 +1,28 @@
 const { ChooseChicagoTransformer } = require("./ChooseChicagoTransformer.js");
+const { Do312Transformer, Do312Pages } = require("./Do312Transformer.js");
 const { SongkickTransformer, SongkickPages } = require("./SongkickTransformer.js");
 
-const transformerProvidersMap = {
-  'CHOOSECHICAGO': ChooseChicagoTransformer,
-  'SONGKICK': SongkickTransformer
+const providersMap = {
+  'CHOOSECHICAGO': {
+    'transformer': ChooseChicagoTransformer,
+    'paginator': () => []
+  },
+  'SONGKICK': {
+    'transformer': SongkickTransformer,
+    'paginator': SongkickPages
+  },
+  'DO312': {
+    'transformer': Do312Transformer,
+    'paginator': Do312Pages
+  }
 }
 
-const paginatorProvidersMap = {
-  'CHOOSECHICAGO': () => [],
-  'SONGKICK': SongkickPages,
+function getTransformer(provider) {
+  return providersMap[provider].transformer;
 }
 
-function getTransformer(provider){
-  return transformerProvidersMap[provider];
-}
-
-function getPaginator(provider){
-  return paginatorProvidersMap[provider];
+function getPaginator(provider) {
+  return providersMap[provider].paginator;
 }
 
 module.exports = { getTransformer, getPaginator }

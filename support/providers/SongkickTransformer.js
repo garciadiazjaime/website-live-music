@@ -19,7 +19,6 @@ function SongkickPages(html, originalLink) {
       return {
         url: url,
         city: originalLink.city,
-        state: originalLink.state,
         provider: originalLink.provider,
       };
     });
