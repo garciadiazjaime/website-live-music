@@ -25,6 +25,11 @@ function getLinks() {
       city: "CHICAGO",
       provider: "SONGKICK",
     },
+    {
+      url: `https://do312.com/events/live-music/${today.format("YYYY/MM/DD")}`,
+      city: "CHICAGO",
+      provider: "DO312",
+    },
   ];
 
   return providerLinks
