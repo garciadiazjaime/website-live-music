@@ -2,16 +2,10 @@ require("dotenv").config();
 
 const EVENTS_API = `${process.env.NEXT_PUBLIC_EVENTS_API}/events`;
 
-async function getLocations(query) {
-  const response = await fetch(`${EVENTS_API}/locations/?${query}`);
+const logger = require("./logger.js")("mint");
 
-  const data = await response.json();
-
-  return data.results;
-}
-
-async function upsertGmaps(payload) {
-  const response = await fetch(`${EVENTS_API}/locations/gmaps/`, {
+async function saveEvent(payload) {
+  const response = await fetch(`${EVENTS_API}/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -19,16 +13,13 @@ async function upsertGmaps(payload) {
     body: JSON.stringify(payload),
   });
 
-  return response;
-}
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error("error saving event", { payload, data });
+    return;
+  }
 
-async function updateLocationRetries(locationPk) {
-  const response = await fetch(`${EVENTS_API}/locations/${locationPk}/`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  logger.info(`event saved`, { pk: data.pk });
 
   return response;
 }
@@ -41,9 +32,165 @@ async function getEvents(query) {
   return data.results;
 }
 
+async function updateEvent(eventPk, payload) {
+  const response = await fetch(`${EVENTS_API}/${eventPk}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`error updating event:`, {
+      eventPk,
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`event updated`, { pk: data.pk });
+
+  return response;
+}
+
+async function saveLocation(payload) {
+  const response = await fetch(`${EVENTS_API}/locations/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`error saving location:`, {
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`location saved`, { slug: data.slug });
+
+  return response;
+}
+
+async function getLocations(query) {
+  const response = await fetch(`${EVENTS_API}/locations/?${query}`);
+
+  const data = await response.json();
+
+  return data.results;
+}
+
+async function updateLocation(pk, payload) {
+  const response = await fetch(`${EVENTS_API}/locations/${pk}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`error updating location:`, {
+      pk,
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`location updated`, { pk: data.pk });
+
+  return response;
+}
+
+async function saveMetadata(payload) {
+  const response = await fetch(`${EVENTS_API}/metadata/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`Error saving metadata`, {
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`metadata saved`, {
+    slug: data.slug,
+  });
+
+  return response;
+}
+
+async function getArtists(query) {
+  const response = await fetch(`${EVENTS_API}/artists/?${query}`);
+
+  const data = await response.json();
+
+  return data.results;
+}
+
+async function rankEvents(payload) {
+  const response = await fetch(`${EVENTS_API}/rank/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+
+  logger.info("events ranked", data);
+}
+
+async function updateSpotify(payload, pk) {
+  const response = await fetch(`${EVENTS_API}/spotify/${pk}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`error updating spotify:`, {
+      pk,
+      payload,
+      data,
+    });
+    return;
+  }
+
+  logger.info(`spotify updated`, { pk: data.pk });
+
+  return response;
+}
+
 module.exports = {
-  getLocations,
-  updateLocationRetries,
-  upsertGmaps,
+  saveEvent,
   getEvents,
+  updateEvent,
+  saveLocation,
+  getLocations,
+  updateLocation,
+  saveMetadata,
+  getArtists,
+  rankEvents,
+  updateSpotify,
 };

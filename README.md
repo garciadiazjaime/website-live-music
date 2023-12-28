@@ -12,9 +12,9 @@ npm run dev
 
 [http://localhost:3000](http://localhost:3000)
 
-## ETLs
+## Scripts
 
-The API needs to be running.
+The [BE](https://github.com/garciadiazjaime/django-models) needs to be running.
 
 ### Events
 
@@ -22,7 +22,7 @@ The API needs to be running.
 npm run events
 ```
 
-This script scrapes Chicago Events websites and sends them to the API.
+This script scrapes Chicago Events websites and sends them to the BE.
 
 ### GPS
 
@@ -30,4 +30,39 @@ This script scrapes Chicago Events websites and sends them to the API.
 npm run gps
 ```
 
-This script asks google maps the coordinates of the saved events locations.
+This script asks `google maps` the coordinates of the events locations.
+
+## How to update Events
+
+- Make sure the [BE](https://github.com/garciadiazjaime/django-models) is running.
+
+- Set both `environment variables`.
+
+```bash
+# .env
+
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=
+NEXT_PUBLIC_EVENTS_API=
+```
+
+- Get the events.
+
+```bash
+npm run events
+```
+
+- Get coordinates for new locations.
+
+```bash
+npm run gps
+```
+
+- Reset [events.json](./public/events.json).
+
+```bash
+npm run reset
+```
+
+- Open PR.
+
+Once merged, the [site](https://livemusic.mintitmedia.com/) should reflect new events in a matter of minutes.

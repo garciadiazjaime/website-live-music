@@ -24,7 +24,7 @@ function ChooseChicagoTransformer(html, link) {
         "dddd, MMMM Do LT"
       ).format();
 
-      const addressName = $(item)
+      const venue = $(item)
         .find(".tribe-events-venue-details b")
         .text()
         .split(",")[0];
@@ -38,12 +38,10 @@ function ChooseChicagoTransformer(html, link) {
         url,
         start_date,
         end_date,
-        location: {
-          name: addressName,
-          address: address.text(),
-          city: link.city,
-          state: link.state,
-        },
+        venue,
+        address: address.text(),
+        city: link.city,
+        provider: link.provider,
       };
     });
 

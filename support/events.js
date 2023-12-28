@@ -1,9 +1,9 @@
 const async = require("async");
 const moment = require("moment");
-const { getTransformer, getPaginator } = require("./providers/factories.js");
-require("dotenv").config();
 
-const EVENTS_API = process.env.NEXT_PUBLIC_EVENTS_API;
+const { saveEvent } = require("./mint.js");
+const { getTransformer, getPaginator } = require("./providers/factories.js");
+const logger = require("./logger.js")("events");
 
 async function extract(url) {
   const response = await fetch(url);
@@ -19,54 +19,17 @@ function transform(html, link) {
 }
 
 async function load(events) {
-  await async.eachSeries(events, async (event) => {
-    const response = await fetch(`${EVENTS_API}/events/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(event),
-    });
-
-    const data = await response.json();
-    if (response.status !== 201) {
-      console.log("Error saving event");
-      console.log(event);
-      console.log(data);
-    } else {
-      console.log(`event saved: ${event.name}`);
-    }
+  await async.eachSeries(events, async (payload) => {
+    await saveEvent(payload);
   });
-}
-
-async function main() {
-  console.log("starting...\n");
-  const today = moment();
-  const endDate = moment().add(7, 'days');
-  const links = [
-    {
-      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format("YYYY-M-D")}&tribe_eventcategory[0]=1242`,
-      city: "CHICAGO",
-      state: "IL",
-      provider: "CHOOSECHICAGO"
-    },
-    {
-      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format("M/D/YYYY")}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
-      city: "CHICAGO",
-      state: "IL",
-      provider: "SONGKICK"
-    },
-  ];
-
-  await etl(links);
 }
 
 async function etl(links, getPages = true) {
   await async.eachSeries(links, async (link) => {
-    console.log(`scrapping: ${link.url}, getPages: ${getPages}`);
+    logger.info(`scrapping event`, { url: link.url, getPages });
     const html = await extract(link.url);
     const events = transform(html, link);
-    console.log(`${events.length} found`);
+    logger.info(`events found`, { total: events.length });
 
     await load(events);
 
@@ -78,4 +41,31 @@ async function etl(links, getPages = true) {
   });
 }
 
-main().then(() => console.log("\nFinished!"));
+async function main() {
+  logger.info("starting events");
+  const today = moment();
+  const endDate = moment().add(7, "days");
+  const links = [
+    {
+      url: `https://www.choosechicago.com/events/?tribe-bar-date=${today.format(
+        "YYYY-M-D"
+      )}&tribe_eventcategory[0]=1242`,
+      city: "CHICAGO",
+      provider: "CHOOSECHICAGO",
+    },
+    {
+      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format(
+        "M/D/YYYY"
+      )}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
+      city: "CHICAGO",
+      provider: "SONGKICK",
+    },
+  ];
+
+  await etl(links);
+}
+
+main().then(() => {
+  logger.info("finished events");
+  logger.flush();
+});
