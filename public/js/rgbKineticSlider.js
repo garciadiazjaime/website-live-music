@@ -231,13 +231,12 @@
                 imgSprite = new PIXI.Sprite(texture);
 
                 // calculate the scale to fit the renderer dimensions
-                // const scaleToFitWidth = renderer.width / imgSprite.width;
+                const scaleToFitWidth = renderer.width / imgSprite.width;
                 const scaleToFitHeight = renderer.height / imgSprite.height;
-                setTimeout(() => console.log(imgSprite.height),300)
-                // const scale = Math.min(scaleToFitWidth, scaleToFitHeight);
+                const scale = Math.min(scaleToFitWidth, scaleToFitHeight);
 
                 // set sprite scale
-                imgSprite.scale.set(1);
+                imgSprite.scale.set(10);
 
                 // center img
                 imgSprite.anchor.set(0.5);
@@ -300,7 +299,7 @@
                         }
 
                         else {
-                            word_wrap = window.innerWidth / 1.2;
+                            word_wrap = window.innerWidth / 1.5;
                         }
 
                         // get string after :
@@ -359,7 +358,7 @@
                             let word_wrap;
 
                             if(window.innerWidth < 768) {
-                                word_wrap = renderer.width / 1.5
+                                word_wrap = renderer.width / 2
                             }
 
                             else {
@@ -850,6 +849,32 @@
                 }
             }
         }
+
+        ///////////////////////////////
+
+        //  Autoplay
+
+        ///////////////////////////////
+
+        let playSlider = document.querySelector('#playSlider');
+        const intervalDuration = 3000;
+        playSlider.addEventListener('click', (e) => {
+            console.log('thing')
+            // Start the interval
+            const intervalId = setInterval(() => {
+                if (currentIndex >= 0 && currentIndex < options.slideImages.length - 1) {
+                    slideTransition(currentIndex + 1);
+                } else {
+                    slideTransition(0);
+                }
+            }, intervalDuration);
+
+            // Stop the interval after 3 iterations (adjust as needed)
+            setTimeout(() => {
+                clearInterval(intervalId);
+            }, options.slideImages.length * intervalDuration);
+        });
+
 
         ///////////////////////////////
 

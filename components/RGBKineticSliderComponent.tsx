@@ -104,14 +104,13 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
         textSubTitleSize: 20, // subtitle size
         mobileTextSubTitleSize: 21, // mobile subtitle size
         textSubTitleLetterspacing: 2, // subtitle letter spacing
-        textSubTitleOffsetTop: 60, // subtitle offset top
+        textSubTitleOffsetTop: 200, // subtitle offset top
         mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
       });
 
       setSliderInstance(slider);
 
       // Start recording after the slider is initialized
-      startRecording();
 
       // Cleanup when the component is unmounted
       return () => {
@@ -122,66 +121,64 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
     }
   }, [scriptsLoaded, images, texts]);
 
-  const startRecording = () => {
-    setTimeout(() => {
-      const chunks: BlobPart[] = [];
-      const canvas = document.querySelector('#rgbKineticSlider canvas');
-
-      if (!canvas) {
-        console.error('Canvas not found');
-        return;
-      }
-
-      // Load your audio file
-      const audioElement = new Audio('/audio/music_sample.mp3');
-
-      // Listen for the canplay event before starting recording
-      audioElement.addEventListener('canplay', () => {
-        console.log('Audio can play');
-
-        const stream = canvas.captureStream();
-
-        const audioStream = audioElement.captureStream();
-
-        // Add the audio track to the video stream
-        stream.addTrack(audioStream.getAudioTracks()[0]);
-
-        const rec = new MediaRecorder(stream);
-
-        // Connect the audio to the media recorder
-        rec.ondataavailable = (e) => chunks.push(e.data);
-        rec.onstop = () => {
-          exportVid(new Blob(chunks, { type: 'video/webm' }));
-          audioElement.pause();
-        };
-
-        // Start playing the audio and recording simultaneously
-        audioElement.play();
-        rec.start();
-
-        setTimeout(() => {
-          rec.stop();
-        }, 15000);
-      });
-    }, 300);
-  };
-
-  // Function to export video
-  const exportVid = (blob: Blob) => {
-    const vid = document.createElement('video');
-    vid.style.width = '30%';
-    vid.src = URL.createObjectURL(blob);
-    vid.controls = true;
-    document.body.appendChild(vid);
-
-    const a = document.createElement('a');
-    a.download = 'myvid.webm';
-    a.href = vid.src;
-    a.textContent = 'download the video';
-    document.body.appendChild(a);
-  };
-
   return <div id="rgbKineticSlider" className="rgbKineticSlider" />;
+};
+
+// Function to export video
+const exportVid = (blob: Blob) => {
+  const vid = document.createElement('video');
+  vid.style.width = '30%';
+  vid.src = URL.createObjectURL(blob);
+  vid.controls = true;
+  document.body.appendChild(vid);
+
+  const a = document.createElement('a');
+  a.download = 'myvid.webm';
+  a.href = vid.src;
+  a.textContent = 'download the video';
+  document.body.appendChild(a);
+};
+
+export const startRecording = () => {
+  const chunks: BlobPart[] = [];
+  const canvas = document.querySelector('#rgbKineticSlider canvas');
+
+  if (!canvas) {
+    console.error('Canvas not found');
+    return;
+  }
+
+  // Load your audio file
+  const audioElement = new Audio('/audio/music_sample.mp3');
+
+  // Listen for the canplay event before starting recording
+  audioElement.addEventListener('canplay', () => {
+    console.log('Audio can play');
+
+    const stream = canvas.captureStream();
+
+    const audioStream = audioElement.captureStream();
+
+    // Add the audio track to the video stream
+    stream.addTrack(audioStream.getAudioTracks()[0]);
+
+    const rec = new MediaRecorder(stream);
+
+    // Connect the audio to the media recorder
+    rec.ondataavailable = (e) => chunks.push(e.data);
+    rec.onstop = () => {
+      exportVid(new Blob(chunks, { type: 'video/webm' }));
+      audioElement.pause();
+    };
+
+    // Start playing the audio and recording simultaneously
+    audioElement.play();
+    rec.start();
+
+    setTimeout(() => {
+      rec.stop();
+    }, 3000 * 5);
+  });
 };
 
 export default RGBKineticSliderComponent;
