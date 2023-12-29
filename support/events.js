@@ -24,20 +24,24 @@ async function load(events) {
   });
 }
 
-async function etl(links, getPages = true) {
+async function processLink(link, getPages = true) {
+  logger.info(`scrapping event`, { url: link.url, getPages });
+  const html = await extract(link.url);
+  const events = transform(html, link);
+  logger.info(`events found`, { total: events.length });
+
+  await load(events);
+
+  if (getPages) {
+    const paginator = getPaginator(link.provider);
+    const paginatorLinks = paginator(html, link);
+    await etl(paginatorLinks, false);
+  }
+}
+
+async function etl(links) {
   await async.eachSeries(links, async (link) => {
-    logger.info(`scrapping event`, { url: link.url, getPages });
-    const html = await extract(link.url);
-    const events = transform(html, link);
-    logger.info(`events found`, { total: events.length });
-
-    await load(events);
-
-    if (getPages) {
-      const paginator = getPaginator(link.provider);
-      const paginatorLinks = paginator(html, link);
-      await etl(paginatorLinks, false);
-    }
+    await processLink(link);
   });
 }
 
@@ -47,7 +51,13 @@ async function main() {
   await etl(links);
 }
 
-main().then(() => {
-  logger.info("finished events");
-  logger.flush();
-});
+if (require.main === module) {
+  main().then(() => {
+    logger.info("finished events");
+    logger.flush();
+  });
+}
+
+module.exports = {
+  processLink,
+};
