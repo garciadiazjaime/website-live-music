@@ -1,5 +1,3 @@
-
-Classical,Classical
 Classical,Andalusian classical music
 Classical,Indian classical music
 Classical,Korean court music
@@ -466,8 +464,7 @@ Electronic,Tech trance
 Electronic,Uplifting trance
 Electronic,Vocal trance
 Electronic,UK garage
-Electronic,
-2-step garage
+Electronic,2-step garage
 Electronic,Bassline
 Electronic,Breakstep
 Electronic,Dubstep
@@ -522,6 +519,7 @@ Folk,Sung poetry
 Folk,Tarantella/Pizzica
 Folk,Traditional blues verses
 
+Hip Hop,Hip Hop
 Hip Hop,Alternative hip hop
 Hip Hop,Hipster hop
 Hip Hop,Beatboxing
@@ -742,6 +740,7 @@ Pop,Wonky pop
 Pop,Worldbeat
 Pop,Yé-yé
 
+R&B,Soul
 R&B,Alternative R&B
 R&B,Contemporary R&B
 R&B,Disco
@@ -772,7 +771,6 @@ R&B,Progressive soul
 R&B,Psychedelic soul
 R&B,Quiet storm
 R&B,Southern soul
-
 
 Rock,Active rock
 Rock,Adult album alternative
@@ -1246,3 +1244,145 @@ Latin,Timba
 Latin,Tropipop
 Latin,Urbano music
 Latin,Vallenato
+
+
+Asian,Shashmaqam
+Asian,Pashto music
+Asian,Kazakh folk music
+Asian,Kyrgyz folk music
+Asian,Mongolian folk music
+Asian,Tuvan throat singing
+Asian,Tajik folk music
+Asian,C-pop
+Asian,Cantopop
+Asian,Hokkien pop
+Asian,Mandopop
+Asian,Chinese hip hop
+Asian,Chinese folk music
+Asian,Chinese rock
+Asian,Hong Kong English pop
+Asian,Hong Kong hip hop
+Asian,Taiwanese hip hop
+Asian,Taiwanese pop
+Asian,Taiwanese rock
+Asian,Anime song
+Asian,Enka
+Asian,J-pop
+Asian,Japanese hip hop
+Asian,Japanese jazz
+Asian,Japanese rock
+Asian,Kayōkyoku
+Asian,K-pop
+Asian,Korean folk music
+Asian,Korean hip hop
+Asian,Korean rock
+Asian,Trot
+Asian,Asian Underground
+Asian,Baul
+Asian,Bhangra
+Asian,Bhawaiya
+Asian,Dohori
+Asian,Filmi
+Asian,Indian classical
+Asian,Carnatic
+Asian,Hindustani classical
+Asian,Indian jazz
+Asian,Indian pop
+Asian,Indian rock
+Asian,Raga rock
+Asian,Kuthu
+Asian,Lavani
+Asian,Morlam
+Asian,Ragini
+Asian,Sufi rock
+Asian,Baila
+Asian,Sri Lankan hip hop
+Asian,Malaysian hip hop
+Asian,Malaysian pop
+Asian,Malaysian rock
+Asian,Dangdut
+Asian,Indo pop
+Asian,Sundanese pop
+Asian,Keroncong
+Asian,Luk thung
+Asian,Luk krung
+Asian,Thai pop
+Asian,Thai string pop
+Asian,Manila sound
+Asian,Original Pilipino
+Asian,Pinoy pop
+Asian,Pinoy rock
+Asian,L-pop
+Asian,Mor lam
+Asian,V-pop
+Asian,Arabic music
+Asian,Arabic pop music
+Asian,Fann at-Tanbura
+Asian,Fijiri
+Asian,Khaliji
+Asian,Liwa
+Asian,Music of Israel
+Asian,Persian traditional music
+Asian,Sawt
+Asian,Music of Turkey
+Asian,Turkish folk music
+Asian,Gypsy music
+
+
+
+Experimental,Experimental
+Blues,Blues
+Country,Country
+Easy Listening,Easy Listening
+Electronic,Electronic
+Folk,Folk
+Hip Hop,Hip Hop
+Jazz,Jazz
+Pop,Pop
+R&B,R&B
+Rock,Rock
+Metal,Metal
+Punk,Punk
+African,African
+Latin,Latin
+Classical,Classical
+Asian,Asian
+
+
+
+Electronic,dance rock
+Electronic,filter house
+Electronic,neo-synthpop
+Electronic,nu disco
+Electronic,house
+Metal,neo classical metal
+Rock,album rock
+Rock,classic canadian rock
+Rock,mellow gold
+Punk,long island punk
+Rock,grand rapids indie
+Hip Hop,chicago rap
+Hip Hop,indie pop rap
+Hip Hop,escape room
+Experimental,j-ambient
+Pop,pop dance
+Asian,japanese alternative pop
+Electronic,german techno
+Latin,urban contemporary
+Pop,dance pop
+Hip Hop,gangster rap
+Hip Hop,rap
+Hip Hop,st louis rap
+Rock,boston rock
+Pop,jam band
+Blues,motown
+Country,mellow gold
+Pop,brill building pop
+Latin,brazilian techno
+Electronic,dark techno
+Electronic,deep minimal techno
+Electronic,italian techno
+Electronic,melodic techno
+Jazz,jazz guitar
+Folk,stomp and holler
+Electronic,deep techno

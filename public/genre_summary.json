@@ -1,0 +1,1893 @@
+{
+  "parent": {
+    "raw": {
+      "folk": 5,
+      "rock": 26,
+      "electronic": 46,
+      "metal": 3,
+      "country": 5,
+      "punk": 7,
+      "latin": 8,
+      "hip hop": 14,
+      "experimental": 1,
+      "asian": 1,
+      "pop": 14,
+      "r&b": 13,
+      "blues": 3,
+      "easy listening": 1,
+      "jazz": 3
+    },
+    "sort": [
+      [
+        "electronic",
+        46
+      ],
+      [
+        "rock",
+        26
+      ],
+      [
+        "hip hop",
+        14
+      ],
+      [
+        "pop",
+        14
+      ],
+      [
+        "r&b",
+        13
+      ],
+      [
+        "latin",
+        8
+      ],
+      [
+        "punk",
+        7
+      ],
+      [
+        "folk",
+        5
+      ],
+      [
+        "country",
+        5
+      ],
+      [
+        "metal",
+        3
+      ],
+      [
+        "blues",
+        3
+      ],
+      [
+        "jazz",
+        3
+      ],
+      [
+        "experimental",
+        1
+      ],
+      [
+        "asian",
+        1
+      ],
+      [
+        "easy listening",
+        1
+      ]
+    ]
+  },
+  "artists": {
+    "raw": {
+      "82": {
+        "pk": 82,
+        "name": "Mt. Joy",
+        "image": "https://i1.sndcdn.com/avatars-000401039334-rfk9eb-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "stomp and holler"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      "83": {
+        "pk": 83,
+        "name": "Chromeo",
+        "image": "http://static1.squarespace.com/static/63d31ce0f5454455cd56acff/t/6515a3e96f0e5e10c35fa569/1695917033337/blank-logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative dance",
+            "dance rock",
+            "filter house",
+            "indietronica",
+            "neo-synthpop",
+            "new rave",
+            "nu disco"
+          ],
+          "parents": [
+            "rock",
+            "electronic"
+          ]
+        }
+      },
+      "84": {
+        "pk": 84,
+        "name": "Purple Disco Machine",
+        "image": "https://cdn.shopify.com/s/files/1/0569/9659/3826/files/logo_black_rendered.jpg?v=1639406319",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "deep house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "85": {
+        "pk": 85,
+        "name": "Trans-Siberian Orchestra",
+        "image": "https://cdn.ontourmedia.io/tso/non_secure/site/TSO_Generic_Artist_Tile1920x1080.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "neo classical metal",
+            "progressive metal"
+          ],
+          "parents": [
+            "metal"
+          ]
+        }
+      },
+      "86": {
+        "pk": 86,
+        "name": "The Guess Who",
+        "image": "https://www.theguesswho.com/wp-content/uploads/2023/11/GW_2024-1024x371.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "singer-songwriter",
+            "classic rock",
+            "rock",
+            "album rock",
+            "classic canadian rock",
+            "country rock",
+            "folk rock",
+            "hard rock",
+            "heartland rock",
+            "mellow gold",
+            "soft rock"
+          ],
+          "parents": [
+            "folk",
+            "rock",
+            "country"
+          ]
+        }
+      },
+      "87": {
+        "pk": 87,
+        "name": "Glassjaw",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "emo",
+            "long island punk",
+            "post-hardcore",
+            "screamo"
+          ],
+          "parents": [
+            "punk"
+          ]
+        }
+      },
+      "89": {
+        "pk": 89,
+        "name": "Mustard Plug",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "grand rapids indie",
+            "ska",
+            "ska punk"
+          ],
+          "parents": [
+            "rock",
+            "latin"
+          ]
+        }
+      },
+      "91": {
+        "pk": 91,
+        "name": "The Palmer Squares",
+        "image": "http://static1.squarespace.com/static/5709e87b86db439cd7687dda/t/5e3b22c60076e851683422bc/1580933831882/TPS_squarelogo+copycopy.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chicago rap",
+            "indie pop rap"
+          ],
+          "parents": [
+            "hip hop"
+          ]
+        }
+      },
+      "98": {
+        "pk": 98,
+        "name": "DJ SKOLi",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "gabber",
+            "happy hardcore"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "99": {
+        "pk": 99,
+        "name": "Mia Panic",
+        "image": "https://i1.sndcdn.com/avatars-000009902510-5gjc4g-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indietronica",
+            "new rave",
+            "escape room"
+          ],
+          "parents": [
+            "electronic",
+            "hip hop"
+          ]
+        }
+      },
+      "101": {
+        "pk": 101,
+        "name": "Cornelius Kite",
+        "image": "http://static1.squarespace.com/static/56bce92a3c44d8eb5061f179/t/5916056d6a4963fbaa2b2f97/1494615405877/Cornelius_logo_crop.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indietronica",
+            "j-ambient",
+            "japanese alternative pop",
+            "shibuya-kei"
+          ],
+          "parents": [
+            "electronic",
+            "experimental",
+            "asian",
+            "pop"
+          ]
+        }
+      },
+      "105": {
+        "pk": 105,
+        "name": "Zedd",
+        "image": "https://i1.sndcdn.com/avatars-No7yEX6IzqBvjP5Q-ym1t7Q-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "edm",
+            "pop dance",
+            "complextro",
+            "german techno",
+            "pop"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      "106": {
+        "pk": 106,
+        "name": "Nelly",
+        "image": "https://nelly.net/images/og.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "urban contemporary",
+            "dance pop",
+            "gangster rap",
+            "hip hop",
+            "pop rap",
+            "rap",
+            "st louis rap"
+          ],
+          "parents": [
+            "latin",
+            "pop",
+            "hip hop"
+          ]
+        }
+      },
+      "108": {
+        "pk": 108,
+        "name": "The Lemonheads",
+        "image": "https://static.wixstatic.com/media/db18c5_69273a023cf64ab48ea633c2c1065ce3%7Emv2.png/v1/fit/w_2500,h_1330,al_c/db18c5_69273a023cf64ab48ea633c2c1065ce3%7Emv2.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative rock",
+            "boston rock",
+            "power pop"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      "109": {
+        "pk": 109,
+        "name": "Umphrey's McGee",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jam band"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "110": {
+        "pk": 110,
+        "name": "Smokey Robinson",
+        "image": "https://smokeyrobinson.com/wp-content/themes/smokeyrobinson-theme/splash/gasms/build_production/assets/images/og.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "soul",
+            "classic soul",
+            "disco",
+            "funk",
+            "motown",
+            "quiet storm"
+          ],
+          "parents": [
+            "r&b",
+            "blues"
+          ]
+        }
+      },
+      "113": {
+        "pk": 113,
+        "name": "Diamond",
+        "image": "https://www.neildiamond.com/files/2023/05/news-default-compressed.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "singer-songwriter",
+            "adult standards",
+            "folk rock",
+            "heartland rock",
+            "mellow gold",
+            "soft rock",
+            "brill building pop",
+            "yacht rock"
+          ],
+          "parents": [
+            "folk",
+            "easy listening",
+            "rock",
+            "country",
+            "pop"
+          ]
+        }
+      },
+      "115": {
+        "pk": 115,
+        "name": "Victor Ruiz",
+        "image": "https://i1.sndcdn.com/avatars-UwdOwR4uHi3vpYv4-OZTEAQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "minimal techno",
+            "brazilian techno",
+            "dark techno",
+            "deep minimal techno",
+            "deep techno"
+          ],
+          "parents": [
+            "electronic",
+            "latin"
+          ]
+        }
+      },
+      "116": {
+        "pk": 116,
+        "name": "Mind Against",
+        "image": "https://i1.sndcdn.com/avatars-fXhhrrJ02eIb4QPF-HsjaNw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "minimal techno",
+            "deep techno",
+            "italian techno",
+            "melodic techno"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "130": {
+        "pk": 130,
+        "name": "Joe Hertlet & The Rainbow Seekers",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jazz",
+            "bebop",
+            "jazz guitar"
+          ],
+          "parents": [
+            "jazz"
+          ]
+        }
+      },
+      "139": {
+        "pk": 139,
+        "name": "Nio Garcia",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "reggaeton",
+            "trap latino",
+            "urbano latino"
+          ],
+          "parents": [
+            "latin"
+          ]
+        }
+      },
+      "143": {
+        "pk": 143,
+        "name": "Anthony Hamilton",
+        "image": "http://static1.squarespace.com/static/6065f8133368ee6813a05e3b/t/6402c90eb72de465928894ee/1677904142515/IMG_5683.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "contemporary r&b",
+            "neo soul",
+            "r&b",
+            "urban contemporary"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      "147": {
+        "pk": 147,
+        "name": "Lil Jon",
+        "image": "https://i1.sndcdn.com/avatars-VwK0T7A5FBpoBEIi-zDSCOw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "dance pop",
+            "pop rap",
+            "atl hip hop",
+            "crunk",
+            "dirty south rap",
+            "old school atlanta hip hop",
+            "southern hip hop",
+            "trap"
+          ],
+          "parents": [
+            "pop",
+            "hip hop"
+          ]
+        }
+      },
+      "148": {
+        "pk": 148,
+        "name": "James Hype",
+        "image": "https://static.wixstatic.com/media/db27d9_410185ded96e48ba84cd4707c00cdf5b%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/db27d9_410185ded96e48ba84cd4707c00cdf5b%7Emv2.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "pop dance",
+            "uk dance",
+            "deep groove house"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      "149": {
+        "pk": 149,
+        "name": "Wooli",
+        "image": "https://i1.sndcdn.com/avatars-2igjUqqhkbsDYI2A-dpd46Q-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep",
+            "dubstep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "150": {
+        "pk": 150,
+        "name": "Ganja White Night",
+        "image": "https://i1.sndcdn.com/avatars-Fzc2ikMkPLNinjER-xXyeUQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "151": {
+        "pk": 151,
+        "name": "Boogie T",
+        "image": "https://boogietstg.wpengine.com/wp-content/uploads/2023/06/BoogieT-fbog-1200x630-1.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "152": {
+        "pk": 152,
+        "name": "Rahsaan Patterson",
+        "image": "http://www.rahsaan.com/site/wp-content/uploads/2019/03/header-1024x242.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "neo soul",
+            "urban contemporary",
+            "smooth soul"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      "153": {
+        "pk": 153,
+        "name": "DJ Boring",
+        "image": "https://i1.sndcdn.com/avatars-4HwyzvZMf08cyV30-yymivw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "lo-fi house"
+          ],
+          "parents": []
+        }
+      },
+      "154": {
+        "pk": 154,
+        "name": "Carl Craig",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "minimal techno",
+            "detroit techno",
+            "microhouse",
+            "outsider house",
+            "techno"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "155": {
+        "pk": 155,
+        "name": "I Fight Dragons",
+        "image": "https://i1.sndcdn.com/avatars-000032539319-eggrfb-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chiptune",
+            "nerdcore",
+            "nintendocore"
+          ],
+          "parents": [
+            "electronic",
+            "hip hop",
+            "metal"
+          ]
+        }
+      },
+      "157": {
+        "pk": 157,
+        "name": "Calle 24",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "corrido",
+            "corridos tumbados",
+            "sad sierreno",
+            "sierreno"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      "158": {
+        "pk": 158,
+        "name": "Chino Pacas",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "corrido",
+            "corridos tumbados",
+            "sierreno"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      "159": {
+        "pk": 159,
+        "name": "Shemekia Copeland",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "electric blues",
+            "modern blues",
+            "soul blues"
+          ],
+          "parents": [
+            "blues"
+          ]
+        }
+      },
+      "162": {
+        "pk": 162,
+        "name": "Laura Cantrell",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      "163": {
+        "pk": 163,
+        "name": "NNAMDÏ",
+        "image": "https://i1.sndcdn.com/avatars-vWmSdAXAnV9hKcxV-2RAofw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "art pop",
+            "experimental hip hop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "166": {
+        "pk": 166,
+        "name": "Maiden Chicago",
+        "image": "https://i1.sndcdn.com/avatars-000038031310-1nftq0-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classic rock",
+            "rock",
+            "album rock",
+            "mellow gold",
+            "soft rock",
+            "yacht rock"
+          ],
+          "parents": [
+            "rock",
+            "country"
+          ]
+        }
+      },
+      "181": {
+        "pk": 181,
+        "name": "Bobby Afterlife",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chill lounge"
+          ],
+          "parents": []
+        }
+      },
+      "190": {
+        "pk": 190,
+        "name": "Diox",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "polish alternative rap",
+            "polish hip hop"
+          ],
+          "parents": []
+        }
+      },
+      "192": {
+        "pk": 192,
+        "name": "Gorgon City",
+        "image": "https://i1.sndcdn.com/avatars-9di9P8gGZCGOg9du-uImJnQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "pop dance",
+            "uk dance",
+            "future garage"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      "194": {
+        "pk": 194,
+        "name": "Nora en Pure",
+        "image": "https://i1.sndcdn.com/avatars-uXmDRxA9gqJqB62n-Ryqzqw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "progressive house",
+            "deep house",
+            "electra",
+            "melodic house",
+            "swiss pop"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "195": {
+        "pk": 195,
+        "name": "Joyce Manor",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie punk",
+            "emo",
+            "alternative emo",
+            "dreamo",
+            "lo-fi emo"
+          ],
+          "parents": [
+            "punk"
+          ]
+        }
+      },
+      "197": {
+        "pk": 197,
+        "name": "BJ the Chicago Kid",
+        "image": "http://g-eazy.com/cdn/shop/t/27/assets/logo.png?v=151885667247908593041687560124",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chicago rap",
+            "alternative r&b"
+          ],
+          "parents": [
+            "hip hop",
+            "r&b"
+          ]
+        }
+      },
+      "198": {
+        "pk": 198,
+        "name": "Hot Since 82",
+        "image": "https://i1.sndcdn.com/avatars-UMoF4mFPmGcVNxbd-xW4NQQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "minimal techno",
+            "deep disco house",
+            "uk house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "199": {
+        "pk": 199,
+        "name": "Local H",
+        "image": "http://www.localh.com/uploads/1/1/4/1/114164171/dark-blue_orig.jpeg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative rock",
+            "grunge",
+            "post-grunge"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      "201": {
+        "pk": 201,
+        "name": "Cedric The Entertainer",
+        "image": "https://static.HugeDomains.com/images/hdv3-img/og_hugedomains.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "black comedy"
+          ],
+          "parents": []
+        }
+      },
+      "208": {
+        "pk": 208,
+        "name": "OMNOM",
+        "image": "http://static1.squarespace.com/static/623b503f0238343b606c8923/t/625319b568c2862301424b02/1649778366459/OMNOM+Electronic+Music+Artist+-+Face+Logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "bass house",
+            "tech house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "221": {
+        "pk": 221,
+        "name": "Robbie Fulks",
+        "image": "http://static1.squarespace.com/static/56957eaba128e6805ab8600d/t/569587de0ab3771dba3ea39d/1452640227004/Robbie_Fulks_logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      "228": {
+        "pk": 228,
+        "name": "Damian Lazarus",
+        "image": "https://damianlazarus.com/wp-content/uploads/home-featured.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "deep disco house",
+            "uk house"
+          ],
+          "parents": []
+        }
+      },
+      "232": {
+        "pk": 232,
+        "name": "Motion City Soundtrack",
+        "image": "http://static1.squarespace.com/static/5cdc8a36ca525b4764b36d1a/t/60995503a7303071755a0ee0/1643054133007/MotionCitySoundtrack_SocialHeader_SocialShare.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "emo",
+            "neon pop punk",
+            "pop punk"
+          ],
+          "parents": [
+            "punk"
+          ]
+        }
+      },
+      "233": {
+        "pk": 233,
+        "name": "Kindred the Family Soul",
+        "image": "http://static1.squarespace.com/static/5ab0605331d4df253b106ba3/t/60613b604f9237430a1af250/1616984928178/KINDRED+FAVICON.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "contemporary r&b",
+            "neo soul",
+            "r&b",
+            "urban contemporary"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      "235": {
+        "pk": 235,
+        "name": "Travis Scott",
+        "image": "https://www.travisscott.com/opengraph-image.jpg?bece06ba687595dc",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "hip hop",
+            "rap",
+            "slap house"
+          ],
+          "parents": [
+            "hip hop",
+            "electronic"
+          ]
+        }
+      },
+      "240": {
+        "pk": 240,
+        "name": "Reid",
+        "image": "https://i1.sndcdn.com/avatars-000078076453-q49qb3-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie psych-pop"
+          ],
+          "parents": []
+        }
+      },
+      "241": {
+        "pk": 241,
+        "name": "Morgan Gold",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chanson",
+            "classic french pop",
+            "french pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      }
+    },
+    "sort": [
+      {
+        "pk": 82,
+        "name": "Mt. Joy",
+        "image": "https://i1.sndcdn.com/avatars-000401039334-rfk9eb-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "stomp and holler"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      {
+        "pk": 83,
+        "name": "Chromeo",
+        "image": "http://static1.squarespace.com/static/63d31ce0f5454455cd56acff/t/6515a3e96f0e5e10c35fa569/1695917033337/blank-logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative dance",
+            "dance rock",
+            "filter house",
+            "indietronica",
+            "neo-synthpop",
+            "new rave",
+            "nu disco"
+          ],
+          "parents": [
+            "rock",
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 84,
+        "name": "Purple Disco Machine",
+        "image": "https://cdn.shopify.com/s/files/1/0569/9659/3826/files/logo_black_rendered.jpg?v=1639406319",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "deep house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 85,
+        "name": "Trans-Siberian Orchestra",
+        "image": "https://cdn.ontourmedia.io/tso/non_secure/site/TSO_Generic_Artist_Tile1920x1080.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "neo classical metal",
+            "progressive metal"
+          ],
+          "parents": [
+            "metal"
+          ]
+        }
+      },
+      {
+        "pk": 86,
+        "name": "The Guess Who",
+        "image": "https://www.theguesswho.com/wp-content/uploads/2023/11/GW_2024-1024x371.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "singer-songwriter",
+            "classic rock",
+            "rock",
+            "album rock",
+            "classic canadian rock",
+            "country rock",
+            "folk rock",
+            "hard rock",
+            "heartland rock",
+            "mellow gold",
+            "soft rock"
+          ],
+          "parents": [
+            "folk",
+            "rock",
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 87,
+        "name": "Glassjaw",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "emo",
+            "long island punk",
+            "post-hardcore",
+            "screamo"
+          ],
+          "parents": [
+            "punk"
+          ]
+        }
+      },
+      {
+        "pk": 89,
+        "name": "Mustard Plug",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "grand rapids indie",
+            "ska",
+            "ska punk"
+          ],
+          "parents": [
+            "rock",
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 91,
+        "name": "The Palmer Squares",
+        "image": "http://static1.squarespace.com/static/5709e87b86db439cd7687dda/t/5e3b22c60076e851683422bc/1580933831882/TPS_squarelogo+copycopy.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chicago rap",
+            "indie pop rap"
+          ],
+          "parents": [
+            "hip hop"
+          ]
+        }
+      },
+      {
+        "pk": 98,
+        "name": "DJ SKOLi",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "gabber",
+            "happy hardcore"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 99,
+        "name": "Mia Panic",
+        "image": "https://i1.sndcdn.com/avatars-000009902510-5gjc4g-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indietronica",
+            "new rave",
+            "escape room"
+          ],
+          "parents": [
+            "electronic",
+            "hip hop"
+          ]
+        }
+      },
+      {
+        "pk": 101,
+        "name": "Cornelius Kite",
+        "image": "http://static1.squarespace.com/static/56bce92a3c44d8eb5061f179/t/5916056d6a4963fbaa2b2f97/1494615405877/Cornelius_logo_crop.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indietronica",
+            "j-ambient",
+            "japanese alternative pop",
+            "shibuya-kei"
+          ],
+          "parents": [
+            "electronic",
+            "experimental",
+            "asian",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 105,
+        "name": "Zedd",
+        "image": "https://i1.sndcdn.com/avatars-No7yEX6IzqBvjP5Q-ym1t7Q-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "edm",
+            "pop dance",
+            "complextro",
+            "german techno",
+            "pop"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 106,
+        "name": "Nelly",
+        "image": "https://nelly.net/images/og.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "urban contemporary",
+            "dance pop",
+            "gangster rap",
+            "hip hop",
+            "pop rap",
+            "rap",
+            "st louis rap"
+          ],
+          "parents": [
+            "latin",
+            "pop",
+            "hip hop"
+          ]
+        }
+      },
+      {
+        "pk": 108,
+        "name": "The Lemonheads",
+        "image": "https://static.wixstatic.com/media/db18c5_69273a023cf64ab48ea633c2c1065ce3%7Emv2.png/v1/fit/w_2500,h_1330,al_c/db18c5_69273a023cf64ab48ea633c2c1065ce3%7Emv2.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative rock",
+            "boston rock",
+            "power pop"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 109,
+        "name": "Umphrey's McGee",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jam band"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 110,
+        "name": "Smokey Robinson",
+        "image": "https://smokeyrobinson.com/wp-content/themes/smokeyrobinson-theme/splash/gasms/build_production/assets/images/og.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "soul",
+            "classic soul",
+            "disco",
+            "funk",
+            "motown",
+            "quiet storm"
+          ],
+          "parents": [
+            "r&b",
+            "blues"
+          ]
+        }
+      },
+      {
+        "pk": 113,
+        "name": "Diamond",
+        "image": "https://www.neildiamond.com/files/2023/05/news-default-compressed.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "singer-songwriter",
+            "adult standards",
+            "folk rock",
+            "heartland rock",
+            "mellow gold",
+            "soft rock",
+            "brill building pop",
+            "yacht rock"
+          ],
+          "parents": [
+            "folk",
+            "easy listening",
+            "rock",
+            "country",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 115,
+        "name": "Victor Ruiz",
+        "image": "https://i1.sndcdn.com/avatars-UwdOwR4uHi3vpYv4-OZTEAQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "minimal techno",
+            "brazilian techno",
+            "dark techno",
+            "deep minimal techno",
+            "deep techno"
+          ],
+          "parents": [
+            "electronic",
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 116,
+        "name": "Mind Against",
+        "image": "https://i1.sndcdn.com/avatars-fXhhrrJ02eIb4QPF-HsjaNw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "minimal techno",
+            "deep techno",
+            "italian techno",
+            "melodic techno"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 130,
+        "name": "Joe Hertlet & The Rainbow Seekers",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jazz",
+            "bebop",
+            "jazz guitar"
+          ],
+          "parents": [
+            "jazz"
+          ]
+        }
+      },
+      {
+        "pk": 139,
+        "name": "Nio Garcia",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "reggaeton",
+            "trap latino",
+            "urbano latino"
+          ],
+          "parents": [
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 143,
+        "name": "Anthony Hamilton",
+        "image": "http://static1.squarespace.com/static/6065f8133368ee6813a05e3b/t/6402c90eb72de465928894ee/1677904142515/IMG_5683.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "contemporary r&b",
+            "neo soul",
+            "r&b",
+            "urban contemporary"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 147,
+        "name": "Lil Jon",
+        "image": "https://i1.sndcdn.com/avatars-VwK0T7A5FBpoBEIi-zDSCOw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "dance pop",
+            "pop rap",
+            "atl hip hop",
+            "crunk",
+            "dirty south rap",
+            "old school atlanta hip hop",
+            "southern hip hop",
+            "trap"
+          ],
+          "parents": [
+            "pop",
+            "hip hop"
+          ]
+        }
+      },
+      {
+        "pk": 148,
+        "name": "James Hype",
+        "image": "https://static.wixstatic.com/media/db27d9_410185ded96e48ba84cd4707c00cdf5b%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/db27d9_410185ded96e48ba84cd4707c00cdf5b%7Emv2.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "pop dance",
+            "uk dance",
+            "deep groove house"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 149,
+        "name": "Wooli",
+        "image": "https://i1.sndcdn.com/avatars-2igjUqqhkbsDYI2A-dpd46Q-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep",
+            "dubstep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 150,
+        "name": "Ganja White Night",
+        "image": "https://i1.sndcdn.com/avatars-Fzc2ikMkPLNinjER-xXyeUQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 151,
+        "name": "Boogie T",
+        "image": "https://boogietstg.wpengine.com/wp-content/uploads/2023/06/BoogieT-fbog-1200x630-1.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 152,
+        "name": "Rahsaan Patterson",
+        "image": "http://www.rahsaan.com/site/wp-content/uploads/2019/03/header-1024x242.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "neo soul",
+            "urban contemporary",
+            "smooth soul"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 153,
+        "name": "DJ Boring",
+        "image": "https://i1.sndcdn.com/avatars-4HwyzvZMf08cyV30-yymivw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "lo-fi house"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 154,
+        "name": "Carl Craig",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "minimal techno",
+            "detroit techno",
+            "microhouse",
+            "outsider house",
+            "techno"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 155,
+        "name": "I Fight Dragons",
+        "image": "https://i1.sndcdn.com/avatars-000032539319-eggrfb-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chiptune",
+            "nerdcore",
+            "nintendocore"
+          ],
+          "parents": [
+            "electronic",
+            "hip hop",
+            "metal"
+          ]
+        }
+      },
+      {
+        "pk": 157,
+        "name": "Calle 24",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "corrido",
+            "corridos tumbados",
+            "sad sierreno",
+            "sierreno"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      {
+        "pk": 158,
+        "name": "Chino Pacas",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "corrido",
+            "corridos tumbados",
+            "sierreno"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      {
+        "pk": 159,
+        "name": "Shemekia Copeland",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "electric blues",
+            "modern blues",
+            "soul blues"
+          ],
+          "parents": [
+            "blues"
+          ]
+        }
+      },
+      {
+        "pk": 162,
+        "name": "Laura Cantrell",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 163,
+        "name": "NNAMDÏ",
+        "image": "https://i1.sndcdn.com/avatars-vWmSdAXAnV9hKcxV-2RAofw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "art pop",
+            "experimental hip hop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 166,
+        "name": "Maiden Chicago",
+        "image": "https://i1.sndcdn.com/avatars-000038031310-1nftq0-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classic rock",
+            "rock",
+            "album rock",
+            "mellow gold",
+            "soft rock",
+            "yacht rock"
+          ],
+          "parents": [
+            "rock",
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 181,
+        "name": "Bobby Afterlife",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chill lounge"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 190,
+        "name": "Diox",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "polish alternative rap",
+            "polish hip hop"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 192,
+        "name": "Gorgon City",
+        "image": "https://i1.sndcdn.com/avatars-9di9P8gGZCGOg9du-uImJnQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "pop dance",
+            "uk dance",
+            "future garage"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 194,
+        "name": "Nora en Pure",
+        "image": "https://i1.sndcdn.com/avatars-uXmDRxA9gqJqB62n-Ryqzqw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "progressive house",
+            "deep house",
+            "electra",
+            "melodic house",
+            "swiss pop"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 195,
+        "name": "Joyce Manor",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie punk",
+            "emo",
+            "alternative emo",
+            "dreamo",
+            "lo-fi emo"
+          ],
+          "parents": [
+            "punk"
+          ]
+        }
+      },
+      {
+        "pk": 197,
+        "name": "BJ the Chicago Kid",
+        "image": "http://g-eazy.com/cdn/shop/t/27/assets/logo.png?v=151885667247908593041687560124",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chicago rap",
+            "alternative r&b"
+          ],
+          "parents": [
+            "hip hop",
+            "r&b"
+          ]
+        }
+      },
+      {
+        "pk": 198,
+        "name": "Hot Since 82",
+        "image": "https://i1.sndcdn.com/avatars-UMoF4mFPmGcVNxbd-xW4NQQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "house",
+            "minimal techno",
+            "deep disco house",
+            "uk house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 199,
+        "name": "Local H",
+        "image": "http://www.localh.com/uploads/1/1/4/1/114164171/dark-blue_orig.jpeg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative rock",
+            "grunge",
+            "post-grunge"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 201,
+        "name": "Cedric The Entertainer",
+        "image": "https://static.HugeDomains.com/images/hdv3-img/og_hugedomains.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "black comedy"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 208,
+        "name": "OMNOM",
+        "image": "http://static1.squarespace.com/static/623b503f0238343b606c8923/t/625319b568c2862301424b02/1649778366459/OMNOM+Electronic+Music+Artist+-+Face+Logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "bass house",
+            "tech house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 221,
+        "name": "Robbie Fulks",
+        "image": "http://static1.squarespace.com/static/56957eaba128e6805ab8600d/t/569587de0ab3771dba3ea39d/1452640227004/Robbie_Fulks_logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 228,
+        "name": "Damian Lazarus",
+        "image": "https://damianlazarus.com/wp-content/uploads/home-featured.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "deep disco house",
+            "uk house"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 232,
+        "name": "Motion City Soundtrack",
+        "image": "http://static1.squarespace.com/static/5cdc8a36ca525b4764b36d1a/t/60995503a7303071755a0ee0/1643054133007/MotionCitySoundtrack_SocialHeader_SocialShare.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "emo",
+            "neon pop punk",
+            "pop punk"
+          ],
+          "parents": [
+            "punk"
+          ]
+        }
+      },
+      {
+        "pk": 233,
+        "name": "Kindred the Family Soul",
+        "image": "http://static1.squarespace.com/static/5ab0605331d4df253b106ba3/t/60613b604f9237430a1af250/1616984928178/KINDRED+FAVICON.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "contemporary r&b",
+            "neo soul",
+            "r&b",
+            "urban contemporary"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 235,
+        "name": "Travis Scott",
+        "image": "https://www.travisscott.com/opengraph-image.jpg?bece06ba687595dc",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "hip hop",
+            "rap",
+            "slap house"
+          ],
+          "parents": [
+            "hip hop",
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 240,
+        "name": "Reid",
+        "image": "https://i1.sndcdn.com/avatars-000078076453-q49qb3-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie psych-pop"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 241,
+        "name": "Morgan Gold",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "chanson",
+            "classic french pop",
+            "french pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      }
+    ]
+  }
+}

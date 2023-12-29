@@ -13,7 +13,8 @@
     "metadata": "node support/metadata",
     "rank": "node support/rank",
     "artist": "node support/artist",
-    "spotify": "node support/spotify"
+    "spotify": "node support/spotify",
+    "genres": "node support/genres"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",
@@ -23,6 +24,7 @@
     "chalk": "^5.3.0",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^11.1.0",
+    "csvtojson": "^2.0.10",
     "dotenv": "^16.3.1",
     "moment": "^2.29.4",
     "next": "14.0.0",

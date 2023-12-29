@@ -1,174 +1,5 @@
 [
   {
-    "pk": 74,
-    "name": "Raheem DeVaughn",
-    "slug": "raheem-devaughn",
-    "metadata": {
-      "website": "http://raheemdevaughn.com/",
-      "image": "",
-      "twitter": "https://twitter.com/Raheem_DeVaughn",
-      "facebook": "",
-      "youtube": "",
-      "instagram": "",
-      "tiktok": "",
-      "soundcloud": "",
-      "spotify": {
-        "pk": 38,
-        "followers": 520358,
-        "genres": [
-          {
-            "name": "contemporary r&b"
-          },
-          {
-            "name": "neo soul"
-          },
-          {
-            "name": "new jack swing"
-          },
-          {
-            "name": "r&b"
-          },
-          {
-            "name": "urban contemporary"
-          }
-        ],
-        "popularity": 44,
-        "url": "https://open.spotify.com/artist/59NO6KX7wQCG7jGdtH1NtL",
-        "tries": 1
-      },
-      "spotify_url_read": "https://open.spotify.com/artist/59NO6KX7wQCG7jGdtH1NtL",
-      "appleMusic": "",
-      "slug": "raheem-devaughn",
-      "type": "ARTIST"
-    }
-  },
-  {
-    "pk": 76,
-    "name": "Patti Smith",
-    "slug": "patti-smith",
-    "metadata": {
-      "website": "http://www.pattismith.net/",
-      "image": "https://i1.sndcdn.com/avatars-000016256067-p5dy7i-t500x500.jpg",
-      "twitter": "",
-      "facebook": "https://www.facebook.com/pages/Patti-Smith/212587898832647",
-      "youtube": "https://www.youtube.com/channel/UCZ75jeE46GMKNBvXXKiUCiA",
-      "instagram": "",
-      "tiktok": "",
-      "soundcloud": "https://soundcloud.com/pattismithmusic",
-      "spotify": {
-        "pk": 40,
-        "followers": 1066070,
-        "genres": [
-          {
-            "name": "permanent wave"
-          },
-          {
-            "name": "singer-songwriter"
-          },
-          {
-            "name": "art punk"
-          },
-          {
-            "name": "protopunk"
-          }
-        ],
-        "popularity": 55,
-        "url": "https://open.spotify.com/artist/0vYkHhJ48Bs3jWcvZXvOrP",
-        "tries": 1
-      },
-      "spotify_url_read": "https://open.spotify.com/artist/0vYkHhJ48Bs3jWcvZXvOrP",
-      "appleMusic": "",
-      "slug": "patti-smith",
-      "type": "ARTIST"
-    }
-  },
-  {
-    "pk": 77,
-    "name": "Tchami",
-    "slug": "tchami",
-    "metadata": {
-      "website": "",
-      "image": "https://i1.sndcdn.com/avatars-FursyaxMLJ0KyJxc-CGxAtA-t500x500.jpg",
-      "twitter": "https://twitter.com/iamTchami",
-      "facebook": "https://www.facebook.com/iamTchami",
-      "youtube": "https://www.youtube.com/channel/UCRgn1KPoJrvRqLxj0t0JQgA",
-      "instagram": "https://www.instagram.com/tchami/",
-      "tiktok": "",
-      "soundcloud": "https://soundcloud.com/iamtchami",
-      "spotify": {
-        "pk": 41,
-        "followers": 404258,
-        "genres": [
-          {
-            "name": "edm"
-          },
-          {
-            "name": "house"
-          },
-          {
-            "name": "pop dance"
-          },
-          {
-            "name": "progressive house"
-          },
-          {
-            "name": "electro house"
-          },
-          {
-            "name": "deep groove house"
-          },
-          {
-            "name": "future house"
-          }
-        ],
-        "popularity": 55,
-        "url": "https://open.spotify.com/artist/1KpCi9BOfviCVhmpI4G2sY",
-        "tries": 1
-      },
-      "spotify_url_read": "https://open.spotify.com/artist/1KpCi9BOfviCVhmpI4G2sY",
-      "appleMusic": "",
-      "slug": "tchami",
-      "type": "ARTIST"
-    }
-  },
-  {
-    "pk": 81,
-    "name": "Lydia Cash",
-    "slug": "lydia-cash",
-    "metadata": {
-      "website": "https://www.johnnycash.com/",
-      "image": "https://cdn.smehost.net/johnnycashonlinecom-uslegacyprod/wp-content/uploads/2019/07/190724_johnnycash_og.jpg",
-      "twitter": "https://twitter.com/JohnnyCash",
-      "facebook": "https://www.facebook.com/johnnycash",
-      "youtube": "https://www.youtube.com/user/JohnnyCashVEVO",
-      "instagram": "https://www.instagram.com/johnnycash/",
-      "tiktok": "",
-      "soundcloud": "https://soundcloud.com/johnnycash",
-      "spotify": {
-        "pk": 44,
-        "followers": 6096187,
-        "genres": [
-          {
-            "name": "rock"
-          },
-          {
-            "name": "arkansas country"
-          },
-          {
-            "name": "outlaw country"
-          }
-        ],
-        "popularity": 72,
-        "url": "https://open.spotify.com/artist/6kACVPfCOnqzgfEF5ryl0x",
-        "tries": 1
-      },
-      "spotify_url_read": "https://open.spotify.com/artist/6kACVPfCOnqzgfEF5ryl0x",
-      "appleMusic": "",
-      "slug": "lydia-cash",
-      "type": "ARTIST"
-    }
-  },
-  {
     "pk": 82,
     "name": "Mt. Joy",
     "slug": "mt-joy",
@@ -451,37 +282,6 @@
       "spotify_url_read": "https://open.spotify.com/artist/5UDSYxxqcF7prMrO2opRhu",
       "appleMusic": "",
       "slug": "mustard-plug",
-      "type": "ARTIST"
-    }
-  },
-  {
-    "pk": 90,
-    "name": "Mike Pinto",
-    "slug": "mike-pinto",
-    "metadata": {
-      "website": "http://www.mikepintomusic.com/",
-      "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/27876/b9ac901496793f7e7b89dcba51d6abdd58e33dd7/original/2022-press-pic-best.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
-      "twitter": "https://twitter.com/mikepinto82",
-      "facebook": "https://www.facebook.com/mikepintomusic",
-      "youtube": "",
-      "instagram": "https://www.instagram.com/mikepintomusic/",
-      "tiktok": "",
-      "soundcloud": "https://soundcloud.com/mikepintomusic",
-      "spotify": {
-        "pk": 52,
-        "followers": 42987,
-        "genres": [
-          {
-            "name": "reggae rock"
-          }
-        ],
-        "popularity": 30,
-        "url": "https://open.spotify.com/artist/1GO9LmsSPXbqZjWkfViwIl",
-        "tries": 1
-      },
-      "spotify_url_read": "https://open.spotify.com/artist/1GO9LmsSPXbqZjWkfViwIl",
-      "appleMusic": "",
-      "slug": "mike-pinto",
       "type": "ARTIST"
     }
   },
@@ -787,6 +587,224 @@
       "spotify_url_read": "https://open.spotify.com/artist/7mQilAy42MqNPqUFqK4Z0o",
       "appleMusic": "",
       "slug": "umphreys-mcgee",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 110,
+    "name": "Smokey Robinson",
+    "slug": "smokey-robinson",
+    "metadata": {
+      "website": "http://www.smokeyrobinson.com/",
+      "image": "https://smokeyrobinson.com/wp-content/themes/smokeyrobinson-theme/splash/gasms/build_production/assets/images/og.jpg",
+      "twitter": "https://twitter.com/smokey_robinson",
+      "facebook": "https://www.facebook.com/thesmokeyrobinson",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 62,
+        "followers": 1226818,
+        "genres": [
+          {
+            "name": "soul"
+          },
+          {
+            "name": "classic soul"
+          },
+          {
+            "name": "disco"
+          },
+          {
+            "name": "funk"
+          },
+          {
+            "name": "motown"
+          },
+          {
+            "name": "quiet storm"
+          }
+        ],
+        "popularity": 52,
+        "url": "https://open.spotify.com/artist/0h9smro0z3HqUbD94jotU8",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/0h9smro0z3HqUbD94jotU8",
+      "appleMusic": "",
+      "slug": "smokey-robinson",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 113,
+    "name": "Diamond",
+    "slug": "diamond",
+    "metadata": {
+      "website": "http://www.neildiamond.com/",
+      "image": "https://www.neildiamond.com/files/2023/05/news-default-compressed.jpg",
+      "twitter": "https://twitter.com/neildiamond",
+      "facebook": "https://www.facebook.com/neildiamond",
+      "youtube": "https://www.youtube.com/user/neildiamond",
+      "instagram": "https://www.instagram.com/neildiamond/",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 64,
+        "followers": 2606496,
+        "genres": [
+          {
+            "name": "singer-songwriter"
+          },
+          {
+            "name": "adult standards"
+          },
+          {
+            "name": "folk rock"
+          },
+          {
+            "name": "heartland rock"
+          },
+          {
+            "name": "mellow gold"
+          },
+          {
+            "name": "soft rock"
+          },
+          {
+            "name": "brill building pop"
+          },
+          {
+            "name": "yacht rock"
+          }
+        ],
+        "popularity": 65,
+        "url": "https://open.spotify.com/artist/7mEIug7XUlQHikrFxjTWes",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/7mEIug7XUlQHikrFxjTWes",
+      "appleMusic": "",
+      "slug": "diamond",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 115,
+    "name": "Victor Ruiz",
+    "slug": "victor-ruiz",
+    "metadata": {
+      "website": "",
+      "image": "https://i1.sndcdn.com/avatars-UwdOwR4uHi3vpYv4-OZTEAQ-t500x500.jpg",
+      "twitter": "https://twitter.com/victorruizdj",
+      "facebook": "https://www.facebook.com/victorruizofficial",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/victorruiz",
+      "spotify": {
+        "pk": 66,
+        "followers": 131554,
+        "genres": [
+          {
+            "name": "minimal techno"
+          },
+          {
+            "name": "brazilian techno"
+          },
+          {
+            "name": "dark techno"
+          },
+          {
+            "name": "deep minimal techno"
+          },
+          {
+            "name": "deep techno"
+          }
+        ],
+        "popularity": 43,
+        "url": "https://open.spotify.com/artist/0xgdNNa5mIbnJKp8AG8S4z",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/0xgdNNa5mIbnJKp8AG8S4z",
+      "appleMusic": "",
+      "slug": "victor-ruiz",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 116,
+    "name": "Mind Against",
+    "slug": "mind-against",
+    "metadata": {
+      "website": "",
+      "image": "https://i1.sndcdn.com/avatars-fXhhrrJ02eIb4QPF-HsjaNw-t500x500.jpg",
+      "twitter": "https://twitter.com/MINDAGAINSTOFC",
+      "facebook": "https://www.facebook.com/mindagainst",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "https://soundcloud.com/mindagainst",
+      "spotify": {
+        "pk": 67,
+        "followers": 115447,
+        "genres": [
+          {
+            "name": "minimal techno"
+          },
+          {
+            "name": "deep techno"
+          },
+          {
+            "name": "italian techno"
+          },
+          {
+            "name": "melodic techno"
+          }
+        ],
+        "popularity": 44,
+        "url": "https://open.spotify.com/artist/48LWLoeY0dhwaiX1FRsn72",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/48LWLoeY0dhwaiX1FRsn72",
+      "appleMusic": "",
+      "slug": "mind-against",
+      "type": "ARTIST"
+    }
+  },
+  {
+    "pk": 130,
+    "name": "Joe Hertlet & The Rainbow Seekers",
+    "slug": "joe-hertlet-the-rainbow-seekers",
+    "metadata": {
+      "website": "",
+      "image": "",
+      "twitter": "",
+      "facebook": "",
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "soundcloud": "",
+      "spotify": {
+        "pk": 71,
+        "followers": 124349,
+        "genres": [
+          {
+            "name": "jazz"
+          },
+          {
+            "name": "bebop"
+          },
+          {
+            "name": "jazz guitar"
+          }
+        ],
+        "popularity": 45,
+        "url": "https://open.spotify.com/artist/4DuZTASH5eSyd0K73W6fuZ",
+        "tries": 1
+      },
+      "spotify_url_read": "https://open.spotify.com/artist/4DuZTASH5eSyd0K73W6fuZ",
+      "appleMusic": "",
+      "slug": "joe-hertlet-and-the-rainbow-seekers",
       "type": "ARTIST"
     }
   }
