@@ -8,12 +8,7 @@ const logger = require("./logger.js")("events");
 
 require("dotenv").config();
 
-const myQueue = new Queue("event", {
-  connection: {
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
-  },
-});
+let queue;
 
 async function extract(url) {
   const response = await fetch(url);
@@ -30,8 +25,12 @@ function transform(html, link) {
 
 async function load(events) {
   await async.eachSeries(events, async (payload) => {
+    if (queue) {
+      await queue.add("event", payload);
+      return;
+    }
+
     await saveEvent(payload);
-    // await myQueue.add("event", payload);
   });
 }
 
@@ -66,6 +65,13 @@ if (require.main === module) {
   main().then(() => {
     logger.info("finished events");
     logger.flush();
+  });
+} else {
+  queue = new Queue("event", {
+    connection: {
+      host: process.env.REDIS_HOST,
+      port: process.env.REDIS_PORT,
+    },
   });
 }
 
