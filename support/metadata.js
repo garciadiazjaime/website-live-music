@@ -7,7 +7,7 @@ const logger = require("./logger.js")("metadata");
 const { getLocations, saveMetadata } = require("./mint");
 const { getSocial, getImageFromURL } = require("./misc");
 
-async function getLocationMetadata(url) {
+async function getMetadata(url) {
   logger.info(`getting metadata`, { url });
 
   if (!url) {
@@ -23,6 +23,20 @@ async function getLocationMetadata(url) {
   const html = await response.text();
 
   const social = getSocial(html, url);
+
+  if (!social.image && social.soundcloud) {
+    social.image = await getImageFromURL(social.soundcloud, "soundcloud");
+  }
+
+  if (!social || !Object.keys(social).find((key) => !!social[key])) {
+    logger.info(`no social media`, {
+      url,
+    });
+  }
+
+  if (!social.image) {
+    logger.info(`no image`, { url });
+  }
 
   return social;
 }
@@ -40,16 +54,7 @@ async function main() {
       slug: location.slug,
     });
 
-    const socialMedia = await getLocationMetadata(location.website);
-    if (
-      !socialMedia ||
-      !Object.keys(socialMedia).find((key) => !!socialMedia[key])
-    ) {
-      logger.info(`no social media`, {
-        pk: location.pk,
-        slug: location.slug,
-      });
-    }
+    const socialMedia = await getMetadata(location.website);
 
     const payload = {
       website: location.website,
@@ -67,23 +72,17 @@ async function main() {
       slug: location.slug,
     };
 
-    if (!payload.image && payload.spotify) {
-      payload.image = await getImageFromURL(payload.spotify, "spotify");
-    }
-
-    if (!payload.image && payload.soundcloud) {
-      payload.image = await getImageFromURL(payload.soundcloud, "soundcloud");
-    }
-
-    if (!payload.image) {
-      logger.info(`no image`, { slug: payload.slug });
-    }
-
     await saveMetadata(payload);
   });
 }
 
-main().then(() => {
-  logger.info("finished metadata");
-  logger.flush();
-});
+if (require.main === module) {
+  main().then(() => {
+    logger.info("finished metadata");
+    logger.flush();
+  });
+}
+
+module.exports = {
+  getMetadata,
+};
