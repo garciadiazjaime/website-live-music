@@ -138,11 +138,11 @@ export default function Home() {
           {/* <h2 style={{ margin: "0 0 30px 0", fontSize: 30 }}>
             {selectedEvents.length} Events
           </h2> */}
-          <div className="flex flex-row overflow-scroll lg:flex-col">
+          <div className="flex flex-row overflow-scroll lg:flex-col gap-4 snap-x snap-mandatory">
             {selectedEvents.map((event, index) => (
               <div
                 key={index}
-                className="w-5/6 flex flex-col shrink-0 items-end mb-2"
+                className="w-5/6 flex flex-col shrink-0 items-end mb-2 snap-x snap-center first:ml-12 last:mr-12"
                 id={getEventID(event)}
               >
                 <Image
@@ -153,7 +153,7 @@ export default function Home() {
                   alt={event.name}
                   className="object-cover w-2/3 h-52 -mb-28 mr-8 z-10"
                 />
-                <div className={` flex flex-col items-start bg-gray-950/70 pt-2 pb-6 text-white relative`}>
+                <div className={`flex flex-col w-full items-start grow bg-gray-950/70 pt-2 pb-6 text-white relative `}>
                   <Link href="/share" title="share" className="bg-fuchsia-400 p-2 absolute -top-3 right-2 z-30"><Image src="/images/share-btn.svg" width="68" height="54" className="w-6 h-auto" alt=""/></Link>
                   <h3 className="font-bold text-fuchsia-400 text-5xl pb-2 pl-3 w-auto">
                     {`
