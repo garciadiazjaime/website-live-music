@@ -142,7 +142,7 @@ export default function Home() {
             {selectedEvents.map((event, index) => (
               <div
                 key={index}
-                className="w-5/6 flex flex-col shrink-0 items-end"
+                className="w-5/6 flex flex-col shrink-0 items-end mb-2"
                 id={getEventID(event)}
               >
                 <Image
@@ -155,42 +155,27 @@ export default function Home() {
                 />
                 <div className={` flex flex-col items-start bg-gray-950/70 pt-2 pb-6 text-white relative`}>
                   <Link href="/share" title="share" className="bg-fuchsia-400 p-2 absolute -top-3 right-2 z-30"><Image src="/images/share-btn.svg" width="68" height="54" className="w-6 h-auto" alt=""/></Link>
-                  <h3 className="font-bold text-fuchsia-400 text-4xl pb-2 pl-3 w-auto">
+                  <h3 className="font-bold text-fuchsia-400 text-5xl pb-2 pl-3 w-auto">
                     {`
                       ${
                         new Date(event.start_date)
                           .toLocaleTimeString()
                           .split(":")[0]
-                      }PM
-                        `}
+                      }
+                        `}<span className="text-base">PM</span>
                   </h3>
                   <h3 className="z-30 bg-fuchsia-400 text-xl p-1 mb-10 pr-4 italic">{event.location.name}</h3>
-                  <button onClick={() => eventHandler(event)}>
-                    <h2
-                      style={{
-                        margin: 0,
-                        fontSize: 42,
-                        lineHeight: "48px",
-                        maxHeight: 98,
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        textTransform: "capitalize",
-                      }}
-                    >
+                  <button onClick={() => eventHandler(event)} className="text-left font-bold text-elipsis text-4xl px-6">
+                    <h2 className="capitalize indent-10 leading-10 pb-4">
                       {event.name.toLowerCase()}
                     </h2>
-                    <p
-                      style={{
-                        margin: "12px 0",
-                        maxHeight: 100,
-                        overflow: "hidden",
-                      }}
+                    <p className="text-sm overflow-hidden font-normal"
                     >
                       {event.description}
                     </p>
                   </button>
                 </div>
-                <div>
+                <div className="mt-1 flex w-full p-2 justify-end bg-gray-950/70">
                   <SocialLinks event={event} />
                 </div>
               </div>
