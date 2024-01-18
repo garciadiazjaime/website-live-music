@@ -1,6 +1,8 @@
 "use client";
 import RGBKineticSliderComponent, {startRecording} from "@/components/RGBKineticSliderComponent";
 import events from "../../public/events.json";
+import SegmentedWheel from "@/components/SegmentedWheel";
+import MusicRecord from "@/components/MusicRecord";
 
 const EFlyer = () => {
 
@@ -10,9 +12,11 @@ const EFlyer = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center bg-red-500 text-white py-6">
+      <h1 className="text-3xl font-bold text-center bg-black text-white py-6 flex flex-row gap-6 justify-center items-center">
         eFlyer recorder
-        <button onClick={startRecording} id="playSlider">Play</button>
+        <button onClick={startRecording} id="playSlider" className="bg-white text-red-500 rounded-md p-4 ml-4 hover:scale-105 transition-all">Create video</button>
+        <SegmentedWheel numberOfSegments={10} innerRadius={30} />
+        <MusicRecord numberOfCircles={10} />
       </h1>
       <RGBKineticSliderComponent images={images} texts={texts} />
     </div>

@@ -230,11 +230,6 @@
                 // set sprite from texture
                 imgSprite = new PIXI.Sprite(texture);
 
-                // calculate the scale to fit the renderer dimensions
-                const scaleToFitWidth = renderer.width / imgSprite.width;
-                const scaleToFitHeight = renderer.height / imgSprite.height;
-                const scale = Math.min(scaleToFitWidth, scaleToFitHeight);
-
                 // set sprite scale
                 imgSprite.scale.set(10);
 
