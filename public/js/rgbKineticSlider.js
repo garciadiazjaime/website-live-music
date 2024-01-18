@@ -53,8 +53,8 @@
 
         ///////////////////////////////
 
-        let imgWidth = 1920;
-        let imgHeight = 1080;
+        let imgWidth = 1080;
+        let imgHeight = 1920;
 
         // remove pixi message in console
         PIXI.utils.skipHello();
@@ -226,8 +226,12 @@
 
                 // get texture from image
                 texture = new PIXI.Texture.from(options.slideImages[i]);
+
                 // set sprite from texture
                 imgSprite = new PIXI.Sprite(texture);
+
+                // set sprite scale
+                imgSprite.scale.set(10);
 
                 // center img
                 imgSprite.anchor.set(0.5);
@@ -290,7 +294,7 @@
                         }
 
                         else {
-                            word_wrap = window.innerWidth / 2
+                            word_wrap = window.innerWidth / 1.5;
                         }
 
                         // get string after :
@@ -300,7 +304,7 @@
                             fontSize: titleSize,
                             fontWeight: fontWeight_1,
                             fill:  options.textTitleColor,
-                            align: 'left',
+                            align: 'center',
                             padding : 0, // todo : make it optionnable
                             wordWrap: true, // todo : make it optionnable
                             wordWrapWidth: word_wrap, // todo : make it optionnable
@@ -349,7 +353,7 @@
                             let word_wrap;
 
                             if(window.innerWidth < 768) {
-                                word_wrap = renderer.width / 1.5
+                                word_wrap = renderer.width / 2
                             }
 
                             else {
@@ -840,6 +844,32 @@
                 }
             }
         }
+
+        ///////////////////////////////
+
+        //  Autoplay
+
+        ///////////////////////////////
+
+        let playSlider = document.querySelector('#playSlider');
+        const intervalDuration = 3000;
+        playSlider.addEventListener('click', (e) => {
+            console.log('thing')
+            // Start the interval
+            const intervalId = setInterval(() => {
+                if (currentIndex >= 0 && currentIndex < options.slideImages.length - 1) {
+                    slideTransition(currentIndex + 1);
+                } else {
+                    slideTransition(0);
+                }
+            }, intervalDuration);
+
+            // Stop the interval after 3 iterations (adjust as needed)
+            setTimeout(() => {
+                clearInterval(intervalId);
+            }, options.slideImages.length * intervalDuration);
+        });
+
 
         ///////////////////////////////
 
