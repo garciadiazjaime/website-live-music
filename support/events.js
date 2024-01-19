@@ -49,9 +49,9 @@ async function processLink(link, getPages = true) {
   }
 }
 
-async function etl(links) {
+async function etl(links, getPages) {
   await async.eachSeries(links, async (link) => {
-    await processLink(link);
+    await processLink(link, getPages);
   });
 }
 
@@ -67,7 +67,7 @@ if (require.main === module) {
     logger.flush();
   });
 } else {
-  queue = new Queue("event", {
+  queue = new Queue("livemusic", {
     connection: {
       host: process.env.REDIS_HOST,
       port: process.env.REDIS_PORT,

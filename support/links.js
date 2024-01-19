@@ -24,18 +24,18 @@ function getLinks() {
       city: "CHICAGO",
       provider: "CHOOSECHICAGO",
     },
-    // {
-    //   url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format(
-    //     "M/D/YYYY"
-    //   )}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
-    //   city: "CHICAGO",
-    //   provider: "SONGKICK",
-    // },
-    // {
-    //   url: `https://do312.com/events/live-music/${today.format("YYYY/MM/DD")}`,
-    //   city: "CHICAGO",
-    //   provider: "DO312",
-    // },
+    {
+      url: `https://www.songkick.com/metro-areas/9426-us-chicago?filters[minDate]=${today.format(
+        "M/D/YYYY"
+      )}&filters[maxDate]=${endDate.format("M/D/YYYY")}`,
+      city: "CHICAGO",
+      provider: "SONGKICK",
+    },
+    {
+      url: `https://do312.com/events/live-music/${today.format("YYYY/MM/DD")}`,
+      city: "CHICAGO",
+      provider: "DO312",
+    },
   ];
 
   return providerLinks

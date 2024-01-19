@@ -5,7 +5,7 @@ const { getLinks } = require("../support/links.js");
 require("dotenv").config();
 
 async function main() {
-  const myQueue = new Queue("event", {
+  const myQueue = new Queue("livemusic", {
     connection: {
       host: process.env.REDIS_HOST,
       port: process.env.REDIS_PORT,
