@@ -1,7 +1,5 @@
-const async = require("async");
 require("dotenv").config();
 
-const { getArtists, updateSpotify } = require("./mint");
 const logger = require("./logger.js")("spotify");
 
 const getToken = async () => {
@@ -59,51 +57,39 @@ const getArtistDetails = async (token, id) => {
   return data;
 };
 
-async function main() {
-  logger.info("spotify starting");
-
-  const token = await getToken();
-
-  if (!token) {
-    logger.info(`invalid token`);
+async function getSpotify(artist) {
+  if (!artist.metadata?.spotify) {
+    logger.info(`no spotify`, {
+      name: artist.name,
+    });
     return;
   }
 
-  const query =
-    "&spotify_empty=false&spotify_tries=3&spotify_genres_empty=true&ordering=metadata__spotify__tries&limit=100";
-  const artists = await getArtists(query);
-  logger.info(`artist found`, { total: artists.length });
-  await async.eachSeries(artists, async (artist) => {
-    logger.info(`processing artist`, {
-      pk: artist.pk,
-      name: artist.name,
-      spotify: artist.metadata?.spotify_url_read,
-    });
-
-    const id = artist.metadata.spotify_url_read.split("/").pop();
-    const details = await getArtistDetails(token, id);
-
-    if (!details) {
-      logger.info(`invalid artist`, { id });
-      const payload = {
-        tries: 1,
-      };
-      await updateSpotify(payload, artist.metadata.spotify.pk);
-      return;
-    }
-
-    const payload = {
-      followers: details.followers.total,
-      image: details.images[0]?.url,
-      popularity: details.popularity,
-      genres: details.genres,
-    };
-
-    await updateSpotify(payload, artist.metadata.spotify.pk);
+  logger.info(`processing artist`, {
+    name: artist.name,
+    spotify: artist.metadata.spotify,
   });
+
+  const token = await getToken();
+  const id = artist.metadata.spotify.split("/").pop();
+  const details = await getArtistDetails(token, id);
+
+  if (!details) {
+    logger.info(`invalid artist`, { id });
+    return;
+  }
+
+  const payload = {
+    id,
+    followers: details.followers.total,
+    image: details.images[0]?.url,
+    popularity: details.popularity,
+    genres: details.genres,
+  };
+
+  return payload;
 }
 
-main().then(() => {
-  logger.info("spotify end");
-  logger.flush;
-});
+module.exports = {
+  getSpotify,
+};

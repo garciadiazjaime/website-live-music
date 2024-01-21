@@ -13,7 +13,7 @@ const { getEvents, updateEvent, saveLocation } = require("./mint");
 async function getGPS(event) {
   const chalk = (await import("chalk").then((mod) => mod)).default;
 
-  logger.info(`processing event`, {
+  logger.info(`processing`, {
     venue: event.venue,
   });
 

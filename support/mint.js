@@ -191,6 +191,32 @@ async function getArtistMetadata(query) {
   return data.results;
 }
 
+async function saveProcessedEvent(payload) {
+  const response = await fetch(`${EVENTS_API}/processed/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+  if (response.status > 201) {
+    logger.error(`Error saving processed event`, {
+      payload,
+      data,
+    });
+    console.log(JSON.stringify(data, null, 2));
+    return;
+  }
+
+  logger.info(`processed event saved`, {
+    slug: data.name,
+  });
+
+  return response;
+}
+
 module.exports = {
   saveEvent,
   getEvents,
@@ -203,4 +229,5 @@ module.exports = {
   rankEvents,
   updateSpotify,
   getArtistMetadata,
+  saveProcessedEvent,
 };

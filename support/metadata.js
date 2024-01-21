@@ -8,7 +8,7 @@ const { getLocations, saveMetadata } = require("./mint");
 const { getSocial, getImageFromURL } = require("./misc");
 
 async function getMetadata(url) {
-  logger.info(`getting metadata`, { url });
+  logger.info(`scrapping`, { url });
 
   if (!url) {
     return {};

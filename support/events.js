@@ -35,10 +35,10 @@ async function load(events) {
 }
 
 async function processLink(link, getPages = true) {
-  logger.info(`scrapping event`, { url: link.url, getPages });
+  logger.info(`scrapping`, { url: link.url, getPages });
   const html = await extract(link.url);
   const events = transform(html, link);
-  logger.info(`events found`, { total: events.length });
+  logger.info(`found`, { total: events.length });
 
   await load(events);
 

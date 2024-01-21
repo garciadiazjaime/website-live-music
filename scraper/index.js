@@ -12,7 +12,7 @@ async function main() {
     },
   });
 
-  const links = getLinks();
+  const links = getLinks().filter((item) => item.provider === "SONGKICK");
 
   const promises = links.map(async (link) => {
     await myQueue.add("link", link);

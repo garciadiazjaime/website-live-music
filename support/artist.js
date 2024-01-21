@@ -34,7 +34,7 @@ async function getDataFromWebsite(url) {
 async function getMusicbrainz(name) {
   const domain = "https://musicbrainz.org";
   const url = `${domain}/search?query=${name}&type=artist&method=indexed`;
-  logger.info(`searching brainz artist`, { name });
+  logger.info(`searching brainz`, { name });
 
   const responseSearch = await fetch(url);
 
@@ -58,7 +58,7 @@ async function getMusicbrainz(name) {
     return {};
   }
 
-  logger.info(`getting brainz website`, { url: data.profile });
+  logger.info(`scrapping brainz profile`, { url: data.profile });
 
   const responseDetails = await fetch(data.profile);
 
@@ -91,94 +91,90 @@ async function getMusicbrainz(name) {
   return data;
 }
 
-async function main() {
+async function getArtist(event) {
   const chalk = (await import("chalk").then((mod) => mod)).default;
 
-  logger.info("starting");
-  const query = `location_empty=false&artist_tries=3&artist_empty=true&provider=SONGKICK&ordering=artist_tries&limit=100`;
-  const events = await getEvents(query);
+  const response = [];
+  const artists = event.name.includes(",")
+    ? event.name.split(",")
+    : event.name.split(" and ");
 
-  if (!Array.isArray(events) || !events.length) {
-    logger.info("no events to process");
-    return;
-  }
-
-  logger.info(`events found`, { total: events.length });
-
-  await async.eachSeries(events, async (event) => {
-    logger.info(`processing event`, {
-      pk: event.pk,
-      name: event.name,
+  await async.eachSeries(artists, async (value) => {
+    const artistName = value.trim().replace(/ /g, "+").replace("and+", "");
+    const name = artistName.replace(/\+/g, " ");
+    const slug = slugify(name, {
+      lower: true,
+      strict: true,
     });
 
-    const artists = event.name.includes(",")
-      ? event.name.split(",")
-      : event.name.split(" and ");
+    const query = `slug=${slug}`;
+    const [artistFound] = await getArtists(query);
 
-    await async.eachSeries(artists, async (value) => {
-      const artistName = value.trim().replace(/ /g, "+").replace("and+", "");
-      const name = artistName.replace(/\+/g, " ");
-      const slug = slugify(name, {
-        lower: true,
-        strict: true,
-      });
-
-      const query = `slug=${slug}`;
-      const [artistFound] = await getArtists(query);
-
-      logger.info(`internal search`, {
-        slug,
-        found: !!artistFound,
-      });
-
-      if (artistFound) {
-        logger.info(chalk.green("found"), {
-          slug,
-        });
-
-        const payload = {
-          artist_tries: 1,
-          artist_pk: artistFound.pk,
-        };
-        console.log(payload);
-
-        await updateEvent(event.pk, payload);
-        return;
-      }
-
-      const musicbrainz = await getMusicbrainz(artistName);
-      const website = await getDataFromWebsite(musicbrainz.website);
-
-      const payload = {
-        slug,
-        event: event.pk,
-        name,
-        profile: musicbrainz.profile,
-        website: website.error ? undefined : musicbrainz.website,
-        instagram: musicbrainz.instagram || website.instagram,
-        twitter: musicbrainz.twitter || website.twitter,
-        facebook: musicbrainz.facebook || website.facebook,
-        soundcloud: musicbrainz.soundcloud || website.soundcloud,
-        spotify_url: musicbrainz.spotify || website.spotify,
-        youtube: musicbrainz.youtube || website.youtube,
-        image: musicbrainz.image || website.image,
-        type: "ARTIST",
-      };
-
-      if (!payload.image && payload.soundcloud) {
-        payload.image = await getImageFromURL(payload.soundcloud, "soundcloud");
-      }
-
-      if (!payload.image) {
-        logger.info(`no image`, { slug });
-      }
-
-      await saveMetadata(payload);
+    logger.info(`internal search`, {
+      slug,
+      found: !!artistFound,
     });
+
+    if (artistFound) {
+      logger.info(chalk.green("found"), {
+        slug,
+      });
+      response.push(artistFound);
+      return;
+    }
+
+    const musicbrainz = await getMusicbrainz(artistName);
+    if (!musicbrainz.profile) {
+      logger.info(`no profile`, {
+        artistName,
+      });
+      return;
+    }
+
+    const website = await getDataFromWebsite(musicbrainz.website);
+
+    const payload = {
+      slug,
+      name,
+      profile: musicbrainz.profile,
+      website: website.error ? undefined : musicbrainz.website,
+    };
+
+    if (!payload.website) {
+      response.push(payload);
+      return;
+    }
+
+    payload.metadata = {
+      website: payload.website,
+      image: musicbrainz.image || website.image,
+      twitter: musicbrainz.twitter || website.twitter,
+      facebook: musicbrainz.facebook || website.facebook,
+      youtube: musicbrainz.youtube || website.youtube,
+      instagram: musicbrainz.instagram || website.instagram,
+      tiktok: musicbrainz.tiktok || website.tiktok,
+      soundcloud: musicbrainz.soundcloud || website.soundcloud,
+      spotify: musicbrainz.spotify || website.spotify,
+      appleMusic: musicbrainz.appleMusic || website.appleMusic,
+    };
+
+    if (!payload.metadata.image && payload.metadata.soundcloud) {
+      payload.metadata.image = await getImageFromURL(
+        payload.metadata.soundcloud,
+        "soundcloud"
+      );
+    }
+
+    if (!payload.metadata.image) {
+      logger.info(`no image`, { slug });
+    }
+
+    response.push(payload);
   });
+
+  return response;
 }
 
-main().then(() => {
-  logger.info("finished");
-  logger.flush();
-});
+module.exports = {
+  getArtist,
+};

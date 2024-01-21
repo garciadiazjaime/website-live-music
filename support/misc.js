@@ -111,6 +111,7 @@ const getSocial = (html, website) => {
   const appleMusic = getAppleMusic(html);
 
   return {
+    website,
     image,
     twitter,
     facebook,
