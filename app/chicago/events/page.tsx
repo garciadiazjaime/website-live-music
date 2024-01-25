@@ -151,7 +151,7 @@ export default function Home() {
                   width={300}
                   height={150}
                   alt={event.name}
-                  className="object-cover w-2/3 h-52 -mb-28 mr-8 z-10"
+                  className="object-cover w-2/3 h-44 -mb-28 mr-8 z-10 bg-white"
                 />
                 <div className={`flex flex-col w-full items-start grow bg-gray-950/70 pt-2 pb-6 text-white relative `}>
                   <Link href="/share" title="share" className="bg-fuchsia-400 p-2 absolute -top-3 right-2 z-30"><Image src="/images/share-btn.svg" width="68" height="54" className="w-6 h-auto" alt=""/></Link>
@@ -165,15 +165,16 @@ export default function Home() {
                         `}<span className="text-base">PM</span>
                   </h3>
                   <h3 className="z-30 bg-fuchsia-400 text-xl p-1 mb-10 pr-4 italic">{event.location.name}</h3>
-                  <button onClick={() => eventHandler(event)} className="text-left font-bold text-elipsis text-4xl px-6">
-                    <h2 className="capitalize indent-10 leading-10 pb-4">
+                  <button onClick={() => eventHandler(event)} className="text-left font-bold text-elipsis text-4xl px-6 flex justify-between items-center w-full gap-4">
+                    <h2 className="capitalize  text-center">
                       {event.name.toLowerCase()}
                     </h2>
-                    <p className="text-sm overflow-hidden font-normal"
-                    >
-                      {event.description}
-                    </p>
+                    <Image src="/images/chevron.svg" width="22" height="56" className="w-4 h-auto" alt=""/>
                   </button>
+                  {/* <p className="text-sm overflow-hidden font-normal"
+                  >
+                    {event.description}
+                  </p> */}
                 </div>
                 <div className="mt-1 flex w-full p-2 justify-end bg-gray-950/70">
                   <SocialLinks event={event} />
