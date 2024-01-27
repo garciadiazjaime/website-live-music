@@ -4,15 +4,10 @@ import { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 
 import TagManager from "react-gtm-module";
-import Image from "next/image";
-import Link from "next/link";
-
-import SocialLinks from "../../../components/socialLinks";
 import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import styles from "./page.module.css";
+import EventCard from "@/components/EventCard";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -51,21 +46,6 @@ const containerStyle = {
 
 const getEventID = (event: Event) =>
   `${slugify(event.name)}-${event.start_date.split("T")[0]}`;
-
-const getImage = (event: Event): string => {
-  const artist = event.artists?.find((artist) => artist.metadata?.image);
-  if (artist) {
-    return artist.metadata?.image!;
-  }
-
-  if (event.location?.metadata?.image) {
-    return event.location.metadata.image;
-  }
-
-  return event.image;
-};
-
-const eventHandler = (event: Event) => window.open(event.url, "_blank");
 
 const filterEventsByDate = (events: Event[], date: Date) =>
   events.filter(
@@ -114,7 +94,7 @@ export default function Home() {
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
     const element = document.getElementById(getEventID(event));
-    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
   };
 
   useEffect(() => {
@@ -131,61 +111,24 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="h-screen flex flex-col">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
-      <main className="h-full flex flex-col-reverse lg:flex-row">
-        <section className="w-full lg:w-1/2 bg-gradient-to-b lg:bg-gradient-to-r from-fuchsia-950 to-gray-900">
-          {/* <h2 style={{ margin: "0 0 30px 0", fontSize: 30 }}>
-            {selectedEvents.length} Events
-          </h2> */}
+      <main className="h-full flex flex-col-reverse lg:flex-row flex-1">
+        <section className="w-full lg:w-96 bg-gradient-to-b lg:bg-gradient-to-r from-fuchsia-950 to-gray-900">
           <div className="flex flex-row overflow-scroll lg:flex-col gap-4 snap-x snap-mandatory">
             {selectedEvents.map((event, index) => (
               <div
                 key={index}
-                className="w-5/6 flex flex-col shrink-0 items-end mb-2 snap-x snap-center first:ml-12 last:mr-12"
+                className="w-5/6 md:w-1/2 lg:w-full shrink-0 mb-2 snap-x snap-center first:ml-12 lg:first:ml-0 last:mr-12 items-stretch"
                 id={getEventID(event)}
               >
-                <Image
-                  priority={index === 0}
-                  src={getImage(event)}
-                  width={300}
-                  height={150}
-                  alt={event.name}
-                  className="object-cover w-2/3 h-44 -mb-28 mr-8 z-10 bg-white"
-                />
-                <div className={`flex flex-col w-full items-start grow bg-gray-950/70 pt-2 pb-6 text-white relative `}>
-                  <Link href="/share" title="share" className="bg-fuchsia-400 p-2 absolute -top-3 right-2 z-30"><Image src="/images/share-btn.svg" width="68" height="54" className="w-6 h-auto" alt=""/></Link>
-                  <h3 className="font-bold text-fuchsia-400 text-5xl pb-2 pl-3 w-auto">
-                    {`
-                      ${
-                        new Date(event.start_date)
-                          .toLocaleTimeString()
-                          .split(":")[0]
-                      }
-                        `}<span className="text-base">PM</span>
-                  </h3>
-                  <h3 className="z-30 bg-fuchsia-400 text-xl p-1 mb-10 pr-4 italic">{event.location.name}</h3>
-                  <button onClick={() => eventHandler(event)} className="text-left font-bold text-elipsis text-4xl px-6 flex justify-between items-center w-full gap-4">
-                    <h2 className="capitalize  text-center">
-                      {event.name.toLowerCase()}
-                    </h2>
-                    <Image src="/images/chevron.svg" width="22" height="56" className="w-4 h-auto" alt=""/>
-                  </button>
-                  {/* <p className="text-sm overflow-hidden font-normal"
-                  >
-                    {event.description}
-                  </p> */}
-                </div>
-                <div className="mt-1 flex w-full p-2 justify-end bg-gray-950/70">
-                  <SocialLinks event={event} />
-                </div>
+                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} />
               </div>
             ))}
           </div>
-          {/* <Footer /> */}
         </section>
 
-        <section className="w-full lg:w-1/2" style={{ height: "50vh" }}>
+        <section className="w-full lg:w-auto flex flex-1">
           {isLoaded && (
             <GoogleMap
               mapContainerStyle={containerStyle}
@@ -193,21 +136,24 @@ export default function Home() {
               center={center}
               onLoad={(map) => setMap(map)}
             >
-              {selectedEvents.map((event, index) => (
-                <MarkerF
+              {selectedEvents.map((event, index) => {
+                console.log(selectedEvent && getEventID(event) === getEventID(selectedEvent))
+                return <MarkerF
                   key={index}
                   onClick={() => markerClickHandler(event)}
-                  icon={index === 0 ? '/images/marker-selected.webp' : '/images/marker.webp'}
                   position={{
                     lat: event.location.lat,
                     lng: event.location.lng,
                   }}
+                  options={{
+                    icon: selectedEvent && getEventID(event) === getEventID(selectedEvent) ? '/images/marker-selected.webp' : '/images/marker.webp'
+                  }}
                 />
-              ))}
+              })}
             </GoogleMap>
           )}
         </section>
       </main>
-    </>
+    </div>
   );
 }

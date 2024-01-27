@@ -149,7 +149,7 @@ export default function SocialLinks(props: { event: Event }) {
     <div
       key={link.url}
       onClick={() => clickHandler(link.url!)}
-      style={{ cursor: "pointer", marginRight: 32 }}
+      className="cursor-pointer"
     >
       {link.logo}
     </div>
