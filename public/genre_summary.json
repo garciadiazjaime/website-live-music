@@ -1,78 +1,63 @@
 {
   "parent": {
     "raw": {
-      "punk": 4,
-      "easy listening": 1,
-      "r&b": 16,
-      "country": 11,
-      "blues": 2,
-      "rock": 18,
-      "jazz": 11,
-      "pop": 28,
-      "folk": 7,
-      "experimental": 1,
       "classical": 7,
-      "electronic": 9,
       "metal": 8,
+      "r&b": 7,
       "hip hop": 3,
-      "latin": 1
+      "latin": 1,
+      "pop": 23,
+      "electronic": 21,
+      "folk": 7,
+      "country": 12,
+      "rock": 25,
+      "punk": 6,
+      "jazz": 10
     },
     "sort": [
       [
-        "pop",
-        28
-      ],
-      [
         "rock",
-        18
+        25
       ],
       [
-        "r&b",
-        16
-      ],
-      [
-        "country",
-        11
-      ],
-      [
-        "jazz",
-        11
+        "pop",
+        23
       ],
       [
         "electronic",
-        9
+        21
+      ],
+      [
+        "country",
+        12
+      ],
+      [
+        "jazz",
+        10
       ],
       [
         "metal",
         8
       ],
       [
-        "folk",
-        7
-      ],
-      [
         "classical",
         7
       ],
       [
+        "r&b",
+        7
+      ],
+      [
+        "folk",
+        7
+      ],
+      [
         "punk",
-        4
+        6
       ],
       [
         "hip hop",
         3
-      ],
-      [
-        "blues",
-        2
-      ],
-      [
-        "easy listening",
-        1
-      ],
-      [
-        "experimental",
-        1
       ],
       [
         "latin",
@@ -82,84 +67,6 @@
   },
   "artists": {
     "raw": {
-      "2": {
-        "pk": 2,
-        "name": "Story of the Year",
-        "image": "https://i1.sndcdn.com/avatars-000123970460-s674dd-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "neon pop punk",
-            "pop punk",
-            "screamo"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      "5": {
-        "pk": 5,
-        "name": "The Commodores",
-        "image": "http://static1.squarespace.com/static/55faf1e3e4b08e1a599fe985/t/5ec71e0fb16d8354fa56f615/1590107665720/Commo+Platinum.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "adult standards",
-            "disco",
-            "funk",
-            "mellow gold",
-            "motown",
-            "quiet storm",
-            "soft rock",
-            "soul"
-          ],
-          "parents": [
-            "easy listening",
-            "r&b",
-            "country",
-            "blues",
-            "rock"
-          ]
-        }
-      },
-      "6": {
-        "pk": 6,
-        "name": "The Spinners",
-        "image": "http://static1.squarespace.com/static/63b4513f363e5042efd39595/t/63b4514b363e5042efd39737/1667501712520/spinners-logo.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "disco",
-            "funk",
-            "motown",
-            "quiet storm",
-            "soul",
-            "classic soul",
-            "philly soul",
-            "southern soul"
-          ],
-          "parents": [
-            "r&b",
-            "blues",
-            "jazz"
-          ]
-        }
-      },
-      "8": {
-        "pk": 8,
-        "name": "Magic City Hippies",
-        "image": "http://static1.squarespace.com/static/5c40cebcf79392dcb790053e/t/61f03ea88456cf190ba45d6b/1643134632188/wygalbum+art+only.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "miami indie"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
       "10": {
         "pk": 10,
         "name": "Jaime Wyatt",
@@ -173,21 +80,6 @@
           ],
           "parents": [
             "country",
-            "pop"
-          ]
-        }
-      },
-      "11": {
-        "pk": 11,
-        "name": "Grlwood",
-        "image": "http://static1.squarespace.com/static/51c2462de4b0da508ca27153/t/5a7cb7d59140b77654f5d137/1518122966172/SB+Official+Logo.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "louisville indie",
-            "pov: indie"
-          ],
-          "parents": [
             "pop"
           ]
         }
@@ -212,60 +104,6 @@
           ]
         }
       },
-      "15": {
-        "pk": 15,
-        "name": "William Tyler",
-        "image": "http://static1.squarespace.com/static/5be06dfec258b44823ef27fd/t/6217b0382a184a7eaebd2769/1645719608758/William+Tyler-logo-white.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "ambient country",
-            "american primitive",
-            "drone folk",
-            "pastoral",
-            "tennessee experimental"
-          ],
-          "parents": [
-            "experimental",
-            "country",
-            "folk",
-            "classical",
-            "pop"
-          ]
-        }
-      },
-      "16": {
-        "pk": 16,
-        "name": "Spencer Brown",
-        "image": "http://static1.squarespace.com/static/58ba0514db29d66bb39f2a48/t/5ece2d4e7517847ec26dcc9f/1590570322807/SpencerBrown_Icon.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "melodic house",
-            "progressive house",
-            "progressive trance"
-          ],
-          "parents": [
-            "electronic"
-          ]
-        }
-      },
-      "18": {
-        "pk": 18,
-        "name": "Jeff Parker",
-        "image": "http://static1.squarespace.com/static/6050de2174edf1126e9136e7/t/64b18b0967a39a3dc798cb66/1689357066074/JP+at+Linear+Labs+2018.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "pastoral",
-            "jazz guitar"
-          ],
-          "parents": [
-            "classical",
-            "jazz"
-          ]
-        }
-      },
       "23": {
         "pk": 23,
         "name": "Kiefer Ian",
@@ -284,36 +122,6 @@
           ]
         }
       },
-      "25": {
-        "pk": 25,
-        "name": "Lizzie No",
-        "image": "http://static1.squarespace.com/static/57ebbe456a49637f6b9fb508/t/651d57480ffe8f1059be47eb/1696421705063/LizzieNo_Halfsies_04_ColeNielsen.JPG?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative americana",
-            "black americana"
-          ],
-          "parents": [
-            "pop",
-            "folk"
-          ]
-        }
-      },
-      "45": {
-        "pk": 45,
-        "name": "Bobby Afterlife",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chill lounge"
-          ],
-          "parents": [
-            "electronic"
-          ]
-        }
-      },
       "47": {
         "pk": 47,
         "name": "Cheat Codes",
@@ -327,24 +135,6 @@
           ],
           "parents": [
             "electronic",
-            "pop"
-          ]
-        }
-      },
-      "48": {
-        "pk": 48,
-        "name": "Lucius",
-        "image": "https://ilovelucius.com/og-meta.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "indie folk",
-            "indie pop",
-            "new americana",
-            "shimmer pop"
-          ],
-          "parents": [
-            "folk",
             "pop"
           ]
         }
@@ -407,21 +197,6 @@
           ],
           "parents": [
             "classical"
-          ]
-        }
-      },
-      "81": {
-        "pk": 81,
-        "name": "Emma White",
-        "image": "http://static1.squarespace.com/static/517d7460e4b08478234cc88f/t/602e9411ddd5ef655f062350/1613665299685/Emma%2BWhite%2B-%2B1%2B%2528credit%2B-%2BSusan%2BBerry%2529%2Bcopy.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "baltimore indie",
-            "country pop"
-          ],
-          "parents": [
-            "pop"
           ]
         }
       },
@@ -784,87 +559,231 @@
             "folk"
           ]
         }
-      }
-    },
-    "sort": [
-      {
-        "pk": 2,
-        "name": "Story of the Year",
-        "image": "https://i1.sndcdn.com/avatars-000123970460-s674dd-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "neon pop punk",
-            "pop punk",
-            "screamo"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
       },
-      {
-        "pk": 5,
-        "name": "The Commodores",
-        "image": "http://static1.squarespace.com/static/55faf1e3e4b08e1a599fe985/t/5ec71e0fb16d8354fa56f615/1590107665720/Commo+Platinum.jpg?format=1500w",
+      "208": {
+        "pk": 208,
+        "name": "Mayer Hawthorne",
+        "image": "https://i1.sndcdn.com/avatars-qxyyRzMCQV7DNtVn-ZjY5IQ-t500x500.jpg",
         "disabled": false,
         "genres": {
           "nodes": [
-            "adult standards",
-            "disco",
             "funk",
-            "mellow gold",
-            "motown",
-            "quiet storm",
-            "soft rock",
-            "soul"
-          ],
-          "parents": [
-            "easy listening",
-            "r&b",
-            "country",
-            "blues",
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 6,
-        "name": "The Spinners",
-        "image": "http://static1.squarespace.com/static/63b4513f363e5042efd39595/t/63b4514b363e5042efd39737/1667501712520/spinners-logo.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "disco",
-            "funk",
-            "motown",
-            "quiet storm",
-            "soul",
-            "classic soul",
-            "philly soul",
-            "southern soul"
+            "pop soul"
           ],
           "parents": [
             "r&b",
-            "blues",
-            "jazz"
-          ]
-        }
-      },
-      {
-        "pk": 8,
-        "name": "Magic City Hippies",
-        "image": "http://static1.squarespace.com/static/5c40cebcf79392dcb790053e/t/61f03ea88456cf190ba45d6b/1643134632188/wygalbum+art+only.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "miami indie"
-          ],
-          "parents": [
             "pop"
           ]
         }
       },
+      "209": {
+        "pk": 209,
+        "name": "Dirt Monkey",
+        "image": "https://i1.sndcdn.com/avatars-IRMw32mhizOt9BzQ-5ehcpw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep",
+            "dubstep",
+            "filthstep",
+            "gaming dubstep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "210": {
+        "pk": 210,
+        "name": "!!! (Chk Chk Chk)",
+        "image": "https://c9cff9.p3cdn2.secureserver.net/wp-content/uploads/2022/02/newlogo-sharing-1.jpg?time=1704928653",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "electronica",
+            "alternative dance",
+            "dance rock",
+            "dance-punk",
+            "neo-synthpop",
+            "new rave",
+            "sacramento indie"
+          ],
+          "parents": [
+            "electronic",
+            "rock",
+            "punk"
+          ]
+        }
+      },
+      "211": {
+        "pk": 211,
+        "name": "Sunsquabi",
+        "image": "https://prod-cdn-00.storenvy.com/assets/og_logo_latest.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jam band",
+            "jamtronica",
+            "livetronica"
+          ],
+          "parents": [
+            "pop",
+            "electronic",
+            "jazz"
+          ]
+        }
+      },
+      "212": {
+        "pk": 212,
+        "name": "Borgeous",
+        "image": "https://i1.sndcdn.com/avatars-000273991416-2wr811-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "progressive house",
+            "edm",
+            "pop dance",
+            "dutch house",
+            "electro house",
+            "progressive electro house"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      "213": {
+        "pk": 213,
+        "name": "Meet Me @ The Altar",
+        "image": "https://www.meetmeatthealtar.com/assets/OGimage.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "pop punk",
+            "black punk",
+            "diy emo",
+            "indie punk",
+            "pixie"
+          ],
+          "parents": [
+            "punk",
+            "rock"
+          ]
+        }
+      },
+      "217": {
+        "pk": 217,
+        "name": "Sian",
+        "image": "http://static1.squarespace.com/static/54d8d211e4b0dfda53e3030e/t/5c47543f352f537b817b1e55/1548178508131/2.SIAN+logo-reverse.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "dark techno"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "219": {
+        "pk": 219,
+        "name": "Emanuel Ax",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classical performance",
+            "classical piano"
+          ],
+          "parents": [
+            "classical"
+          ]
+        }
+      },
+      "221": {
+        "pk": 221,
+        "name": "gum.mp3",
+        "image": "http://static1.squarespace.com/static/57f41f4846c3c4b4ece8f366/t/6539b16b6f170074c3100acc/1698279787775/gum+logo+white+.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jazz house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      "222": {
+        "pk": 222,
+        "name": "Backyard Tire Fire",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      "226": {
+        "pk": 226,
+        "name": "Bruce Molsky",
+        "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/179978/cdeeaacc56bd5b84a64a11d0336785d9dafaa2c5/original/bcm-bw-300.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "modern old-time",
+            "old-time",
+            "old-time fiddle"
+          ],
+          "parents": [
+            "country",
+            "folk"
+          ]
+        }
+      },
+      "233": {
+        "pk": 233,
+        "name": "The Sumthins",
+        "image": "https://i1.sndcdn.com/avatars-000002587545-76kohm-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classic rock",
+            "rock",
+            "british invasion",
+            "merseybeat",
+            "psychedelic rock"
+          ],
+          "parents": [
+            "rock",
+            "pop"
+          ]
+        }
+      },
+      "246": {
+        "pk": 246,
+        "name": "Van-g",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classic schlager",
+            "schlager",
+            "volksmusik"
+          ],
+          "parents": [
+            "folk",
+            "pop"
+          ]
+        }
+      }
+    },
+    "sort": [
       {
         "pk": 10,
         "name": "Jaime Wyatt",
@@ -878,21 +797,6 @@
           ],
           "parents": [
             "country",
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 11,
-        "name": "Grlwood",
-        "image": "http://static1.squarespace.com/static/51c2462de4b0da508ca27153/t/5a7cb7d59140b77654f5d137/1518122966172/SB+Official+Logo.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "louisville indie",
-            "pov: indie"
-          ],
-          "parents": [
             "pop"
           ]
         }
@@ -918,60 +822,6 @@
         }
       },
       {
-        "pk": 15,
-        "name": "William Tyler",
-        "image": "http://static1.squarespace.com/static/5be06dfec258b44823ef27fd/t/6217b0382a184a7eaebd2769/1645719608758/William+Tyler-logo-white.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "ambient country",
-            "american primitive",
-            "drone folk",
-            "pastoral",
-            "tennessee experimental"
-          ],
-          "parents": [
-            "experimental",
-            "country",
-            "folk",
-            "classical",
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 16,
-        "name": "Spencer Brown",
-        "image": "http://static1.squarespace.com/static/58ba0514db29d66bb39f2a48/t/5ece2d4e7517847ec26dcc9f/1590570322807/SpencerBrown_Icon.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "melodic house",
-            "progressive house",
-            "progressive trance"
-          ],
-          "parents": [
-            "electronic"
-          ]
-        }
-      },
-      {
-        "pk": 18,
-        "name": "Jeff Parker",
-        "image": "http://static1.squarespace.com/static/6050de2174edf1126e9136e7/t/64b18b0967a39a3dc798cb66/1689357066074/JP+at+Linear+Labs+2018.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "pastoral",
-            "jazz guitar"
-          ],
-          "parents": [
-            "classical",
-            "jazz"
-          ]
-        }
-      },
-      {
         "pk": 23,
         "name": "Kiefer Ian",
         "image": "http://static1.squarespace.com/static/645d4a0bafa1eb4a61035c1c/t/645d56d15dfe6712c2508cd7/1683838673571/Kiefer_NavyYellow.png?format=1500w",
@@ -990,36 +840,6 @@
         }
       },
       {
-        "pk": 25,
-        "name": "Lizzie No",
-        "image": "http://static1.squarespace.com/static/57ebbe456a49637f6b9fb508/t/651d57480ffe8f1059be47eb/1696421705063/LizzieNo_Halfsies_04_ColeNielsen.JPG?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative americana",
-            "black americana"
-          ],
-          "parents": [
-            "pop",
-            "folk"
-          ]
-        }
-      },
-      {
-        "pk": 45,
-        "name": "Bobby Afterlife",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chill lounge"
-          ],
-          "parents": [
-            "electronic"
-          ]
-        }
-      },
-      {
         "pk": 47,
         "name": "Cheat Codes",
         "image": "https://i1.sndcdn.com/avatars-5TzUe3zpNchsc3TQ-rJ66kA-t500x500.jpg",
@@ -1032,24 +852,6 @@
           ],
           "parents": [
             "electronic",
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 48,
-        "name": "Lucius",
-        "image": "https://ilovelucius.com/og-meta.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "indie folk",
-            "indie pop",
-            "new americana",
-            "shimmer pop"
-          ],
-          "parents": [
-            "folk",
             "pop"
           ]
         }
@@ -1112,21 +914,6 @@
           ],
           "parents": [
             "classical"
-          ]
-        }
-      },
-      {
-        "pk": 81,
-        "name": "Emma White",
-        "image": "http://static1.squarespace.com/static/517d7460e4b08478234cc88f/t/602e9411ddd5ef655f062350/1613665299685/Emma%2BWhite%2B-%2B1%2B%2528credit%2B-%2BSusan%2BBerry%2529%2Bcopy.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "baltimore indie",
-            "country pop"
-          ],
-          "parents": [
-            "pop"
           ]
         }
       },
@@ -1487,6 +1274,228 @@
             "country",
             "rock",
             "folk"
+          ]
+        }
+      },
+      {
+        "pk": 208,
+        "name": "Mayer Hawthorne",
+        "image": "https://i1.sndcdn.com/avatars-qxyyRzMCQV7DNtVn-ZjY5IQ-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "funk",
+            "pop soul"
+          ],
+          "parents": [
+            "r&b",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 209,
+        "name": "Dirt Monkey",
+        "image": "https://i1.sndcdn.com/avatars-IRMw32mhizOt9BzQ-5ehcpw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "brostep",
+            "dubstep",
+            "filthstep",
+            "gaming dubstep"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 210,
+        "name": "!!! (Chk Chk Chk)",
+        "image": "https://c9cff9.p3cdn2.secureserver.net/wp-content/uploads/2022/02/newlogo-sharing-1.jpg?time=1704928653",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "electronica",
+            "alternative dance",
+            "dance rock",
+            "dance-punk",
+            "neo-synthpop",
+            "new rave",
+            "sacramento indie"
+          ],
+          "parents": [
+            "electronic",
+            "rock",
+            "punk"
+          ]
+        }
+      },
+      {
+        "pk": 211,
+        "name": "Sunsquabi",
+        "image": "https://prod-cdn-00.storenvy.com/assets/og_logo_latest.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jam band",
+            "jamtronica",
+            "livetronica"
+          ],
+          "parents": [
+            "pop",
+            "electronic",
+            "jazz"
+          ]
+        }
+      },
+      {
+        "pk": 212,
+        "name": "Borgeous",
+        "image": "https://i1.sndcdn.com/avatars-000273991416-2wr811-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "progressive house",
+            "edm",
+            "pop dance",
+            "dutch house",
+            "electro house",
+            "progressive electro house"
+          ],
+          "parents": [
+            "electronic",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 213,
+        "name": "Meet Me @ The Altar",
+        "image": "https://www.meetmeatthealtar.com/assets/OGimage.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "pop punk",
+            "black punk",
+            "diy emo",
+            "indie punk",
+            "pixie"
+          ],
+          "parents": [
+            "punk",
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 217,
+        "name": "Sian",
+        "image": "http://static1.squarespace.com/static/54d8d211e4b0dfda53e3030e/t/5c47543f352f537b817b1e55/1548178508131/2.SIAN+logo-reverse.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "dark techno"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 219,
+        "name": "Emanuel Ax",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classical performance",
+            "classical piano"
+          ],
+          "parents": [
+            "classical"
+          ]
+        }
+      },
+      {
+        "pk": 221,
+        "name": "gum.mp3",
+        "image": "http://static1.squarespace.com/static/57f41f4846c3c4b4ece8f366/t/6539b16b6f170074c3100acc/1698279787775/gum+logo+white+.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jazz house"
+          ],
+          "parents": [
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 222,
+        "name": "Backyard Tire Fire",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 226,
+        "name": "Bruce Molsky",
+        "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/179978/cdeeaacc56bd5b84a64a11d0336785d9dafaa2c5/original/bcm-bw-300.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "modern old-time",
+            "old-time",
+            "old-time fiddle"
+          ],
+          "parents": [
+            "country",
+            "folk"
+          ]
+        }
+      },
+      {
+        "pk": 233,
+        "name": "The Sumthins",
+        "image": "https://i1.sndcdn.com/avatars-000002587545-76kohm-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classic rock",
+            "rock",
+            "british invasion",
+            "merseybeat",
+            "psychedelic rock"
+          ],
+          "parents": [
+            "rock",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 246,
+        "name": "Van-g",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "classic schlager",
+            "schlager",
+            "volksmusik"
+          ],
+          "parents": [
+            "folk",
+            "pop"
           ]
         }
       }
