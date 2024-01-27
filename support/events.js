@@ -1,14 +1,17 @@
 const async = require("async");
 const { Queue } = require("bullmq");
 
-const { saveEvent } = require("./mint.js");
 const { getTransformer, getPaginator } = require("./providers/factories.js");
-const { getLinks } = require("./links.js");
 const logger = require("./logger.js")("events");
 
 require("dotenv").config();
 
-let queue;
+const queue = new Queue("livemusic", {
+  connection: {
+    host: process.env.REDIS_HOST,
+    port: process.env.REDIS_PORT,
+  },
+});
 
 async function extract(url) {
   const response = await fetch(url);
@@ -25,53 +28,24 @@ function transform(html, link) {
 
 async function load(events) {
   await async.eachSeries(events, async (payload) => {
-    if (queue) {
-      await queue.add("event", payload);
-      return;
-    }
-
-    await saveEvent(payload);
+    await queue.add("event", payload);
   });
 }
 
-async function processLink(link, getPages = true) {
-  logger.info(`scrapping`, { url: link.url, getPages });
-  const html = await extract(link.url);
-  const events = transform(html, link);
-  logger.info(`found`, { total: events.length });
-
-  await load(events);
-
-  if (getPages) {
-    const paginator = getPaginator(link.provider);
-    const paginatorLinks = paginator(html, link);
-    await etl(paginatorLinks, false);
-  }
-}
-
-async function etl(links, getPages) {
+async function processLink(links, getPages = true) {
   await async.eachSeries(links, async (link) => {
-    await processLink(link, getPages);
-  });
-}
+    logger.info(`scrapping`, { url: link.url, getPages });
+    const html = await extract(link.url);
+    const events = transform(html, link);
+    logger.info(`found`, { total: events.length });
 
-async function main() {
-  logger.info("starting events");
-  const links = getLinks();
-  await etl(links);
-}
+    await load(events);
 
-if (require.main === module) {
-  main().then(() => {
-    logger.info("finished events");
-    logger.flush();
-  });
-} else {
-  queue = new Queue("livemusic", {
-    connection: {
-      host: process.env.REDIS_HOST,
-      port: process.env.REDIS_PORT,
-    },
+    if (getPages) {
+      const paginator = getPaginator(link.provider);
+      const paginatorLinks = paginator(html, link);
+      await processLink(paginatorLinks, false);
+    }
   });
 }
 

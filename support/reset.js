@@ -37,13 +37,13 @@ async function resetArtist() {
           disabled: false,
 
           genres: {
-            nodes: artist.metadata.spotify?.genres.map(({ name }) => name),
+            nodes: artist.spotify?.genres.map(({ name }) => name),
             parents: [],
           },
         };
       }
 
-      artist.metadata.spotify?.genres?.forEach(({ name }) => {
+      artist.spotify?.genres?.forEach(({ name }) => {
         const _genre = name.toLowerCase();
         const parent = genres.nodes[_genre];
         if (!parent) {

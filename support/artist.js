@@ -3,11 +3,9 @@ const cheerio = require("cheerio");
 const slugify = require("slugify");
 
 const { validURL, getSocial, getImageFromURL } = require("./misc");
-const { getEvents, saveMetadata, getArtists, updateEvent } = require("./mint");
+const { getArtists } = require("./mint");
 
 const logger = require("./logger.js")("artist");
-
-require("dotenv").config();
 
 async function getDataFromWebsite(url) {
   if (!url) {
@@ -134,7 +132,6 @@ async function getArtist(event) {
     const website = await getDataFromWebsite(musicbrainz.website);
 
     const payload = {
-      slug,
       name,
       profile: musicbrainz.profile,
       website: website.error ? undefined : musicbrainz.website,

@@ -4,26 +4,6 @@ const EVENTS_API = `${process.env.NEXT_PUBLIC_EVENTS_API}/events`;
 
 const logger = require("./logger.js")("mint");
 
-async function saveEvent(payload) {
-  const response = await fetch(`${EVENTS_API}/`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
-
-  const data = await response.json();
-  if (response.status > 201) {
-    logger.error("error saving event", { payload, data });
-    return;
-  }
-
-  logger.info(`event saved`, { pk: data.pk });
-
-  return response;
-}
-
 async function getEvents(query) {
   const response = await fetch(`${EVENTS_API}/?${query}`);
 
@@ -191,8 +171,8 @@ async function getArtistMetadata(query) {
   return data.results;
 }
 
-async function saveProcessedEvent(payload) {
-  const response = await fetch(`${EVENTS_API}/processed/`, {
+async function saveEvent(payload) {
+  const response = await fetch(`${EVENTS_API}/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -229,5 +209,4 @@ module.exports = {
   rankEvents,
   updateSpotify,
   getArtistMetadata,
-  saveProcessedEvent,
 };

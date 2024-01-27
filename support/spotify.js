@@ -81,10 +81,12 @@ async function getSpotify(artist) {
 
   const payload = {
     id,
+    name: details.name,
     followers: details.followers.total,
     image: details.images[0]?.url,
     popularity: details.popularity,
-    genres: details.genres,
+    genres: details.genres?.map((genre) => ({ name: genre })),
+    url: details.external_urls.spotify,
   };
 
   return payload;

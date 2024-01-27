@@ -7,16 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "events": "node support/events",
-    "gps": "node support/gps",
-    "reset": "node support/reset",
-    "metadata": "node support/metadata",
-    "rank": "node support/rank",
-    "artist": "node support/artist",
-    "spotify": "node support/spotify",
+    "r": "node support/reset",
     "genres": "node support/genres",
-    "q": "nodemon queue/index.js",
-    "s": "node scraper/index.js"
+    "w": "nodemon support/workers",
+    "q": "node support/queue"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",

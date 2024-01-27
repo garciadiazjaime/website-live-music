@@ -12,7 +12,6 @@ const sleep = async (ms = 1_000) => {
 
 const snakeCase = (value) => value.trim().replace(/ /g, "_");
 
-const emailRegex = /([a-zA-Z0-9._+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
 const urlValidRegex =
   /https?:\/\/(([a-z\d]([a-z\d-]*[a-z\d])?\.)+[a-z]{2,})(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?/i;
 const twitterRegex = /http(?:s)?:\/\/(?:www\.)?twitter\.com\/([a-zA-Z0-9_]+)/gi;
@@ -20,7 +19,7 @@ const facebookRegex =
   /http(?:s)?:\/\/(?:www\.)?facebook\.com\/([a-zA-Z0-9_]+)/gi;
 const youtubeRegex = /http(?:s)?:\/\/(?:www\.)?youtube\.com\/([a-zA-Z0-9_]+)/gi;
 const instagramRegex =
-  /http(?:s)?:\/\/(?:www\.)?instagram\.com\/([a-zA-Z0-9_]+)/gi;
+  /http(?:s)?:\/\/(?:www\.)?instagram\.com\/([a-zA-Z0-9_\.]+)/gi;
 const tiktokRegex = /http(?:s)?:\/\/(?:www\.)?tiktok\.com\/([a-zA-Z0-9_]+)/gi;
 const soundcloudRegex =
   /http(?:s)?:\/\/(?:www\.)?soundcloud\.com\/([a-zA-Z0-9_]+)/gi;
@@ -45,7 +44,10 @@ const getImage = (html, website) => {
 };
 
 const getTwitter = (value) => {
-  const twitter = value.match(twitterRegex)?.pop();
+  const twitter = value
+    .match(twitterRegex)
+    ?.filter((item) => !item.includes("twitter.com/intent"))[0];
+
   if (["http://www.twitter.com/wix"].includes(twitter)) {
     return;
   }
@@ -54,7 +56,9 @@ const getTwitter = (value) => {
 };
 
 const getFacebook = (value) => {
-  const facebook = value.match(facebookRegex)?.pop();
+  const facebook = value
+    .match(facebookRegex)
+    ?.filter((item) => !item.includes("facebook.com/sharer"))[0];
 
   if (
     [
@@ -86,17 +90,16 @@ const getYoutube = (value) => {
   return youtube;
 };
 const getInstagram = (value) => {
-  const instagram = value.match(instagramRegex)?.pop();
-
-  if ("https://www.instagram.com/explore") {
-    return;
-  }
+  const instagram = value
+    .match(instagramRegex)
+    ?.filter((item) => item !== "https://www.instagram.com/explore")[0];
 
   return instagram;
 };
 const getTiktok = (value) => value.match(tiktokRegex)?.pop();
 const getSoundcloud = (value) => value.match(soundcloudRegex)?.pop();
-const getSpotify = (value) => value.match(spotifyRegex)?.pop();
+const getSpotify = (value) =>
+  value.match(spotifyRegex)?.filter((item) => item.includes("artist"))[0];
 const getAppleMusic = (value) => value.match(appleMusicRegex)?.pop();
 
 const getSocial = (html, website) => {

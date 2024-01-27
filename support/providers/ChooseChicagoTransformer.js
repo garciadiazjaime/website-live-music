@@ -9,7 +9,7 @@ function ChooseChicagoTransformer(html, link) {
     .map((item) => {
       const name = $(item).find(".card-title").text();
       const description = $(item).find(".card-body p").text();
-      const image = $(item).find(".img-cover").data("src");
+      const image = encodeURI($(item).find(".img-cover").data("src"));
       const url = $(item).find(".card-img-link").attr("href");
 
       const date = $(item).find(".tribe-event-date-start").text();

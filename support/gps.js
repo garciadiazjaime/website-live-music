@@ -1,14 +1,9 @@
 const { Client } = require("@googlemaps/google-maps-services-js");
-const async = require("async");
 const slugify = require("slugify");
 
 const { getLocations } = require("./mint.js");
 const { sleep } = require("./misc");
 const logger = require("./logger.js")("gps");
-
-require("dotenv").config();
-
-const { getEvents, updateEvent, saveLocation } = require("./mint");
 
 async function getGPS(event) {
   const chalk = (await import("chalk").then((mod) => mod)).default;
@@ -28,7 +23,7 @@ async function getGPS(event) {
 
   if (location) {
     logger.info(chalk.green("location found"), {
-      slug: location.slug,
+      slug_venue,
       website: location.website,
     });
 
@@ -88,59 +83,6 @@ async function getGPS(event) {
   };
 
   return payload;
-}
-
-async function main() {
-  logger.info("starting");
-  const query =
-    "location_empty=true&gmaps_tries=3&ordering=gmaps_tries&limit=100";
-  const events = await getEvents(query);
-
-  if (!Array.isArray(events) || !events.length) {
-    logger.info("no events to process");
-    return;
-  }
-
-  logger.info(`events found`, { total: events.length });
-
-  await async.eachSeries(events, async (event) => {
-    const chalk = (await import("chalk").then((mod) => mod)).default;
-
-    const location = await getGPS(event);
-
-    if (location.pk) {
-      logger.info(chalk.green("location found"), {
-        slug: location.slug,
-        website: location.website,
-      });
-      await updateEvent(event.pk, { gmaps_tries: 1, location_pk: location.pk });
-      return;
-    }
-
-    if (!location) {
-      logger.info(chalk.red(`gps not found`), {
-        venue: event.venue,
-      });
-
-      await updateEvent(event.pk, { gmaps_tries: 1 });
-      return;
-    }
-
-    const response = await saveLocation({
-      ...location,
-      event: event.pk,
-    });
-    if (!response) {
-      await updateEvent(event.pk, { gmaps_tries: 1 });
-    }
-  });
-}
-
-if (require.main === module) {
-  main().then(() => {
-    logger.info("finished");
-    logger.flush();
-  });
 }
 
 module.exports = {

@@ -1,6 +1,6 @@
 const { Queue } = require("bullmq");
 
-const { getLinks } = require("../support/links.js");
+const { getLinks } = require("./links.js");
 
 require("dotenv").config();
 
@@ -12,7 +12,7 @@ async function main() {
     },
   });
 
-  const links = getLinks().filter((item) => item.provider === "SONGKICK");
+  const links = getLinks();
 
   const promises = links.map(async (link) => {
     await myQueue.add("link", link);
