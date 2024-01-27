@@ -8,7 +8,6 @@ export interface Spotify {
   genres: Genre[];
   popularity: number;
   url: string;
-  tries: number;
 }
 
 export interface SocialMedia {
@@ -48,7 +47,7 @@ interface Metadata {
   instagram: string | null;
   tiktok: string | null;
   soundcloud: string | null;
-  spotify: Spotify | null;
+  spotify: string | null;
   appleMusic: string | null;
 }
 
@@ -61,7 +60,6 @@ interface Location {
   slug: string;
   slug_venue: string;
   pk: number;
-  meta_tries: number;
   website: string;
   metadata: Metadata | null;
 }
@@ -70,6 +68,7 @@ export interface Artist {
   pk: number;
   name: string;
   metadata: Metadata | null;
+  spotify: Spotify | null;
 }
 
 export interface Event {
@@ -79,14 +78,12 @@ export interface Event {
   image: string;
   url: string;
   start_date: string;
-  end_date: string;
+  end_date: string | null;
   provider: string;
   venue: string;
   address: string;
   city: string;
   slug: string;
-  gmaps_tries: number;
-  artist_tries: number;
   location: Location;
   artists: Artist[];
   pk: number;
