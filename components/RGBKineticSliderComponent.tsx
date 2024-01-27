@@ -6,6 +6,7 @@ declare global {
     TweenMax: any;
     PIXI: any;
     rgbKineticSlider: any;
+    webkitAudioContext: any;
   }
   interface Element {
     captureStream: any;
@@ -20,7 +21,6 @@ interface RGBKineticSliderProps {
 const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, texts }) => {
   const [scriptsLoaded, setScriptsLoaded] = useState(false);
   const [sliderInstance, setSliderInstance] = useState<any>(null);
-
   useEffect(() => {
     const loadScript = (src: string, callback: () => void) => {
       const script = document.createElement('script');
@@ -57,8 +57,8 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
         itemsTitles: texts, // array of titles / subtitles
 
         // displacement images sources
-        backgroundDisplacementSprite: "https://i.ibb.co/N246LxD/map-9.jpg", // slide displacement image
-        cursorDisplacementSprite: "https://i.ibb.co/KrVr51f/displace-circle.png", // cursor displacement image
+        backgroundDisplacementSprite: "/video-effects/map-9.jpg", // slide displacement image
+        cursorDisplacementSprite: "/video-effects/displace-circle.png", // cursor displacement image
 
         // cursor displacement effect
         cursorImgEffect: true, // enable cursor effect
@@ -96,22 +96,21 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
         navTextsRgbIntensity: 15, // set text rgb intensity for regular nav
 
         textTitleColor: "#fff", // title color
-        textTitleSize: 125, // title size
+        textTitleSize: 30, // title size
         mobileTextTitleSize: 125, // title size
         textTitleLetterspacing: 3, // title letterspacing
 
         textSubTitleColor: "white", // subtitle color ex : 0x000000
-        textSubTitleSize: 21, // subtitle size
+        textSubTitleSize: 20, // subtitle size
         mobileTextSubTitleSize: 21, // mobile subtitle size
         textSubTitleLetterspacing: 2, // subtitle letter spacing
-        textSubTitleOffsetTop: 90, // subtitle offset top
+        textSubTitleOffsetTop: 200, // subtitle offset top
         mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
       });
 
       setSliderInstance(slider);
 
       // Start recording after the slider is initialized
-      startRecording();
 
       // Cleanup when the component is unmounted
       return () => {
@@ -122,39 +121,64 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
     }
   }, [scriptsLoaded, images, texts]);
 
-  const startRecording = () => {
-    setTimeout(() => {
-      const chunks: BlobPart[] | undefined = [];
-      const canvas = document.querySelector('#rgbKineticSlider canvas');
-      const stream = canvas?.captureStream(); // Use the container's canvas element
-
-      if (stream) {
-        const rec = new MediaRecorder(stream);
-
-        rec.ondataavailable = (e) => chunks.push(e.data);
-        rec.onstop = (e) => exportVid(new Blob(chunks, { type: 'video/webm' }));
-
-        rec.start();
-        setTimeout(() => rec.stop(), 15000);
-      }
-    }, 200);
-  };
-
-  // Function to export video
-  const exportVid = (blob: Blob) => {
-    const vid = document.createElement('video');
-    vid.src = URL.createObjectURL(blob);
-    vid.controls = true;
-    document.body.appendChild(vid);
-
-    const a = document.createElement('a');
-    a.download = 'myvid.webm';
-    a.href = vid.src;
-    a.textContent = 'download the video';
-    document.body.appendChild(a);
-  };
-
   return <div id="rgbKineticSlider" className="rgbKineticSlider" />;
+};
+
+// Function to export video
+const exportVid = (blob: Blob) => {
+  const vid = document.createElement('video');
+  vid.style.width = '30%';
+  vid.src = URL.createObjectURL(blob);
+  vid.controls = true;
+  document.body.appendChild(vid);
+
+  const a = document.createElement('a');
+  a.download = 'myvid.webm';
+  a.href = vid.src;
+  a.textContent = 'download the video';
+  document.body.appendChild(a);
+};
+
+export const startRecording = () => {
+  const chunks: BlobPart[] = [];
+  const canvas = document.querySelector('#rgbKineticSlider canvas');
+
+  if (!canvas) {
+    console.error('Canvas not found');
+    return;
+  }
+
+  // Load your audio file
+  const audioElement = new Audio('/audio/music_sample.mp3');
+
+  // Listen for the canplay event before starting recording
+  audioElement.addEventListener('canplay', () => {
+    console.log('Audio can play');
+
+    const stream = canvas.captureStream();
+
+    const audioStream = audioElement.captureStream();
+
+    // Add the audio track to the video stream
+    stream.addTrack(audioStream.getAudioTracks()[0]);
+
+    const rec = new MediaRecorder(stream);
+
+    // Connect the audio to the media recorder
+    rec.ondataavailable = (e) => chunks.push(e.data);
+    rec.onstop = () => {
+      exportVid(new Blob(chunks, { type: 'video/webm' }));
+      audioElement.pause();
+    };
+
+    // Start playing the audio and recording simultaneously
+    audioElement.play();
+    rec.start();
+
+    setTimeout(() => {
+      rec.stop();
+    }, 3000 * 5);
+  });
 };
 
 export default RGBKineticSliderComponent;
