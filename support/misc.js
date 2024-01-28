@@ -144,6 +144,15 @@ async function getImageFromURL(url, social) {
   return image;
 }
 
+const getGenres = (html) => {
+  const $ = cheerio.load(html);
+  const genres = $('.genre-list a').toArray().map((item) => {
+      return { name: $(item).text() };
+    });
+
+  return genres;
+}
+
 module.exports = {
   sleep,
   snakeCase,
@@ -151,4 +160,5 @@ module.exports = {
   validURL,
   getSocial,
   getImageFromURL,
+  getGenres,
 };
