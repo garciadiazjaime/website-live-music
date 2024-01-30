@@ -2,7 +2,7 @@ const async = require("async");
 const cheerio = require("cheerio");
 const slugify = require("slugify");
 
-const { validURL, getSocial, getImageFromURL } = require("./misc");
+const { validURL, getSocial, getImageFromURL, getGenres } = require("./misc");
 const { getArtists } = require("./mint");
 
 const logger = require("./logger.js")("artist");
@@ -86,6 +86,9 @@ async function getMusicbrainz(name) {
     data[social] = href;
   });
 
+  const genres = getGenres(htmlDetails);
+  data.genres = genres;
+
   return data;
 }
 
@@ -135,6 +138,7 @@ async function getArtist(event) {
       name,
       profile: musicbrainz.profile,
       website: website.error ? undefined : musicbrainz.website,
+      genres: musicbrainz.genres
     };
 
     if (!payload.website) {
