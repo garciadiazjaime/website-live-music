@@ -9,7 +9,7 @@ interface Props {
   selected: boolean | undefined;
 }
 
-const EventCard = ({ event, index, selected = false}: Props) => {
+const EventCard = ({ event, index, selected = false }: Props) => {
   const getImage = (event: Event): string => {
     const artist = event.artists?.find((artist) => artist.metadata?.image);
     if (artist) {
@@ -35,7 +35,14 @@ const EventCard = ({ event, index, selected = false}: Props) => {
       className="object-cover w-2/3 h-32 -mb-24 mr-8 z-10 bg-white"
     />
     <div className={`flex flex-col w-full items-start grow ${selected ? 'bg-fuchsia-800/30 shadow-xl' : 'bg-gray-950/40'} pt-2 pb-6 text-white relative `}>
-      <Link href="/share" title="share" className="bg-fuchsia-400 p-1.5 absolute -top-3 right-2 z-30"><Image src="/images/share-btn.svg" width="68" height="54" className="w-5 h-auto" alt=""/></Link>
+      <div className="absolute -top-3 right-2 z-30 w-auto">
+        <Link href="/share" className="bg-fuchsia-400 p-1.5 mb-2 flex">
+          <Image src="/images/share-btn.svg" width="68" height="54" className="w-5 h-auto" alt=""/>
+        </Link>
+        <button className="bg-fuchsia-400 p-1.5 flex">
+          <Image src="/images/show-location.svg" width="68" height="54" className="w-5 h-auto" alt=""/>
+        </button>
+      </div>
       <h3 className="font-bold text-fuchsia-400 text-3xl pb-2 pl-3 w-auto">
         {`
           ${
@@ -52,9 +59,9 @@ const EventCard = ({ event, index, selected = false}: Props) => {
         </h2>
         <Image src="/images/chevron.svg" width="22" height="56" className="w-4 h-auto" alt=""/>
       </button>
-    </div>
-    <div className="-mt-4 flex mr-2 p-2 justify-end bg-gray-950 z-10 gap-6">
-      <SocialLinks event={event} />
+      <div className="flex pl-2">
+        <SocialLinks event={event} />
+      </div>
     </div>
   </div>
 }

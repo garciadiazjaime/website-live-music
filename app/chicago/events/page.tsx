@@ -8,6 +8,7 @@ import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
 import EventCard from "@/components/EventCard";
+import generateUniqueKey from "@/support/generateUniqueKey";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -113,12 +114,12 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
-      <main className="h-full flex flex-col-reverse lg:flex-row flex-1">
-        <section className="w-full lg:w-96 bg-gradient-to-b lg:bg-gradient-to-r from-fuchsia-950 to-gray-900">
+      <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
+        <section className="w-full lg:w-96 lg:h-full lg:overflow-y-scroll bg-gradient-to-b lg:bg-gradient-to-r from-fuchsia-950 to-gray-900">
           <div className="flex flex-row overflow-scroll lg:flex-col gap-4 snap-x snap-mandatory">
             {selectedEvents.map((event, index) => (
               <div
-                key={index}
+                key={generateUniqueKey(index)}
                 className="w-5/6 md:w-1/2 lg:w-full shrink-0 mb-2 snap-x snap-center first:ml-12 lg:first:ml-0 last:mr-12 items-stretch"
                 id={getEventID(event)}
               >
@@ -137,9 +138,8 @@ export default function Home() {
               onLoad={(map) => setMap(map)}
             >
               {selectedEvents.map((event, index) => {
-                console.log(selectedEvent && getEventID(event) === getEventID(selectedEvent))
                 return <MarkerF
-                  key={index}
+                  key={generateUniqueKey(index)}
                   onClick={() => markerClickHandler(event)}
                   position={{
                     lat: event.location.lat,
