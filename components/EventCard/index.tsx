@@ -25,7 +25,6 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
   };
 
   const gotoEventPage = (event: Event) => window.open(event.url, "_blank");
-  console.log(event)
 
   return <div className="flex flex-col w-full h-full items-end group">
     <Image

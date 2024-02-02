@@ -25,11 +25,6 @@ function slugify(str: string) {
     .replace(/-+/g, "-");
 }
 
-const center = {
-  lat: 41.8777569,
-  lng: -87.6271142,
-};
-
 const days = [
   "Monday",
   "Tuesday",
@@ -61,7 +56,20 @@ export default function Home() {
     filterEventsByDate(events, selectedDate)
   );
   const [selectedEvent, setSelectedEvent] = useState<Event>();
-  const [map, setMap] = useState<google.maps.Map>();
+  const [map, setMap] = useState<google.maps.Map | null>();
+
+  const [center, setCenter] = useState({
+    lat: 41.8777569,
+    lng: -87.6271142,
+  });
+
+  const onLoad = (map: google.maps.Map)  => {
+    setMap(map);
+  };
+
+  const onUnmount = () => {
+    setMap(null);
+  };
 
   const currentDay = new Date().getDay() - 1;
 
@@ -111,6 +119,17 @@ export default function Home() {
     setSelectedDate(today);
   };
 
+  const setPin = (event: Event) => {
+    setSelectedEvent(event);
+    if (map) {
+      map.setZoom(13);
+      map.panTo({
+        lat: event.location.lat,
+        lng: event.location.lng
+      });
+    }
+  }
+
   return (
     <div className="h-screen flex flex-col">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
@@ -123,7 +142,7 @@ export default function Home() {
                 className="w-5/6 md:w-1/2 lg:w-full shrink-0 mb-2 snap-x snap-center first:ml-12 lg:first:ml-0 last:mr-12 items-stretch"
                 id={getEventID(event)}
               >
-                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} setPin={() => setSelectedEvent(event)}/>
+                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} setPin={() => setPin(event)}/>
               </div>
             ))}
           </div>
@@ -135,7 +154,8 @@ export default function Home() {
               mapContainerStyle={containerStyle}
               zoom={10}
               center={center}
-              onLoad={(map) => setMap(map)}
+              onLoad={onLoad}
+              onUnmount={onUnmount}
             >
               {selectedEvents.map((event, index) => {
                 return <MarkerF
