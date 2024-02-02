@@ -95,7 +95,7 @@ export default function Home() {
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
     const element = document.getElementById(getEventID(event));
-    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+    element?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
   };
 
   useEffect(() => {
@@ -115,15 +115,15 @@ export default function Home() {
     <div className="h-screen flex flex-col">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
-        <section className="w-full lg:w-96 lg:h-full lg:overflow-y-scroll bg-gradient-to-b lg:bg-gradient-to-r from-fuchsia-950 to-gray-900">
-          <div className="flex flex-row overflow-scroll lg:flex-col gap-4 snap-x snap-mandatory">
+        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll lg:overflow-x-hidden lg:overflow-y-scroll bg-gradient-to-b lg:bg-gradient-to-r to-fuchsia-950 from-gray-900">
+          <div className="flex flex-row lg:flex-col gap-4 snap-x snap-mandatory">
             {selectedEvents.map((event, index) => (
               <div
                 key={generateUniqueKey(index)}
                 className="w-5/6 md:w-1/2 lg:w-full shrink-0 mb-2 snap-x snap-center first:ml-12 lg:first:ml-0 last:mr-12 items-stretch"
                 id={getEventID(event)}
               >
-                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} />
+                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} setPin={() => setSelectedEvent(event)}/>
               </div>
             ))}
           </div>
