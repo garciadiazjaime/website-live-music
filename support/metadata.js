@@ -7,7 +7,7 @@ const { getSocial, getImageFromURL } = require("./misc");
 async function getMetadata(url) {
   logger.info(`scrapping`, { url });
 
-  if (!url) {
+  if (!url || url.includes("youtube.com")) {
     return {};
   }
 

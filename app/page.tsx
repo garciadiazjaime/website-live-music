@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <div style={{ position: "relative" }}>
-        <Link href="/chicago" style={{ display: "inline-block" }}>
+        <Link href="/chicago/events" style={{ display: "inline-block" }}>
           <Image
             alt="chicago"
             src="https://cdn.britannica.com/59/94459-050-DBA42467/Skyline-Chicago.jpg"

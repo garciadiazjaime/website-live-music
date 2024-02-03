@@ -1,51 +1,44 @@
 {
   "parent": {
     "raw": {
-      "classical": 7,
-      "metal": 8,
-      "r&b": 7,
+      "rock": 26,
+      "r&b": 12,
       "hip hop": 3,
-      "latin": 1,
-      "pop": 23,
-      "electronic": 21,
-      "folk": 7,
-      "country": 12,
-      "rock": 25,
+      "latin": 2,
+      "electronic": 19,
       "punk": 6,
-      "jazz": 10
+      "country": 14,
+      "folk": 7,
+      "pop": 18,
+      "jazz": 10,
+      "classical": 2,
+      "blues": 5,
+      "metal": 1
     },
     "sort": [
       [
         "rock",
-        25
-      ],
-      [
-        "pop",
-        23
+        26
       ],
       [
         "electronic",
-        21
+        19
+      ],
+      [
+        "pop",
+        18
       ],
       [
         "country",
+        14
+      ],
+      [
+        "r&b",
         12
       ],
       [
         "jazz",
         10
-      ],
-      [
-        "metal",
-        8
-      ],
-      [
-        "classical",
-        7
-      ],
-      [
-        "r&b",
-        7
       ],
       [
         "folk",
@@ -56,11 +49,23 @@
         6
       ],
       [
+        "blues",
+        5
+      ],
+      [
         "hip hop",
         3
       ],
       [
         "latin",
+        2
+      ],
+      [
+        "classical",
+        2
+      ],
+      [
+        "metal",
         1
       ]
     ]
@@ -84,26 +89,6 @@
           ]
         }
       },
-      "12": {
-        "pk": 12,
-        "name": "Yonder Mountain String Band",
-        "image": "https://www.yondermountain.com/wp-content/uploads/2022/12/Social-Logo.jpeg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "banjo",
-            "jam band",
-            "jamgrass",
-            "progressive bluegrass",
-            "string band"
-          ],
-          "parents": [
-            "folk",
-            "pop",
-            "country"
-          ]
-        }
-      },
       "23": {
         "pk": 23,
         "name": "Kiefer Ian",
@@ -118,175 +103,6 @@
           ],
           "parents": [
             "jazz",
-            "r&b"
-          ]
-        }
-      },
-      "47": {
-        "pk": 47,
-        "name": "Cheat Codes",
-        "image": "https://i1.sndcdn.com/avatars-5TzUe3zpNchsc3TQ-rJ66kA-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "edm",
-            "pop",
-            "pop dance"
-          ],
-          "parents": [
-            "electronic",
-            "pop"
-          ]
-        }
-      },
-      "52": {
-        "pk": 52,
-        "name": "Spafford",
-        "image": "https://i1.sndcdn.com/avatars-MejLfS2DjoiEuD7r-IRjijg-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "jam band"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      "60": {
-        "pk": 60,
-        "name": "Stephen Kellogg",
-        "image": "http://static1.squarespace.com/static/58544e27d2b8571b6a05dd61/t/5ff4cf1bca37334fb2343a31/1609879325303/logo+2.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "acoustic pop"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      "71": {
-        "pk": 71,
-        "name": "Harry Styles vs One Direction",
-        "image": "https://www.onedirectionmusic.com/assets/images/hero-2015-rect-med.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "pop",
-            "boy band",
-            "post-teen pop",
-            "talent show"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      "80": {
-        "pk": 80,
-        "name": "Felix",
-        "image": "https://www.mendelssohn-stiftung.de/static/images/ogimage.1e55fcc81e2f.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "classical",
-            "early romantic era",
-            "german romanticism"
-          ],
-          "parents": [
-            "classical"
-          ]
-        }
-      },
-      "83": {
-        "pk": 83,
-        "name": "Chicago Funk Mafia",
-        "image": "https://i1.sndcdn.com/avatars-000038031310-1nftq0-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "mellow gold",
-            "soft rock",
-            "album rock",
-            "classic rock",
-            "rock",
-            "yacht rock"
-          ],
-          "parents": [
-            "country",
-            "rock"
-          ]
-        }
-      },
-      "84": {
-        "pk": 84,
-        "name": "Eclipse",
-        "image": "https://static.wixstatic.com/media/5c748b_9e7119e99b9d4b23b2616fdf1f176a4d~mv2.png/v1/fill/w_2500,h_926,al_c/5c748b_9e7119e99b9d4b23b2616fdf1f176a4d~mv2.png",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "swedish melodic rock"
-          ],
-          "parents": [
-            "rock"
-          ]
-        }
-      },
-      "100": {
-        "pk": 100,
-        "name": "Pacifica Quartet",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "modern string quartet",
-            "string quartet"
-          ],
-          "parents": [
-            "classical"
-          ]
-        }
-      },
-      "105": {
-        "pk": 105,
-        "name": "Lia Kohl",
-        "image": "https://freight.cargo.site/i/62e30f322d853410f97b30f5fbe9601e6b062b2a069f10d33ba2e2bc7ec6246f/0022652812_21.jpeg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "spectra"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      "110": {
-        "pk": 110,
-        "name": "Lala Lala",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "bubblegrunge"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      "112": {
-        "pk": 112,
-        "name": "Yung Baby Tate",
-        "image": "http://static1.squarespace.com/static/5b147078506fbebc59fcf09c/t/654a805746352116ca934de3/1699381335508/color2%28%23E086B1%29-07.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "trap queen"
-          ],
-          "parents": [
             "r&b"
           ]
         }
@@ -306,28 +122,6 @@
           "parents": [
             "electronic",
             "hip hop"
-          ]
-        }
-      },
-      "120": {
-        "pk": 120,
-        "name": "Machine Head",
-        "image": "https://i1.sndcdn.com/avatars-000005591159-3r0cav-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative metal",
-            "groove metal",
-            "hard rock",
-            "industrial metal",
-            "melodic groove metal",
-            "metal",
-            "nu metal",
-            "progressive groove metal"
-          ],
-          "parents": [
-            "metal",
-            "rock"
           ]
         }
       },
@@ -585,8 +379,7 @@
           "nodes": [
             "brostep",
             "dubstep",
-            "filthstep",
-            "gaming dubstep"
+            "filthstep"
           ],
           "parents": [
             "electronic"
@@ -781,6 +574,202 @@
             "pop"
           ]
         }
+      },
+      "255": {
+        "pk": 255,
+        "name": "Dear Daniel",
+        "image": "http://static1.squarespace.com/static/5d01ed9c3e23b200012eadbe/t/63692dafe6390303de28d769/1667837359121/loneydear_comma.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "swedish indie pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "265": {
+        "pk": 265,
+        "name": "Jackson",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "soul",
+            "r&b"
+          ],
+          "parents": [
+            "r&b"
+          ]
+        }
+      },
+      "268": {
+        "pk": 268,
+        "name": "Lydia Cash",
+        "image": "https://cdn.smehost.net/johnnycashonlinecom-uslegacyprod/wp-content/uploads/2019/07/190724_johnnycash_og.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "rock",
+            "arkansas country",
+            "outlaw country"
+          ],
+          "parents": [
+            "rock",
+            "country"
+          ]
+        }
+      },
+      "271": {
+        "pk": 271,
+        "name": "Tweet",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "hip pop",
+            "r&b",
+            "urban contemporary",
+            "contemporary r&b",
+            "neo soul"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      "274": {
+        "pk": 274,
+        "name": "Chance Peña",
+        "image": "https://static.wixstatic.com/media/3b600c_c08c8ac7e00f4a6793a22ae0e23582a4%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/3b600c_c08c8ac7e00f4a6793a22ae0e23582a4%7Emv2.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "singer-songwriter pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "276": {
+        "pk": 276,
+        "name": "Becca Mancari",
+        "image": "http://static1.squarespace.com/static/550f43bce4b0907feb9f721f/t/6477c0e5555c700ccd40d3c6/1685569765801/bm-logo-tan.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "nashville indie",
+            "nashville singer-songwriter"
+          ],
+          "parents": [
+            "pop",
+            "country"
+          ]
+        }
+      },
+      "277": {
+        "pk": 277,
+        "name": "Gold Necklace",
+        "image": "https://cdn.shopify.com/s/files/1/0554/2071/5178/files/head001_c26882b6-f867-428d-9c48-28af3616ea2d.png?v=1623135006",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "progressive post-hardcore",
+            "swancore"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      "280": {
+        "pk": 280,
+        "name": "The Blues Imperials",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "acoustic blues",
+            "blues",
+            "electric blues",
+            "modern blues",
+            "power blues-rock"
+          ],
+          "parents": [
+            "blues"
+          ]
+        }
+      },
+      "283": {
+        "pk": 283,
+        "name": "Josh Ritter",
+        "image": "https://www.joshritter.com/wp23/-wp-content/themes/josh/img/share.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country",
+            "indie folk",
+            "new americana",
+            "folk",
+            "modern folk rock",
+            "stomp and holler"
+          ],
+          "parents": [
+            "country",
+            "folk",
+            "pop",
+            "rock"
+          ]
+        }
+      },
+      "284": {
+        "pk": 284,
+        "name": "Holding Absence",
+        "image": "http://holdingabsence.com/cdn/shop/files/HOLDING_ABSENCE_TNAOSD_FINAL_FRONT_FINAL_997bccf8-4a9a-463c-8bc9-9f30f6d540d9.png?v=1684488813",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "metalcore",
+            "uk pop punk"
+          ],
+          "parents": [
+            "metal",
+            "pop"
+          ]
+        }
+      },
+      "285": {
+        "pk": 285,
+        "name": "Messer Chups",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie surf",
+            "instrumental surf",
+            "laboratorio"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      "286": {
+        "pk": 286,
+        "name": "Siena Liggins",
+        "image": "http://static1.squarespace.com/static/5c1ab869cc8fed13ea3f15e3/t/5e2f944a3e2fbb3e81ae4cff/1580176459517/sienaliggins_logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "detroit indie"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
       }
     },
     "sort": [
@@ -798,26 +787,6 @@
           "parents": [
             "country",
             "pop"
-          ]
-        }
-      },
-      {
-        "pk": 12,
-        "name": "Yonder Mountain String Band",
-        "image": "https://www.yondermountain.com/wp-content/uploads/2022/12/Social-Logo.jpeg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "banjo",
-            "jam band",
-            "jamgrass",
-            "progressive bluegrass",
-            "string band"
-          ],
-          "parents": [
-            "folk",
-            "pop",
-            "country"
           ]
         }
       },
@@ -840,175 +809,6 @@
         }
       },
       {
-        "pk": 47,
-        "name": "Cheat Codes",
-        "image": "https://i1.sndcdn.com/avatars-5TzUe3zpNchsc3TQ-rJ66kA-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "edm",
-            "pop",
-            "pop dance"
-          ],
-          "parents": [
-            "electronic",
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 52,
-        "name": "Spafford",
-        "image": "https://i1.sndcdn.com/avatars-MejLfS2DjoiEuD7r-IRjijg-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "jam band"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 60,
-        "name": "Stephen Kellogg",
-        "image": "http://static1.squarespace.com/static/58544e27d2b8571b6a05dd61/t/5ff4cf1bca37334fb2343a31/1609879325303/logo+2.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "acoustic pop"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 71,
-        "name": "Harry Styles vs One Direction",
-        "image": "https://www.onedirectionmusic.com/assets/images/hero-2015-rect-med.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "pop",
-            "boy band",
-            "post-teen pop",
-            "talent show"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 80,
-        "name": "Felix",
-        "image": "https://www.mendelssohn-stiftung.de/static/images/ogimage.1e55fcc81e2f.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "classical",
-            "early romantic era",
-            "german romanticism"
-          ],
-          "parents": [
-            "classical"
-          ]
-        }
-      },
-      {
-        "pk": 83,
-        "name": "Chicago Funk Mafia",
-        "image": "https://i1.sndcdn.com/avatars-000038031310-1nftq0-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "mellow gold",
-            "soft rock",
-            "album rock",
-            "classic rock",
-            "rock",
-            "yacht rock"
-          ],
-          "parents": [
-            "country",
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 84,
-        "name": "Eclipse",
-        "image": "https://static.wixstatic.com/media/5c748b_9e7119e99b9d4b23b2616fdf1f176a4d~mv2.png/v1/fill/w_2500,h_926,al_c/5c748b_9e7119e99b9d4b23b2616fdf1f176a4d~mv2.png",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "swedish melodic rock"
-          ],
-          "parents": [
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 100,
-        "name": "Pacifica Quartet",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "modern string quartet",
-            "string quartet"
-          ],
-          "parents": [
-            "classical"
-          ]
-        }
-      },
-      {
-        "pk": 105,
-        "name": "Lia Kohl",
-        "image": "https://freight.cargo.site/i/62e30f322d853410f97b30f5fbe9601e6b062b2a069f10d33ba2e2bc7ec6246f/0022652812_21.jpeg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "spectra"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      {
-        "pk": 110,
-        "name": "Lala Lala",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "bubblegrunge"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
-      {
-        "pk": 112,
-        "name": "Yung Baby Tate",
-        "image": "http://static1.squarespace.com/static/5b147078506fbebc59fcf09c/t/654a805746352116ca934de3/1699381335508/color2%28%23E086B1%29-07.png?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "trap queen"
-          ],
-          "parents": [
-            "r&b"
-          ]
-        }
-      },
-      {
         "pk": 119,
         "name": "DJ Shadow",
         "image": "https://cdn.shopify.com/s/files/1/0526/6731/8431/files/djshadow-logo-white.png?height=628&pad_color=101c29&v=1614351561&width=1200",
@@ -1023,28 +823,6 @@
           "parents": [
             "electronic",
             "hip hop"
-          ]
-        }
-      },
-      {
-        "pk": 120,
-        "name": "Machine Head",
-        "image": "https://i1.sndcdn.com/avatars-000005591159-3r0cav-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative metal",
-            "groove metal",
-            "hard rock",
-            "industrial metal",
-            "melodic groove metal",
-            "metal",
-            "nu metal",
-            "progressive groove metal"
-          ],
-          "parents": [
-            "metal",
-            "rock"
           ]
         }
       },
@@ -1302,8 +1080,7 @@
           "nodes": [
             "brostep",
             "dubstep",
-            "filthstep",
-            "gaming dubstep"
+            "filthstep"
           ],
           "parents": [
             "electronic"
@@ -1496,6 +1273,202 @@
           "parents": [
             "folk",
             "pop"
+          ]
+        }
+      },
+      {
+        "pk": 255,
+        "name": "Dear Daniel",
+        "image": "http://static1.squarespace.com/static/5d01ed9c3e23b200012eadbe/t/63692dafe6390303de28d769/1667837359121/loneydear_comma.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "swedish indie pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 265,
+        "name": "Jackson",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "soul",
+            "r&b"
+          ],
+          "parents": [
+            "r&b"
+          ]
+        }
+      },
+      {
+        "pk": 268,
+        "name": "Lydia Cash",
+        "image": "https://cdn.smehost.net/johnnycashonlinecom-uslegacyprod/wp-content/uploads/2019/07/190724_johnnycash_og.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "rock",
+            "arkansas country",
+            "outlaw country"
+          ],
+          "parents": [
+            "rock",
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 271,
+        "name": "Tweet",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "hip pop",
+            "r&b",
+            "urban contemporary",
+            "contemporary r&b",
+            "neo soul"
+          ],
+          "parents": [
+            "r&b",
+            "latin"
+          ]
+        }
+      },
+      {
+        "pk": 274,
+        "name": "Chance Peña",
+        "image": "https://static.wixstatic.com/media/3b600c_c08c8ac7e00f4a6793a22ae0e23582a4%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/3b600c_c08c8ac7e00f4a6793a22ae0e23582a4%7Emv2.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "singer-songwriter pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 276,
+        "name": "Becca Mancari",
+        "image": "http://static1.squarespace.com/static/550f43bce4b0907feb9f721f/t/6477c0e5555c700ccd40d3c6/1685569765801/bm-logo-tan.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "nashville indie",
+            "nashville singer-songwriter"
+          ],
+          "parents": [
+            "pop",
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 277,
+        "name": "Gold Necklace",
+        "image": "https://cdn.shopify.com/s/files/1/0554/2071/5178/files/head001_c26882b6-f867-428d-9c48-28af3616ea2d.png?v=1623135006",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "progressive post-hardcore",
+            "swancore"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 280,
+        "name": "The Blues Imperials",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "acoustic blues",
+            "blues",
+            "electric blues",
+            "modern blues",
+            "power blues-rock"
+          ],
+          "parents": [
+            "blues"
+          ]
+        }
+      },
+      {
+        "pk": 283,
+        "name": "Josh Ritter",
+        "image": "https://www.joshritter.com/wp23/-wp-content/themes/josh/img/share.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative country",
+            "indie folk",
+            "new americana",
+            "folk",
+            "modern folk rock",
+            "stomp and holler"
+          ],
+          "parents": [
+            "country",
+            "folk",
+            "pop",
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 284,
+        "name": "Holding Absence",
+        "image": "http://holdingabsence.com/cdn/shop/files/HOLDING_ABSENCE_TNAOSD_FINAL_FRONT_FINAL_997bccf8-4a9a-463c-8bc9-9f30f6d540d9.png?v=1684488813",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "metalcore",
+            "uk pop punk"
+          ],
+          "parents": [
+            "metal",
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 285,
+        "name": "Messer Chups",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie surf",
+            "instrumental surf",
+            "laboratorio"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 286,
+        "name": "Siena Liggins",
+        "image": "http://static1.squarespace.com/static/5c1ab869cc8fed13ea3f15e3/t/5e2f944a3e2fbb3e81ae4cff/1580176459517/sienaliggins_logo.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "detroit indie"
+          ],
+          "parents": [
+            "rock"
           ]
         }
       }

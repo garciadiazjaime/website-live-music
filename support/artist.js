@@ -2,67 +2,40 @@ const async = require("async");
 const cheerio = require("cheerio");
 const slugify = require("slugify");
 
-const { validURL, getSocial, getImageFromURL } = require("./misc");
+const { validURL, getDataFromWebsite, getImageFromURL } = require("./misc");
 const { getArtists } = require("./mint");
 
 const logger = require("./logger.js")("artist");
 
-async function getDataFromWebsite(url) {
-  if (!url) {
-    logger.info(`no website`);
-
-    return {};
-  }
-
-  const response = await fetch(url).catch(() => false);
-
-  if (!response) {
-    logger.info(`website error`, { url });
-
-    return { error: true };
-  }
-
-  const html = await response.text();
-
-  const social = getSocial(html, url);
-
-  return social;
-}
-
-async function getMusicbrainz(name) {
+async function getProfileFromMusicbrainz(name) {
   const domain = "https://musicbrainz.org";
   const url = `${domain}/search?query=${name}&type=artist&method=indexed`;
   logger.info(`searching brainz`, { name });
 
-  const responseSearch = await fetch(url);
+  const response = await fetch(url);
 
-  const htmlSearch = await responseSearch.text();
+  const html = await response.text();
 
-  let $ = cheerio.load(htmlSearch);
+  let $ = cheerio.load(html);
 
   const anchor = $("#content table tbody tr a").first();
 
   if (!anchor.length) {
     logger.info(`no artist results`, { name });
-    return {};
+    return;
   }
 
-  const data = {
-    profile: `${domain}${anchor.attr("href")}`,
-  };
+  return `${domain}${anchor.attr("href")}`;
+}
 
-  if (!validURL(data.profile)) {
-    logger.info(`invalid profile`, { name, profile: data.profile });
-    return {};
-  }
+async function getSocialFromProfile(profile) {
+  logger.info(`scrapping brainz profile`, { url: profile });
 
-  logger.info(`scrapping brainz profile`, { url: data.profile });
+  const response = await fetch(profile);
 
-  const responseDetails = await fetch(data.profile);
+  const html = await response.text();
 
-  const htmlDetails = await responseDetails.text();
-
-  $ = cheerio.load(htmlDetails);
+  $ = cheerio.load(html);
 
   const links = [
     ["website", "home-favicon"],
@@ -73,20 +46,36 @@ async function getMusicbrainz(name) {
     ["spotify", "spotify-favicon"],
     ["youtube", "youtube-favicon"],
   ];
-  links.forEach(([social, selector]) => {
+  return links.reduce((accumulator, [social, selector]) => {
     let href = $(`.external_links .${selector} a`).attr("href");
     if (!href) {
-      return;
+      return accumulator;
     }
 
     if (href.slice(0, 2) === "//") {
       href = `https:${href}`;
     }
 
-    data[social] = href;
-  });
+    accumulator[social] = href;
 
-  return data;
+    return accumulator;
+  }, {});
+}
+
+async function getMusicbrainz(name) {
+  const profile = await getProfileFromMusicbrainz(name);
+
+  if (!validURL(profile)) {
+    logger.info(`invalid profile`, { name, profile: profile });
+    return;
+  }
+
+  const social = await getSocialFromProfile(profile);
+
+  return {
+    profile,
+    ...social,
+  };
 }
 
 async function getArtist(event) {
@@ -122,7 +111,7 @@ async function getArtist(event) {
     }
 
     const musicbrainz = await getMusicbrainz(artistName);
-    if (!musicbrainz.profile) {
+    if (!musicbrainz) {
       logger.info(`no profile`, {
         artistName,
       });
@@ -134,7 +123,7 @@ async function getArtist(event) {
     const payload = {
       name,
       profile: musicbrainz.profile,
-      website: website.error ? undefined : musicbrainz.website,
+      website: website ? musicbrainz.website : undefined,
     };
 
     if (!payload.website) {

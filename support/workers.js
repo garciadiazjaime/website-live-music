@@ -2,7 +2,7 @@ const { Worker } = require("bullmq");
 const async = require("async");
 
 const { processLink } = require("./events");
-const { getGPS } = require("./gps");
+const { getGMapsLocation } = require("./gps");
 const { getMetadata } = require("./metadata");
 const { getArtist } = require("./artist");
 const { getSpotify } = require("./spotify");
@@ -22,7 +22,7 @@ async function main() {
       }
 
       if (job.name === "event") {
-        const location = await getGPS(job.data);
+        const location = await getGMapsLocation(job.data);
 
         if (!location) {
           logger.info("no-location", job.data);

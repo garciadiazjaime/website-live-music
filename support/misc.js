@@ -144,6 +144,28 @@ async function getImageFromURL(url, social) {
   return image;
 }
 
+async function getDataFromWebsite(url) {
+  if (!url) {
+    logger.info(`no website`);
+
+    return;
+  }
+
+  const response = await fetch(url).catch(() => false);
+
+  if (!response) {
+    logger.info(`website error`, { url });
+
+    return;
+  }
+
+  const html = await response.text();
+
+  const social = getSocial(html, url);
+
+  return social;
+}
+
 module.exports = {
   sleep,
   snakeCase,
@@ -151,4 +173,5 @@ module.exports = {
   validURL,
   getSocial,
   getImageFromURL,
+  getDataFromWebsite,
 };
