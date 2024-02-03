@@ -2,7 +2,12 @@ const async = require("async");
 const cheerio = require("cheerio");
 const slugify = require("slugify");
 
-const { validURL, getDataFromWebsite, getImageFromURL } = require("./misc");
+const {
+  validURL,
+  getDataFromWebsite,
+  getImageFromURL,
+  getGenres,
+} = require("./misc");
 const { getArtists } = require("./mint");
 
 const logger = require("./logger.js")("artist");
@@ -35,6 +40,8 @@ async function getSocialFromProfile(profile) {
 
   const html = await response.text();
 
+  const genres = getGenres(html);
+
   $ = cheerio.load(html);
 
   const links = [
@@ -46,20 +53,23 @@ async function getSocialFromProfile(profile) {
     ["spotify", "spotify-favicon"],
     ["youtube", "youtube-favicon"],
   ];
-  return links.reduce((accumulator, [social, selector]) => {
-    let href = $(`.external_links .${selector} a`).attr("href");
-    if (!href) {
+  return links.reduce(
+    (accumulator, [social, selector]) => {
+      let href = $(`.external_links .${selector} a`).attr("href");
+      if (!href) {
+        return accumulator;
+      }
+
+      if (href.slice(0, 2) === "//") {
+        href = `https:${href}`;
+      }
+
+      accumulator[social] = href;
+
       return accumulator;
-    }
-
-    if (href.slice(0, 2) === "//") {
-      href = `https:${href}`;
-    }
-
-    accumulator[social] = href;
-
-    return accumulator;
-  }, {});
+    },
+    { genres }
+  );
 }
 
 async function getMusicbrainz(name) {
@@ -124,6 +134,7 @@ async function getArtist(event) {
       name,
       profile: musicbrainz.profile,
       website: website ? musicbrainz.website : undefined,
+      genres: musicbrainz.genres,
     };
 
     if (!payload.website) {

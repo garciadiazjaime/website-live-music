@@ -166,6 +166,17 @@ async function getDataFromWebsite(url) {
   return social;
 }
 
+const getGenres = (html) => {
+  const $ = cheerio.load(html);
+  const genres = $(".genre-list a")
+    .toArray()
+    .map((item) => {
+      return { name: $(item).text() };
+    });
+
+  return genres;
+};
+
 module.exports = {
   sleep,
   snakeCase,
@@ -174,4 +185,5 @@ module.exports = {
   getSocial,
   getImageFromURL,
   getDataFromWebsite,
+  getGenres,
 };
