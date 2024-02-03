@@ -4,6 +4,7 @@ const moment = require("moment");
 
 const { getMetadata } = require("../metadata");
 const { getGMapsLocation } = require("../gps");
+const { getSpotify } = require("../spotify");
 const { saveEvent } = require("../mint");
 const logger = require("../logger.js")("hideoutchicago");
 
@@ -46,6 +47,11 @@ async function getDetails(url) {
 
   await async.eachSeries(details.artists, async (artist) => {
     artist.metadata = await getMetadata(artist.website);
+
+    const spotify = await getSpotify(artist);
+    if (spotify) {
+      artist.spotify = spotify;
+    }
   });
 
   return details;
@@ -106,7 +112,7 @@ async function main() {
 
   const html = await extract(url);
 
-  const preEvents = transform(html).slice(0, 1);
+  const preEvents = transform(html);
 
   await async.eachSeries(preEvents, async (preEvent) => {
     const details = await getDetails(preEvent.url);
