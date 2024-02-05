@@ -131,10 +131,10 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
-        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll lg:overflow-x-hidden lg:overflow-y-scroll bg-gradient-to-b lg:bg-gradient-to-r to-fuchsia-950 from-gray-900">
+        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll lg:overflow-x-hidden lg:overflow-y-scroll">
           <div className="flex flex-row lg:flex-col gap-4 snap-x snap-mandatory">
             {selectedEvents.map((event, index) => (
               <div
