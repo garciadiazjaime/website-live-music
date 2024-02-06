@@ -134,12 +134,12 @@ export default function Home() {
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
-        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll lg:overflow-x-hidden lg:overflow-y-scroll">
-          <div className="flex flex-row lg:flex-col gap-4 lg:gap-6 snap-x snap-mandatory">
+        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
+          <div className="flex lg:flex-col gap-4 lg:gap-6">
             {selectedEvents.map((event, index) => (
               <div
                 key={generateUniqueKey(index)}
-                className="w-5/6 md:w-1/2 lg:w-full shrink-0 snap-x snap-center first:ml-8 lg:first:ml-0 last:mr-8 lg:last:mr-0 items-stretch"
+                className="w-11/12 md:w-1/2 lg:w-full shrink-0 snap-center first:pl-8 lg:first:pl-0 last:pr-8 lg:last:pr-0 items-stretch"
                 id={getEventID(event)}
               >
                 <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} setPin={() => setPin(event)}/>

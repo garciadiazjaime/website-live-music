@@ -165,7 +165,7 @@ export default function SocialLinks(props: { event: Event }) {
     <div
       key={generateUniqueKey(link.url)}
       onClick={() => clickHandler(link.url!)}
-      className="cursor-pointer p-4 opacity-60 hover:opacity-100"
+      className="cursor-pointer p-4 opacity-60 active:opacity-100 lg:hover:opacity-100"
     >
       {link.logo}
     </div>
