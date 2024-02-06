@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Event } from "../../support/types";
 import SocialLinks from "../socialLinks";
 
@@ -14,7 +13,7 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
   const getImage = (event: Event): string => {
     const artist = event.artists?.find((artist) => artist.metadata?.image);
     if (artist) {
-      return artist.metadata?.image!;
+      return artist.metadata?.image || '';
     }
 
     if (event.location?.metadata?.image) {
@@ -25,32 +24,9 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
   };
 
   const gotoEventPage = (event: Event) => window.open(event.url, "_blank");
-
-  return <div className="flex flex-col w-full h-full items-end group">
-    <Image
-      priority={index === 0}
-      src={getImage(event)}
-      width={300}
-      height={150}
-      alt={event.name}
-      className="object-cover w-3/4 h-32 -mb-24 mr-4 z-10 bg-white"
-    />
-    <div className={`flex flex-col w-full items-start grow ${selected ? 'bg-fuchsia-800/50 shadow-xl' : 'bg-gray-950/40 group-hover:bg-fuchsia-800/30'} py-2 mr-2 text-white relative `}>
-      <div className={`absolute bottom-2 -right-2 z-30 w-auto gap-2 flex flex-col ${!selected && 'lg:opacity-0 group-hover:opacity-100 transition-all duration-300'}`}>
-        <button onClick={setPin} className={`bg-fuchsia-400 p-2 flex ${selected && 'hidden'}`}>
-          <Image src="/images/pin.svg" width="68" height="54" className="w-5 h-auto" alt=""/>
-        </button>
-        <button className="bg-fuchsia-400 p-2 flex">
-          <Image src="/images/share-btn.svg" width="68" height="54" className="w-5 h-auto" alt=""/>
-        </button>
-        <button className="bg-fuchsia-400 p-2 flex">
-          <Image src="/images/show-location.svg" width="68" height="54" className="w-5 h-auto" alt=""/>
-        </button>
-        <button onClick={() => gotoEventPage(event)} className="bg-fuchsia-400 p-2 flex">
-          <Image src="/images/tickets.svg" width="68" height="54" className="w-5 h-auto" alt=""/>
-        </button>
-      </div>
-      <h3 className="font-bold text-fuchsia-400 text-3xl pb-2 pl-3 w-auto">
+  return <div className={`flex flex-col w-full h-full items-end group ${selected ? 'bg-blue-500/20 shadow-xl' : 'group-hover:bg-blue-500/20 bg-gradient-to-t from-blue-500/20 to-transparent'}`}>
+    <div className="flex gap-0 relative items-end w-full">
+      <h3 className="flex items-end font-bold text-sky-300  text-3xl pb-2 px-4 mb-10">
         {`
           ${
             new Date(event.start_date)
@@ -59,11 +35,26 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
           }
             `}<span className="text-base">PM</span>
       </h3>
-      <h3 className="z-30 bg-fuchsia-400 text-base mb-10 px-3 italic">{event.location.name}</h3>
-      <h2 className="capitalize  text-left text-2xl font-bold text-elipsis px-6 w-full">
+      <h3 className="absolute left-0 bottom-0 text-white z-30 bg-rose-600 text-base mb-4 px-4 italic">{event.location.name}</h3>
+      <div className="h-32 w-full grow bg-contain bg-white/50 bg-center" style={{ backgroundImage: `url(${getImage(event)})`}}></div>
+      <div className={`w-10 flex flex-col transition-all duration-300'`}>
+        <button onClick={setPin} className={`p-2 flex justify-center ${selected ? 'bg-rose-600' : 'bg-sky-300/60 hover:bg-sky-300'}`}>
+          <Image src={`${selected ? '/images/pin-active.svg' : '/images/pin.svg'}`} width="68" height="54" className="w-3 h-auto" alt=""/>
+        </button>
+        <button className={`p-2 flex  justify-center ${selected ? 'lg:opacity-60 lg:hover:opacity-100' : 'lg:opacity-20'}`}>
+          <Image src="/images/share.svg" width="68" height="54" className="w-3 h-auto" alt=""/>
+        </button>
+        <button onClick={() => gotoEventPage(event)} className={`p-2 flex justify-center ${selected ? 'lg:opacity-60 lg:hover:opacity-100' : 'lg:opacity-20'}`}>
+          <Image src="/images/directions.svg" width="68" height="54" className={`w-3 h-auto`} alt=""/>
+        </button>
+      </div>
+    </div>
+    <div className={`flex flex-col w-full items-stretch grow text-white relative`}>
+      <h2 className="capitalize text-left p-4 pb-0 pr-8 text-2xl font-bold text-overflow-elipsis flex justify-between items-center">
         {event.name.toLowerCase()}
+        <Image src="/images/chevron.svg" width="60" height="65" alt="" className="w-8 h-auto ml-4" />
       </h2>
-      <div className={`flex pl-2 ${!selected && 'lg:opacity-0 group-hover:opacity-100 transition-all duration-300'}`}>
+      <div className={`flex ${!selected && 'lg:opacity-20 group-hover:opacity-100 transition-all duration-300'}`}>
         <SocialLinks event={event} />
       </div>
     </div>

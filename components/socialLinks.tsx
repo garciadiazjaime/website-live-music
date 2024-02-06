@@ -1,7 +1,7 @@
 import { Event, Social, SocialMedia, Spotify } from "@/support/types";
 import generateUniqueKey from "@/support/generateUniqueKey";
 
-const fill = '#A987AA';
+const fill = 'rgb(125, 211, 252';
 
 const logos = {
   twitter: (
@@ -165,7 +165,7 @@ export default function SocialLinks(props: { event: Event }) {
     <div
       key={generateUniqueKey(link.url)}
       onClick={() => clickHandler(link.url!)}
-      className="cursor-pointer p-4"
+      className="cursor-pointer p-4 opacity-60 hover:opacity-100"
     >
       {link.logo}
     </div>
