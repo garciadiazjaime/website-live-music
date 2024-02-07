@@ -8,6 +8,7 @@ import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
 import EventCard from "@/components/EventCard";
+import generateUniqueKey from "@/support/generateUniqueKey";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -23,11 +24,6 @@ function slugify(str: string) {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 }
-
-const center = {
-  lat: 41.8777569,
-  lng: -87.6271142,
-};
 
 const days = [
   "Monday",
@@ -60,7 +56,20 @@ export default function Home() {
     filterEventsByDate(events, selectedDate)
   );
   const [selectedEvent, setSelectedEvent] = useState<Event>();
-  const [map, setMap] = useState<google.maps.Map>();
+  const [map, setMap] = useState<google.maps.Map | null>();
+
+  const [center, setCenter] = useState({
+    lat: 41.8777569,
+    lng: -87.6271142,
+  });
+
+  const onLoad = (map: google.maps.Map)  => {
+    setMap(map);
+  };
+
+  const onUnmount = () => {
+    setMap(null);
+  };
 
   const currentDay = new Date().getDay() - 1;
 
@@ -94,7 +103,7 @@ export default function Home() {
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
     const element = document.getElementById(getEventID(event));
-    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+    element?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
   };
 
   useEffect(() => {
@@ -110,19 +119,30 @@ export default function Home() {
     setSelectedDate(today);
   };
 
+  const setPin = (event: Event) => {
+    setSelectedEvent(event);
+    if (map) {
+      map.setZoom(13);
+      map.panTo({
+        lat: event.location.lat,
+        lng: event.location.lng
+      });
+    }
+  }
+
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
-      <main className="h-full flex flex-col-reverse lg:flex-row flex-1">
-        <section className="w-full lg:w-96 bg-gradient-to-b lg:bg-gradient-to-r from-fuchsia-950 to-gray-900">
-          <div className="flex flex-row overflow-scroll lg:flex-col gap-4 snap-x snap-mandatory">
+      <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
+        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
+          <div className="flex lg:flex-col gap-4 lg:gap-6">
             {selectedEvents.map((event, index) => (
               <div
-                key={index}
-                className="w-5/6 md:w-1/2 lg:w-full shrink-0 mb-2 snap-x snap-center first:ml-12 lg:first:ml-0 last:mr-12 items-stretch"
+                key={generateUniqueKey(index)}
+                className="w-11/12 md:w-1/2 lg:w-full shrink-0 snap-center first:pl-8 lg:first:pl-0 last:pr-8 lg:last:pr-0 items-stretch"
                 id={getEventID(event)}
               >
-                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} />
+                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} setPin={() => setPin(event)}/>
               </div>
             ))}
           </div>
@@ -134,12 +154,12 @@ export default function Home() {
               mapContainerStyle={containerStyle}
               zoom={10}
               center={center}
-              onLoad={(map) => setMap(map)}
+              onLoad={onLoad}
+              onUnmount={onUnmount}
             >
               {selectedEvents.map((event, index) => {
-                console.log(selectedEvent && getEventID(event) === getEventID(selectedEvent))
                 return <MarkerF
-                  key={index}
+                  key={generateUniqueKey(index)}
                   onClick={() => markerClickHandler(event)}
                   position={{
                     lat: event.location.lat,
