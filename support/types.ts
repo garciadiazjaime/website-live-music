@@ -66,6 +66,7 @@ interface Location {
   pk: number;
   website: string;
   metadata: Metadata | null;
+  url: string;
 }
 
 export interface Artist {
