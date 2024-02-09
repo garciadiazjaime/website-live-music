@@ -51,6 +51,10 @@ interface Metadata {
   appleMusic: string | null;
 }
 
+interface SlugVenue {
+  name: string;
+}
+
 interface Location {
   name: string;
   address: string;
@@ -58,7 +62,7 @@ interface Location {
   lng: number;
   place_id: string;
   slug: string;
-  slug_venue: string;
+  slug_venue: SlugVenue[];
   pk: number;
   website: string;
   metadata: Metadata | null;
