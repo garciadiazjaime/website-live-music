@@ -6,25 +6,27 @@ const { getMetadata } = require("../metadata");
 const { getGMapsLocation } = require("../gps");
 const { getSpotify } = require("../spotify");
 const { saveEvent } = require("../mint");
-const logger = require("../logger.js")("hideoutchicago");
+const logger = require("../logger.js")("HIDEOUTCHICAGO");
 
 async function extract(url) {
   logger.info("scrapping", { url });
   const response = await fetch(url);
-  const html = response.text();
+  const html = await response.text();
 
   return html;
 }
 
 function transformDetails(html) {
   const $ = cheerio.load(html);
-  const price = $(".eventCost").text().trim().replace(/\W+/, "");
+  const price = $(".eventCost").text().trim().match(/\d+/)?.[0];
   const buyUrl = $(".on-sale a").attr("href");
   const artists = $(".singleEventDescription a")
     .toArray()
     .map((item) => ({
       name: $(item).text().trim(),
-      website: $(item).attr("href"),
+      metadata: {
+        website: $(item).attr("href"),
+      },
     }));
 
   const details = {
@@ -46,7 +48,12 @@ async function getDetails(url) {
   const details = transformDetails(html);
 
   await async.eachSeries(details.artists, async (artist) => {
-    artist.metadata = await getMetadata(artist.website);
+    const metadata = await getMetadata(artist.metadata.website);
+    console.log(metadata);
+    artist.metadata = {
+      website: artist.metadata.website,
+      ...metadata,
+    };
 
     const spotify = await getSpotify(artist);
     if (spotify) {
@@ -57,7 +64,7 @@ async function getDetails(url) {
   return details;
 }
 
-function transform(html) {
+function transform(html, preEvent) {
   const $ = cheerio.load(html);
   const regexTime = /(1[0-2]|0?[1-9]):([0-5][0-9])([AaPp][Mm])/;
 
@@ -75,9 +82,6 @@ function transform(html) {
 
       const start_date = moment(dateTime, "ddd, MMM DD, YYYY h:mma");
       const description = $(item).find(".eventDoorStartDate").text().trim();
-      const provider = "HIDEOUTCHICAGO";
-      const venue = "Hideout Chicago";
-      const city = "Chicago";
 
       const event = {
         name,
@@ -85,9 +89,9 @@ function transform(html) {
         url,
         start_date,
         description,
-        provider,
-        venue,
-        city,
+        provider: preEvent.provider,
+        venue: preEvent.venue,
+        city: preEvent.city,
       };
 
       return event;
@@ -99,6 +103,8 @@ function transform(html) {
 async function main() {
   const preEvent = {
     venue: "Hideout Chicago",
+    provider: "HIDEOUTCHICAGO",
+    city: "Chicago",
   };
   const location = await getGMapsLocation(preEvent);
   const url = "https://hideoutchicago.com/";
@@ -107,12 +113,14 @@ async function main() {
     logger.error("ERROR_WEBSITE", { url, maps: location.website });
   }
 
-  const locationMetadata = await getMetadata(url);
-  location.metadata = locationMetadata;
+  if (!location.metadata) {
+    const locationMetadata = await getMetadata(url);
+    location.metadata = locationMetadata;
+  }
 
   const html = await extract(url);
 
-  const preEvents = transform(html);
+  const preEvents = transform(html, preEvent);
 
   await async.eachSeries(preEvents, async (preEvent) => {
     const details = await getDetails(preEvent.url);

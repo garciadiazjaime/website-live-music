@@ -1,172 +1,99 @@
 const async = require("async");
-const cheerio = require("cheerio");
+
 const slugify = require("slugify");
 
-const {
-  validURL,
-  getDataFromWebsite,
-  getImageFromURL,
-  getGenres,
-} = require("./misc");
+const { getDataFromWebsite, getImageFromURL } = require("./misc");
+const { getMusicbrainz } = require("./musicbrainz");
 const { getArtists } = require("./mint");
 
-const logger = require("./logger.js")("artist");
+const logger = require("./logger")("artist");
 
-async function getProfileFromMusicbrainz(name) {
-  const domain = "https://musicbrainz.org";
-  const url = `${domain}/search?query=${name}&type=artist&method=indexed`;
-  logger.info(`searching brainz`, { name });
+async function getArtistSingle(value) {
+  const chalk = (await import("chalk").then((mod) => mod)).default;
 
-  const response = await fetch(url);
+  const name = value
+    .trim()
+    .replace(/ /g, "+")
+    .replace("and+", "")
+    .replace(/\+/g, " ");
+  const slug = slugify(name, {
+    lower: true,
+    strict: true,
+  });
 
-  const html = await response.text();
+  const query = `slug=${slug}`;
+  const [artistFound] = await getArtists(query);
 
-  let $ = cheerio.load(html);
+  logger.info(`internal search`, {
+    slug,
+    found: !!artistFound,
+  });
 
-  const anchor = $("#content table tbody tr a").first();
+  if (artistFound) {
+    logger.info(chalk.green("found"), {
+      slug,
+    });
 
-  if (!anchor.length) {
-    logger.info(`no artist results`, { name });
+    return artistFound;
+  }
+
+  const musicbrainz = await getMusicbrainz(value);
+  if (!musicbrainz) {
+    logger.info(`NO_PROFILE`, {
+      artist: value,
+    });
     return;
   }
 
-  return `${domain}${anchor.attr("href")}`;
-}
+  const website = await getDataFromWebsite(musicbrainz.metadata.website);
 
-async function getSocialFromProfile(profile) {
-  logger.info(`scrapping brainz profile`, { url: profile });
-
-  const response = await fetch(profile);
-
-  const html = await response.text();
-
-  const genres = getGenres(html);
-
-  $ = cheerio.load(html);
-
-  const links = [
-    ["website", "home-favicon"],
-    ["instagram", "instagram-favicon"],
-    ["twitter", "twitter-favicon"],
-    ["facebook", "facebook-favicon"],
-    ["soundcloud", "soundcloud-favicon"],
-    ["spotify", "spotify-favicon"],
-    ["youtube", "youtube-favicon"],
-  ];
-  return links.reduce(
-    (accumulator, [social, selector]) => {
-      let href = $(`.external_links .${selector} a`).attr("href");
-      if (!href) {
-        return accumulator;
-      }
-
-      if (href.slice(0, 2) === "//") {
-        href = `https:${href}`;
-      }
-
-      accumulator[social] = href;
-
-      return accumulator;
-    },
-    { genres }
-  );
-}
-
-async function getMusicbrainz(name) {
-  const profile = await getProfileFromMusicbrainz(name);
-
-  if (!validURL(profile)) {
-    logger.info(`invalid profile`, { name, profile: profile });
-    return;
-  }
-
-  const social = await getSocialFromProfile(profile);
-
-  return {
-    profile,
-    ...social,
+  const artist = {
+    name,
+    profile: musicbrainz.profile,
+    genres: musicbrainz.genres,
   };
+
+  artist.metadata = {
+    website: website ? musicbrainz.metadata.website : undefined,
+    image: website?.image,
+    twitter: musicbrainz.metadata.twitter || website?.twitter,
+    facebook: musicbrainz.metadata.facebook || website?.facebook,
+    youtube: musicbrainz.metadata.youtube || website?.youtube,
+    instagram: musicbrainz.metadata.instagram || website?.instagram,
+    tiktok: musicbrainz.metadata.tiktok || website?.tiktok,
+    soundcloud: musicbrainz.metadata.soundcloud || website?.soundcloud,
+    spotify: musicbrainz.metadata.spotify || website?.spotify,
+    appleMusic: musicbrainz.metadata.appleMusic || website?.appleMusic,
+    band_camp: musicbrainz.metadata.bandcamp,
+  };
+
+  if (!artist.metadata.image && artist.metadata.soundcloud) {
+    artist.metadata.image = await getImageFromURL(
+      artist.metadata.soundcloud,
+      "soundcloud"
+    );
+  }
+
+  if (!artist.metadata.image) {
+    logger.info(`no image`, { slug });
+  }
+
+  return artist;
 }
 
 async function getArtist(event) {
-  const chalk = (await import("chalk").then((mod) => mod)).default;
-
   const response = [];
   const artists = event.name.includes(",")
     ? event.name.split(",")
     : event.name.split(" and ");
 
   await async.eachSeries(artists, async (value) => {
-    const artistName = value.trim().replace(/ /g, "+").replace("and+", "");
-    const name = artistName.replace(/\+/g, " ");
-    const slug = slugify(name, {
-      lower: true,
-      strict: true,
-    });
-
-    const query = `slug=${slug}`;
-    const [artistFound] = await getArtists(query);
-
-    logger.info(`internal search`, {
-      slug,
-      found: !!artistFound,
-    });
-
-    if (artistFound) {
-      logger.info(chalk.green("found"), {
-        slug,
-      });
-      response.push(artistFound);
+    const artist = await getArtistSingle(value);
+    if (!artist) {
       return;
     }
 
-    const musicbrainz = await getMusicbrainz(artistName);
-    if (!musicbrainz) {
-      logger.info(`no profile`, {
-        artistName,
-      });
-      return;
-    }
-
-    const website = await getDataFromWebsite(musicbrainz.website);
-
-    const payload = {
-      name,
-      profile: musicbrainz.profile,
-      website: website ? musicbrainz.website : undefined,
-      genres: musicbrainz.genres,
-    };
-
-    if (!payload.website) {
-      response.push(payload);
-      return;
-    }
-
-    payload.metadata = {
-      website: payload.website,
-      image: musicbrainz.image || website.image,
-      twitter: musicbrainz.twitter || website.twitter,
-      facebook: musicbrainz.facebook || website.facebook,
-      youtube: musicbrainz.youtube || website.youtube,
-      instagram: musicbrainz.instagram || website.instagram,
-      tiktok: musicbrainz.tiktok || website.tiktok,
-      soundcloud: musicbrainz.soundcloud || website.soundcloud,
-      spotify: musicbrainz.spotify || website.spotify,
-      appleMusic: musicbrainz.appleMusic || website.appleMusic,
-    };
-
-    if (!payload.metadata.image && payload.metadata.soundcloud) {
-      payload.metadata.image = await getImageFromURL(
-        payload.metadata.soundcloud,
-        "soundcloud"
-      );
-    }
-
-    if (!payload.metadata.image) {
-      logger.info(`no image`, { slug });
-    }
-
-    response.push(payload);
+    response.push(artist);
   });
 
   return response;
@@ -174,4 +101,5 @@ async function getArtist(event) {
 
 module.exports = {
   getArtist,
+  getArtistSingle,
 };

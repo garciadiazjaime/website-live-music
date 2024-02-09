@@ -17,18 +17,27 @@ const urlValidRegex =
 const twitterRegex = /http(?:s)?:\/\/(?:www\.)?twitter\.com\/([a-zA-Z0-9_]+)/gi;
 const facebookRegex =
   /http(?:s)?:\/\/(?:www\.)?facebook\.com\/([a-zA-Z0-9_]+)/gi;
-const youtubeRegex = /http(?:s)?:\/\/(?:www\.)?youtube\.com\/([a-zA-Z0-9_]+)/gi;
+const youtubeSimpleRegex =
+  /http(?:s)?:\/\/(?:www\.)?youtube\.com\/([@a-zA-Z0-9_]+)/;
+const youtubeRegex =
+  /https?:\/\/(?:www\.)?youtube\.com\/(?:embed\/|channel\/|user\/|watch\?v=|[^\/]+)([a-zA-Z0-9_-]+)/;
 const instagramRegex =
   /http(?:s)?:\/\/(?:www\.)?instagram\.com\/([a-zA-Z0-9_\.]+)/gi;
 const tiktokRegex = /http(?:s)?:\/\/(?:www\.)?tiktok\.com\/([a-zA-Z0-9_]+)/gi;
 const soundcloudRegex =
-  /http(?:s)?:\/\/(?:www\.)?soundcloud\.com\/([a-zA-Z0-9_]+)/gi;
+  /http(?:s)?:\/\/(?:www\.)?soundcloud\.com\/([a-zA-Z0-9_-]+)/gi;
 const spotifyRegex =
   /https?:\/\/open\.spotify\.com\/(track|user|artist|album)\/[a-zA-Z0-9]+(\/playlist\/[a-zA-Z0-9]+|)|spotify:(track|user|artist|album):[a-zA-Z0-9]+(:playlist:[a-zA-Z0-9]+|)/gi;
 const appleMusicRegex =
   /https?:\/\/music\.apple\.com\/([a-zA-Z]{2})\/(album|artist|playlist|station)\/([a-zA-Z0-9_-]+)\/(\d+)/gi;
+const bandCampSimpleRegex = /https:\/\/([a-zA-Z0-9_-]+\.)bandcamp\.com/;
+const bandCampRegex =
+  /https:\/\/(?:\w+\.bandcamp\.com\/|bandcamp\.com\/EmbeddedPlayer\/v=2\/)(album|track)=\d+/;
+const linkTreeRegex = /http(?:s)?:\/\/(?:www\.)?linktr\.ee\/([a-zA-Z0-9_]+)/i;
 
 const validURL = (value) => urlValidRegex.test(value);
+
+const getURL = (value) => value.match(urlValidRegex)?.pop();
 
 const getImage = (html, website) => {
   const $ = cheerio.load(html);
@@ -65,7 +74,8 @@ const getFacebook = (value) => {
       "https://www.facebook.com/pages",
       "https://www.facebook.com/profile",
       "https://www.facebook.com/tr",
-    ].includes(facebook)
+      "http://www.facebook.com/2008",
+    ].find((item) => item === facebook)
   ) {
     return;
   }
@@ -73,7 +83,8 @@ const getFacebook = (value) => {
   return facebook;
 };
 const getYoutube = (value) => {
-  const youtube = value.match(youtubeRegex)?.pop();
+  const youtube =
+    value.match(youtubeSimpleRegex)?.[0] || value.match(youtubeRegex)?.[0];
 
   if (
     [
@@ -82,13 +93,14 @@ const getYoutube = (value) => {
       "https://www.youtube.com/channel",
       "https://www.youtube.com/embed",
       "https://www.youtube.com/user",
-    ].includes(youtube)
+    ].find((item) => item === youtube)
   ) {
     return;
   }
 
   return youtube;
 };
+
 const getInstagram = (value) => {
   const instagram = value
     .match(instagramRegex)
@@ -96,6 +108,24 @@ const getInstagram = (value) => {
 
   return instagram;
 };
+
+const getBandCamp = (value) => {
+  const bandCamp =
+    value.match(bandCampRegex)?.[0] || value.match(bandCampSimpleRegex)?.[0];
+
+  if (bandCamp?.includes("jeffscottcastle")) {
+    return;
+  }
+
+  return bandCamp;
+};
+
+const getLinkTree = (value) => {
+  const linkTree = value.match(linkTreeRegex)?.[0];
+
+  return linkTree;
+};
+
 const getTiktok = (value) => value.match(tiktokRegex)?.pop();
 const getSoundcloud = (value) => value.match(soundcloudRegex)?.pop();
 const getSpotify = (value) =>
@@ -112,6 +142,8 @@ const getSocial = (html, website) => {
   const soundcloud = getSoundcloud(html);
   const spotify = getSpotify(html);
   const appleMusic = getAppleMusic(html);
+  const band_camp = getBandCamp(html);
+  const link_tree = getLinkTree(html);
 
   return {
     website,
@@ -124,6 +156,8 @@ const getSocial = (html, website) => {
     soundcloud,
     spotify,
     appleMusic,
+    band_camp,
+    link_tree,
   };
 };
 
@@ -177,6 +211,31 @@ const getGenres = (html) => {
   return genres;
 };
 
+const getSocialNetworkFrom = (url) => {
+  if (!url) {
+    return;
+  }
+
+  const socialNetworks = [
+    "twitter",
+    "facebook",
+    "youtube",
+    "instagram",
+    "tiktok",
+    "soundcloud",
+    "spotify",
+    "apple",
+    "bandcamp",
+  ];
+
+  const network =
+    socialNetworks.find((prop) => url.includes(prop)) || "website";
+
+  return {
+    [network]: url,
+  };
+};
+
 module.exports = {
   sleep,
   snakeCase,
@@ -186,4 +245,6 @@ module.exports = {
   getImageFromURL,
   getDataFromWebsite,
   getGenres,
+  getURL,
+  getSocialNetworkFrom,
 };

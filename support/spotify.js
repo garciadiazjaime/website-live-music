@@ -59,13 +59,20 @@ const getArtistDetails = async (token, id) => {
 
 async function getSpotify(artist) {
   if (!artist.metadata?.spotify) {
-    logger.info(`no spotify`, {
+    logger.info(`NO_SPOTIFY`, {
       name: artist.name,
     });
     return;
   }
 
-  logger.info(`processing artist`, {
+  if (artist.metadata.spotify.includes("user/")) {
+    logger.info(`USER_NO_ARTISTS`, {
+      name: artist.name,
+    });
+    return;
+  }
+
+  logger.info(`artist`, {
     name: artist.name,
     spotify: artist.metadata.spotify,
   });
@@ -75,7 +82,7 @@ async function getSpotify(artist) {
   const details = await getArtistDetails(token, id);
 
   if (!details) {
-    logger.info(`invalid artist`, { id });
+    logger.info(`INVALID_ARTIST`, { id });
     return;
   }
 

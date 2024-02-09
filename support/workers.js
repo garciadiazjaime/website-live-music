@@ -12,6 +12,8 @@ const logger = require("./logger")("queue");
 require("dotenv").config();
 
 async function main() {
+  const chalk = (await import("chalk").then((mod) => mod)).default;
+
   const worker = new Worker(
     "livemusic",
     async (job) => {
@@ -26,6 +28,13 @@ async function main() {
 
         if (!location) {
           logger.info("no-location", job.data);
+          return;
+        }
+
+        if (location.provider) {
+          logger.info(chalk.green("LOCATION_FROM_PROVIDER"), {
+            provider: location.provider,
+          });
           return;
         }
 
