@@ -27,6 +27,19 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
     window.open(event.location.url, "_blank");
   };
 
+  const shareClickHandler = async (event: Event) => {
+    if (!navigator.share) {
+      return;
+    }
+
+    const shareData = {
+      title: "Chicago Events",
+      text: event.name,
+      url: event.url,
+    };
+    await navigator.share(shareData);
+  };
+
   const gotoEventPage = (event: Event) => window.open(event.url, "_blank");
   return (
     <div
@@ -76,6 +89,7 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
           </button>
           <button
             className={`flex justify-center items-center grow opacity-60 hover:opacity-100`}
+            onClick={() => shareClickHandler(event)}
           >
             <Image
               src="/images/share.svg"
