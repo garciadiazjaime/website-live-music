@@ -2,41 +2,41 @@
   "parent": {
     "raw": {
       "country": 2,
-      "rock": 30,
-      "pop": 27,
+      "rock": 31,
+      "pop": 28,
       "folk": 11,
       "punk": 8,
-      "electronic": 8,
-      "metal": 12,
+      "metal": 8,
       "experimental": 1,
       "hip hop": 6,
       "r&b": 4,
+      "electronic": 9,
       "asian": 1,
       "jazz": 1
     },
     "sort": [
       [
         "rock",
-        30
+        31
       ],
       [
         "pop",
-        27
-      ],
-      [
-        "metal",
-        12
+        28
       ],
       [
         "folk",
         11
       ],
       [
+        "electronic",
+        9
+      ],
+      [
         "punk",
         8
       ],
       [
-        "electronic",
+        "metal",
         8
       ],
       [
@@ -179,43 +179,16 @@
           ]
         }
       },
-      "148": {
-        "pk": 148,
-        "name": "Siena Liggins",
-        "image": "http://static1.squarespace.com/static/5c1ab869cc8fed13ea3f15e3/t/5e2f944a3e2fbb3e81ae4cff/1580176459517/sienaliggins_logo.png?format=1500w",
+      "218": {
+        "pk": 218,
+        "name": "Loss Leader",
+        "image": "",
         "disabled": false,
         "genres": {
           "nodes": [
-            "detroit indie"
-          ],
-          "parents": [
-            "rock"
-          ]
-        }
-      },
-      "161": {
-        "pk": 161,
-        "name": "Caligula's Horse",
-        "image": "https://i1.sndcdn.com/avatars-000212499155-j9aq02-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "djent",
-            "progressive metal"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      "192": {
-        "pk": 192,
-        "name": "Willi Carlisle",
-        "image": "https://static.wixstatic.com/media/35850d_dd98c1356c844e25b1e37db482dff98e~mv2.jpg/v1/fill/w_1920,h_1282,al_c/35850d_dd98c1356c844e25b1e37db482dff98e~mv2.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "arkansas indie"
+            "death doom",
+            "funeral doom",
+            "tennessee metal"
           ],
           "parents": []
         }
@@ -231,36 +204,6 @@
             "grunge revival"
           ],
           "parents": []
-        }
-      },
-      "282": {
-        "pk": 282,
-        "name": "ESCUELA GRIND",
-        "image": "http://static1.squarespace.com/static/5e966b3cbdd412639676dc46/t/5e98db3364419f4833b6e48d/1587075893554/cover+photo.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "powerviolence"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      "283": {
-        "pk": 283,
-        "name": "TAKE OFFENSE",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicano punk",
-            "hardcore",
-            "metallic hardcore"
-          ],
-          "parents": [
-            "electronic"
-          ]
         }
       },
       "315": {
@@ -496,35 +439,6 @@
           ],
           "parents": [
             "punk"
-          ]
-        }
-      },
-      "441": {
-        "pk": 441,
-        "name": "BOTH SIDES NOW: A CHIRP VINYL LISTENING BAR",
-        "image": "https://i1.sndcdn.com/avatars-000348151430-75t031-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "liquid funk"
-          ],
-          "parents": [
-            "electronic"
-          ]
-        }
-      },
-      "442": {
-        "pk": 442,
-        "name": "Caligula’s Horse",
-        "image": "https://i1.sndcdn.com/avatars-000212499155-j9aq02-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "djent",
-            "progressive metal"
-          ],
-          "parents": [
-            "metal"
           ]
         }
       },
@@ -1545,6 +1459,90 @@
             "pop"
           ]
         }
+      },
+      "557": {
+        "pk": 557,
+        "name": "Aidan Bissett",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "gen z singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      "558": {
+        "pk": 558,
+        "name": "Olive Klug",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "gen z singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      "560": {
+        "pk": 560,
+        "name": "Eric Slick",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "philly indie"
+          ],
+          "parents": []
+        }
+      },
+      "561": {
+        "pk": 561,
+        "name": "Sam Evian",
+        "image": "https://assets-global.website-files.com/657cd32cd18a2454f1bb486d/65ae112e2c5d3dd68c0b161e_SamSpotifyBannerwebsite.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "neo-psychedelic"
+          ],
+          "parents": []
+        }
+      },
+      "563": {
+        "pk": 563,
+        "name": "Yot Club",
+        "image": "http://yotclubmusic.com/cdn/shop/files/YotClub_LOGO_WORDMARK_03.png?height=628&pad_color=ffffff&v=1705592746&width=1200",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "bedroom pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "564": {
+        "pk": 564,
+        "name": "CSS",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative dance",
+            "dance-punk",
+            "neo-synthpop",
+            "new rave",
+            "indietronica",
+            "electroclash",
+            "electrofox"
+          ],
+          "parents": [
+            "rock",
+            "punk",
+            "electronic"
+          ]
+        }
       }
     },
     "sort": [
@@ -1661,42 +1659,15 @@
         }
       },
       {
-        "pk": 148,
-        "name": "Siena Liggins",
-        "image": "http://static1.squarespace.com/static/5c1ab869cc8fed13ea3f15e3/t/5e2f944a3e2fbb3e81ae4cff/1580176459517/sienaliggins_logo.png?format=1500w",
+        "pk": 218,
+        "name": "Loss Leader",
+        "image": "",
         "disabled": false,
         "genres": {
           "nodes": [
-            "detroit indie"
-          ],
-          "parents": [
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 161,
-        "name": "Caligula's Horse",
-        "image": "https://i1.sndcdn.com/avatars-000212499155-j9aq02-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "djent",
-            "progressive metal"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      {
-        "pk": 192,
-        "name": "Willi Carlisle",
-        "image": "https://static.wixstatic.com/media/35850d_dd98c1356c844e25b1e37db482dff98e~mv2.jpg/v1/fill/w_1920,h_1282,al_c/35850d_dd98c1356c844e25b1e37db482dff98e~mv2.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "arkansas indie"
+            "death doom",
+            "funeral doom",
+            "tennessee metal"
           ],
           "parents": []
         }
@@ -1712,36 +1683,6 @@
             "grunge revival"
           ],
           "parents": []
-        }
-      },
-      {
-        "pk": 282,
-        "name": "ESCUELA GRIND",
-        "image": "http://static1.squarespace.com/static/5e966b3cbdd412639676dc46/t/5e98db3364419f4833b6e48d/1587075893554/cover+photo.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "powerviolence"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      {
-        "pk": 283,
-        "name": "TAKE OFFENSE",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicano punk",
-            "hardcore",
-            "metallic hardcore"
-          ],
-          "parents": [
-            "electronic"
-          ]
         }
       },
       {
@@ -1977,35 +1918,6 @@
           ],
           "parents": [
             "punk"
-          ]
-        }
-      },
-      {
-        "pk": 441,
-        "name": "BOTH SIDES NOW: A CHIRP VINYL LISTENING BAR",
-        "image": "https://i1.sndcdn.com/avatars-000348151430-75t031-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "liquid funk"
-          ],
-          "parents": [
-            "electronic"
-          ]
-        }
-      },
-      {
-        "pk": 442,
-        "name": "Caligula’s Horse",
-        "image": "https://i1.sndcdn.com/avatars-000212499155-j9aq02-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "djent",
-            "progressive metal"
-          ],
-          "parents": [
-            "metal"
           ]
         }
       },
@@ -3024,6 +2936,90 @@
           "parents": [
             "rock",
             "pop"
+          ]
+        }
+      },
+      {
+        "pk": 557,
+        "name": "Aidan Bissett",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "gen z singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 558,
+        "name": "Olive Klug",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "gen z singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 560,
+        "name": "Eric Slick",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "philly indie"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 561,
+        "name": "Sam Evian",
+        "image": "https://assets-global.website-files.com/657cd32cd18a2454f1bb486d/65ae112e2c5d3dd68c0b161e_SamSpotifyBannerwebsite.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "neo-psychedelic"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 563,
+        "name": "Yot Club",
+        "image": "http://yotclubmusic.com/cdn/shop/files/YotClub_LOGO_WORDMARK_03.png?height=628&pad_color=ffffff&v=1705592746&width=1200",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "bedroom pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 564,
+        "name": "CSS",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative dance",
+            "dance-punk",
+            "neo-synthpop",
+            "new rave",
+            "indietronica",
+            "electroclash",
+            "electrofox"
+          ],
+          "parents": [
+            "rock",
+            "punk",
+            "electronic"
           ]
         }
       }

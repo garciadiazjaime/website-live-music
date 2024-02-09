@@ -933,9 +933,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 336,
+          "pk": 399,
           "name": "Flatfoot 56",
-          "followers": 34338,
+          "followers": 34321,
           "genres": [
             {
               "name": "alternative roots rock"
@@ -988,9 +988,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 337,
+          "pk": 400,
           "name": "Tsunami Bomb",
-          "followers": 44061,
+          "followers": 44043,
           "genres": [
             {
               "name": "skate punk"
@@ -1065,9 +1065,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 338,
+          "pk": 174,
           "name": "Loss",
-          "followers": 5303,
+          "followers": 5304,
           "genres": [
             {
               "name": "death doom"
@@ -1576,9 +1576,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 340,
+          "pk": 403,
           "name": "Dru Hill",
-          "followers": 1477732,
+          "followers": 1476363,
           "genres": [
             {
               "name": "r&b"
@@ -1648,9 +1648,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 341,
+          "pk": 404,
           "name": "Lloyd",
-          "followers": 2241697,
+          "followers": 2239226,
           "genres": [
             {
               "name": "trap"
@@ -1703,9 +1703,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 342,
+          "pk": 405,
           "name": "Bobby V.",
-          "followers": 942551,
+          "followers": 941588,
           "genres": [
             {
               "name": "r&b"
@@ -1761,9 +1761,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 343,
+          "pk": 406,
           "name": "Pleasure P",
-          "followers": 1251173,
+          "followers": 1249337,
           "genres": [
             {
               "name": "trap"
@@ -1872,9 +1872,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 351,
+          "pk": 413,
           "name": "LOUIEJAYXX",
-          "followers": 9400,
+          "followers": 9404,
           "genres": [
             {
               "name": "dubstep"
@@ -1883,7 +1883,7 @@
               "name": "gaming dubstep"
             }
           ],
-          "popularity": 29,
+          "popularity": 28,
           "url": "https://open.spotify.com/artist/4FjUttOJfudEcivKBA6fLl",
           "image": "https://i.scdn.co/image/ab6761610000e5ebcf1bc1a0266ce86a15f2928e"
         },
@@ -1911,9 +1911,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 352,
+          "pk": 414,
           "name": "VLCN",
-          "followers": 5999,
+          "followers": 6013,
           "genres": [],
           "popularity": 32,
           "url": "https://open.spotify.com/artist/4jTgru4XsqeKA1L9xB9AzW",
@@ -2359,9 +2359,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 358,
+          "pk": 418,
           "name": "Vader",
-          "followers": 229278,
+          "followers": 229173,
           "genres": [
             {
               "name": "metal"
@@ -2428,9 +2428,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 359,
+          "pk": 419,
           "name": "Origin",
-          "followers": 69539,
+          "followers": 69543,
           "genres": [
             {
               "name": "brutal death metal"
@@ -2476,9 +2476,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 360,
+          "pk": 420,
           "name": "Inhuman Condition",
-          "followers": 11785,
+          "followers": 11798,
           "genres": [
             {
               "name": "florida death metal"
@@ -3025,11 +3025,11 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 329,
+          "pk": 390,
           "name": "David Lopez",
-          "followers": 3495,
+          "followers": 3483,
           "genres": [],
-          "popularity": 19,
+          "popularity": 18,
           "url": "https://open.spotify.com/artist/2O1yp9U9H1t5udlQHwAcUQ",
           "image": "https://i.scdn.co/image/ab6761610000e5ebf72b1fcfcdea46b2133aa877"
         },
@@ -3863,9 +3863,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 358,
+          "pk": 418,
           "name": "Vader",
-          "followers": 229278,
+          "followers": 229173,
           "genres": [
             {
               "name": "metal"
@@ -3932,9 +3932,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 359,
+          "pk": 419,
           "name": "Origin",
-          "followers": 69539,
+          "followers": 69543,
           "genres": [
             {
               "name": "brutal death metal"
@@ -3980,9 +3980,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 360,
+          "pk": 420,
           "name": "Inhuman Condition",
-          "followers": 11785,
+          "followers": 11798,
           "genres": [
             {
               "name": "florida death metal"
@@ -5801,9 +5801,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 324,
+          "pk": 384,
           "name": "Living Colour",
-          "followers": 378627,
+          "followers": 378536,
           "genres": [
             {
               "name": "hard rock"
@@ -6520,9 +6520,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 363,
+          "pk": 424,
           "name": "Rachael Yamagata",
-          "followers": 158352,
+          "followers": 158253,
           "genres": [
             {
               "name": "acoustic pop"
@@ -6572,9 +6572,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 364,
+          "pk": 425,
           "name": "May Erlewine",
-          "followers": 17671,
+          "followers": 17680,
           "genres": [
             {
               "name": "michigan folk"
@@ -6588,6 +6588,161 @@
           "image": "https://i.scdn.co/image/ab6761610000e5eb0c71a10a4fb69f7e3e65ac4c"
         },
         "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 659,
+    "rank": 2300,
+    "slug": "kanye-west-and-ty-dolla-ign",
+    "name": "Kanye West and Ty Dolla $ign",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/552177/large_avatar",
+    "url": "https://www.songkick.com/concerts/41732809-kanye-west-at-united-center",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "United Center",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 117,
+      "name": "United Center",
+      "slug": "united-center",
+      "address": "1901 W Madison St, Chicago, IL 60612, United States",
+      "lat": 41.880691,
+      "lng": -87.674176,
+      "place_id": "ChIJT7Wpyj4tDogRRAPwjAbwk5s",
+      "website": "http://www.unitedcenter.com/",
+      "url": "https://maps.google.com/?cid=11210567808380306244",
+      "slug_venue": [
+        {
+          "name": "united-center"
+        }
+      ],
+      "metadata": {
+        "pk": 385,
+        "slug": "united-center",
+        "type": "LOCATION",
+        "website": "http://www.unitedcenter.com/",
+        "image": "",
+        "twitter": "https://twitter.com/unitedcenter",
+        "facebook": "https://www.facebook.com/unitedcenter",
+        "youtube": "",
+        "instagram": "http://instagram.com/unitedcenter",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 650,
+        "name": "Kanye West",
+        "profile": "https://musicbrainz.org/artist/164f0d73-1234-4e2c-8743-d77bf2191051",
+        "metadata": {
+          "pk": 601,
+          "slug": "kanye-west",
+          "type": "ARTIST",
+          "website": "",
+          "image": "https://i1.sndcdn.com/avatars-BSDMkcimX14O99Zz-Zhjy6w-t500x500.jpg",
+          "twitter": "https://twitter.com/kanyewest",
+          "facebook": "",
+          "youtube": "https://www.youtube.com/user/kanyewest",
+          "instagram": "https://www.instagram.com/kanyewest/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/kanyewest",
+          "spotify": "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 392,
+          "name": "Kanye West",
+          "followers": 23368467,
+          "genres": [
+            {
+              "name": "hip hop"
+            },
+            {
+              "name": "chicago rap"
+            },
+            {
+              "name": "rap"
+            }
+          ],
+          "popularity": 91,
+          "url": "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb867008a971fae0f4d913f63a"
+        },
+        "genres": [
+          {
+            "name": "pop"
+          },
+          {
+            "name": "hip hop"
+          },
+          {
+            "name": "pop rap"
+          },
+          {
+            "name": "electropop"
+          },
+          {
+            "name": "christian hip hop"
+          }
+        ]
+      },
+      {
+        "pk": 651,
+        "name": "Ty Dolla $ign",
+        "profile": "https://musicbrainz.org/artist/7bd66c18-cb33-49aa-9279-140acedbdb49",
+        "metadata": {
+          "pk": 602,
+          "slug": "ty-dolla-ign",
+          "type": "ARTIST",
+          "website": "http://dollasignworld.com/",
+          "image": "https://www.dollasignworld.com/sites/g/files/g2000010601/files/Intersection%201.png",
+          "twitter": "https://twitter.com/tydollasign",
+          "facebook": "https://www.facebook.com/tydollasign",
+          "youtube": "https://www.youtube.com/user/tydollasign",
+          "instagram": "https://www.instagram.com/tydollasign/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/tydollasign",
+          "spotify": "https://open.spotify.com/artist/2hED6gNVoqGvmmX8i5dRoj",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 393,
+          "name": "Ty",
+          "followers": 586,
+          "genres": [],
+          "popularity": 32,
+          "url": "https://open.spotify.com/artist/2hED6gNVoqGvmmX8i5dRoj",
+          "image": "https://i.scdn.co/image/ab67616d0000b27380674c495351fafb1550a491"
+        },
+        "genres": [
+          {
+            "name": "hip hop"
+          },
+          {
+            "name": "r&b"
+          },
+          {
+            "name": "alternative r&b"
+          },
+          {
+            "name": "trap soul"
+          }
+        ]
       }
     ]
   },
@@ -6780,9 +6935,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 330,
+          "pk": 391,
           "name": "Reverie",
-          "followers": 35719,
+          "followers": 35702,
           "genres": [
             {
               "name": "alternative r&b"
@@ -7222,6 +7377,152 @@
           },
           {
             "name": "math rock"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 665,
+    "rank": 2100,
+    "slug": "10000-maniacs",
+    "name": "10,000 Maniacs",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/292381/large_avatar",
+    "url": "https://www.songkick.com/concerts/41471682-10000-maniacs-at-city-winery-chicago",
+    "start_date": "2024-02-16T00:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "City Winery Chicago",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 70,
+      "name": "City Winery",
+      "slug": "city-winery",
+      "address": "1200 W Randolph St, Chicago, IL 60607, United States",
+      "lat": 41.884588,
+      "lng": -87.657111,
+      "place_id": "ChIJ7ZBcatgsDogRVeUuWDAD0TM",
+      "website": "https://citywinery.com/chicago",
+      "url": "https://maps.google.com/?cid=3733769072239633749",
+      "slug_venue": [
+        {
+          "name": "city-winery-chicago"
+        },
+        {
+          "name": "city-winery"
+        }
+      ],
+      "metadata": {
+        "pk": 146,
+        "slug": "city-winery",
+        "type": "LOCATION",
+        "website": "https://citywinery.com/chicago",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 656,
+        "name": "10",
+        "profile": "https://musicbrainz.org/artist/d597a691-f243-4579-9f92-a011a7f7f49b",
+        "metadata": {
+          "pk": 607,
+          "slug": "10",
+          "type": "ARTIST",
+          "website": "",
+          "image": "https://i1.sndcdn.com/avatars-ew4DICVoqF6CEu1A-hFLTpA-t500x500.jpg",
+          "twitter": "",
+          "facebook": "",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/10-music",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      },
+      {
+        "pk": 657,
+        "name": "000 Maniacs",
+        "profile": "https://musicbrainz.org/artist/b9a06530-1241-4162-836f-7b8e79deaa58",
+        "metadata": {
+          "pk": 608,
+          "slug": "000-maniacs",
+          "type": "ARTIST",
+          "website": "http://www.maniacs.com/",
+          "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/566726/1ae18f73ac8534a2634082bdb7964e83c8a7c246/original/15a1579-10km.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
+          "twitter": "https://twitter.com/10000Maniacs",
+          "facebook": "https://www.facebook.com/10KManiacs",
+          "youtube": "https://www.youtube.com/user/10000ManiacsVEVO",
+          "instagram": "https://www.instagram.com/10000maniacs",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "https://open.spotify.com/artist/0MBIKH9DjtBkv8O3nS6szj",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 429,
+          "name": "10,000 Maniacs",
+          "followers": 372093,
+          "genres": [
+            {
+              "name": "new wave"
+            },
+            {
+              "name": "pop rock"
+            },
+            {
+              "name": "singer-songwriter"
+            },
+            {
+              "name": "ectofolk"
+            },
+            {
+              "name": "new wave pop"
+            },
+            {
+              "name": "lilith"
+            }
+          ],
+          "popularity": 48,
+          "url": "https://open.spotify.com/artist/0MBIKH9DjtBkv8O3nS6szj",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb43825079ea196f5412435254"
+        },
+        "genres": [
+          {
+            "name": "alternative rock"
+          },
+          {
+            "name": "acoustic rock"
+          },
+          {
+            "name": "indie pop"
+          },
+          {
+            "name": "folk pop"
+          },
+          {
+            "name": "jangle pop"
           }
         ]
       }
@@ -9016,11 +9317,11 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 355,
+          "pk": 415,
           "name": "Radoslav Lorkovic",
           "followers": 186,
           "genres": [],
-          "popularity": 1,
+          "popularity": 0,
           "url": "https://open.spotify.com/artist/2QJq5eGRmfDL5BsKL4uyP0",
           "image": "https://i.scdn.co/image/ab6761610000e5eb8ce3e80a0d49a36a7e0c9137"
         },
@@ -10981,9 +11282,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 325,
+          "pk": 385,
           "name": "Briston Maroney",
-          "followers": 286346,
+          "followers": 286517,
           "genres": [
             {
               "name": "nashville indie"
@@ -11072,9 +11373,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 200,
+          "pk": 386,
           "name": "Caligula's Horse",
-          "followers": 93036,
+          "followers": 93132,
           "genres": [
             {
               "name": "djent"
@@ -11167,9 +11468,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 327,
+          "pk": 388,
           "name": "Kevin Burt",
-          "followers": 1166,
+          "followers": 1167,
           "genres": [],
           "popularity": 7,
           "url": "https://open.spotify.com/artist/7Czoy12mVQ3LMbOyihbPo6",
@@ -11185,11 +11486,11 @@
     "slug": "elvie-shane",
     "name": "Elvie Shane",
     "description": "",
-    "image": "https://images.sk-static.com/images/media/profile_images/artists/9642509/large_avatar",
-    "url": "https://www.songkick.com/concerts/41589380-elvie-shane-at-carols-pub",
-    "start_date": "2024-02-08T15:00:00Z",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17179512/9c00a134-815d-47f2-a56f-8341d391483d.jpg",
+    "url": "https://do312.com/events/2024/2/8/elvie-shane-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
     "end_date": null,
-    "provider": "SONGKICK",
+    "provider": "DO312",
     "venue": "Carol's Pub",
     "address": "",
     "city": "CHICAGO",
@@ -11251,9 +11552,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 328,
+          "pk": 389,
           "name": "Elvie Shane",
-          "followers": 32137,
+          "followers": 32163,
           "genres": [
             {
               "name": "modern country pop"
@@ -11348,11 +11649,11 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 329,
+          "pk": 390,
           "name": "David Lopez",
-          "followers": 3495,
+          "followers": 3483,
           "genres": [],
-          "popularity": 19,
+          "popularity": 18,
           "url": "https://open.spotify.com/artist/2O1yp9U9H1t5udlQHwAcUQ",
           "image": "https://i.scdn.co/image/ab6761610000e5ebf72b1fcfcdea46b2133aa877"
         },
@@ -11432,9 +11733,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 331,
+          "pk": 394,
           "name": "Poolside",
-          "followers": 272730,
+          "followers": 272777,
           "genres": [
             {
               "name": "indie soul"
@@ -11526,9 +11827,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 332,
+          "pk": 395,
           "name": "Elephante",
-          "followers": 98160,
+          "followers": 98113,
           "genres": [
             {
               "name": "pop dance"
@@ -11620,9 +11921,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 333,
+          "pk": 396,
           "name": "The Record Company",
-          "followers": 113402,
+          "followers": 113421,
           "genres": [
             {
               "name": "la indie"
@@ -11724,9 +12025,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 334,
+          "pk": 397,
           "name": "Chicago Symphony Orchestra",
-          "followers": 71346,
+          "followers": 71314,
           "genres": [
             {
               "name": "classical performance"
@@ -11829,10 +12130,13 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 201,
+          "pk": 401,
           "name": "Willi Carlisle",
-          "followers": 20849,
+          "followers": 20877,
           "genres": [
+            {
+              "name": "alternative country"
+            },
             {
               "name": "arkansas indie"
             }
@@ -11930,9 +12234,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 339,
+          "pk": 402,
           "name": "Rod Stewart",
-          "followers": 4538621,
+          "followers": 4537051,
           "genres": [
             {
               "name": "mellow gold"
@@ -12037,9 +12341,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 345,
+          "pk": 408,
           "name": "Extreme",
-          "followers": 575967,
+          "followers": 575787,
           "genres": [
             {
               "name": "hard rock"
@@ -12147,9 +12451,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 347,
+          "pk": 410,
           "name": "Deap Vally",
-          "followers": 84761,
+          "followers": 84737,
           "genres": [
             {
               "name": "garage rock"
@@ -12235,9 +12539,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 349,
+          "pk": 186,
           "name": "Tedious & Brief",
-          "followers": 1592,
+          "followers": 1593,
           "genres": [],
           "popularity": 11,
           "url": "https://open.spotify.com/artist/3WILyUrVpk9OpwyJXNmffM",
@@ -12493,9 +12797,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 356,
+          "pk": 416,
           "name": "✝✝✝ (Crosses)",
-          "followers": 287622,
+          "followers": 287818,
           "genres": [
             {
               "name": "electronic rock"
@@ -12581,9 +12885,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 357,
+          "pk": 417,
           "name": "Sarah Jarosz",
-          "followers": 146267,
+          "followers": 146289,
           "genres": [
             {
               "name": "new americana"
@@ -12691,9 +12995,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 319,
+          "pk": 421,
           "name": "Lowdown Brass Band",
-          "followers": 4885,
+          "followers": 4892,
           "genres": [
             {
               "name": "brass band"
@@ -12739,6 +13043,9 @@
       "slug_venue": [
         {
           "name": "burlington-bar"
+        },
+        {
+          "name": "the-burlington"
         }
       ],
       "metadata": {
@@ -12782,9 +13089,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 361,
+          "pk": 422,
           "name": "Doom Scroll",
-          "followers": 4189,
+          "followers": 4204,
           "genres": [
             {
               "name": "crack rock steady"
@@ -13068,9 +13375,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 319,
+          "pk": 421,
           "name": "Lowdown Brass Band",
-          "followers": 4885,
+          "followers": 4892,
           "genres": [
             {
               "name": "brass band"
@@ -13567,9 +13874,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 204,
+          "pk": 435,
           "name": "Thumpasaurus",
-          "followers": 44421,
+          "followers": 44449,
           "genres": [],
           "popularity": 36,
           "url": "https://open.spotify.com/artist/13peDbMKVZpn5nanRC96WJ",
@@ -23383,7 +23690,7 @@
     "description": "",
     "image": "https://images.sk-static.com/images/media/profile_images/artists/236059/large_avatar",
     "url": "https://www.songkick.com/concerts/41502441-kills-at-vic-theatre",
-    "start_date": "2024-02-15T01:00:00Z",
+    "start_date": "2024-02-15T02:00:00Z",
     "end_date": null,
     "provider": "SONGKICK",
     "venue": "The Vic Theatre",
@@ -23447,9 +23754,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 362,
+          "pk": 423,
           "name": "The Kills",
-          "followers": 671688,
+          "followers": 671111,
           "genres": [
             {
               "name": "alternative dance"
@@ -23575,9 +23882,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 365,
+          "pk": 426,
           "name": "edapollo",
-          "followers": 13569,
+          "followers": 13579,
           "genres": [],
           "popularity": 46,
           "url": "https://open.spotify.com/artist/5BCLvW3qaUm39VjiZ8INmm",
@@ -23847,11 +24154,11 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 367,
+          "pk": 427,
           "name": "Yuma Abe",
-          "followers": 11512,
+          "followers": 11546,
           "genres": [],
-          "popularity": 32,
+          "popularity": 33,
           "url": "https://open.spotify.com/artist/576rDSci8FAVAq5dIKZc7z",
           "image": "https://i.scdn.co/image/ab6761610000e5eba93d4a5e302d035b95f51d9d"
         },
@@ -24208,6 +24515,910 @@
     ]
   },
   {
+    "pk": 664,
+    "rank": 1200,
+    "slug": "tinashe",
+    "name": "Tinashe",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/2020878/large_avatar",
+    "url": "https://www.songkick.com/concerts/41546445-tinashe-at-radius-chicago",
+    "start_date": "2024-02-15T12:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Radius Chicago",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 139,
+      "name": "Radius Chicago",
+      "slug": "radius-chicago",
+      "address": "640 W Cermak Rd, Chicago, IL 60616, United States",
+      "lat": 41.853339,
+      "lng": -87.642483,
+      "place_id": "ChIJ9--nFowtDogR9GXgGuXfues",
+      "website": "https://www.radius-chicago.com/",
+      "url": "https://maps.google.com/?cid=16985853644695954932",
+      "slug_venue": [
+        {
+          "name": "radius-chicago"
+        }
+      ],
+      "metadata": {
+        "pk": 605,
+        "slug": "radius-chicago",
+        "type": "LOCATION",
+        "website": "https://www.radius-chicago.com/",
+        "image": "https://www.radius-chicago.com/assets/img/radius-front-d5d1c9d9e9.jpg",
+        "twitter": "http://www.twitter.com/radiuschicago",
+        "facebook": "http://www.facebook.com/radiuschicago",
+        "youtube": "",
+        "instagram": "http://www.instagram.com/radiuschicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 655,
+        "name": "Tinashe",
+        "profile": "https://musicbrainz.org/artist/396a9525-0994-4542-b480-c4587feeb476",
+        "metadata": {
+          "pk": 606,
+          "slug": "tinashe",
+          "type": "ARTIST",
+          "website": "http://tinashenow.com/",
+          "image": "http://static1.squarespace.com/static/5dd45a339d9c1700e092ea6c/t/650b975cd299c70e44895d77/1695258460712/Screen+Shot+2023-09-20+at+6.06.55+PM.png?format=1500w",
+          "twitter": "https://twitter.com/Tinashe",
+          "facebook": "https://www.facebook.com/OfficialTinashe",
+          "youtube": "https://www.youtube.com/user/tinashenow",
+          "instagram": "https://www.instagram.com/tinashenow/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/tinashenow",
+          "spotify": "https://open.spotify.com/artist/0NIIxcxNHmOoyBx03SfTCD",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 428,
+          "name": "Tinashe",
+          "followers": 2667106,
+          "genres": [
+            {
+              "name": "pop"
+            },
+            {
+              "name": "r&b"
+            },
+            {
+              "name": "urban contemporary"
+            },
+            {
+              "name": "alternative r&b"
+            },
+            {
+              "name": "dance pop"
+            },
+            {
+              "name": "metropopolis"
+            }
+          ],
+          "popularity": 66,
+          "url": "https://open.spotify.com/artist/0NIIxcxNHmOoyBx03SfTCD",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb74cca01a52304bfd552cd17d"
+        },
+        "genres": [
+          {
+            "name": "pop"
+          },
+          {
+            "name": "contemporary r&b"
+          },
+          {
+            "name": "alternative r&b"
+          },
+          {
+            "name": "trap soul"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 666,
+    "rank": 1200,
+    "slug": "sango",
+    "name": "Sango",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/963793/large_avatar",
+    "url": "https://www.songkick.com/concerts/41550316-sango-at-concord-music-hall",
+    "start_date": "2024-02-16T03:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Concord Music Hall",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 6,
+      "name": "Concord Music Hall",
+      "slug": "concord-music-hall",
+      "address": "2051 N Milwaukee Ave, Chicago, IL 60647, United States",
+      "lat": 41.918646,
+      "lng": -87.690146,
+      "place_id": "ChIJA1PJVZjSD4gRoUnGNtBbWHQ",
+      "website": "http://concordmusichall.com/",
+      "url": "https://maps.google.com/?cid=8383551656180468129",
+      "slug_venue": [
+        {
+          "name": "concord-music-hall"
+        }
+      ],
+      "metadata": {
+        "pk": 7,
+        "slug": "concord-music-hall",
+        "type": "LOCATION",
+        "website": "http://concordmusichall.com/",
+        "image": "https://concordmusichall.com/wp-content/uploads/2016/09/DSC_3711.jpg",
+        "twitter": "https://twitter.com/concordhall",
+        "facebook": "https://www.facebook.com/ConcordMusicHall",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/concordhall",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 658,
+        "name": "Sango",
+        "profile": "https://musicbrainz.org/artist/150aacdf-a15f-46b8-8a99-25cde68e90de",
+        "metadata": {
+          "pk": 609,
+          "slug": "sango",
+          "type": "ARTIST",
+          "website": "https://sangobeats.com/",
+          "image": "http://static1.squarespace.com/static/56142164e4b08b4affbf3ae8/t/57db75a629687fc055d04885/1474000297516/Sango_Logo_Color.png?format=1500w",
+          "twitter": "https://twitter.com/sangobeats",
+          "facebook": "https://www.facebook.com/SangoBeats",
+          "youtube": "https://www.youtube.com/user/sangobeats",
+          "instagram": "https://www.instagram.com/sango_/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/sangobeats",
+          "spotify": "https://open.spotify.com/artist/7e3FtKBIPLrIVm8g1FJMVg",
+          "appleMusic": "",
+          "band_camp": "https://sango.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 430,
+          "name": "Sango",
+          "followers": 195951,
+          "genres": [
+            {
+              "name": "alternative r&b"
+            },
+            {
+              "name": "indie soul"
+            }
+          ],
+          "popularity": 54,
+          "url": "https://open.spotify.com/artist/7e3FtKBIPLrIVm8g1FJMVg",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb6e2492696b1d35e490e3691a"
+        },
+        "genres": [
+          {
+            "name": "electronic"
+          },
+          {
+            "name": "r&b"
+          },
+          {
+            "name": "instrumental"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 667,
+    "rank": 1200,
+    "slug": "widespread-panic",
+    "name": "Widespread Panic",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/377326/large_avatar",
+    "url": "https://www.songkick.com/concerts/41542712-widespread-panic-at-chicago-theatre",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Chicago Theatre",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 41,
+      "name": "The Chicago Theatre",
+      "slug": "the-chicago-theatre",
+      "address": "175 N State St, Chicago, IL 60601, United States",
+      "lat": 41.885513,
+      "lng": -87.627586,
+      "place_id": "ChIJk6QQWKUsDogR1vrLD_bdAEc",
+      "website": "https://www.msg.com/the-chicago-theatre",
+      "url": "https://maps.google.com/?cid=5116333225589603030",
+      "slug_venue": [
+        {
+          "name": "chicago-theatre"
+        },
+        {
+          "name": "the-chicago-theatre"
+        }
+      ],
+      "metadata": {
+        "pk": 108,
+        "slug": "the-chicago-theatre",
+        "type": "LOCATION",
+        "website": "https://www.msg.com/the-chicago-theatre",
+        "image": "",
+        "twitter": "https://www.twitter.com/chicagotheatre",
+        "facebook": "https://www.facebook.com/chicagotheatre",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/chicagotheatre",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 659,
+        "name": "Widespread Panic",
+        "profile": "https://musicbrainz.org/artist/3797a6d0-7700-44bf-96fb-f44386bc9ab2",
+        "metadata": {
+          "pk": 610,
+          "slug": "widespread-panic",
+          "type": "ARTIST",
+          "website": "http://www.widespreadpanic.com/",
+          "image": "https://wranglerspace.s3-accelerate.amazonaws.com/2019/07/Widespread-Panic-Red-Rocks-20190630-Timmermans-1519.jpg",
+          "twitter": "https://twitter.com/widespreadpanic",
+          "facebook": "https://www.facebook.com/widespreadpanic",
+          "youtube": "https://www.youtube.com/user/WidespreadPanicMusic",
+          "instagram": "https://www.instagram.com/widespreadpanichq/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/widespreadpanic",
+          "spotify": "https://open.spotify.com/artist/54SHZF2YS3W87xuJKSvOVf",
+          "appleMusic": "https://music.apple.com/us/artist/widespread-panic/2226112",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 431,
+          "name": "Widespread Panic",
+          "followers": 271460,
+          "genres": [
+            {
+              "name": "jam band"
+            },
+            {
+              "name": "southern rock"
+            },
+            {
+              "name": "athens indie"
+            }
+          ],
+          "popularity": 48,
+          "url": "https://open.spotify.com/artist/54SHZF2YS3W87xuJKSvOVf",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb178c98dedcf53d05d32b0ad2"
+        },
+        "genres": [
+          {
+            "name": "jam band"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 668,
+    "rank": 1200,
+    "slug": "indigo-de-souza",
+    "name": "Indigo De Souza",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/9563889/large_avatar",
+    "url": "https://www.songkick.com/concerts/41600478-indigo-de-souza-at-thalia-hall",
+    "start_date": "2024-02-15T15:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Thalia Hall",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 71,
+      "name": "Thalia Hall",
+      "slug": "thalia-hall",
+      "address": "1807 S Allport St, Chicago, IL 60608, United States",
+      "lat": 41.857692,
+      "lng": -87.657509,
+      "place_id": "ChIJIbdi2_8sDogRNs8JXduUSpo",
+      "website": "http://thaliahallchicago.com/",
+      "url": "https://maps.google.com/?cid=11117862299997163318",
+      "slug_venue": [
+        {
+          "name": "thalia-hall"
+        }
+      ],
+      "metadata": {
+        "pk": 149,
+        "slug": "thalia-hall",
+        "type": "LOCATION",
+        "website": "http://thaliahallchicago.com/",
+        "image": "http://static1.squarespace.com/static/5b088cce620b85511ff9c68d/t/5e13b9e17ec0a61af3041a50/1578351076278/TH_box_black-Cream.jpg?format=1500w",
+        "twitter": "https://twitter.com/ThaliaHallChi",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/thaliahallchicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 660,
+        "name": "Indigo De Souza",
+        "profile": "https://musicbrainz.org/artist/a8d894ce-0e6b-4ddd-a49b-46f6330a590f",
+        "metadata": {
+          "pk": 611,
+          "slug": "indigo-de-souza",
+          "type": "ARTIST",
+          "website": "https://www.indigodesouza.com/",
+          "image": "http://static1.squarespace.com/static/59b9e7b49f7456c35c5ecc5b/t/63e1c65a5f7630437c676e3a/1675740762184/INDIGO_website_logosymbol-01.png?format=1500w",
+          "twitter": "https://twitter.com/IndigoDeSouza",
+          "facebook": "https://www.facebook.com/Indigo-De-Souza-311885212875",
+          "youtube": "",
+          "instagram": "https://www.instagram.com/indigofaraway/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/indigo-de-souza",
+          "spotify": "https://open.spotify.com/artist/3ir2pF2mkiEWqyPenKTh5e",
+          "appleMusic": "",
+          "band_camp": "https://indigodesouza.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 432,
+          "name": "Indigo De Souza",
+          "followers": 151862,
+          "genres": [
+            {
+              "name": "bubblegrunge"
+            },
+            {
+              "name": "indie pop"
+            },
+            {
+              "name": "asheville indie"
+            }
+          ],
+          "popularity": 53,
+          "url": "https://open.spotify.com/artist/3ir2pF2mkiEWqyPenKTh5e",
+          "image": "https://i.scdn.co/image/ab6761610000e5ebaee08f28d7c31a45559e7140"
+        },
+        "genres": [
+          {
+            "name": "pop"
+          },
+          {
+            "name": "indie rock"
+          },
+          {
+            "name": "garage rock"
+          },
+          {
+            "name": "grunge"
+          },
+          {
+            "name": "bedroom pop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 669,
+    "rank": 1200,
+    "slug": "silent-planet",
+    "name": "Silent Planet",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/72435/large_avatar",
+    "url": "https://www.songkick.com/concerts/41550649-silent-planet-at-bottom-lounge",
+    "start_date": "2024-02-16T01:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Bottom Lounge",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 65,
+      "name": "Bottom Lounge",
+      "slug": "bottom-lounge",
+      "address": "1375 W Lake St, Chicago, IL 60607, United States",
+      "lat": 41.885316,
+      "lng": -87.661703,
+      "place_id": "ChIJSzNFPSYtDogRtAvfhyIu2g0",
+      "website": "http://bottomlounge.com/",
+      "url": "https://maps.google.com/?cid=998160993259293620",
+      "slug_venue": [
+        {
+          "name": "bottom-lounge"
+        }
+      ],
+      "metadata": {
+        "pk": 136,
+        "slug": "bottom-lounge",
+        "type": "LOCATION",
+        "website": "http://bottomlounge.com/",
+        "image": "https://bottomlounge.com/wp-content/uploads/2019/01/restaurant-1.jpeg",
+        "twitter": "https://twitter.com/thebottomlounge",
+        "facebook": "https://www.facebook.com/bottomloungechicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/bottomlounge",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 661,
+        "name": "Silent Planet",
+        "profile": "https://musicbrainz.org/artist/c62afc98-8596-4532-a1dd-bc1a595c927e",
+        "metadata": {
+          "pk": 612,
+          "slug": "silent-planet",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "https://twitter.com/SLNTPLNT",
+          "facebook": "https://www.facebook.com/silentplanetmusic",
+          "youtube": "https://www.youtube.com/channel/UCJKdHhXovF8tsWa9bCKOZTg",
+          "instagram": "https://www.instagram.com/silentplanetband/",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "https://open.spotify.com/artist/0JGTiwfinlCuANGu4Gq2XU",
+          "appleMusic": "",
+          "band_camp": "https://silentplanetmusic.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 433,
+          "name": "Silent Planet",
+          "followers": 161762,
+          "genres": [
+            {
+              "name": "metalcore"
+            },
+            {
+              "name": "christian metalcore"
+            },
+            {
+              "name": "melodic metalcore"
+            },
+            {
+              "name": "progressive metalcore"
+            }
+          ],
+          "popularity": 53,
+          "url": "https://open.spotify.com/artist/0JGTiwfinlCuANGu4Gq2XU",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb85ffd133b82ebf688dc5f443"
+        },
+        "genres": [
+          {
+            "name": "metal"
+          },
+          {
+            "name": "metalcore"
+          },
+          {
+            "name": "post-hardcore"
+          },
+          {
+            "name": "djent"
+          },
+          {
+            "name": "melodic metalcore"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 671,
+    "rank": 1200,
+    "slug": "laura-jane-grace",
+    "name": "Laura Jane Grace",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/6734884/large_avatar",
+    "url": "https://www.songkick.com/concerts/41696718-laura-jane-grace-at-sleeping-village",
+    "start_date": "2024-02-16T03:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Sleeping Village",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 37,
+      "name": "Sleeping Village",
+      "slug": "sleeping-village",
+      "address": "3734 W Belmont Ave, Chicago, IL 60618, United States",
+      "lat": 41.939418,
+      "lng": -87.721361,
+      "place_id": "ChIJIZkjJ6HND4gRwgmE3djktKM",
+      "website": "http://sleeping-village.com/",
+      "url": "https://maps.google.com/?cid=11796304944070658498",
+      "slug_venue": [
+        {
+          "name": "sleeping-village"
+        }
+      ],
+      "metadata": {
+        "pk": 102,
+        "slug": "sleeping-village",
+        "type": "LOCATION",
+        "website": "http://sleeping-village.com/",
+        "image": "https://sleeping-village.com/wp-content/uploads/2023/03/SleepingVillageinAvondale.jpeg",
+        "twitter": "https://twitter.com/Sl33pingVillag3",
+        "facebook": "https://www.facebook.com/sleepingvillagechicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/sl33pingvillag3",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 662,
+        "name": "Laura Jane Grace",
+        "profile": "https://musicbrainz.org/artist/23d0b15f-b6b5-489b-b2a1-0333bd8db44b",
+        "metadata": {
+          "pk": 613,
+          "slug": "laura-jane-grace",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "https://twitter.com/LauraJaneGrace",
+          "facebook": "https://www.facebook.com/LauraJaneGrace",
+          "youtube": "https://www.youtube.com/user/thomasgabel",
+          "instagram": "https://www.instagram.com/laurajanegrace/",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "https://open.spotify.com/artist/4yfPiAauSgUfyc4k4WtwM9",
+          "appleMusic": "",
+          "band_camp": "https://laurajanegrace.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 434,
+          "name": "Laura Jane Grace",
+          "followers": 42935,
+          "genres": [
+            {
+              "name": "folk punk"
+            },
+            {
+              "name": "acoustic punk"
+            }
+          ],
+          "popularity": 37,
+          "url": "https://open.spotify.com/artist/4yfPiAauSgUfyc4k4WtwM9",
+          "image": "https://i.scdn.co/image/ab6761610000e5ebfa69e2c603501255bd369b39"
+        },
+        "genres": [
+          {
+            "name": "punk"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 672,
+    "rank": 1200,
+    "slug": "thumpasaurus",
+    "name": "Thumpasaurus",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/8782694/large_avatar",
+    "url": "https://www.songkick.com/concerts/41589773-thumpasaurus-at-lincoln-hall",
+    "start_date": "2024-02-15T15:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Lincoln Hall",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 79,
+      "name": "Lincoln Hall",
+      "slug": "lincoln-hall",
+      "address": "2424 N Lincoln Ave, Chicago, IL 60614, United States",
+      "lat": 41.925922,
+      "lng": -87.649837,
+      "place_id": "ChIJF5adNwXTD4gRnfyy_a5-5aA",
+      "website": "http://www.lh-st.com/",
+      "url": "https://maps.google.com/?cid=11593812105780984989",
+      "slug_venue": [
+        {
+          "name": "lincoln-hall"
+        }
+      ],
+      "metadata": {
+        "pk": 171,
+        "slug": "lincoln-hall",
+        "type": "LOCATION",
+        "website": "http://www.lh-st.com/",
+        "image": "",
+        "twitter": "https://twitter.com/schubas",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/lh_schubas",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 446,
+        "name": "Thumpasaurus",
+        "profile": "https://musicbrainz.org/artist/a2f41b90-7541-4254-9303-fd227da66fcc",
+        "metadata": {
+          "pk": 411,
+          "slug": "thumpasaurus",
+          "type": "ARTIST",
+          "website": "https://thumpasaurus.com/",
+          "image": "",
+          "twitter": "",
+          "facebook": "",
+          "youtube": "https://www.youtube.com/channel/UCscTH4RuEEibzu3PEhhqymw",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "https://open.spotify.com/artist/13peDbMKVZpn5nanRC96WJ",
+          "appleMusic": "",
+          "band_camp": "https://thumpasaurus.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 435,
+          "name": "Thumpasaurus",
+          "followers": 44449,
+          "genres": [],
+          "popularity": 36,
+          "url": "https://open.spotify.com/artist/13peDbMKVZpn5nanRC96WJ",
+          "image": "https://i.scdn.co/image/ab6761610000e5ebe95da35e7c479204eb18243d"
+        },
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 676,
+    "rank": 1200,
+    "slug": "505",
+    "name": "5:05",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/402412/large_avatar",
+    "url": "https://www.songkick.com/concerts/41664868-505-at-reggies",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Reggie's",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 34,
+      "name": "Reggies Chicago",
+      "slug": "reggies-chicago",
+      "address": "2105 S State St, Chicago, IL 60616, United States",
+      "lat": 41.853918,
+      "lng": -87.626852,
+      "place_id": "ChIJVUmkEX0sDogRzm1DQOACx-g",
+      "website": "https://www.reggieslive.com/",
+      "url": "https://maps.google.com/?cid=16773378499338792398",
+      "slug_venue": [
+        {
+          "name": "reggies-rock-club"
+        },
+        {
+          "name": "reggies"
+        },
+        {
+          "name": "reggies-music-joint"
+        },
+        {
+          "name": "reggies-chicago"
+        }
+      ],
+      "metadata": {
+        "pk": 98,
+        "slug": "reggies-chicago",
+        "type": "LOCATION",
+        "website": "https://www.reggieslive.com/",
+        "image": "",
+        "twitter": "https://twitter.com/reggieslive",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://instagram.com/reggieslive",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 666,
+        "name": "5:05",
+        "profile": "https://musicbrainz.org/artist/ef858200-8361-4b51-98c2-75023e5732ea",
+        "metadata": {
+          "pk": 616,
+          "slug": "505",
+          "type": "ARTIST",
+          "website": "http://www.fiveofive-music.com/",
+          "image": "https://i1.sndcdn.com/avatars-000157218992-6j3qo8-t500x500.jpg",
+          "twitter": "https://twitter.com/505_music",
+          "facebook": "https://www.facebook.com/505music",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/five-o-five",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "https://fiveofive.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": [
+          {
+            "name": "chiptune"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 682,
+    "rank": 1200,
+    "slug": "sold-out-andre-2024",
+    "name": "*SOLD OUT* André 2024",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/events/41697518/large_avatar?series_id=3639549",
+    "url": "https://www.songkick.com/festivals/3639549-sold-out-andre/id/41697518-sold-out-andr-2024",
+    "start_date": "2024-02-16T04:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Garfield Park Conservatory",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 140,
+      "name": "Garfield Park Conservatory",
+      "slug": "garfield-park-conservatory",
+      "address": "300 N Central Park Ave, Chicago, IL 60624, United States",
+      "lat": 41.886273,
+      "lng": -87.717255,
+      "place_id": "ChIJaQUY87cyDogRqoNIaIN0IdI",
+      "website": "https://garfieldconservatory.org/",
+      "url": "https://maps.google.com/?cid=15141511529935438762",
+      "slug_venue": [
+        {
+          "name": "garfield-park-conservatory"
+        }
+      ],
+      "metadata": {
+        "pk": 619,
+        "slug": "garfield-park-conservatory",
+        "type": "LOCATION",
+        "website": "https://garfieldconservatory.org/",
+        "image": "",
+        "twitter": "https://twitter.com/gpconservatory",
+        "facebook": "https://www.facebook.com/GarfieldParkConservatory",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/gpconservatory",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 671,
+        "name": "*SOLD OUT* André 2024",
+        "profile": "https://musicbrainz.org/artist/2b9ed862-57b5-41e7-a467-95dd94698a36",
+        "metadata": {
+          "pk": 620,
+          "slug": "sold-out-andre-2024",
+          "type": "ARTIST",
+          "website": "http://www.soldout.be/",
+          "image": "https://i1.sndcdn.com/avatars-000292925325-bieprj-t500x500.jpg",
+          "twitter": "https://twitter.com/wearesoldout",
+          "facebook": "https://www.facebook.com/wearesoldout",
+          "youtube": "https://www.youtube.com/user/wearesoldout",
+          "instagram": "https://www.instagram.com/wearesoldout/",
+          "tiktok": "",
+          "soundcloud": "https://soundcloud.com/soldout",
+          "spotify": "https://open.spotify.com/artist/5g40eoVT3f0lZbIa1mGbzs",
+          "appleMusic": "",
+          "band_camp": "https://wearesoldout.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 437,
+          "name": "Soldout",
+          "followers": 16547,
+          "genres": [
+            {
+              "name": "electroclash"
+            }
+          ],
+          "popularity": 21,
+          "url": "https://open.spotify.com/artist/5g40eoVT3f0lZbIa1mGbzs",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb60c2f016b93a7ff45a2fc24b"
+        },
+        "genres": [
+          {
+            "name": "electro"
+          },
+          {
+            "name": "electroclash"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "pk": 13,
     "rank": 1100,
     "slug": "the-singer-and-the-song",
@@ -24503,9 +25714,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 326,
+          "pk": 387,
           "name": "Sian",
-          "followers": 10620,
+          "followers": 10626,
           "genres": [
             {
               "name": "dark techno"
@@ -24591,9 +25802,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 335,
+          "pk": 398,
           "name": "Afterlife",
-          "followers": 35039,
+          "followers": 35021,
           "genres": [
             {
               "name": "chill lounge"
@@ -24818,9 +26029,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 344,
+          "pk": 407,
           "name": "Los Tigres Del Norte",
-          "followers": 5266884,
+          "followers": 5262696,
           "genres": [
             {
               "name": "banda"
@@ -24925,9 +26136,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 346,
+          "pk": 409,
           "name": "Daley",
-          "followers": 83417,
+          "followers": 83343,
           "genres": [],
           "popularity": 40,
           "url": "https://open.spotify.com/artist/13UXMns4uwUrEpIzY79Qgw",
@@ -25019,9 +26230,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 348,
+          "pk": 411,
           "name": "Morris Day",
-          "followers": 222552,
+          "followers": 222416,
           "genres": [
             {
               "name": "funk"
@@ -26041,6 +27252,239 @@
     ]
   },
   {
+    "pk": 675,
+    "rank": 1100,
+    "slug": "jax-hollow",
+    "name": "Jax Hollow",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/10151777/large_avatar",
+    "url": "https://www.songkick.com/concerts/41531850-jax-hollow-at-space",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "SPACE",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 74,
+      "name": "Evanston SPACE",
+      "slug": "evanston-space",
+      "address": "1245 Chicago Ave, Evanston, IL 60202, United States",
+      "lat": 42.04095,
+      "lng": -87.680325,
+      "place_id": "ChIJrd2hdhPQD4gRef448VXB82Q",
+      "website": "http://www.evanstonspace.com/",
+      "url": "https://maps.google.com/?cid=7274370397996908153",
+      "slug_venue": [
+        {
+          "name": "space"
+        }
+      ],
+      "metadata": {
+        "pk": 156,
+        "slug": "evanston-space",
+        "type": "LOCATION",
+        "website": "http://www.evanstonspace.com/",
+        "image": "http://static1.squarespace.com/static/5afb0ce22487fd4b7c8415f2/t/653ab12f3d0f4f6307d75781/1698345264001/Space_logo_white.png?format=1500w",
+        "twitter": "https://twitter.com/evanstonspace",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "http://instagram.com/evanstonspace",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 665,
+        "name": "Jax Hollow",
+        "profile": "https://musicbrainz.org/artist/91450f97-d44a-4364-acf4-882433df30a8",
+        "metadata": {
+          "pk": 615,
+          "slug": "jax-hollow",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "",
+          "facebook": "",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "https://open.spotify.com/artist/7DQYAz99eM3Y5PkP9WtUew",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 436,
+          "name": "Jax",
+          "followers": 603485,
+          "genres": [
+            {
+              "name": "gen z singer-songwriter"
+            }
+          ],
+          "popularity": 59,
+          "url": "https://open.spotify.com/artist/7DQYAz99eM3Y5PkP9WtUew",
+          "image": "https://i.scdn.co/image/ab6761610000e5eb9b047b776a6e3419b09913fb"
+        },
+        "genres": [
+          {
+            "name": "pop"
+          },
+          {
+            "name": "teen pop"
+          },
+          {
+            "name": "power pop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 678,
+    "rank": 1100,
+    "slug": "barely-carvallo",
+    "name": "Barely Carvallo",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/10137088/large_avatar",
+    "url": "https://www.songkick.com/concerts/41712456-barely-carvallo-at-cobra-lounge",
+    "start_date": "2024-02-16T01:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Cobra Lounge",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 47,
+      "name": "Cobra Lounge",
+      "slug": "cobra-lounge",
+      "address": "235 N Ashland Ave, Chicago, IL 60607, United States",
+      "lat": 41.886375,
+      "lng": -87.666806,
+      "place_id": "ChIJJ2QQ9S8tDogRRMruQ74TVmo",
+      "website": "http://www.cobralounge.com/",
+      "url": "https://maps.google.com/?cid=7662333523921914436",
+      "slug_venue": [
+        {
+          "name": "cobra-lounge"
+        }
+      ],
+      "metadata": {
+        "pk": 115,
+        "slug": "cobra-lounge",
+        "type": "LOCATION",
+        "website": "http://www.cobralounge.com/",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 615,
+        "name": "Barely Carvallo",
+        "profile": "https://musicbrainz.org/artist/40f19fcf-11e2-4119-9ba4-556421318493",
+        "metadata": {
+          "pk": 578,
+          "slug": "barely-carvallo",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "",
+          "facebook": "",
+          "youtube": "",
+          "instagram": "https://www.instagram.com/barelycarvallomusic/",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "https://open.spotify.com/artist/7CpwZewA5nS4xtrTcrIk7L",
+          "appleMusic": "",
+          "band_camp": "https://barelycarvallo.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": {
+          "pk": 369,
+          "name": "Barely Carvallo",
+          "followers": 37,
+          "genres": [],
+          "popularity": 0,
+          "url": "https://open.spotify.com/artist/7CpwZewA5nS4xtrTcrIk7L",
+          "image": "https://i.scdn.co/image/ab6761610000e5ebdc54ef99b0f01c064a4df921"
+        },
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 689,
+    "rank": 1100,
+    "slug": "the-myron-r-szold-music-dance-hall-presents-reveri",
+    "name": "The Myron R. Szold Music & Dance Hall Presents\n    Reverie Road",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16943579/749fbc7f-3238-4b8b-84f2-2c203543236d.jpg",
+    "url": "https://do312.com/events/2024/2/8/reverie-road-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Old Town School of Folk Music",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 39,
+      "name": "Old Town School of Folk Music - Lincoln Square",
+      "slug": "old-town-school-of-folk-music-lincoln-square",
+      "address": "4544 N Lincoln Ave, Chicago, IL 60625, United States",
+      "lat": 41.964246,
+      "lng": -87.685981,
+      "place_id": "ChIJ577XXffND4gRNk-_baT-A_U",
+      "website": "https://www.oldtownschool.org/aboutus/lincoln-square/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "url": "https://maps.google.com/?cid=17655234946391822134",
+      "slug_venue": [
+        {
+          "name": "old-town-school-of-folk-music"
+        }
+      ],
+      "metadata": {
+        "pk": 106,
+        "slug": "old-town-school-of-folk-music-lincoln-square",
+        "type": "LOCATION",
+        "website": "https://www.oldtownschool.org/aboutus/lincoln-square/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+        "image": "http://www.oldtownschool.org/images/template/OTS_Web_FB_LinkImgs_031919-General.jpg",
+        "twitter": "http://www.twitter.com/oldtownschool",
+        "facebook": "http://www.facebook.com/oldtownschool",
+        "youtube": "http://www.youtube.com/oldtownschool",
+        "instagram": "http://www.instagram.com/oldtownschool",
+        "tiktok": "",
+        "soundcloud": "https://soundcloud.com/oldtownschool",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
     "pk": 226,
     "rank": 1000,
     "slug": "rocket-miner-amwas-and-precocious-neophyte",
@@ -26120,9 +27564,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 350,
+          "pk": 412,
           "name": "Was Ist Was",
-          "followers": 59907,
+          "followers": 59943,
           "genres": [
             {
               "name": "hoerspiel"
@@ -26307,9 +27751,9 @@
           "link_tree": ""
         },
         "spotify": {
-          "pk": 350,
+          "pk": 412,
           "name": "Was Ist Was",
-          "followers": 59907,
+          "followers": 59943,
           "genres": [
             {
               "name": "hoerspiel"
@@ -28884,11 +30328,11 @@
     "slug": "ted-sirota",
     "name": "Ted Sirota",
     "description": "",
-    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17814046/b40dd963-58c9-433e-bae6-8b5e1d3d82ef.png",
-    "url": "https://do312.com/events/2024/2/7/ted-sirota-tickets",
-    "start_date": "2024-02-08T03:00:00Z",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/1164413/large_avatar",
+    "url": "https://www.songkick.com/concerts/41690784-ted-sirota-at-hungry-brain",
+    "start_date": "2024-02-15T03:00:00Z",
     "end_date": null,
-    "provider": "DO312",
+    "provider": "SONGKICK",
     "venue": "Hungry Brain",
     "address": "",
     "city": "CHICAGO",
@@ -32086,6 +33530,400 @@
     ]
   },
   {
+    "pk": 662,
+    "rank": 200,
+    "slug": "kingsley",
+    "name": "Kingsley",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/228663/large_avatar",
+    "url": "https://www.songkick.com/concerts/41734004-kingsley-at-sofar-sounds",
+    "start_date": "2024-02-11T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Sofar Sounds",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 84,
+      "name": "Overflow Coffee",
+      "slug": "overflow-coffee",
+      "address": "1449 S Michigan Ave, Chicago, IL 60605, United States",
+      "lat": 41.86268,
+      "lng": -87.623605,
+      "place_id": "ChIJRUGiqWctDogRuuahxkFwBGE",
+      "website": "https://www.overflowchicago.com/",
+      "url": "https://maps.google.com/?cid=6990835949393536698",
+      "slug_venue": [
+        {
+          "name": "sofar-sounds"
+        }
+      ],
+      "metadata": {
+        "pk": 190,
+        "slug": "overflow-coffee",
+        "type": "LOCATION",
+        "website": "https://www.overflowchicago.com/",
+        "image": "http://static1.squarespace.com/static/5f7b447b0849c5640fbd862c/t/602d9d7c19bc571edf0ec260/1657900313620/Overflow.jpeg?format=1500w",
+        "twitter": "",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/overflowcoffee",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 653,
+        "name": "Kingsley",
+        "profile": "https://musicbrainz.org/artist/aa171050-89fe-437e-974d-9a38cc683434",
+        "metadata": {
+          "pk": 603,
+          "slug": "kingsley",
+          "type": "ARTIST",
+          "website": "http://www.kingsleylive.com/",
+          "image": "",
+          "twitter": "https://twitter.com/kingsleyband",
+          "facebook": "https://www.facebook.com/kingsleyband",
+          "youtube": "https://www.youtube.com/user/kingsleyband",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 663,
+    "rank": 200,
+    "slug": "super-football-fun-fest-2024",
+    "name": "SUPER FOOTBALL FUN FEST 2024",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/events/41735581/large_avatar?series_id=3644254",
+    "url": "https://www.songkick.com/festivals/3644254-super-football-fun-fest/id/41735581-super-football-fun-fest-2024",
+    "start_date": "2024-02-11T22:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "The Empty Bottle",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 27,
+      "name": "The Empty Bottle",
+      "slug": "the-empty-bottle",
+      "address": "1035 N Western Ave, Chicago, IL 60622, United States",
+      "lat": 41.900414,
+      "lng": -87.686738,
+      "place_id": "ChIJR-BMErLSD4gRFUV3e3FwXEo",
+      "website": "http://www.emptybottle.com/",
+      "url": "https://maps.google.com/?cid=5358281289369077013",
+      "slug_venue": [
+        {
+          "name": "the-empty-bottle"
+        },
+        {
+          "name": "empty-bottle"
+        }
+      ],
+      "metadata": {
+        "pk": 85,
+        "slug": "the-empty-bottle",
+        "type": "LOCATION",
+        "website": "http://www.emptybottle.com/",
+        "image": "http://static1.squarespace.com/static/5486852ae4b00adc4f6f0ab6/t/5e177208b52dd242f7b2e79b/1578594827674/THEEMPTYBOTTLE%2BEBP_logo5+-+Brent+Heyl.jpg?format=1500w",
+        "twitter": "https://twitter.com/theemptybottle",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "http://instagram.com/emptybottle",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 654,
+        "name": "SUPER FOOTBALL FUN FEST 2024",
+        "profile": "https://musicbrainz.org/artist/e5084097-17e7-477d-9c41-a370387b7822",
+        "metadata": {
+          "pk": 604,
+          "slug": "super-football-fun-fest-2024",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "",
+          "facebook": "https://www.facebook.com/pages/2024/1462026084079294",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 674,
+    "rank": 200,
+    "slug": "disaster-kid",
+    "name": "Disaster Kid",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/10085469/large_avatar",
+    "url": "https://www.songkick.com/concerts/41670662-disaster-kid-at-beat-kitchen",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Beat Kitchen",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 72,
+      "name": "Beat Kitchen",
+      "slug": "beat-kitchen",
+      "address": "2100 W Belmont Ave, Chicago, IL 60618, United States",
+      "lat": 41.939653,
+      "lng": -87.680944,
+      "place_id": "ChIJvyExPWHSD4gRPaqsMD6li78",
+      "website": "http://www.beatkitchen.com/",
+      "url": "https://maps.google.com/?cid=13802307169530194493",
+      "slug_venue": [
+        {
+          "name": "beat-kitchen"
+        }
+      ],
+      "metadata": {
+        "pk": 150,
+        "slug": "beat-kitchen",
+        "type": "LOCATION",
+        "website": "http://www.beatkitchen.com/",
+        "image": "",
+        "twitter": "https://twitter.com/beatkitchenbar",
+        "facebook": "https://www.facebook.com/beatkitchenchicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/beatkitchenbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 664,
+        "name": "Disaster Kid",
+        "profile": "https://musicbrainz.org/artist/44f3615e-af8a-4934-bc8e-0bc331e812af",
+        "metadata": {
+          "pk": 614,
+          "slug": "disaster-kid",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "",
+          "facebook": "https://www.facebook.com/pages/Disaster/133419923343387",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 679,
+    "rank": 200,
+    "slug": "dogcatcher",
+    "name": "Dogcatcher",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/1512557/large_avatar",
+    "url": "https://www.songkick.com/concerts/41718117-dogcatcher-at-carols-pub",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Carol's Pub",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 4,
+      "name": "Carol's Pub",
+      "slug": "carols-pub",
+      "address": "4659 N Clark St, Chicago, IL 60640, United States",
+      "lat": 41.966917,
+      "lng": -87.66692,
+      "place_id": "ChIJLwPlvy_SD4gRqEJ181lAUhQ",
+      "website": "https://carolspub.com/",
+      "url": "https://maps.google.com/?cid=1464303583929647784",
+      "slug_venue": [
+        {
+          "name": "carols-pub"
+        }
+      ],
+      "metadata": {
+        "pk": 5,
+        "slug": "carols-pub",
+        "type": "LOCATION",
+        "website": "https://carolspub.com/",
+        "image": "",
+        "twitter": "https://twitter.com/carolspub",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/carolschicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 668,
+        "name": "Dogcatcher",
+        "profile": "https://musicbrainz.org/artist/53fdb0a2-8b5d-46c9-9a52-0f50fb4fc21d",
+        "metadata": {
+          "pk": 618,
+          "slug": "dogcatcher",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "https://twitter.com/dgctchr",
+          "facebook": "https://www.facebook.com/dogcatcherband",
+          "youtube": "https://www.youtube.com/dogcatcherband",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "https://dogcatcher.bandcamp.com/",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 684,
+    "rank": 200,
+    "slug": "the-damn-quails-with-thunder-and-rain-civl-fest-20",
+    "name": "The Damn Quails with Thunder and Rain - CIVL Fest 2024",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/events/41679571/large_avatar?series_id=3637115",
+    "url": "https://www.songkick.com/festivals/3637115-damn-quails-with-thunder-and-rain-civl-fest/id/41679571-the-damn-quails-with-thunder-and-rain--civl-fest-2024",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Joe's on Weed St.",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 5,
+      "name": "Joe's on Weed St.",
+      "slug": "joes-on-weed-st",
+      "address": "940 W Weed St, Chicago, IL 60642, United States",
+      "lat": 41.909911,
+      "lng": -87.652158,
+      "place_id": "ChIJr2GMEiTTD4gRt5EY1kGRI3c",
+      "website": "http://www.joesbar.com/",
+      "url": "https://maps.google.com/?cid=8584865026649133495",
+      "slug_venue": [
+        {
+          "name": "joes-on-weed-st"
+        },
+        {
+          "name": "joes-bar-on-weed-st"
+        }
+      ],
+      "metadata": {
+        "pk": 6,
+        "slug": "joes-on-weed-st",
+        "type": "LOCATION",
+        "website": "http://www.joesbar.com/",
+        "image": "https://www.daveada.com/site-banners/joes-logo.png",
+        "twitter": "https://twitter.com/joesonweedst",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/joesonweedst",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 672,
+        "name": "The Damn Quails with Thunder",
+        "profile": "https://musicbrainz.org/artist/f991ec40-6d1b-47bd-8bdf-bbddd88a4f4f",
+        "metadata": null,
+        "spotify": null,
+        "genres": []
+      },
+      {
+        "pk": 673,
+        "name": "Rain - CIVL Fest 2024",
+        "profile": "https://musicbrainz.org/artist/e5084097-17e7-477d-9c41-a370387b7822",
+        "metadata": {
+          "pk": 621,
+          "slug": "rain-civl-fest-2024",
+          "type": "ARTIST",
+          "website": "",
+          "image": "",
+          "twitter": "",
+          "facebook": "https://www.facebook.com/pages/2024/1462026084079294",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
     "pk": 4,
     "rank": 100,
     "slug": "ashland-craft",
@@ -33051,9 +34889,9 @@
     "name": "The Infinite Wrench",
     "description": "Don’t miss the longest running late-night show in Chicago! At The Infinite Wrench you’ll see 30 original plays in 60 minutes written and performed by…Andersonville",
     "image": "https://cdn.choosechicago.com/uploads/2023/04/TIW_promo-900x400.png",
-    "url": "https://www.choosechicago.com/event/the-infinite-wrench/2024-02-09/",
-    "start_date": "2024-02-10T01:00:00Z",
-    "end_date": "2024-02-10T02:00:00Z",
+    "url": "https://www.choosechicago.com/event/the-infinite-wrench/2024-02-10/",
+    "start_date": "2024-02-11T01:00:00Z",
+    "end_date": "2024-02-11T02:00:00Z",
     "provider": "CHOOSECHICAGO",
     "venue": "Neo-Futurist Theater",
     "address": "5153 N. Ashland Ave.",
@@ -33258,8 +35096,8 @@
     "name": "The Joanna Connor Band",
     "description": "",
     "image": "https://images.sk-static.com/images/media/profile_images/artists/318631/large_avatar",
-    "url": "https://www.songkick.com/concerts/41668589-joanna-connor-band-at-kingston-mines",
-    "start_date": "2024-02-11T01:00:00Z",
+    "url": "https://www.songkick.com/concerts/41668558-joanna-connor-band-at-kingston-mines",
+    "start_date": "2024-02-16T00:00:00Z",
     "end_date": null,
     "provider": "SONGKICK",
     "venue": "Kingston Mines",
@@ -33817,8 +35655,8 @@
     "name": "JERZY",
     "description": "",
     "image": "https://images.sk-static.com/images/media/profile_images/artists/899776/large_avatar",
-    "url": "https://www.songkick.com/concerts/41666943-jerzy-at-blackhawks-game",
-    "start_date": "2024-02-08T01:00:00Z",
+    "url": "https://www.songkick.com/concerts/41666946-jerzy-at-blackhawks-game",
+    "start_date": "2024-02-16T01:00:00Z",
     "end_date": null,
     "provider": "SONGKICK",
     "venue": "Blackhawks Game",
@@ -34440,8 +36278,8 @@
     "name": "Reggae Gold",
     "description": "",
     "image": "https://images.sk-static.com/images/media/profile_images/artists/434141/large_avatar",
-    "url": "https://www.songkick.com/concerts/41662952-reggae-gold-at-subterranean",
-    "start_date": "2024-02-08T16:00:00Z",
+    "url": "https://www.songkick.com/concerts/41662953-reggae-gold-at-subterranean",
+    "start_date": "2024-02-15T16:00:00Z",
     "end_date": null,
     "provider": "SONGKICK",
     "venue": "Subterranean",
@@ -35652,6 +37490,9 @@
       "slug_venue": [
         {
           "name": "burlington-bar"
+        },
+        {
+          "name": "the-burlington"
         }
       ],
       "metadata": {
@@ -36595,6 +38436,9 @@
       "slug_venue": [
         {
           "name": "burlington-bar"
+        },
+        {
+          "name": "the-burlington"
         }
       ],
       "metadata": {
@@ -38068,9 +39912,9 @@
     "name": "Pops Ensemble Winter Concert 2024 : What A Wonderful World",
     "description": "The Lakeside Pride Pops Ensemble starts off the new year with our winter concert: What A Wonderful World. Join us on a journey as we…South Shore",
     "image": "https://cdn.choosechicago.com/uploads/2024/01/Pops-Winter-Concert-2024-Cover-Art-1-900x450.png",
-    "url": "https://www.choosechicago.com/event/pops-ensemble-winter-concert-2024-what-a-wonderful-world/2024-02-10/1/",
-    "start_date": "2024-02-10T14:00:00Z",
-    "end_date": "2024-02-10T23:00:00Z",
+    "url": "https://www.choosechicago.com/event/pops-ensemble-winter-concert-2024-what-a-wonderful-world/2024-02-10/2/",
+    "start_date": "2024-02-11T01:00:00Z",
+    "end_date": "2024-02-11T03:00:00Z",
     "provider": "CHOOSECHICAGO",
     "venue": "South Shore Cultural Center",
     "address": "7059 S. South Shore Dr",
@@ -43900,15 +45744,2416 @@
     ]
   },
   {
+    "pk": 657,
+    "rank": 100,
+    "slug": "candlelight-the-best-of-hans-zimmer",
+    "name": "Candlelight: The Best of Hans Zimmer",
+    "description": "⭐ Candlelight concerts bring the magic of a live, multi-sensory musical experience to awe-inspiring locations like never seen before in Chicago. Get your tickets now…",
+    "image": "https://cdn.choosechicago.com/uploads/2024/01/57590.jpg",
+    "url": "https://www.choosechicago.com/event/candlelight-the-best-of-hans-zimmer/",
+    "start_date": "2024-02-11T00:30:00Z",
+    "end_date": "2024-02-11T04:30:00Z",
+    "provider": "CHOOSECHICAGO",
+    "venue": "Stan Mansion",
+    "address": "2408 North Kedzie Boulevard",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 112,
+      "name": "Stan Mansion",
+      "slug": "stan-mansion",
+      "address": "2408 N Kedzie Blvd, Chicago, IL 60647, United States",
+      "lat": 41.925043,
+      "lng": -87.70792,
+      "place_id": "ChIJ2Tj8kW_ND4gRLL81cg2sjzo",
+      "website": "https://www.stanmansion.com/",
+      "url": "https://maps.google.com/?cid=4219780549620121388",
+      "slug_venue": [
+        {
+          "name": "stan-mansion"
+        }
+      ],
+      "metadata": {
+        "pk": 376,
+        "slug": "stan-mansion",
+        "type": "LOCATION",
+        "website": "https://www.stanmansion.com/",
+        "image": "https://static.wixstatic.com/media/6e18da_903140e50c9f47308154dbe4737d407d~mv2.jpg/v1/fill/w_1920,h_900,al_c/6e18da_903140e50c9f47308154dbe4737d407d~mv2.jpg",
+        "twitter": "https://twitter.com/stanmansion",
+        "facebook": "https://www.facebook.com/stanmansionchicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/stanmansion",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 660,
+    "rank": 100,
+    "slug": "ariel-zetina",
+    "name": "Ariel Zetina",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/8799594/large_avatar",
+    "url": "https://www.songkick.com/concerts/41735916-ariel-zetina-at-beat-kitchen",
+    "start_date": "2024-02-09T04:30:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Beat Kitchen",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 72,
+      "name": "Beat Kitchen",
+      "slug": "beat-kitchen",
+      "address": "2100 W Belmont Ave, Chicago, IL 60618, United States",
+      "lat": 41.939653,
+      "lng": -87.680944,
+      "place_id": "ChIJvyExPWHSD4gRPaqsMD6li78",
+      "website": "http://www.beatkitchen.com/",
+      "url": "https://maps.google.com/?cid=13802307169530194493",
+      "slug_venue": [
+        {
+          "name": "beat-kitchen"
+        }
+      ],
+      "metadata": {
+        "pk": 150,
+        "slug": "beat-kitchen",
+        "type": "LOCATION",
+        "website": "http://www.beatkitchen.com/",
+        "image": "",
+        "twitter": "https://twitter.com/beatkitchenbar",
+        "facebook": "https://www.facebook.com/beatkitchenchicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/beatkitchenbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 213,
+        "name": "Ariel Zetina",
+        "profile": "https://musicbrainz.org/artist/92d10bc8-eb06-42e6-b5ff-3820927fa7e4",
+        "metadata": null,
+        "spotify": null,
+        "genres": [
+          {
+            "name": "electronic"
+          },
+          {
+            "name": "club"
+          },
+          {
+            "name": "dance"
+          },
+          {
+            "name": "house"
+          },
+          {
+            "name": "techno"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pk": 661,
+    "rank": 100,
+    "slug": "andrew-sevener-and-sevy",
+    "name": "Andrew Sevener and Sevy",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/10070643/large_avatar",
+    "url": "https://www.songkick.com/concerts/41679784-andrew-sevener-at-joes-on-weed-st",
+    "start_date": "2024-02-10T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Joe's on Weed St.",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 5,
+      "name": "Joe's on Weed St.",
+      "slug": "joes-on-weed-st",
+      "address": "940 W Weed St, Chicago, IL 60642, United States",
+      "lat": 41.909911,
+      "lng": -87.652158,
+      "place_id": "ChIJr2GMEiTTD4gRt5EY1kGRI3c",
+      "website": "http://www.joesbar.com/",
+      "url": "https://maps.google.com/?cid=8584865026649133495",
+      "slug_venue": [
+        {
+          "name": "joes-on-weed-st"
+        },
+        {
+          "name": "joes-bar-on-weed-st"
+        }
+      ],
+      "metadata": {
+        "pk": 6,
+        "slug": "joes-on-weed-st",
+        "type": "LOCATION",
+        "website": "http://www.joesbar.com/",
+        "image": "https://www.daveada.com/site-banners/joes-logo.png",
+        "twitter": "https://twitter.com/joesonweedst",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/joesonweedst",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 4,
+        "name": "Andrew Sevener",
+        "profile": "https://musicbrainz.org/artist/6dffc85b-ff2a-4e95-8ba9-50413e694551",
+        "metadata": null,
+        "spotify": null,
+        "genres": []
+      },
+      {
+        "pk": 652,
+        "name": "Sevy",
+        "profile": "https://musicbrainz.org/artist/7f072025-dad4-434d-a04e-c941a56f3d2d",
+        "metadata": null,
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 670,
+    "rank": 100,
+    "slug": "sheku-kanneh-mason",
+    "name": "Sheku Kanneh-Mason",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/9649144/large_avatar",
+    "url": "https://www.songkick.com/concerts/41469176-sheku-kannehmason-at-symphony-center",
+    "start_date": "2024-02-16T01:30:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Symphony Center",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 14,
+      "name": "Chicago Symphony Orchestra",
+      "slug": "chicago-symphony-orchestra",
+      "address": "220 S Michigan Ave, Chicago, IL 60604, United States",
+      "lat": 41.878988,
+      "lng": -87.625065,
+      "place_id": "ChIJ03xbwqMsDogRn80hvd2Xg18",
+      "website": "https://cso.org/",
+      "url": "https://maps.google.com/?cid=6882511634168925599",
+      "slug_venue": [
+        {
+          "name": "chicago-symphony-orchestra"
+        },
+        {
+          "name": "chicago-symphony-center"
+        },
+        {
+          "name": "symphony-center"
+        }
+      ],
+      "metadata": {
+        "pk": 70,
+        "slug": "chicago-symphony-orchestra",
+        "type": "LOCATION",
+        "website": "https://cso.org/",
+        "image": "",
+        "twitter": "",
+        "facebook": "https://www.facebook.com/chicagosymphony",
+        "youtube": "https://www.youtube.com/chicagosymphony",
+        "instagram": "https://instagram.com/chicagosymphony",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 673,
+    "rank": 100,
+    "slug": "roy-kinsey",
+    "name": "Roy Kinsey",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/5707604/large_avatar",
+    "url": "https://www.songkick.com/concerts/41672077-roy-kinsey-at-coles-bar",
+    "start_date": "2024-02-16T03:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Cole's Bar",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 52,
+      "name": "Cole's Bar",
+      "slug": "coles-bar",
+      "address": "2338 N Milwaukee Ave, Chicago, IL 60647, United States",
+      "lat": 41.923661,
+      "lng": -87.698806,
+      "place_id": "ChIJQ_ORYGLND4gRxGOgGm82S10",
+      "website": "http://www.coleschicago.com/",
+      "url": "https://maps.google.com/?cid=6722526719596585924",
+      "slug_venue": [
+        {
+          "name": "coles-bar"
+        }
+      ],
+      "metadata": {
+        "pk": 120,
+        "slug": "coles-bar",
+        "type": "LOCATION",
+        "website": "http://www.coleschicago.com/",
+        "image": "",
+        "twitter": "https://twitter.com/coleschicago",
+        "facebook": "https://www.facebook.com/coleschicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/colesbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 663,
+        "name": "Roy Kinsey",
+        "profile": "https://musicbrainz.org/artist/bd66dab2-d1cf-4ff5-a2c4-0c4614299da5",
+        "metadata": null,
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 677,
+    "rank": 100,
+    "slug": "the-lovers",
+    "name": "The Lovers",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/469085/large_avatar",
+    "url": "https://www.songkick.com/concerts/41671046-lovers-at-promontory",
+    "start_date": "2024-02-16T03:30:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "The Promontory",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 85,
+      "name": "The Promontory",
+      "slug": "the-promontory",
+      "address": "5311 S Lake Park Ave W, Chicago, IL 60615, United States",
+      "lat": 41.799005,
+      "lng": -87.587608,
+      "place_id": "ChIJx2ywOnIpDogRml0FxS9Snlw",
+      "website": "http://promontorychicago.com/",
+      "url": "https://maps.google.com/?cid=6673862062932057498",
+      "slug_venue": [
+        {
+          "name": "the-promontory"
+        }
+      ],
+      "metadata": {
+        "pk": 196,
+        "slug": "the-promontory",
+        "type": "LOCATION",
+        "website": "http://promontorychicago.com/",
+        "image": "http://static1.squarespace.com/static/5b083fc896d4552e4e5349f3/t/6144cdfb54e49e4efdd031e0/1631899131529/Promontory_HeaderLogo_HydePark.jpg?format=1500w",
+        "twitter": "",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/promontorychicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 667,
+        "name": "The Lovers",
+        "profile": "https://musicbrainz.org/artist/70f67f25-cada-457b-8573-0d9110c3be14",
+        "metadata": {
+          "pk": 617,
+          "slug": "the-lovers",
+          "type": "ARTIST",
+          "website": "http://www.voilathelovers.com/",
+          "image": "",
+          "twitter": "",
+          "facebook": "",
+          "youtube": "",
+          "instagram": "",
+          "tiktok": "",
+          "soundcloud": "",
+          "spotify": "",
+          "appleMusic": "",
+          "band_camp": "",
+          "link_tree": ""
+        },
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 680,
+    "rank": 100,
+    "slug": "passengers",
+    "name": "Passengers",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/304529/large_avatar",
+    "url": "https://www.songkick.com/concerts/41720847-passengers-at-burlington-bar",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Burlington Bar",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 42,
+      "name": "Burlington Bar",
+      "slug": "burlington-bar",
+      "address": "3425 W Fullerton Ave, Chicago, IL 60647, United States",
+      "lat": 41.924522,
+      "lng": -87.713196,
+      "place_id": "ChIJszoj0W3ND4gRT2DogQ3Ea6c",
+      "website": "http://www.theburlingtonbar.com/",
+      "url": "https://maps.google.com/?cid=12063951589135114319",
+      "slug_venue": [
+        {
+          "name": "burlington-bar"
+        },
+        {
+          "name": "the-burlington"
+        }
+      ],
+      "metadata": {
+        "pk": 109,
+        "slug": "burlington-bar",
+        "type": "LOCATION",
+        "website": "http://www.theburlingtonbar.com/",
+        "image": "http://static1.squarespace.com/static/641c7f826e1df00c4572bb52/t/641cd4a4fe462d5414060805/1679611044459/Burlington-Logo-V1.png?format=1500w",
+        "twitter": "",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "http://instagram.com/theburlingtonbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 669,
+        "name": "Passengers",
+        "profile": "https://musicbrainz.org/artist/e110c11f-1c94-4471-a350-c38f46b29389",
+        "metadata": null,
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 681,
+    "rank": 100,
+    "slug": "the-damn-quails",
+    "name": "The Damn Quails",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/artists/4206961/large_avatar",
+    "url": "https://www.songkick.com/concerts/41728997-damn-quails-at-joes-on-weed-st",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "Joe's on Weed St.",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 5,
+      "name": "Joe's on Weed St.",
+      "slug": "joes-on-weed-st",
+      "address": "940 W Weed St, Chicago, IL 60642, United States",
+      "lat": 41.909911,
+      "lng": -87.652158,
+      "place_id": "ChIJr2GMEiTTD4gRt5EY1kGRI3c",
+      "website": "http://www.joesbar.com/",
+      "url": "https://maps.google.com/?cid=8584865026649133495",
+      "slug_venue": [
+        {
+          "name": "joes-on-weed-st"
+        },
+        {
+          "name": "joes-bar-on-weed-st"
+        }
+      ],
+      "metadata": {
+        "pk": 6,
+        "slug": "joes-on-weed-st",
+        "type": "LOCATION",
+        "website": "http://www.joesbar.com/",
+        "image": "https://www.daveada.com/site-banners/joes-logo.png",
+        "twitter": "https://twitter.com/joesonweedst",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/joesonweedst",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": [
+      {
+        "pk": 670,
+        "name": "The Damn Quails",
+        "profile": "https://musicbrainz.org/artist/f991ec40-6d1b-47bd-8bdf-bbddd88a4f4f",
+        "metadata": null,
+        "spotify": null,
+        "genres": []
+      }
+    ]
+  },
+  {
+    "pk": 683,
+    "rank": 100,
+    "slug": "the-grand-finale-wrap-party-w-nathan-graham-and-al",
+    "name": "The Grand Finale Wrap Party W/ NATHAN GRAHAM And All His Friends! (Winter Residency Night #4) 2024",
+    "description": "",
+    "image": "https://images.sk-static.com/images/media/profile_images/events/41648099/large_avatar?series_id=3633478",
+    "url": "https://www.songkick.com/festivals/3633478-grand-finale-wrap-party-w-nathan-graham-and-all-his-friends-winter-residency-night-4/id/41648099-the-grand-finale-wrap-party-w-nathan-graham-and-all-his-friends-winter-residency-night-4-2024",
+    "start_date": "2024-02-16T02:00:00Z",
+    "end_date": null,
+    "provider": "SONGKICK",
+    "venue": "FITZGERALDS NIGHTCLUB",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 33,
+      "name": "FitzGerald's",
+      "slug": "fitzgeralds",
+      "address": "6615 Roosevelt Rd, Berwyn, IL 60402, United States",
+      "lat": 41.865121,
+      "lng": -87.789924,
+      "place_id": "ChIJvbxu6o40DogRyL8Q3YU4eu8",
+      "website": "http://www.fitzgeraldsnightclub.com/",
+      "url": "https://maps.google.com/?cid=17256167069814144968",
+      "slug_venue": [
+        {
+          "name": "fitzgeralds-nightclub"
+        },
+        {
+          "name": "fitzgeralds"
+        }
+      ],
+      "metadata": {
+        "pk": 96,
+        "slug": "fitzgeralds",
+        "type": "LOCATION",
+        "website": "http://www.fitzgeraldsnightclub.com/",
+        "image": "",
+        "twitter": "https://twitter.com/FitzGeraldsClub",
+        "facebook": "https://www.facebook.com/elevation27",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/elevation27vb",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 685,
+    "rank": 100,
+    "slug": "live-nation-presents-and-thats-why-we-drink",
+    "name": "Live Nation Presents\n    And That’s Why We Drink",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16930313/29b333a2-53be-4d58-b67a-6fe2908c4bea.jpg",
+    "url": "https://do312.com/events/2024/2/8/and-that-s-why-we-drink-tickets",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Riviera Theatre",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 141,
+      "name": "The Riviera Theatre",
+      "slug": "the-riviera-theatre",
+      "address": "4746 N Racine Ave, Chicago, IL 60640, United States",
+      "lat": 41.968584,
+      "lng": -87.6598,
+      "place_id": "ChIJs7gF7izSD4gRcZVts1O394c",
+      "website": "https://www.jamusa.com/riviera-theatre/",
+      "url": "https://maps.google.com/?cid=9797501084488275313",
+      "slug_venue": [
+        {
+          "name": "the-riviera-theatre"
+        }
+      ],
+      "metadata": {
+        "pk": 622,
+        "slug": "the-riviera-theatre",
+        "type": "LOCATION",
+        "website": "https://www.jamusa.com/riviera-theatre/",
+        "image": "https://www.jamusa.com/assets/img/default_thumbnail-b243bc31e2.jpg",
+        "twitter": "https://www.twitter.com/jamusa",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/jamusa",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 686,
+    "rank": 100,
+    "slug": "ye-ty-dolla-ign",
+    "name": "Ye & Ty Dolla $ign",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/18001832/ad268d5f-190c-4dfa-a0dc-fe926b11e2f8.jpg",
+    "url": "https://do312.com/events/2024/2/8/ye-ty-dolla-ign-tickets",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "United Center",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 117,
+      "name": "United Center",
+      "slug": "united-center",
+      "address": "1901 W Madison St, Chicago, IL 60612, United States",
+      "lat": 41.880691,
+      "lng": -87.674176,
+      "place_id": "ChIJT7Wpyj4tDogRRAPwjAbwk5s",
+      "website": "http://www.unitedcenter.com/",
+      "url": "https://maps.google.com/?cid=11210567808380306244",
+      "slug_venue": [
+        {
+          "name": "united-center"
+        }
+      ],
+      "metadata": {
+        "pk": 385,
+        "slug": "united-center",
+        "type": "LOCATION",
+        "website": "http://www.unitedcenter.com/",
+        "image": "",
+        "twitter": "https://twitter.com/unitedcenter",
+        "facebook": "https://www.facebook.com/unitedcenter",
+        "youtube": "",
+        "instagram": "http://instagram.com/unitedcenter",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 687,
+    "rank": 100,
+    "slug": "lonnie-foundation-orchestra-noise-shrine",
+    "name": "Lonnie / Foundation Orchestra / Noise Shrine",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17797422/c887d910-ce10-4abc-bee9-f8605e612109.jpg",
+    "url": "https://do312.com/events/2024/2/8/lonnie-foundation-orchestra-noise-shrine-tickets",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Empty Bottle",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 27,
+      "name": "The Empty Bottle",
+      "slug": "the-empty-bottle",
+      "address": "1035 N Western Ave, Chicago, IL 60622, United States",
+      "lat": 41.900414,
+      "lng": -87.686738,
+      "place_id": "ChIJR-BMErLSD4gRFUV3e3FwXEo",
+      "website": "http://www.emptybottle.com/",
+      "url": "https://maps.google.com/?cid=5358281289369077013",
+      "slug_venue": [
+        {
+          "name": "the-empty-bottle"
+        },
+        {
+          "name": "empty-bottle"
+        }
+      ],
+      "metadata": {
+        "pk": 85,
+        "slug": "the-empty-bottle",
+        "type": "LOCATION",
+        "website": "http://www.emptybottle.com/",
+        "image": "http://static1.squarespace.com/static/5486852ae4b00adc4f6f0ab6/t/5e177208b52dd242f7b2e79b/1578594827674/THEEMPTYBOTTLE%2BEBP_logo5+-+Brent+Heyl.jpg?format=1500w",
+        "twitter": "https://twitter.com/theemptybottle",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "http://instagram.com/emptybottle",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 688,
+    "rank": 100,
+    "slug": "golden-hour-featuring-dj-mwelwa-free-admission-rsv",
+    "name": "Golden Hour featuring DJ Mwelwa - FREE ADMISSION | RSVP BELOW",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17274498/293995a6-e930-4d6d-ae18-705b6bfb4145.jpg",
+    "url": "https://do312.com/events/2024/2/8/golden-hour-featuring-dj-mwelwa-free-admission-rsvp-below-tickets",
+    "start_date": "2024-02-08T23:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Epiphany Center For The Arts",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 98,
+      "name": "Epiphany Center for the Arts",
+      "slug": "epiphany-center-for-the-arts",
+      "address": "201 S Ashland Ave, Chicago, IL 60607, United States",
+      "lat": 41.878519,
+      "lng": -87.666422,
+      "place_id": "ChIJm9y1qKstDogRkr62fX0RLA8",
+      "website": "http://www.epiphanychi.com/",
+      "url": "https://maps.google.com/?cid=1093268040221900434",
+      "slug_venue": [
+        {
+          "name": "epiphany-center-for-the-arts"
+        }
+      ],
+      "metadata": {
+        "pk": 222,
+        "slug": "epiphany-center-for-the-arts",
+        "type": "LOCATION",
+        "website": "http://www.epiphanychi.com/",
+        "image": "https://epiphanychi.com/wp-content/uploads/2024/01/02-01-24-JANUARYSNOWFLAKE-HOMEPAGE-DESKTOP.png",
+        "twitter": "https://twitter.com/epiphanyarts201",
+        "facebook": "https://www.facebook.com/EpiphanyChi",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/epiphanyarts201",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 690,
+    "rank": 100,
+    "slug": "escuela-grind-take-offense-brat-bonginator",
+    "name": "Escuela Grind, Take Offense, Brat, Bonginator",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17672529/da6efe0a-3b21-4d89-afdc-aca6fc8aad1a.jpg",
+    "url": "https://do312.com/events/2024/2/8/escuela-grind-take-offense-brat-bonginator-tickets",
+    "start_date": "2024-02-09T00:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Reggies",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 34,
+      "name": "Reggies Chicago",
+      "slug": "reggies-chicago",
+      "address": "2105 S State St, Chicago, IL 60616, United States",
+      "lat": 41.853918,
+      "lng": -87.626852,
+      "place_id": "ChIJVUmkEX0sDogRzm1DQOACx-g",
+      "website": "https://www.reggieslive.com/",
+      "url": "https://maps.google.com/?cid=16773378499338792398",
+      "slug_venue": [
+        {
+          "name": "reggies-rock-club"
+        },
+        {
+          "name": "reggies"
+        },
+        {
+          "name": "reggies-music-joint"
+        },
+        {
+          "name": "reggies-chicago"
+        }
+      ],
+      "metadata": {
+        "pk": 98,
+        "slug": "reggies-chicago",
+        "type": "LOCATION",
+        "website": "https://www.reggieslive.com/",
+        "image": "",
+        "twitter": "https://twitter.com/reggieslive",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://instagram.com/reggieslive",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 691,
+    "rank": 100,
+    "slug": "kickstand-productions-presents-6arelyhuman",
+    "name": "Kickstand Productions Presents\n    6arelyhuman",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17295710/cff10f5c-427d-4177-8dba-b7db8edf40f2.jpg",
+    "url": "https://do312.com/events/2024/2/8/6arelyhuman-tickets",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Subterranean",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 35,
+      "name": "Subterranean",
+      "slug": "subterranean",
+      "address": "2011 W North Ave, Chicago, IL 60647, United States",
+      "lat": 41.910257,
+      "lng": -87.677978,
+      "place_id": "ChIJ2dxMprjSD4gRvUWbdblbV1w",
+      "website": "http://www.subt.net/",
+      "url": "https://maps.google.com/?cid=6653887826563384765",
+      "slug_venue": [
+        {
+          "name": "subterranean"
+        }
+      ],
+      "metadata": {
+        "pk": 99,
+        "slug": "subterranean",
+        "type": "LOCATION",
+        "website": "http://www.subt.net/",
+        "image": "",
+        "twitter": "https://twitter.com/subtchicago",
+        "facebook": "https://www.facebook.com/subterraneanchicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/subtchicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 692,
+    "rank": 100,
+    "slug": "frost-children-mspaint",
+    "name": "Frost Children, MSPAINT",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16771511/95ea8587-5f92-41c9-a85e-a8d0446f0d45.jpg",
+    "url": "https://do312.com/events/2024/2/8/frost-children-tickets",
+    "start_date": "2024-02-09T01:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Beat Kitchen",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 72,
+      "name": "Beat Kitchen",
+      "slug": "beat-kitchen",
+      "address": "2100 W Belmont Ave, Chicago, IL 60618, United States",
+      "lat": 41.939653,
+      "lng": -87.680944,
+      "place_id": "ChIJvyExPWHSD4gRPaqsMD6li78",
+      "website": "http://www.beatkitchen.com/",
+      "url": "https://maps.google.com/?cid=13802307169530194493",
+      "slug_venue": [
+        {
+          "name": "beat-kitchen"
+        }
+      ],
+      "metadata": {
+        "pk": 150,
+        "slug": "beat-kitchen",
+        "type": "LOCATION",
+        "website": "http://www.beatkitchen.com/",
+        "image": "",
+        "twitter": "https://twitter.com/beatkitchenbar",
+        "facebook": "https://www.facebook.com/beatkitchenchicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/beatkitchenbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 693,
+    "rank": 100,
+    "slug": "comedy-night-feat-em-brown-lysaa-laird-nini-xavier",
+    "name": "Comedy Night Feat: Em Brown, Lysaa Laird, Nini, Xavier Lamont & Mike Knight",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17927883/7822e9ea-dfaf-416e-898c-3d5cb7fba4b9.jpg",
+    "url": "https://do312.com/events/2024/2/8/comedy-night-feat-em-brown-lysaa-laird-nini-xavier-lamont-mike-knight-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Cubby Bear",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 57,
+      "name": "The Cubby Bear Chicago",
+      "slug": "the-cubby-bear-chicago",
+      "address": "1059 W Addison St, Chicago, IL 60613, United States",
+      "lat": 41.946951,
+      "lng": -87.656715,
+      "place_id": "ChIJVR_s6bLTD4gRE48xLsrwvIM",
+      "website": "http://www.cubbybear.com/",
+      "url": "https://maps.google.com/?cid=9492726865739222803",
+      "slug_venue": [
+        {
+          "name": "the-cubby-bear"
+        },
+        {
+          "name": "cubby-bear"
+        }
+      ],
+      "metadata": {
+        "pk": 126,
+        "slug": "the-cubby-bear-chicago",
+        "type": "LOCATION",
+        "website": "http://www.cubbybear.com/",
+        "image": "http://static1.squarespace.com/static/5d4b60ead5286b0001aa9126/t/60309c272cfb6e5b1e34b412/1613798443357/Bear+Logo+%281%29.png?format=1500w",
+        "twitter": "",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/cubbybearwrigley",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 694,
+    "rank": 100,
+    "slug": "makechicagofunagain-presents-traffic-light-party",
+    "name": "MakeChicagoFunAgain Presents:\n    : Traffic Light Party",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17884908/fbf7de23-19af-4a38-8c7d-ddf4d952a75c.jpg",
+    "url": "https://do312.com/events/2024/2/8/traffic-light-party-tickets",
+    "start_date": "2024-02-09T04:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Promontory",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 85,
+      "name": "The Promontory",
+      "slug": "the-promontory",
+      "address": "5311 S Lake Park Ave W, Chicago, IL 60615, United States",
+      "lat": 41.799005,
+      "lng": -87.587608,
+      "place_id": "ChIJx2ywOnIpDogRml0FxS9Snlw",
+      "website": "http://promontorychicago.com/",
+      "url": "https://maps.google.com/?cid=6673862062932057498",
+      "slug_venue": [
+        {
+          "name": "the-promontory"
+        }
+      ],
+      "metadata": {
+        "pk": 196,
+        "slug": "the-promontory",
+        "type": "LOCATION",
+        "website": "http://promontorychicago.com/",
+        "image": "http://static1.squarespace.com/static/5b083fc896d4552e4e5349f3/t/6144cdfb54e49e4efdd031e0/1631899131529/Promontory_HeaderLogo_HydePark.jpg?format=1500w",
+        "twitter": "",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/promontorychicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 695,
+    "rank": 100,
+    "slug": "kevin-burt-big-medicine-tribute-to-bill-withers",
+    "name": "Kevin Burt & Big Medicine: Tribute to Bill Withers",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17100663/cd54e6b6-d6d8-4d32-9763-a7cf4a4e6af8.jpg",
+    "url": "https://do312.com/events/2024/2/8/kevin-burt-big-medicine-tribute-to-bill-withers-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "SPACE",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 74,
+      "name": "Evanston SPACE",
+      "slug": "evanston-space",
+      "address": "1245 Chicago Ave, Evanston, IL 60202, United States",
+      "lat": 42.04095,
+      "lng": -87.680325,
+      "place_id": "ChIJrd2hdhPQD4gRef448VXB82Q",
+      "website": "http://www.evanstonspace.com/",
+      "url": "https://maps.google.com/?cid=7274370397996908153",
+      "slug_venue": [
+        {
+          "name": "space"
+        }
+      ],
+      "metadata": {
+        "pk": 156,
+        "slug": "evanston-space",
+        "type": "LOCATION",
+        "website": "http://www.evanstonspace.com/",
+        "image": "http://static1.squarespace.com/static/5afb0ce22487fd4b7c8415f2/t/653ab12f3d0f4f6307d75781/1698345264001/Space_logo_white.png?format=1500w",
+        "twitter": "https://twitter.com/evanstonspace",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "http://instagram.com/evanstonspace",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 696,
+    "rank": 100,
+    "slug": "unbridled",
+    "name": "Unbridled",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17628890/9c72fae6-357b-419d-9bc0-e97b08f0331e.jpg",
+    "url": "https://do312.com/events/2024/2/8/unbridled-tickets",
+    "start_date": "2024-02-09T02:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Untitled",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 102,
+      "name": "Untitled Supper Club",
+      "slug": "untitled-supper-club",
+      "address": "111 W Kinzie St, Chicago, IL 60654, United States",
+      "lat": 41.88908,
+      "lng": -87.631636,
+      "place_id": "ChIJm_I8DbEsDogRgw0_Rgq8PLE",
+      "website": "http://untitledsupperclub.com/",
+      "url": "https://maps.google.com/?cid=12771289395630116227",
+      "slug_venue": [
+        {
+          "name": "untitled"
+        }
+      ],
+      "metadata": {
+        "pk": 226,
+        "slug": "untitled-supper-club",
+        "type": "LOCATION",
+        "website": "http://untitledsupperclub.com/",
+        "image": "",
+        "twitter": "",
+        "facebook": "https://www.facebook.com/UntitledChicago",
+        "youtube": "https://www.youtube.com/playlist",
+        "instagram": "https://www.instagram.com/untitledchicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 697,
+    "rank": 100,
+    "slug": "usa-boxing-presented-by-river-west-boxing-club",
+    "name": "Usa Boxing Presented By River West Boxing Club",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/18030327/75652589-ffa1-4541-89b7-292bb7cd2d0d.jpg",
+    "url": "https://do312.com/events/2024/2/8/usa-boxing-presented-by-river-west-boxing-club-tickets",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Joe's Bar On Weed St.",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 5,
+      "name": "Joe's on Weed St.",
+      "slug": "joes-on-weed-st",
+      "address": "940 W Weed St, Chicago, IL 60642, United States",
+      "lat": 41.909911,
+      "lng": -87.652158,
+      "place_id": "ChIJr2GMEiTTD4gRt5EY1kGRI3c",
+      "website": "http://www.joesbar.com/",
+      "url": "https://maps.google.com/?cid=8584865026649133495",
+      "slug_venue": [
+        {
+          "name": "joes-on-weed-st"
+        },
+        {
+          "name": "joes-bar-on-weed-st"
+        }
+      ],
+      "metadata": {
+        "pk": 6,
+        "slug": "joes-on-weed-st",
+        "type": "LOCATION",
+        "website": "http://www.joesbar.com/",
+        "image": "https://www.daveada.com/site-banners/joes-logo.png",
+        "twitter": "https://twitter.com/joesonweedst",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/joesonweedst",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 698,
+    "rank": 100,
+    "slug": "jazz-in-the-sidebar-the-jarod-bufe-quartet",
+    "name": "Jazz in the SIDEBAR, THE JAROD BUFE QUARTET",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17571097/dea7c3ff-a689-4091-baa0-5cd9960bd6da.jpg",
+    "url": "https://do312.com/events/2024/2/8/jazz-in-the-sidebar-the-jarod-bufe-quartet-tickets",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "FitzGerald's",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 33,
+      "name": "FitzGerald's",
+      "slug": "fitzgeralds",
+      "address": "6615 Roosevelt Rd, Berwyn, IL 60402, United States",
+      "lat": 41.865121,
+      "lng": -87.789924,
+      "place_id": "ChIJvbxu6o40DogRyL8Q3YU4eu8",
+      "website": "http://www.fitzgeraldsnightclub.com/",
+      "url": "https://maps.google.com/?cid=17256167069814144968",
+      "slug_venue": [
+        {
+          "name": "fitzgeralds-nightclub"
+        },
+        {
+          "name": "fitzgeralds"
+        }
+      ],
+      "metadata": {
+        "pk": 96,
+        "slug": "fitzgeralds",
+        "type": "LOCATION",
+        "website": "http://www.fitzgeraldsnightclub.com/",
+        "image": "",
+        "twitter": "https://twitter.com/FitzGeraldsClub",
+        "facebook": "https://www.facebook.com/elevation27",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/elevation27vb",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 699,
+    "rank": 100,
+    "slug": "audiotree-presents-caligulas-horse-earthside",
+    "name": "Audiotree Presents:\n    Caligula’s Horse, Earthside",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16939525/f7aeb6bf-baed-4683-b57c-4c14cd729f19.png",
+    "url": "https://do312.com/events/2024/2/8/caligula-s-horse-earthside-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Lincoln Hall",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 79,
+      "name": "Lincoln Hall",
+      "slug": "lincoln-hall",
+      "address": "2424 N Lincoln Ave, Chicago, IL 60614, United States",
+      "lat": 41.925922,
+      "lng": -87.649837,
+      "place_id": "ChIJF5adNwXTD4gRnfyy_a5-5aA",
+      "website": "http://www.lh-st.com/",
+      "url": "https://maps.google.com/?cid=11593812105780984989",
+      "slug_venue": [
+        {
+          "name": "lincoln-hall"
+        }
+      ],
+      "metadata": {
+        "pk": 171,
+        "slug": "lincoln-hall",
+        "type": "LOCATION",
+        "website": "http://www.lh-st.com/",
+        "image": "",
+        "twitter": "https://twitter.com/schubas",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/lh_schubas",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 701,
+    "rank": 100,
+    "slug": "disco-lemonade",
+    "name": "Disco Lemonade",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17274503/b6342665-b4f2-4811-9839-5f72aa21ecdd.png",
+    "url": "https://do312.com/events/2024/2/8/disco-lemonade-tickets",
+    "start_date": "2024-02-09T01:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Epiphany Center For The Arts",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 98,
+      "name": "Epiphany Center for the Arts",
+      "slug": "epiphany-center-for-the-arts",
+      "address": "201 S Ashland Ave, Chicago, IL 60607, United States",
+      "lat": 41.878519,
+      "lng": -87.666422,
+      "place_id": "ChIJm9y1qKstDogRkr62fX0RLA8",
+      "website": "http://www.epiphanychi.com/",
+      "url": "https://maps.google.com/?cid=1093268040221900434",
+      "slug_venue": [
+        {
+          "name": "epiphany-center-for-the-arts"
+        }
+      ],
+      "metadata": {
+        "pk": 222,
+        "slug": "epiphany-center-for-the-arts",
+        "type": "LOCATION",
+        "website": "http://www.epiphanychi.com/",
+        "image": "https://epiphanychi.com/wp-content/uploads/2024/01/02-01-24-JANUARYSNOWFLAKE-HOMEPAGE-DESKTOP.png",
+        "twitter": "https://twitter.com/epiphanyarts201",
+        "facebook": "https://www.facebook.com/EpiphanyChi",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/epiphanyarts201",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 702,
+    "rank": 100,
+    "slug": "audiotree-presents-wolves-of-glendale",
+    "name": "Audiotree Presents:\n    Wolves of Glendale",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16579835/4cbfbf9b-bb6a-4559-a60a-7914ffeea9db.png",
+    "url": "https://do312.com/events/2024/2/8/wolves-of-glendale-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Schubas",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 31,
+      "name": "Schubas Tavern",
+      "slug": "schubas-tavern",
+      "address": "3159 N Southport Ave, Chicago, IL 60657, United States",
+      "lat": 41.939687,
+      "lng": -87.663629,
+      "place_id": "ChIJN6FVo1bSD4gRSQOR_0qo3hM",
+      "website": "http://www.lh-st.com/",
+      "url": "https://maps.google.com/?cid=1431766771619136329",
+      "slug_venue": [
+        {
+          "name": "schubas-tavern"
+        },
+        {
+          "name": "schubas"
+        }
+      ],
+      "metadata": {
+        "pk": 93,
+        "slug": "schubas-tavern",
+        "type": "LOCATION",
+        "website": "http://www.lh-st.com/",
+        "image": "",
+        "twitter": "https://twitter.com/schubas",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/lh_schubas",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 705,
+    "rank": 100,
+    "slug": "housewerk",
+    "name": "Housewerk",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17785464/827ddfb6-d973-47a1-a781-cb185396ce67.jpg",
+    "url": "https://do312.com/events/2024/2/8/housewerk-tickets",
+    "start_date": "2024-02-09T04:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "PRYSM",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 25,
+      "name": "PRYSM Chicago",
+      "slug": "prysm-chicago",
+      "address": "1543 N Kingsbury St, Chicago, IL 60642, United States",
+      "lat": 41.909318,
+      "lng": -87.652615,
+      "place_id": "ChIJKbhQPSTTD4gRVW0a0Mvp_I8",
+      "website": "http://www.prysmchicago.com/",
+      "url": "https://maps.google.com/?cid=10375424703133805909",
+      "slug_venue": [
+        {
+          "name": "prysm-nightclub"
+        },
+        {
+          "name": "serum-prysm"
+        },
+        {
+          "name": "prysm"
+        }
+      ],
+      "metadata": {
+        "pk": 80,
+        "slug": "prysm-chicago",
+        "type": "LOCATION",
+        "website": "http://www.prysmchicago.com/",
+        "image": "https://www.prysmchicago.com/assets/img/default_thumb.jpg",
+        "twitter": "http://www.twitter.com/PRYSMnightclub",
+        "facebook": "http://www.facebook.com/PRYSMchicago",
+        "youtube": "",
+        "instagram": "http://www.instagram.com/prysmnightclub",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 706,
+    "rank": 100,
+    "slug": "joe-doyle-bandjoanna-connor-band",
+    "name": "Joe Doyle Band/Joanna Connor Band",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17990182/e3732dbb-aeb6-46df-81a9-239ed41c0887.jpg",
+    "url": "https://do312.com/events/2024/2/8/joe-doyle-band-joanna-connor-band-tickets",
+    "start_date": "2024-02-09T00:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Kingston Mines",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 53,
+      "name": "Kingston Mines",
+      "slug": "kingston-mines",
+      "address": "2548 N Halsted St, Chicago, IL 60614, United States",
+      "lat": 41.928703,
+      "lng": -87.648999,
+      "place_id": "ChIJ8b-ckQXTD4gRSiZPBswZmnE",
+      "website": "http://www.kingstonmines.com/",
+      "url": "https://maps.google.com/?cid=8185883636769171018",
+      "slug_venue": [
+        {
+          "name": "kingston-mines"
+        }
+      ],
+      "metadata": {
+        "pk": 122,
+        "slug": "kingston-mines",
+        "type": "LOCATION",
+        "website": "http://www.kingstonmines.com/",
+        "image": "",
+        "twitter": "https://twitter.com/kingstonmines",
+        "facebook": "https://www.facebook.com/kingstonmineschicago",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 707,
+    "rank": 100,
+    "slug": "haden-lee-with-flo-estes-and-lisa-p-medina",
+    "name": "Haden Lee with Flo Estes and Lisa P Medina",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16762797/85c0bb86-4f43-4fe8-a84c-85e3cc6ea62c.jpg",
+    "url": "https://do312.com/events/2024/2/8/haden-lee-with-flo-estes-and-lisa-p-medina-tickets",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Uncommon Ground Lakeview",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 104,
+      "name": "UncommonGround - Lakeview",
+      "slug": "uncommonground-lakeview",
+      "address": "3800 N Clark St, Chicago, IL 60613, United States",
+      "lat": 41.951191,
+      "lng": -87.65986,
+      "place_id": "ChIJMbuzb0vSD4gR9V5RRimiri4",
+      "website": "http://www.uncommonground.com/",
+      "url": "https://maps.google.com/?cid=3363804269849435893",
+      "slug_venue": [
+        {
+          "name": "uncommon-ground-lakeview"
+        }
+      ],
+      "metadata": {
+        "pk": 228,
+        "slug": "uncommonground-lakeview",
+        "type": "LOCATION",
+        "website": "http://www.uncommonground.com/",
+        "image": "http://static1.squarespace.com/static/5a749b452aeba56788878424/t/5f6bdaf85f653c657eea9d77/1600903933600/Greenstar+Logo.png?format=1500w",
+        "twitter": "https://twitter.com/uncommongrd",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/uncommongroundchi",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 708,
+    "rank": 100,
+    "slug": "alfred-banks-and-saxkixave",
+    "name": "Alfred Banks and Saxkixave",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17308363/694b768e-9a69-4f7d-a9c7-f487e2538fcc.jpg",
+    "url": "https://do312.com/events/2024/2/8/alfred-banks-and-saxkixave-tickets",
+    "start_date": "2024-02-09T03:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Hideout",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 1,
+      "name": "The Hideout",
+      "slug": "the-hideout",
+      "address": "1354 W Wabansia Ave, Chicago, IL 60642, United States",
+      "lat": 41.91378,
+      "lng": -87.662498,
+      "place_id": "ChIJibbqZN7SD4gRcL9eytUwVzM",
+      "website": "http://www.hideoutchicago.com/",
+      "url": "https://maps.google.com/?cid=3699479313689526128",
+      "slug_venue": [
+        {
+          "name": "hideout-chicago"
+        },
+        {
+          "name": "hideout"
+        },
+        {
+          "name": "the-hideout-chicago"
+        },
+        {
+          "name": "the-hideout"
+        }
+      ],
+      "metadata": {
+        "pk": 163,
+        "slug": "the-hideout",
+        "type": "LOCATION",
+        "website": "http://www.hideoutchicago.com/",
+        "image": "https://hideoutchicago.com/wp-content/uploads/2020/12/HIDEOUT-LOGO-UPDATE-4-lg.png",
+        "twitter": "https://twitter.com/hideoutchicago",
+        "facebook": "https://www.facebook.com/hideoutchicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/hideoutchicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 709,
+    "rank": 100,
+    "slug": "haden-lee-with-flo-estes-and-lisa-p-medina",
+    "name": "Haden Lee with Flo Estes and Lisa P Medina",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17754651/706f0964-931d-46a5-b00a-c386a29d6096.jpg",
+    "url": "https://do312.com/events/2024/2/8/haden-lee-with-flo-estes-and-lisa-p-medina-tickets-g0k6mwa",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Uncommon Ground Edgewater",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 105,
+      "name": "Uncommon Ground",
+      "slug": "uncommon-ground",
+      "address": "1401 W Devon Ave, Chicago, IL 60660, United States",
+      "lat": 41.997951,
+      "lng": -87.665619,
+      "place_id": "ChIJuWoM1qTTD4gRHzAbzSfIsWg",
+      "website": "http://www.uncommonground.com/",
+      "url": "https://maps.google.com/?cid=7544030924092682271",
+      "slug_venue": [
+        {
+          "name": "uncommon-ground-edgewater"
+        }
+      ],
+      "metadata": {
+        "pk": 229,
+        "slug": "uncommon-ground",
+        "type": "LOCATION",
+        "website": "http://www.uncommonground.com/",
+        "image": "http://static1.squarespace.com/static/5a749b452aeba56788878424/t/5f6bdaf85f653c657eea9d77/1600903933600/Greenstar+Logo.png?format=1500w",
+        "twitter": "https://twitter.com/uncommongrd",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/uncommongroundchi",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 711,
+    "rank": 100,
+    "slug": "nathan-plays-the-blues",
+    "name": "Nathan Plays The Blues",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17571102/419cb4d7-a22d-4f3c-bc29-8cbbd6f0ace4.jpg",
+    "url": "https://do312.com/events/2024/2/8/nathan-plays-the-blues-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "FitzGerald's",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 33,
+      "name": "FitzGerald's",
+      "slug": "fitzgeralds",
+      "address": "6615 Roosevelt Rd, Berwyn, IL 60402, United States",
+      "lat": 41.865121,
+      "lng": -87.789924,
+      "place_id": "ChIJvbxu6o40DogRyL8Q3YU4eu8",
+      "website": "http://www.fitzgeraldsnightclub.com/",
+      "url": "https://maps.google.com/?cid=17256167069814144968",
+      "slug_venue": [
+        {
+          "name": "fitzgeralds-nightclub"
+        },
+        {
+          "name": "fitzgeralds"
+        }
+      ],
+      "metadata": {
+        "pk": 96,
+        "slug": "fitzgeralds",
+        "type": "LOCATION",
+        "website": "http://www.fitzgeraldsnightclub.com/",
+        "image": "",
+        "twitter": "https://twitter.com/FitzGeraldsClub",
+        "facebook": "https://www.facebook.com/elevation27",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/elevation27vb",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 712,
+    "rank": 100,
+    "slug": "karaoke-theme-nights",
+    "name": "Karaoke Theme Nights",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17840416/f50aad25-ca4b-468f-be93-1b7a43cbaa70.png",
+    "url": "https://do312.com/events/2024/2/8/karaoke-theme-nights-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "She-nannigans",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 136,
+      "name": "She-nannigans",
+      "slug": "she-nannigans",
+      "address": "16 W Division St, Chicago, IL 60610, United States",
+      "lat": 41.904025,
+      "lng": -87.629482,
+      "place_id": "ChIJudI86k_TD4gRRDWAjWW6Wl0",
+      "website": "https://www.she-nannigans.com/",
+      "url": "https://maps.google.com/?cid=6726893938759710020",
+      "slug_venue": [
+        {
+          "name": "she-nannigans"
+        }
+      ],
+      "metadata": {
+        "pk": 570,
+        "slug": "she-nannigans",
+        "type": "LOCATION",
+        "website": "https://www.she-nannigans.com/",
+        "image": "",
+        "twitter": "https://twitter.com/Shenanniganshob",
+        "facebook": "https://www.facebook.com/ShenannigansHOB",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/shenanniganshob",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 714,
+    "rank": 100,
+    "slug": "khamari",
+    "name": "Khamari",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17192239/def45a48-4e05-485a-92c2-c8b32c8b7c5f.jpg",
+    "url": "https://do312.com/events/2024/2/8/khamari-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Sleeping Village",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 37,
+      "name": "Sleeping Village",
+      "slug": "sleeping-village",
+      "address": "3734 W Belmont Ave, Chicago, IL 60618, United States",
+      "lat": 41.939418,
+      "lng": -87.721361,
+      "place_id": "ChIJIZkjJ6HND4gRwgmE3djktKM",
+      "website": "http://sleeping-village.com/",
+      "url": "https://maps.google.com/?cid=11796304944070658498",
+      "slug_venue": [
+        {
+          "name": "sleeping-village"
+        }
+      ],
+      "metadata": {
+        "pk": 102,
+        "slug": "sleeping-village",
+        "type": "LOCATION",
+        "website": "http://sleeping-village.com/",
+        "image": "https://sleeping-village.com/wp-content/uploads/2023/03/SleepingVillageinAvondale.jpeg",
+        "twitter": "https://twitter.com/Sl33pingVillag3",
+        "facebook": "https://www.facebook.com/sleepingvillagechicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/sl33pingvillag3",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 715,
+    "rank": 100,
+    "slug": "chromabeats",
+    "name": "CHROMABEATS",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17592938/c1f50fae-c46f-4bd3-89ef-cbd3897b18d6.png",
+    "url": "https://do312.com/events/2024/2/8/chromabeats-1704775050",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "DMen Tap",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 143,
+      "name": "DMen Tap",
+      "slug": "dmen-tap",
+      "address": "2849 W Belmont Ave, Chicago, IL 60618, United States",
+      "lat": 41.939292,
+      "lng": -87.699715,
+      "place_id": "ChIJiXgD_IDND4gRn1il45NG5uM",
+      "website": "http://www.dmentap.com/",
+      "url": "https://maps.google.com/?cid=16421890692246493343",
+      "slug_venue": [
+        {
+          "name": "dmen-tap"
+        }
+      ],
+      "metadata": {
+        "pk": 624,
+        "slug": "dmen-tap",
+        "type": "LOCATION",
+        "website": "http://www.dmentap.com/",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "http://instagram.com/dmentapchi",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 716,
+    "rank": 100,
+    "slug": "jesus-adrian-romero-terrenal-tour",
+    "name": "Jesus Adrian Romero - Terrenal Tour",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16781976/c76181da-8de7-44f8-a957-91a4ddfe48c9.jpg",
+    "url": "https://do312.com/events/2024/2/8/jesus-adrian-romero-terrenal-tour-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Copernicus Center",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 144,
+      "name": "Copernicus Center",
+      "slug": "copernicus-center",
+      "address": "5216 W Lawrence Ave, Chicago, IL 60630, United States",
+      "lat": 41.968275,
+      "lng": -87.758818,
+      "place_id": "ChIJR6OatRnMD4gRS5-8-o03JDc",
+      "website": "https://copernicuscenter.org/",
+      "url": "https://maps.google.com/?cid=3973361854184202059",
+      "slug_venue": [
+        {
+          "name": "copernicus-center"
+        }
+      ],
+      "metadata": {
+        "pk": 625,
+        "slug": "copernicus-center",
+        "type": "LOCATION",
+        "website": "https://copernicuscenter.org/",
+        "image": "https://copernicuscenter.org/wp-content/uploads/Copernicus-Center-Homepage.jpg",
+        "twitter": "https://twitter.com/CopernicusCtr",
+        "facebook": "https://www.facebook.com/CopernicusCenter",
+        "youtube": "https://www.youtube.com/playlist",
+        "instagram": "https://www.instagram.com/CopernicusCenter",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 717,
+    "rank": 100,
+    "slug": "blesstonio-presents-fusion",
+    "name": "Blesstonio presents: Fusion",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17931302/c0623421-768e-452b-ae76-ddb52e3f22c4.jpg",
+    "url": "https://do312.com/events/2024/2/8/blesstonio-presents-fusion-tickets",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Whistler",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 122,
+      "name": "The Whistler",
+      "slug": "the-whistler",
+      "address": "2421 N Milwaukee Ave, Chicago, IL 60647, United States",
+      "lat": 41.925318,
+      "lng": -87.701069,
+      "place_id": "ChIJbdGdPmPND4gRFCl6afkm-zI",
+      "website": "http://www.whistlerchicago.com/",
+      "url": "https://maps.google.com/?cid=3673572773709097236",
+      "slug_venue": [
+        {
+          "name": "the-whistler"
+        }
+      ],
+      "metadata": {
+        "pk": 393,
+        "slug": "the-whistler",
+        "type": "LOCATION",
+        "website": "http://www.whistlerchicago.com/",
+        "image": "http://static1.squarespace.com/static/61f08416a9cbda13ab76179c/t/62531f1fa8a0b76c12c7bd5e/1649614623406/Whistler_scrape.jpg?format=1500w",
+        "twitter": "https://twitter.com/whistlerchicago",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/whistlerchicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 718,
+    "rank": 100,
+    "slug": "leon-the-bandit-triple",
+    "name": "Leon The Bandit / Triple",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17770502/31b87991-8131-4a5a-b35b-85517b2891ba.png",
+    "url": "https://do312.com/events/2024/2/8/leon-the-bandit-triple-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Burlington",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 42,
+      "name": "Burlington Bar",
+      "slug": "burlington-bar",
+      "address": "3425 W Fullerton Ave, Chicago, IL 60647, United States",
+      "lat": 41.924522,
+      "lng": -87.713196,
+      "place_id": "ChIJszoj0W3ND4gRT2DogQ3Ea6c",
+      "website": "http://www.theburlingtonbar.com/",
+      "url": "https://maps.google.com/?cid=12063951589135114319",
+      "slug_venue": [
+        {
+          "name": "burlington-bar"
+        },
+        {
+          "name": "the-burlington"
+        }
+      ],
+      "metadata": {
+        "pk": 109,
+        "slug": "burlington-bar",
+        "type": "LOCATION",
+        "website": "http://www.theburlingtonbar.com/",
+        "image": "http://static1.squarespace.com/static/641c7f826e1df00c4572bb52/t/641cd4a4fe462d5414060805/1679611044459/Burlington-Logo-V1.png?format=1500w",
+        "twitter": "",
+        "facebook": "http://www.facebook.com/2008",
+        "youtube": "",
+        "instagram": "http://instagram.com/theburlingtonbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 719,
+    "rank": 100,
+    "slug": "bonzo-squad",
+    "name": "Bonzo Squad",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/18030405/e57b92cb-d11f-4775-8331-9bff44bf54c7.jpg",
+    "url": "https://do312.com/events/2024/2/8/bonzo-squad-tickets",
+    "start_date": "2024-02-09T03:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "aliveOne",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 76,
+      "name": "aliveOne",
+      "slug": "aliveone",
+      "address": "2683 N Halsted St, Chicago, IL 60614, United States",
+      "lat": 41.931444,
+      "lng": -87.648686,
+      "place_id": "ChIJjxwmGAbTD4gR0AD4slTcXCg",
+      "website": "http://www.aliveone.com/",
+      "url": "https://maps.google.com/?cid=2908441715712458960",
+      "slug_venue": [
+        {
+          "name": "aliveone"
+        }
+      ],
+      "metadata": {
+        "pk": 164,
+        "slug": "aliveone",
+        "type": "LOCATION",
+        "website": "http://www.aliveone.com/",
+        "image": "https://static.wixstatic.com/media/0d50a1_ae5090dbf33f4eabbc30eed347c5be78%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/0d50a1_ae5090dbf33f4eabbc30eed347c5be78%7Emv2.jpg",
+        "twitter": "https://twitter.com/aliveonechicago",
+        "facebook": "https://www.facebook.com/aliveOneLincolnPark",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/aliveonechicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 720,
+    "rank": 100,
+    "slug": "the-real-time-whitewolfsonicprincess-thomas-pace-b",
+    "name": "The Real Time // Whitewolfsonicprincess // Thomas Pace Band // No Hero",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17721029/ab324f30-0e59-4352-8b45-22ff4352001c.jpg",
+    "url": "https://do312.com/events/2024/2/8/the-real-time-whitewolfsonicprincess-thomas-pace-band-no-hero-tickets",
+    "start_date": "2024-02-09T00:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Montrose Saloon",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 9,
+      "name": "Montrose Saloon",
+      "slug": "montrose-saloon",
+      "address": "2933 W Montrose Ave, Chicago, IL 60618, United States",
+      "lat": 41.961057,
+      "lng": -87.702315,
+      "place_id": "ChIJkbYWAfTND4gRzzRfFxeIbBQ",
+      "website": "http://www.montrosesaloon.com/",
+      "url": "https://maps.google.com/?cid=1471700811001050319",
+      "slug_venue": [
+        {
+          "name": "montrose-saloon"
+        }
+      ],
+      "metadata": {
+        "pk": 66,
+        "slug": "montrose-saloon",
+        "type": "LOCATION",
+        "website": "http://www.montrosesaloon.com/",
+        "image": "https://montrosesaloon.com/wp-content/uploads/2023/04/gP_1d45M.jpeg",
+        "twitter": "https://twitter.com/MontroseSaloon",
+        "facebook": "https://www.facebook.com/montrosesaloon",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/montrosesaloon",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 723,
+    "rank": 100,
+    "slug": "1st-set-with-anthony-bruno",
+    "name": "1st Set With Anthony Bruno",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16827339/4f987602-bd1d-44eb-a8e1-6f199b562723.jpg",
+    "url": "https://do312.com/events/2024/2/8/1st-set-with-anthony-bruno-tickets",
+    "start_date": "2024-02-09T00:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Andy's Jazz Club",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 124,
+      "name": "Andy's Jazz Club & Restaurant",
+      "slug": "andys-jazz-club-restaurant",
+      "address": "11 E Hubbard St, Chicago, IL 60611, United States",
+      "lat": 41.88995,
+      "lng": -87.627476,
+      "place_id": "ChIJp77lDq4sDogRpoHbNJEoye8",
+      "website": "http://www.andysjazzclub.com/",
+      "url": "https://maps.google.com/?cid=17278386049505788326",
+      "slug_venue": [
+        {
+          "name": "andys-jazz-club"
+        }
+      ],
+      "metadata": {
+        "pk": 395,
+        "slug": "andys-jazz-club-restaurant",
+        "type": "LOCATION",
+        "website": "http://www.andysjazzclub.com/",
+        "image": "http://andysjazzclub.com/wp-content/uploads/2019/11/Andys-Jazz-Club-Gift_card-e1668112217171.jpg",
+        "twitter": "https://twitter.com/andysjazzclub",
+        "facebook": "https://www.facebook.com/andysjazzclub",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/andysjazzclub",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 725,
+    "rank": 100,
+    "slug": "2nd-set-with-anthony-bruno",
+    "name": "2nd Set With Anthony Bruno",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/16827351/bed5a192-1834-406a-a768-4ef42bc42eed.jpg",
+    "url": "https://do312.com/events/2024/2/8/2nd-set-with-anthony-bruno-tickets",
+    "start_date": "2024-02-09T02:15:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Andy's Jazz Club",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 124,
+      "name": "Andy's Jazz Club & Restaurant",
+      "slug": "andys-jazz-club-restaurant",
+      "address": "11 E Hubbard St, Chicago, IL 60611, United States",
+      "lat": 41.88995,
+      "lng": -87.627476,
+      "place_id": "ChIJp77lDq4sDogRpoHbNJEoye8",
+      "website": "http://www.andysjazzclub.com/",
+      "url": "https://maps.google.com/?cid=17278386049505788326",
+      "slug_venue": [
+        {
+          "name": "andys-jazz-club"
+        }
+      ],
+      "metadata": {
+        "pk": 395,
+        "slug": "andys-jazz-club-restaurant",
+        "type": "LOCATION",
+        "website": "http://www.andysjazzclub.com/",
+        "image": "http://andysjazzclub.com/wp-content/uploads/2019/11/Andys-Jazz-Club-Gift_card-e1668112217171.jpg",
+        "twitter": "https://twitter.com/andysjazzclub",
+        "facebook": "https://www.facebook.com/andysjazzclub",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/andysjazzclub",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 726,
+    "rank": 100,
+    "slug": "wejustfriends-afro-beats-showcase",
+    "name": "wejustfriends, AFRO BEATS SHOWCASE",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17721419/af9206b3-de8f-45ba-a117-fc693ac91ccc.jpg",
+    "url": "https://do312.com/events/2024/2/8/wejustfriends-afro-beats-showcase-tickets",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Cole's Bar",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 52,
+      "name": "Cole's Bar",
+      "slug": "coles-bar",
+      "address": "2338 N Milwaukee Ave, Chicago, IL 60647, United States",
+      "lat": 41.923661,
+      "lng": -87.698806,
+      "place_id": "ChIJQ_ORYGLND4gRxGOgGm82S10",
+      "website": "http://www.coleschicago.com/",
+      "url": "https://maps.google.com/?cid=6722526719596585924",
+      "slug_venue": [
+        {
+          "name": "coles-bar"
+        }
+      ],
+      "metadata": {
+        "pk": 120,
+        "slug": "coles-bar",
+        "type": "LOCATION",
+        "website": "http://www.coleschicago.com/",
+        "image": "",
+        "twitter": "https://twitter.com/coleschicago",
+        "facebook": "https://www.facebook.com/coleschicago",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/colesbar",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 727,
+    "rank": 100,
+    "slug": "hali-palombo-wishful-thinking",
+    "name": "Hali Palombo (Wishful Thinking)",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17884318/deb4ec67-baef-4cd9-a160-8ae046f40d59.jpg",
+    "url": "https://do312.com/events/2024/2/8/hali-palombo-wishful-thinking-tickets",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Tack Room",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 145,
+      "name": "Tack Room",
+      "slug": "tack-room",
+      "address": "1807 S Allport St, Chicago, IL 60608, United States",
+      "lat": 41.857616,
+      "lng": -87.657509,
+      "place_id": "ChIJq3bUxP8sDogR2ApnZoerq6A",
+      "website": "http://www.tackroomchicago.com/",
+      "url": "https://maps.google.com/?cid=11577535865112955608",
+      "slug_venue": [
+        {
+          "name": "tack-room"
+        }
+      ],
+      "metadata": {
+        "pk": 626,
+        "slug": "tack-room",
+        "type": "LOCATION",
+        "website": "http://www.tackroomchicago.com/",
+        "image": "http://static1.squarespace.com/static/647112d4eca2c42791664d52/t/647a783aadfbd76a198e0abb/1692230939552/Duseks-123+%281%29.jpg?format=1500w",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "https://www.instagram.com/tackroomchicago",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 51,
+    "rank": 0,
+    "slug": "teatro-zinzanni",
+    "name": "Teatro Zinzanni",
+    "description": "A spectacle of unforgettable performances, fantastic cuisine, and premium entertainment await you within the velvet walls of the Antique Belgian Spiegeltent in the heart of…Loop",
+    "image": "https://cdn.choosechicago.com/uploads/2023/11/ChicagoPlaysFacebookKeyArt-1-900x473.jpg",
+    "url": "https://www.choosechicago.com/event/teatro-zinzanni-5/2024-02-10/",
+    "start_date": "2024-02-10T18:00:00Z",
+    "end_date": "2024-02-10T21:00:00Z",
+    "provider": "CHOOSECHICAGO",
+    "venue": "Spiegeltent – Cambria Hotel",
+    "address": "32 W. Randolph",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 8,
+      "name": "Cambria Hotel Chicago Loop - Theatre District",
+      "slug": "cambria-hotel-chicago-loop-theatre-district",
+      "address": "32 W Randolph St, Chicago, IL 60601, United States",
+      "lat": 41.884722,
+      "lng": -87.629049,
+      "place_id": "ChIJrU7gr7osDogRY1NoNI9zcq0",
+      "website": "https://www.choicehotels.com/illinois/chicago/cambria-hotels/il514?mc=llgoxxpx",
+      "url": "https://maps.google.com/?cid=12498178974803317603",
+      "slug_venue": [
+        {
+          "name": "spiegeltent-cambria-hotel"
+        }
+      ],
+      "metadata": {
+        "pk": 65,
+        "slug": "cambria-hotel-chicago-loop-theatre-district",
+        "type": "LOCATION",
+        "website": "https://www.choicehotels.com/illinois/chicago/cambria-hotels/il514?mc=llgoxxpx",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
     "pk": 53,
     "rank": 0,
     "slug": "teatro-zinzanni",
     "name": "Teatro Zinzanni",
     "description": "A spectacle of unforgettable performances, fantastic cuisine, and premium entertainment await you within the velvet walls of the Antique Belgian Spiegeltent in the heart of…",
     "image": "https://cdn.choosechicago.com/uploads/2019/08/placehoder-900x425.jpg",
-    "url": "https://www.choosechicago.com/event/teatro-zinzanni-4/2024-02-09/",
-    "start_date": "2024-02-10T00:30:00Z",
-    "end_date": "2024-02-10T04:00:00Z",
+    "url": "https://www.choosechicago.com/event/teatro-zinzanni-4/2024-02-10/",
+    "start_date": "2024-02-11T00:30:00Z",
+    "end_date": "2024-02-11T04:00:00Z",
     "provider": "CHOOSECHICAGO",
     "venue": "32 W Randolph St",
     "address": "32 W Randolph St",
@@ -45530,14 +49775,14 @@
     "slug": "llo-llo-rotundos-4x4-animal-style-daundry",
     "name": "Llo Llo / Rotundos / 4x4 Animal Style / Daundry",
     "description": "Cobra Lounge presents...  \n  \nLlo Llo  \nRotundos  \n4x4 Animal Style  \nDaundry\n\nPresented by Cobra Lounge.\n\nThis is a 17+ event.",
-    "image": "https://dice-media.imgix.net/attachments/2024-01-03/dbabb265-2461-4c1a-a70b-2a5097e6099e.jpg",
-    "url": "https://link.dice.fm/a28b75472de4",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17579360/3ccf84ab-21be-4231-8af3-f1bb7fe4f7e1.jpg",
+    "url": "https://do312.com/events/2024/2/8/llo-llo-rotundos-4x4-animal-style-daundry-tickets",
     "start_date": "2024-02-09T01:00:00Z",
     "end_date": null,
-    "provider": "COBRALOUNGE",
+    "provider": "DO312",
     "venue": "Cobra Lounge",
     "address": "",
-    "city": "Chicago",
+    "city": "CHICAGO",
     "price": 15,
     "buyUrl": "https://link.dice.fm/a28b75472de4",
     "location": {
@@ -45754,5 +49999,454 @@
         "genres": []
       }
     ]
+  },
+  {
+    "pk": 658,
+    "rank": 0,
+    "slug": "heart-of-chicago-soul-clubs-all-vinyl-valentines-d",
+    "name": "Heart Of Chicago Soul Club’s All Vinyl Valentine’s Dance Party!",
+    "description": "Join Heart of Chicago Soul Club for our next all vinyl dance party on Saturday, February 10th at Color Club at 4146 N Elston Ave, Chicago. After a stellar sold-out dance…",
+    "image": "https://cdn.choosechicago.com/uploads/2024/01/Screenshot-2024-01-21-at-11.36.37%E2%80%AFPM-617x800.png",
+    "url": "https://www.choosechicago.com/event/heart-of-chicago-soul-clubs-all-vinyl-valentines-dance-party/",
+    "start_date": "2024-02-11T01:00:00Z",
+    "end_date": "2024-02-11T05:30:00Z",
+    "provider": "CHOOSECHICAGO",
+    "venue": "Color Club",
+    "address": "4146 North Elston Avenue",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 138,
+      "name": "Color Club",
+      "slug": "color-club",
+      "address": "4146 N Elston Ave, Chicago, IL 60618, United States",
+      "lat": 41.956044,
+      "lng": -87.722995,
+      "place_id": "ChIJAYFuSgbND4gRvZdEssM2FF4",
+      "website": "http://www.colorclub.events/",
+      "url": "https://maps.google.com/?cid=6779103553236801469",
+      "slug_venue": [
+        {
+          "name": "color-club"
+        }
+      ],
+      "metadata": {
+        "pk": 600,
+        "slug": "color-club",
+        "type": "LOCATION",
+        "website": "http://www.colorclub.events/",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 700,
+    "rank": 0,
+    "slug": "in-the-foundation-room-foundation-room-presents-ch",
+    "name": "In The Foundation Room\n    Foundation Room presents Chicago Comedy Club",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17572934/86df51d4-87e0-47a1-8b8c-a8e994abd873.png",
+    "url": "https://do312.com/events/2024/2/8/foundation-room-presents-chicago-comedy-club-tickets",
+    "start_date": "2024-02-09T00:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "House of Blues",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 26,
+      "name": "House of Blues Chicago",
+      "slug": "house-of-blues-chicago",
+      "address": "329 N Dearborn St, Chicago, IL 60654, United States",
+      "lat": 41.888235,
+      "lng": -87.629102,
+      "place_id": "ChIJ05UHzLEsDogRSZiv23eq-Mg",
+      "website": "https://www.houseofblues.com/chicago?utm_source=GMBlisting&utm_medium=organic",
+      "url": "https://maps.google.com/?cid=14481512033573378121",
+      "slug_venue": [
+        {
+          "name": "house-of-blues-chicago"
+        },
+        {
+          "name": "house-of-blues"
+        }
+      ],
+      "metadata": {
+        "pk": 83,
+        "slug": "house-of-blues-chicago",
+        "type": "LOCATION",
+        "website": "https://www.houseofblues.com/chicago?utm_source=GMBlisting&utm_medium=organic",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 703,
+    "rank": 0,
+    "slug": "andy-brown",
+    "name": "Andy Brown",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/18030328/3172781f-477e-4f98-951b-c2a04304ab9c.jpg",
+    "url": "https://do312.com/events/2024/2/8/andy-brown-tickets",
+    "start_date": "2024-02-08T23:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Green Mill",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 106,
+      "name": "The Green Mill",
+      "slug": "the-green-mill",
+      "address": "4802 N Broadway, Chicago, IL 60640, United States",
+      "lat": 41.969203,
+      "lng": -87.659922,
+      "place_id": "ChIJ5ywykizSD4gRX8IVtWSf3OI",
+      "website": "http://www.greenmilljazz.com/",
+      "url": "https://maps.google.com/?cid=16347116002331705951",
+      "slug_venue": [
+        {
+          "name": "the-green-mill"
+        }
+      ],
+      "metadata": {
+        "pk": 230,
+        "slug": "the-green-mill",
+        "type": "LOCATION",
+        "website": "http://www.greenmilljazz.com/",
+        "image": "https://greenmilljazz.com/wp-content/uploads/2017/10/Foreman.jpg",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 704,
+    "rank": 0,
+    "slug": "alan-gresiks-swing-orchestra",
+    "name": "Alan Gresik’S Swing Orchestra",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/18030337/e8e7cd59-1de6-4d15-8502-76a43838b7de.jpg",
+    "url": "https://do312.com/events/2024/2/8/alan-gresik-s-swing-orchestra-tickets",
+    "start_date": "2024-02-09T02:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "The Green Mill",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 106,
+      "name": "The Green Mill",
+      "slug": "the-green-mill",
+      "address": "4802 N Broadway, Chicago, IL 60640, United States",
+      "lat": 41.969203,
+      "lng": -87.659922,
+      "place_id": "ChIJ5ywykizSD4gRX8IVtWSf3OI",
+      "website": "http://www.greenmilljazz.com/",
+      "url": "https://maps.google.com/?cid=16347116002331705951",
+      "slug_venue": [
+        {
+          "name": "the-green-mill"
+        }
+      ],
+      "metadata": {
+        "pk": 230,
+        "slug": "the-green-mill",
+        "type": "LOCATION",
+        "website": "http://www.greenmilljazz.com/",
+        "image": "https://greenmilljazz.com/wp-content/uploads/2017/10/Foreman.jpg",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 710,
+    "rank": 0,
+    "slug": "andre-ward-presents-hbcu-greek-celebration",
+    "name": "Andre Ward presents HBCU & Greek Celebration",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17406850/185e36c0-9f82-407f-be49-32032b56dd4a.jpg",
+    "url": "https://do312.com/events/2024/2/8/andre-ward-presents-hbcu-greek-celebration-tickets",
+    "start_date": "2024-02-09T01:30:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "City Winery",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 70,
+      "name": "City Winery",
+      "slug": "city-winery",
+      "address": "1200 W Randolph St, Chicago, IL 60607, United States",
+      "lat": 41.884588,
+      "lng": -87.657111,
+      "place_id": "ChIJ7ZBcatgsDogRVeUuWDAD0TM",
+      "website": "https://citywinery.com/chicago",
+      "url": "https://maps.google.com/?cid=3733769072239633749",
+      "slug_venue": [
+        {
+          "name": "city-winery-chicago"
+        },
+        {
+          "name": "city-winery"
+        }
+      ],
+      "metadata": {
+        "pk": 146,
+        "slug": "city-winery",
+        "type": "LOCATION",
+        "website": "https://citywinery.com/chicago",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 713,
+    "rank": 0,
+    "slug": "midwest-underground-nation-this-aint-yo-mommas-vib",
+    "name": "Midwest Underground Nation\n    This Ain’t Yo Momma’s Vibe",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17885167/de97b5af-7924-4b6c-8fdc-09a794be0222.jpg",
+    "url": "https://do312.com/events/2024/2/8/this-ain-t-yo-momma-s-vibe-tickets",
+    "start_date": "2024-02-09T04:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Innjoy",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 142,
+      "name": "Innjoy",
+      "slug": "innjoy",
+      "address": "2051 W Division St, Chicago, IL 60622, United States",
+      "lat": 41.903001,
+      "lng": -87.679261,
+      "place_id": "ChIJE6NfZ67SD4gRjZO9aR-80PM",
+      "website": "https://www.innjoywickerpark.com/",
+      "url": "https://maps.google.com/?cid=17568748989476344717",
+      "slug_venue": [
+        {
+          "name": "innjoy"
+        }
+      ],
+      "metadata": {
+        "pk": 623,
+        "slug": "innjoy",
+        "type": "LOCATION",
+        "website": "https://www.innjoywickerpark.com/",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 721,
+    "rank": 0,
+    "slug": "the-boi-and-the-ghouls-kehsins-jazz-pop-quartet-sa",
+    "name": "The Boi And The Ghouls, Kehsin’S Jazz Pop Quartet, Sara Mercurio, Mobius",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17762228/de2f2369-89f9-4f6f-a328-43743416d6dc.jpg",
+    "url": "https://do312.com/events/2024/2/8/the-boi-and-the-ghouls-kehsin-s-jazz-pop-quartet-sara-mercurio-mobius-tickets-70enxjm",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Music Joint",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 119,
+      "name": "Sound joint",
+      "slug": "sound-joint",
+      "address": "822 N Lorel Ave, Chicago, IL 60651, United States",
+      "lat": 41.895649,
+      "lng": -87.759555,
+      "place_id": "ChIJVVVpBkszDogRsWNnPz4DFdg",
+      "website": "",
+      "url": "https://maps.google.com/?cid=15570354852589953969",
+      "slug_venue": [
+        {
+          "name": "music-joint"
+        }
+      ],
+      "metadata": null
+    },
+    "artists": []
+  },
+  {
+    "pk": 722,
+    "rank": 0,
+    "slug": "mike-wheeler-blues-band-w-mzz-reese",
+    "name": "Mike Wheeler Blues Band w/ Mzz Reese",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17527458/60c09a75-a2c4-43c6-96d2-3bcc03e42545.png",
+    "url": "https://do312.com/events/2024/2/8/mike-wheeler-blues-band-w-mzz-reese-tickets",
+    "start_date": "2024-02-09T03:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Blue Chicago",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 123,
+      "name": "Blue Chicago",
+      "slug": "blue-chicago",
+      "address": "536 N Clark St, Chicago, IL 60654, United States",
+      "lat": 41.891976,
+      "lng": -87.631466,
+      "place_id": "ChIJezvnsLMsDogRLDrqWcT7SRI",
+      "website": "http://www.bluechicago.com/",
+      "url": "https://maps.google.com/?cid=1317861186723265068",
+      "slug_venue": [
+        {
+          "name": "blue-chicago"
+        }
+      ],
+      "metadata": {
+        "pk": 394,
+        "slug": "blue-chicago",
+        "type": "LOCATION",
+        "website": "http://www.bluechicago.com/",
+        "image": "",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
+  },
+  {
+    "pk": 724,
+    "rank": 0,
+    "slug": "sea-ghouls-constant-headache-sunset-drip",
+    "name": "Sea Ghouls, Constant Headache, Sunset Drip",
+    "description": "",
+    "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/17219908/375539e4-2384-43f6-aa1c-bc0d779115fc.jpg",
+    "url": "https://do312.com/events/2024/2/8/sea-ghouls-constant-headache-sunset-drip-tickets",
+    "start_date": "2024-02-09T01:00:00Z",
+    "end_date": null,
+    "provider": "DO312",
+    "venue": "Kitchen 17",
+    "address": "",
+    "city": "CHICAGO",
+    "price": 0,
+    "buyUrl": "",
+    "location": {
+      "pk": 107,
+      "name": "Kitchen 17",
+      "slug": "kitchen-17",
+      "address": "2554 W Diversey Ave, Chicago, IL 60647, United States",
+      "lat": 41.932314,
+      "lng": -87.692647,
+      "place_id": "ChIJpTp7k6bTD4gR8InnpPnmR0Q",
+      "website": "http://www.kitchen17.com/",
+      "url": "https://maps.google.com/?cid=4920155077813438960",
+      "slug_venue": [
+        {
+          "name": "kitchen-17"
+        }
+      ],
+      "metadata": {
+        "pk": 231,
+        "slug": "kitchen-17",
+        "type": "LOCATION",
+        "website": "http://www.kitchen17.com/",
+        "image": "https://kitchen17.com/wp-content/uploads/2020/11/kitchen-17-logo-white-square.jpg",
+        "twitter": "",
+        "facebook": "",
+        "youtube": "",
+        "instagram": "",
+        "tiktok": "",
+        "soundcloud": "",
+        "spotify": "",
+        "appleMusic": "",
+        "band_camp": "",
+        "link_tree": ""
+      }
+    },
+    "artists": []
   }
 ]
