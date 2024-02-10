@@ -31,9 +31,9 @@ const Header = ({ currentDay, dateHandler }: Props) => {
     </h1>
     <select
       className="h-full bg-rose-600 text-white italic font-semibold text-xl md:text-2xl rounded-none lg:hidden"
-      defaultValue={currentDay}
+      value={currentDay}
       onChange={dateHandler}
-      >
+    >
       {days.map((day, index) => (
         <option value={index} key={generateUniqueKey(day)} disabled={index < currentDay}>
           {currentDay === index ? "Today" : day}

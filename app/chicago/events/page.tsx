@@ -102,8 +102,13 @@ export default function Home() {
 
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
+    const scrollSnapSection = document.getElementById('scrollSnap');
     const element = document.getElementById(getEventID(event));
+    scrollSnapSection?.classList.remove('snap-mandatory', 'snap-x');
     element?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    setTimeout(() => {
+      scrollSnapSection?.classList.add('snap-mandatory', 'snap-x');
+    }, 1000);
   };
 
   useEffect(() => {
@@ -134,7 +139,7 @@ export default function Home() {
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} dateHandler={dateHandler} />
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
-        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
+        <section id="scrollSnap" className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-mandatory snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
           <div className="flex lg:flex-col gap-4 lg:gap-6">
             {selectedEvents.map((event, index) => (
               <div
