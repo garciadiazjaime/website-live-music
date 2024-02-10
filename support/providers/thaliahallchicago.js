@@ -1,6 +1,4 @@
-const cheerio = require("cheerio");
 const async = require("async");
-const moment = require("moment");
 
 const { getMetadata } = require("../metadata.js");
 const { getGMapsLocation } = require("../gps.js");
@@ -33,7 +31,6 @@ function transform(data, location) {
       buyUrl: event.url,
       price: event.priceRanges?.[0].min,
       artists: event._embedded.attractions?.map((artist) => {
-        console.log(Object.keys(artist.externalLinks ?? {}));
         const metadata = artist.externalLinks
           ? {
               youtube: artist.externalLinks.youtube?.[0].url,
@@ -44,8 +41,8 @@ function transform(data, location) {
               instagram: artist.externalLinks.instagram?.[0].url,
               website: artist.externalLinks.homepage?.[0].url,
               wiki: artist.externalLinks.wiki?.[0].url,
-              musicbrainz: artist.musicbrainz.wiki?.[0].url,
-              lastfm: artist.lastfm.wiki?.[0].url,
+              musicbrainz: artist.externalLinks.musicbrainz?.[0].url,
+              lastfm: artist.externalLinks.lastfm?.[0].url,
             }
           : {};
 
@@ -53,10 +50,24 @@ function transform(data, location) {
           metadata.image = artist.images?.[0].url;
         }
 
-        const genres = artist.classifications
-          ? artist.classifications?.[0].genre.name
-          : undefined;
+        const genres = Array.isArray(artist.classifications)
+          ? artist.classifications.reduce((accumulator, classification) => {
+              if (classification.genre?.name) {
+                accumulator.push({
+                  name: classification.genre.name,
+                });
+              }
+              if (classification.subGenre?.name) {
+                accumulator.push({
+                  name: classification.subGenre.name,
+                });
+              }
 
+              return accumulator;
+            }, [])
+          : [];
+
+        // todo: save ticketmaster in BE
         return {
           name: artist.name,
           ticketmaster: {
@@ -80,14 +91,34 @@ async function getArtists(event) {
   const artists = [];
 
   await async.eachSeries(event.artists, async (preArtist) => {
-    console.log({ preArtist });
     const artist = await getArtistSingle(preArtist.name);
 
     if (!artist) {
       return preArtist;
     }
 
-    // consolidate artist (musicbrainz + website) with ticketmaster
+    if (!artist.genres?.length) {
+      artist.genres = preArtist.genres;
+    }
+
+    const props = [
+      "youtube",
+      "twitter",
+      "appleMusic",
+      "facebook",
+      "spotify",
+      "instagram",
+      "website",
+      "wiki",
+      "musicbrainz",
+      "lastfm",
+      "image",
+    ];
+    props.forEach((prop) => {
+      if (!artist.metadata[prop]) {
+        artist.metadata[prop] = preArtist.metadata[prop];
+      }
+    });
 
     const spotify = await getSpotify(artist);
     if (spotify) {
@@ -120,21 +151,20 @@ async function main() {
     const locationMetadata = await getMetadata(preLocation.website);
     location.metadata = locationMetadata;
   }
-  // todo: this api-key might expire
 
+  // todo: this api-key might expire
   const html = await extract(
-    "https://app.ticketmaster.com/discovery/v2/events.json?size=200&apikey=Mj9g4ZY7tXTmixNb7zMOAP85WPGAfFL8&venueId=rZ7HnEZ17aJq7&venueId=KovZpZAktlaA"
+    "https://app.ticketmaster.com/discovery/v2/events.json?size=50&apikey=Mj9g4ZY7tXTmixNb7zMOAP85WPGAfFL8&venueId=rZ7HnEZ17aJq7&venueId=KovZpZAktlaA"
   );
 
-  const preEvents = transform(html, preLocation).slice(0, 1);
-  console.log(JSON.stringify(preEvents, null, 2));
+  const preEvents = transform(html, preLocation);
 
   await async.eachSeries(preEvents, async (preEvent) => {
     const artists = await getArtists(preEvent);
 
     const event = { ...preEvent, artists, location };
     console.log(JSON.stringify(event, null, 2));
-    // await saveEvent(event);
+    await saveEvent(event);
   });
 }
 
