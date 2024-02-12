@@ -1,5 +1,4 @@
 import { Event, Social, SocialMedia, Spotify } from "@/support/types";
-import generateUniqueKey from "@/support/generateUniqueKey";
 
 const fill = 'rgb(125, 211, 252';
 
@@ -163,7 +162,7 @@ export default function SocialLinks(props: { event: Event }) {
 
   return links.map((link) => (
     <div
-      key={generateUniqueKey(link.url)}
+      key={link.url}
       onClick={() => clickHandler(link.url!)}
       className="cursor-pointer p-4 opacity-60 active:opacity-100 lg:hover:opacity-100"
     >
