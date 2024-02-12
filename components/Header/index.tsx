@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useState } from "react";
-import generateUniqueKey from "@/support/generateUniqueKey";
 
 const days = [
   "Monday",
@@ -14,11 +13,19 @@ const days = [
 
 interface Props {
   currentDay: number;
-  dateHandler: (event: any) => void;
+  setSelectedDate: (newDate: Date) => void;
 }
 
-const Header = ({ currentDay, dateHandler }: Props) => {
+const Header = ({ currentDay, setSelectedDate }: Props) => {
   const [activeDay, setActiveDay] = useState(currentDay);
+
+  const dateHandler = (event: any) => {
+    const diff = event.target.value - currentDay;
+    const today = new Date();
+    today.setDate(today.getDate() + diff);
+
+    setSelectedDate(today);
+  };
 
   const handleClick = (e: any, i: number) => {
     dateHandler(e);
@@ -31,13 +38,13 @@ const Header = ({ currentDay, dateHandler }: Props) => {
     </h1>
     <select
       className="h-full bg-rose-600 text-white italic font-semibold text-xl md:text-2xl rounded-none lg:hidden"
-      defaultValue={currentDay}
       onChange={dateHandler}
-      >
+    >
       {days.map((day, index) => (
-        <option value={index} key={generateUniqueKey(day)} disabled={index < currentDay}>
+        <option value={index} key={`${index}-${day}`} disabled={index < currentDay}>
           {currentDay === index ? "Today" : day}
         </option>
+
       ))}
     </select>
     <div className="h-full hidden lg:flex">
@@ -45,7 +52,7 @@ const Header = ({ currentDay, dateHandler }: Props) => {
         index >= currentDay && (
           <button
           className={`${activeDay === index ? 'bg-rose-600' : 'hover:bg-blue-500/10'} flex items-center text-white px-3 italic font-semibold opacity-90 hover:opacity-100`}
-          value={index} key={generateUniqueKey(day)} onClick={(e) => handleClick(e, index)}>
+          value={index} key={`${day}-${index}`} onClick={(e) => handleClick(e, index)}>
           {currentDay === index ? "Today" : day}
         </button>
       )))}

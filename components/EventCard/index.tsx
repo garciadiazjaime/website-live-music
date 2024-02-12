@@ -51,7 +51,7 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
     >
       {selected && (
         <div className={`absolute flex w-full h-full`}>
-          <div className="border border-rose-500 w-full my-1 lg:m-1"></div>
+          <div className="border border-rose-500 w-full my-3 lg:m-1"></div>
         </div>
       )}
       <div className="flex gap-0 w-full relative">
@@ -118,7 +118,7 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
       >
         <button onClick={() => gotoEventPage(event)}>
           <h2 className="cursor-pointer capitalize text-left pl-4 py-6 pb-2 pr-8 text-2xl font-bold text-overflow-elipsis flex justify-between items-center lg:opacity-80 lg:hover:opacity-100">
-            {event.name.toLowerCase()}
+            <span className="line-clamp-2">{event.name.toLowerCase()}</span>
             <Image
               src="/images/chevron.svg"
               width="60"
