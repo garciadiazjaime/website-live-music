@@ -8,7 +8,6 @@ import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
 import EventCard from "@/components/EventCard";
-import generateUniqueKey from "@/support/generateUniqueKey";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -24,16 +23,6 @@ function slugify(str: string) {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 }
-
-const days = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
 
 const containerStyle = {
   width: "100%",
@@ -102,22 +91,19 @@ export default function Home() {
 
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
+    const scrollSnapSection = document.getElementById('scrollSnap');
     const element = document.getElementById(getEventID(event));
+    scrollSnapSection?.classList.remove('snap-mandatory', 'snap-x');
     element?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    setTimeout(() => {
+      scrollSnapSection?.classList.add('snap-mandatory', 'snap-x');
+    }, 1000);
   };
 
   useEffect(() => {
     const _events = filterEventsByDate(events, selectedDate);
     setSelectedEvents(_events);
   }, [selectedDate]);
-
-  const dateHandler = (event: any) => {
-    const diff = event.target.value - currentDay;
-    const today = new Date();
-    today.setDate(today.getDate() + diff);
-
-    setSelectedDate(today);
-  };
 
   const setPin = (event: Event) => {
     setSelectedEvent(event);
@@ -132,13 +118,13 @@ export default function Home() {
 
   return (
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
-      <Header currentDay={currentDay} dateHandler={dateHandler} />
+      <Header currentDay={currentDay} setSelectedDate={setSelectedDate}/>
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
-        <section className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
+        <section id="scrollSnap" className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-mandatory snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
           <div className="flex lg:flex-col gap-4 lg:gap-6">
             {selectedEvents.map((event, index) => (
               <div
-                key={generateUniqueKey(index)}
+                key={getEventID(event)}
                 className="w-11/12 md:w-1/2 lg:w-full shrink-0 snap-center first:pl-8 lg:first:pl-0 last:pr-8 lg:last:pr-0 items-stretch"
                 id={getEventID(event)}
               >
@@ -159,7 +145,7 @@ export default function Home() {
             >
               {selectedEvents.map((event, index) => {
                 return <MarkerF
-                  key={generateUniqueKey(index)}
+                  key={`${getEventID(event)}-markerF`}
                   onClick={() => markerClickHandler(event)}
                   position={{
                     lat: event.location.lat,
