@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
-
+import { useRouter } from "next/navigation";
 import TagManager from "react-gtm-module";
+
 import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
@@ -40,6 +41,7 @@ const filterEventsByDate = (events: Event[], date: Date) =>
   );
 
 export default function Home() {
+  const router = useRouter();
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(
     filterEventsByDate(events, selectedDate)
@@ -52,7 +54,7 @@ export default function Home() {
     lng: -87.6271142,
   });
 
-  const onLoad = (map: google.maps.Map)  => {
+  const onLoad = (map: google.maps.Map) => {
     setMap(map);
   };
 
@@ -91,12 +93,16 @@ export default function Home() {
 
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
-    const scrollSnapSection = document.getElementById('scrollSnap');
+    const scrollSnapSection = document.getElementById("scrollSnap");
     const element = document.getElementById(getEventID(event));
-    scrollSnapSection?.classList.remove('snap-mandatory', 'snap-x');
-    element?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    scrollSnapSection?.classList.remove("snap-mandatory", "snap-x");
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
     setTimeout(() => {
-      scrollSnapSection?.classList.add('snap-mandatory', 'snap-x');
+      scrollSnapSection?.classList.add("snap-mandatory", "snap-x");
     }, 1000);
   };
 
@@ -111,16 +117,43 @@ export default function Home() {
       map.setZoom(13);
       map.panTo({
         lat: event.location.lat,
-        lng: event.location.lng
+        lng: event.location.lng,
       });
     }
-  }
+  };
+
+  useEffect(() => {
+    const slug = window.location.hash.replace("#", "");
+
+    if (!slug) {
+      return;
+    }
+
+    const event = events.find((event) => event.slug === slug);
+    if (!event) {
+      // todo: show not found event pop-up
+    }
+
+    setPin(event);
+    markerClickHandler(event);
+  }, []);
+
+  useEffect(() => {
+    if (!selectedEvent) {
+      return;
+    }
+
+    router.push(`#${selectedEvent.slug}`);
+  }, [selectedEvent]);
 
   return (
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
-      <Header currentDay={currentDay} setSelectedDate={setSelectedDate}/>
+      <Header currentDay={currentDay} setSelectedDate={setSelectedDate} />
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
-        <section id="scrollSnap" className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-mandatory snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll">
+        <section
+          id="scrollSnap"
+          className="w-full lg:w-96 lg:h-full overflow-x-scroll snap-mandatory snap-x lg:snap-none lg:overflow-x-hidden lg:overflow-y-scroll"
+        >
           <div className="flex lg:flex-col gap-4 lg:gap-6">
             {selectedEvents.map((event, index) => (
               <div
@@ -128,7 +161,15 @@ export default function Home() {
                 className="w-11/12 md:w-1/2 lg:w-full shrink-0 snap-center first:pl-8 lg:first:pl-0 last:pr-8 lg:last:pr-0 items-stretch"
                 id={getEventID(event)}
               >
-                <EventCard event={event} index={index} selected={selectedEvent && getEventID(event) === getEventID(selectedEvent)} setPin={() => setPin(event)}/>
+                <EventCard
+                  event={event}
+                  index={index}
+                  selected={
+                    selectedEvent &&
+                    getEventID(event) === getEventID(selectedEvent)
+                  }
+                  setPin={() => setPin(event)}
+                />
               </div>
             ))}
           </div>
@@ -144,17 +185,23 @@ export default function Home() {
               onUnmount={onUnmount}
             >
               {selectedEvents.map((event, index) => {
-                return <MarkerF
-                  key={`${getEventID(event)}-markerF`}
-                  onClick={() => markerClickHandler(event)}
-                  position={{
-                    lat: event.location.lat,
-                    lng: event.location.lng,
-                  }}
-                  options={{
-                    icon: selectedEvent && getEventID(event) === getEventID(selectedEvent) ? '/images/marker-selected.webp' : '/images/marker.webp'
-                  }}
-                />
+                return (
+                  <MarkerF
+                    key={`${getEventID(event)}-markerF`}
+                    onClick={() => markerClickHandler(event)}
+                    position={{
+                      lat: event.location.lat,
+                      lng: event.location.lng,
+                    }}
+                    options={{
+                      icon:
+                        selectedEvent &&
+                        getEventID(event) === getEventID(selectedEvent)
+                          ? "/images/marker-selected.webp"
+                          : "/images/marker.webp",
+                    }}
+                  />
+                );
               })}
             </GoogleMap>
           )}

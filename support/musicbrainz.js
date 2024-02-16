@@ -1,9 +1,24 @@
 const cheerio = require("cheerio");
+const { compareTwoStrings } = require("string-similarity");
 
 const { validURL, getGenres } = require("./misc");
 const logger = require("./logger")("musicbrainz");
 
-async function getProfileFromMusicbrainz(name) {
+function isMatch(artistName, artistResult) {
+  if (!artistName || !artistResult) {
+    return false;
+  }
+
+  const result = compareTwoStrings(
+    artistName.toLowerCase(),
+    artistResult.toLowerCase()
+  );
+
+  return result >= 0.5;
+}
+
+async function getProfileFromMusicbrainz(artistName) {
+  const name = artistName.trim().replace(/ /g, "+").replace("and+", "");
   const domain = "https://musicbrainz.org";
   const url = `${domain}/search?query=${name}&type=artist&method=indexed`;
   logger.info(`searching brainz`, { name });
@@ -18,6 +33,12 @@ async function getProfileFromMusicbrainz(name) {
 
   if (!anchor.length) {
     logger.info(`no artist results`, { name });
+    return;
+  }
+
+  const artistResult = anchor.text();
+  if (!isMatch(artistName, artistResult)) {
+    logger.info(`NO_MATCH`, { artist: artistName, result: artistResult });
     return;
   }
 
@@ -65,11 +86,10 @@ async function getSocialFromProfile(profile) {
 }
 
 async function getMusicbrainz(name) {
-  const artistName = name.trim().replace(/ /g, "+").replace("and+", "");
-  const profile = await getProfileFromMusicbrainz(artistName);
+  const profile = await getProfileFromMusicbrainz(name);
 
   if (!validURL(profile)) {
-    logger.info(`invalid profile`, { name, profile: profile });
+    logger.info(`invalid profile`, { name, profile });
     return;
   }
 

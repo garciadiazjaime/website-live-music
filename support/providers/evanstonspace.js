@@ -138,14 +138,14 @@ async function getArtists(event) {
 
 async function main() {
   const preLocation = {
-    venue: "Thalia Hall",
-    provider: "THALIA_HALL",
+    venue: "Evanston SPACE",
+    provider: "EVANSTON_SPACE",
     city: "Chicago",
-    website: "https://www.thaliahallchicago.com/",
+    website: "https://www.evanstonspace.com/",
   };
   const location = await getGMapsLocation(preLocation);
 
-  if (!location.website?.includes("thaliahallchicago.com")) {
+  if (!location.website?.includes("evanstonspace.com")) {
     logger.error("ERROR_WEBSITE", {
       website: preLocation.website,
       maps: location.website,
@@ -158,12 +158,12 @@ async function main() {
   }
 
   // todo: this api-key might expire
+  // todo: this is the same as thaliahallchicago
   const html = await extract(
-    "https://app.ticketmaster.com/discovery/v2/events.json?size=50&apikey=Mj9g4ZY7tXTmixNb7zMOAP85WPGAfFL8&venueId=rZ7HnEZ17aJq7&venueId=KovZpZAktlaA"
+    "https://app.ticketmaster.com/discovery/v2/events.json?size=50&apikey=8GdH3nQcFnnZkzWGuPSGkh9oIKUGjffQ&venueId=KovZpakJQe&venueId=rZ7HnEZ173FQ4&venueId=rZ7HnEZ17fSA4&source=ticketmaster,ticketweb"
   );
 
   const preEvents = transform(html, preLocation);
-
   await async.eachSeries(preEvents, async (preEvent) => {
     const artists = await getArtists(preEvent);
 

@@ -1,39 +1,35 @@
 {
   "parent": {
     "raw": {
-      "country": 2,
-      "rock": 31,
-      "pop": 28,
-      "folk": 11,
-      "punk": 8,
-      "metal": 8,
-      "experimental": 1,
-      "hip hop": 6,
+      "rock": 39,
+      "pop": 30,
+      "electronic": 16,
       "r&b": 4,
-      "electronic": 9,
+      "hip hop": 6,
+      "punk": 3,
       "asian": 1,
-      "jazz": 1
+      "metal": 8,
+      "country": 3,
+      "folk": 11,
+      "jazz": 2,
+      "experimental": 2
     },
     "sort": [
       [
         "rock",
-        31
+        39
       ],
       [
         "pop",
-        28
+        30
+      ],
+      [
+        "electronic",
+        16
       ],
       [
         "folk",
         11
-      ],
-      [
-        "electronic",
-        9
-      ],
-      [
-        "punk",
-        8
       ],
       [
         "metal",
@@ -48,493 +44,29 @@
         4
       ],
       [
+        "punk",
+        3
+      ],
+      [
         "country",
+        3
+      ],
+      [
+        "jazz",
         2
       ],
       [
         "experimental",
-        1
+        2
       ],
       [
         "asian",
-        1
-      ],
-      [
-        "jazz",
         1
       ]
     ]
   },
   "artists": {
     "raw": {
-      "37": {
-        "pk": 37,
-        "name": "Elizabeth Moen",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb9d7d577f3b75015f64c02a3e",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "iowa indie"
-          ],
-          "parents": []
-        }
-      },
-      "39": {
-        "pk": 39,
-        "name": "Tom Wes",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb4945ec6912d76051b0e63541",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "australian americana",
-            "folk-pop"
-          ],
-          "parents": []
-        }
-      },
-      "40": {
-        "pk": 40,
-        "name": "t",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb4945ec6912d76051b0e63541",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "australian americana",
-            "folk-pop"
-          ],
-          "parents": []
-        }
-      },
-      "44": {
-        "pk": 44,
-        "name": "Bandits on the Run",
-        "image": "https://i1.sndcdn.com/avatars-bgZcoWV3D5chLHyE-EOMU3g-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "folk-pop",
-            "brooklyn indie"
-          ],
-          "parents": []
-        }
-      },
-      "51": {
-        "pk": 51,
-        "name": "In The Pines",
-        "image": "https://www.inthepines.band/processed/ada7d4ba7ea916d16671836fce26edeb2c317c92-1500x1000/baseAsset-1200.jpg?w=1200&h=630&fit=clip",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "cincinnati indie"
-          ],
-          "parents": []
-        }
-      },
-      "56": {
-        "pk": 56,
-        "name": "John McCauley of Deer Tick",
-        "image": "http://static1.squarespace.com/static/58dacc1d37c581eb181574ee/t/6447da1262e2e8357ad99ea3/1682430482367/IMG_2905.PNG?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative country",
-            "modern folk rock",
-            "new americana",
-            "rhode island indie",
-            "stomp and holler"
-          ],
-          "parents": [
-            "country",
-            "rock",
-            "pop",
-            "folk"
-          ]
-        }
-      },
-      "61": {
-        "pk": 61,
-        "name": "Blick Bassy",
-        "image": "https://i.scdn.co/image/ab6761610000e5ebb1f1796e152b9f397e5b16f6",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "afropop",
-            "mande pop",
-            "world"
-          ],
-          "parents": []
-        }
-      },
-      "62": {
-        "pk": 62,
-        "name": "The Brother Brothers",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "indie folk"
-          ],
-          "parents": [
-            "folk"
-          ]
-        }
-      },
-      "218": {
-        "pk": 218,
-        "name": "Loss Leader",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "death doom",
-            "funeral doom",
-            "tennessee metal"
-          ],
-          "parents": []
-        }
-      },
-      "261": {
-        "pk": 261,
-        "name": "Lever (IL)",
-        "image": "https://static.wixstatic.com/media/711410_8079be176554479db020e419e4f60375%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/711410_8079be176554479db020e419e4f60375%7Emv2.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicago pop punk",
-            "grunge revival"
-          ],
-          "parents": []
-        }
-      },
-      "315": {
-        "pk": 315,
-        "name": "KHARMA",
-        "image": "https://linktr.ee/og/image/Kharmahc.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "metallic hardcore",
-            "chicago hardcore"
-          ],
-          "parents": []
-        }
-      },
-      "318": {
-        "pk": 318,
-        "name": "DETERIORATION  (MN)",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "grindcore",
-            "powerviolence",
-            "american grindcore",
-            "goregrind",
-            "minnesota metal"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      "325": {
-        "pk": 325,
-        "name": "THE OCEAN",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "djent",
-            "progressive metal",
-            "atmospheric post-metal",
-            "atmospheric sludge",
-            "post-metal",
-            "progressive sludge",
-            "sludge metal"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      "326": {
-        "pk": 326,
-        "name": "THE WORLD IS A BEAUTIFUL PLACE & I AM NO LONGER AFRAID TO DIE",
-        "image": "https://uploads-ssl.webflow.com/60fc6e133bc79656cf2cd905/630e396abc9ca47f4791bd4f_ThankYouForBeingHere_TWIABP-SocialShare.png",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "emo",
-            "alternative emo",
-            "bubblegrunge",
-            "dreamo",
-            "midwest emo",
-            "new england emo"
-          ],
-          "parents": [
-            "punk",
-            "pop",
-            "rock"
-          ]
-        }
-      },
-      "327": {
-        "pk": 327,
-        "name": "SHY, LOW",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "american post-rock"
-          ],
-          "parents": []
-        }
-      },
-      "351": {
-        "pk": 351,
-        "name": "ASHBRINGER",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "atmospheric black metal",
-            "minneapolis metal",
-            "voidgaze"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      "352": {
-        "pk": 352,
-        "name": "VARAHA",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "atmospheric doom"
-          ],
-          "parents": []
-        }
-      },
-      "353": {
-        "pk": 353,
-        "name": "DISMALIMERENCE",
-        "image": "https://linktr.ee/og/image/Dismalimerence.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "progressive black metal"
-          ],
-          "parents": []
-        }
-      },
-      "357": {
-        "pk": 357,
-        "name": "AUTHOR & PUNISHER",
-        "image": "https://linktr.ee/og/image/authorandpunisher.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "experimental",
-            "laboratorio",
-            "dub metal",
-            "one-person band"
-          ],
-          "parents": [
-            "experimental",
-            "rock"
-          ]
-        }
-      },
-      "358": {
-        "pk": 358,
-        "name": "MORNE",
-        "image": "https://linktr.ee/og/image/morne.boston.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "boston metal",
-            "neo-crust"
-          ],
-          "parents": []
-        }
-      },
-      "359": {
-        "pk": 359,
-        "name": "GLASSING",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "austin metal"
-          ],
-          "parents": []
-        }
-      },
-      "371": {
-        "pk": 371,
-        "name": "QWEL",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "abstract hip hop",
-            "chicago rap",
-            "underground rap"
-          ],
-          "parents": [
-            "hip hop"
-          ]
-        }
-      },
-      "378": {
-        "pk": 378,
-        "name": "DISTRICT 97",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "crossover prog"
-          ],
-          "parents": []
-        }
-      },
-      "381": {
-        "pk": 381,
-        "name": "SPENZO",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicago bop",
-            "drill"
-          ],
-          "parents": [
-            "hip hop"
-          ]
-        }
-      },
-      "382": {
-        "pk": 382,
-        "name": "BIGGA $TATE",
-        "image": "https://united-masters.imgix.net/mxMmJ96XHjcB",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "iowa hip hop"
-          ],
-          "parents": []
-        }
-      },
-      "400": {
-        "pk": 400,
-        "name": "CANCERSLUG",
-        "image": "http://img.youtube.com/vi/WXaDQP-62E8/0.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "horror punk"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      "444": {
-        "pk": 444,
-        "name": "TALK",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "new wave",
-            "new romantic",
-            "melancholia",
-            "new wave pop",
-            "sophisti-pop",
-            "synthpop"
-          ],
-          "parents": [
-            "rock",
-            "pop"
-          ]
-        }
-      },
-      "451": {
-        "pk": 451,
-        "name": "Tkay Maidza",
-        "image": "http://static1.squarespace.com/static/64cbec56e43d497b52bf246e/t/64cc146e4538453d9de1b1fa/1691096174965/sm_butterfly.jpg?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative r&b",
-            "australian hip hop"
-          ],
-          "parents": [
-            "r&b"
-          ]
-        }
-      },
-      "452": {
-        "pk": 452,
-        "name": "Totally Cashed",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicago pop punk"
-          ],
-          "parents": []
-        }
-      },
-      "453": {
-        "pk": 453,
-        "name": "VARSITY",
-        "image": "https://i1.sndcdn.com/avatars-000528307206-tj78nc-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "indie rock",
-            "chicago indie",
-            "indie garage rock"
-          ],
-          "parents": [
-            "rock"
-          ]
-        }
-      },
-      "457": {
-        "pk": 457,
-        "name": "Talisk",
-        "image": "https://static.wixstatic.com/media/0c819f_696dc3cf586d4db0978cbbe46d75d931~mv2.jpg/v1/fill/w_2500,h_1875,al_c/0c819f_696dc3cf586d4db0978cbbe46d75d931~mv2.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "concertina",
-            "irish neo-traditional",
-            "jig and reel",
-            "scottish folk",
-            "trad quebecois"
-          ],
-          "parents": []
-        }
-      },
-      "459": {
-        "pk": 459,
-        "name": "Mark Ambor",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "singer-songwriter pop"
-          ],
-          "parents": [
-            "pop"
-          ]
-        }
-      },
       "461": {
         "pk": 461,
         "name": "Pigs Pigs Pigs Pigs Pigs Pigs Pigs",
@@ -560,18 +92,6 @@
           "parents": [
             "electronic"
           ]
-        }
-      },
-      "464": {
-        "pk": 464,
-        "name": "Chico",
-        "image": "https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007966/artist_photo/63371.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "anime rock"
-          ],
-          "parents": []
         }
       },
       "466": {
@@ -1543,477 +1063,507 @@
             "electronic"
           ]
         }
-      }
-    },
-    "sort": [
-      {
-        "pk": 37,
-        "name": "Elizabeth Moen",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb9d7d577f3b75015f64c02a3e",
+      },
+      "565": {
+        "pk": 565,
+        "name": "Mama’s Broke",
+        "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/266221/f45d958a06eb728a501348b9ab38e2bb778e7ace/original/mboriginal.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
         "disabled": false,
         "genres": {
           "nodes": [
-            "iowa indie"
+            "canadian americana"
           ],
           "parents": []
         }
       },
-      {
-        "pk": 39,
-        "name": "Tom Wes",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb4945ec6912d76051b0e63541",
+      "567": {
+        "pk": 567,
+        "name": "Lola Kirke",
+        "image": "http://static1.squarespace.com/static/5926542bebbd1a74b7aff511/t/64dc22e52beae00dcb226e9e/1692148453925/LolaKirke_logo_2023.png?format=1500w",
         "disabled": false,
         "genres": {
           "nodes": [
-            "australian americana",
-            "folk-pop"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 40,
-        "name": "t",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb4945ec6912d76051b0e63541",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "australian americana",
-            "folk-pop"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 44,
-        "name": "Bandits on the Run",
-        "image": "https://i1.sndcdn.com/avatars-bgZcoWV3D5chLHyE-EOMU3g-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "folk-pop",
-            "brooklyn indie"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 51,
-        "name": "In The Pines",
-        "image": "https://www.inthepines.band/processed/ada7d4ba7ea916d16671836fce26edeb2c317c92-1500x1000/baseAsset-1200.jpg?w=1200&h=630&fit=clip",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "cincinnati indie"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 56,
-        "name": "John McCauley of Deer Tick",
-        "image": "http://static1.squarespace.com/static/58dacc1d37c581eb181574ee/t/6447da1262e2e8357ad99ea3/1682430482367/IMG_2905.PNG?format=1500w",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "alternative country",
-            "modern folk rock",
-            "new americana",
-            "rhode island indie",
-            "stomp and holler"
+            "alternative americana"
           ],
           "parents": [
-            "country",
-            "rock",
-            "pop",
-            "folk"
-          ]
-        }
-      },
-      {
-        "pk": 61,
-        "name": "Blick Bassy",
-        "image": "https://i.scdn.co/image/ab6761610000e5ebb1f1796e152b9f397e5b16f6",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "afropop",
-            "mande pop",
-            "world"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 62,
-        "name": "The Brother Brothers",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "indie folk"
-          ],
-          "parents": [
-            "folk"
-          ]
-        }
-      },
-      {
-        "pk": 218,
-        "name": "Loss Leader",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "death doom",
-            "funeral doom",
-            "tennessee metal"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 261,
-        "name": "Lever (IL)",
-        "image": "https://static.wixstatic.com/media/711410_8079be176554479db020e419e4f60375%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/711410_8079be176554479db020e419e4f60375%7Emv2.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicago pop punk",
-            "grunge revival"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 315,
-        "name": "KHARMA",
-        "image": "https://linktr.ee/og/image/Kharmahc.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "metallic hardcore",
-            "chicago hardcore"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 318,
-        "name": "DETERIORATION  (MN)",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "grindcore",
-            "powerviolence",
-            "american grindcore",
-            "goregrind",
-            "minnesota metal"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      {
-        "pk": 325,
-        "name": "THE OCEAN",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "djent",
-            "progressive metal",
-            "atmospheric post-metal",
-            "atmospheric sludge",
-            "post-metal",
-            "progressive sludge",
-            "sludge metal"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      {
-        "pk": 326,
-        "name": "THE WORLD IS A BEAUTIFUL PLACE & I AM NO LONGER AFRAID TO DIE",
-        "image": "https://uploads-ssl.webflow.com/60fc6e133bc79656cf2cd905/630e396abc9ca47f4791bd4f_ThankYouForBeingHere_TWIABP-SocialShare.png",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "emo",
-            "alternative emo",
-            "bubblegrunge",
-            "dreamo",
-            "midwest emo",
-            "new england emo"
-          ],
-          "parents": [
-            "punk",
-            "pop",
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 327,
-        "name": "SHY, LOW",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "american post-rock"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 351,
-        "name": "ASHBRINGER",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "atmospheric black metal",
-            "minneapolis metal",
-            "voidgaze"
-          ],
-          "parents": [
-            "metal"
-          ]
-        }
-      },
-      {
-        "pk": 352,
-        "name": "VARAHA",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "atmospheric doom"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 353,
-        "name": "DISMALIMERENCE",
-        "image": "https://linktr.ee/og/image/Dismalimerence.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "progressive black metal"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 357,
-        "name": "AUTHOR & PUNISHER",
-        "image": "https://linktr.ee/og/image/authorandpunisher.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "experimental",
-            "laboratorio",
-            "dub metal",
-            "one-person band"
-          ],
-          "parents": [
-            "experimental",
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 358,
-        "name": "MORNE",
-        "image": "https://linktr.ee/og/image/morne.boston.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "boston metal",
-            "neo-crust"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 359,
-        "name": "GLASSING",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "austin metal"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 371,
-        "name": "QWEL",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "abstract hip hop",
-            "chicago rap",
-            "underground rap"
-          ],
-          "parents": [
-            "hip hop"
-          ]
-        }
-      },
-      {
-        "pk": 378,
-        "name": "DISTRICT 97",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "crossover prog"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 381,
-        "name": "SPENZO",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "chicago bop",
-            "drill"
-          ],
-          "parents": [
-            "hip hop"
-          ]
-        }
-      },
-      {
-        "pk": 382,
-        "name": "BIGGA $TATE",
-        "image": "https://united-masters.imgix.net/mxMmJ96XHjcB",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "iowa hip hop"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 400,
-        "name": "CANCERSLUG",
-        "image": "http://img.youtube.com/vi/WXaDQP-62E8/0.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "horror punk"
-          ],
-          "parents": [
-            "punk"
-          ]
-        }
-      },
-      {
-        "pk": 444,
-        "name": "TALK",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "new wave",
-            "new romantic",
-            "melancholia",
-            "new wave pop",
-            "sophisti-pop",
-            "synthpop"
-          ],
-          "parents": [
-            "rock",
             "pop"
           ]
         }
       },
-      {
-        "pk": 451,
-        "name": "Tkay Maidza",
-        "image": "http://static1.squarespace.com/static/64cbec56e43d497b52bf246e/t/64cc146e4538453d9de1b1fa/1691096174965/sm_butterfly.jpg?format=1500w",
+      "568": {
+        "pk": 568,
+        "name": "Wild Party",
+        "image": "",
         "disabled": false,
         "genres": {
           "nodes": [
-            "alternative r&b",
-            "australian hip hop"
+            "indie rockism",
+            "hopebeat"
+          ],
+          "parents": []
+        }
+      },
+      "569": {
+        "pk": 569,
+        "name": "The Messthetics and James Brandon Lewis",
+        "image": "http://static1.squarespace.com/static/551bc75ce4b0c2174c3b8799/t/634802e407cbb040dccdfe6f/1665663716769/JBL_EFI_Social+Share+-+1200+x+630.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "modern free jazz"
+          ],
+          "parents": []
+        }
+      },
+      "570": {
+        "pk": 570,
+        "name": "Jeffrey Martin",
+        "image": "https://assets-global.website-files.com/6579b10df7dab74fc2e10b2a/6594237a4aac925284bc9f45_OG-Jeffrey-Martin.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "deep new americana",
+            "southern americana",
+            "stomp and flutter"
           ],
           "parents": [
+            "country"
+          ]
+        }
+      },
+      "573": {
+        "pk": 573,
+        "name": "Lewis OfMan",
+        "image": "https://i1.sndcdn.com/avatars-000454098873-br629h-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "french indie pop",
+            "french indietronica"
+          ],
+          "parents": []
+        }
+      },
+      "574": {
+        "pk": 574,
+        "name": "Matthew Logan Vasquez",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "modern folk rock"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      "575": {
+        "pk": 575,
+        "name": "Combo Chimbita and Pachyman",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "latintronica",
+            "tropical alternativo"
+          ],
+          "parents": []
+        }
+      },
+      "576": {
+        "pk": 576,
+        "name": "LOONY",
+        "image": "https://loonymoonchild.com/wp-content/uploads/2024/01/Loony2024-Desktop-scaled.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "canadian contemporary r&b",
+            "indie r&b"
+          ],
+          "parents": []
+        }
+      },
+      "577": {
+        "pk": 577,
+        "name": "Buck Meek",
+        "image": "http://static1.squarespace.com/static/64481b6232c5f60e57713644/t/645a91201ba1cc45cb47eba2/1683656992185/BuckMeekHeader.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "small room"
+          ],
+          "parents": []
+        }
+      },
+      "578": {
+        "pk": 578,
+        "name": "Mount Kimbie",
+        "image": "https://d1rgjmn2wmqeif.cloudfront.net/h/g/20356-1.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "electronica",
+            "indie soul",
+            "indietronica",
+            "electra",
+            "future garage",
+            "wonky"
+          ],
+          "parents": [
+            "electronic",
+            "jazz"
+          ]
+        }
+      },
+      "579": {
+        "pk": 579,
+        "name": "Janine",
+        "image": "https://i1.sndcdn.com/avatars-UAGOop8Q8NnlWOrW-6SoLzw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "nz pop",
+            "pop r&b"
+          ],
+          "parents": []
+        }
+      },
+      "580": {
+        "pk": 580,
+        "name": "Humbird",
+        "image": "https://i1.sndcdn.com/avatars-000634545297-jt6xmj-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "midwest americana"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      "584": {
+        "pk": 584,
+        "name": "Medium Build",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alaska indie"
+          ],
+          "parents": []
+        }
+      },
+      "586": {
+        "pk": 586,
+        "name": "Shannon & The Clams",
+        "image": "https://shannonletthemusicplay.com/wp-content/uploads/2020/04/Shannon_Logo_Transparent.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "shatta",
+            "zouk riddim"
+          ],
+          "parents": []
+        }
+      },
+      "587": {
+        "pk": 587,
+        "name": "Hollow Coves",
+        "image": "https://i1.sndcdn.com/avatars-cvU9mLAFQx8m57ln-f1qnZA-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie folk",
+            "modern indie folk",
+            "indie anthem-folk"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      "598": {
+        "pk": 598,
+        "name": "Rachael & Vilray",
+        "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "acoustic pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "674": {
+        "pk": 674,
+        "name": "André 3000",
+        "image": "http://shop.amyriadofpyramids.com/cdn/shop/files/amop_og_share_adfbd2c3-d2bd-4ebd-bdbb-ff7d5fd048d4.png?v=1700146306",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "hip hop",
+            "southern hip hop",
+            "dirty south rap",
+            "atl hip hop"
+          ],
+          "parents": [
+            "hip hop",
             "r&b"
           ]
         }
       },
-      {
-        "pk": 452,
-        "name": "Totally Cashed",
-        "image": "",
+      "675": {
+        "pk": 675,
+        "name": "Rachael & Vilray",
+        "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_TABLET_LANDSCAPE_LARGE_16_9.jpg",
         "disabled": false,
         "genres": {
           "nodes": [
-            "chicago pop punk"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 453,
-        "name": "VARSITY",
-        "image": "https://i1.sndcdn.com/avatars-000528307206-tj78nc-t500x500.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "indie rock",
-            "chicago indie",
-            "indie garage rock"
-          ],
-          "parents": [
-            "rock"
-          ]
-        }
-      },
-      {
-        "pk": 457,
-        "name": "Talisk",
-        "image": "https://static.wixstatic.com/media/0c819f_696dc3cf586d4db0978cbbe46d75d931~mv2.jpg/v1/fill/w_2500,h_1875,al_c/0c819f_696dc3cf586d4db0978cbbe46d75d931~mv2.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "concertina",
-            "irish neo-traditional",
-            "jig and reel",
-            "scottish folk",
-            "trad quebecois"
-          ],
-          "parents": []
-        }
-      },
-      {
-        "pk": 459,
-        "name": "Mark Ambor",
-        "image": "",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "singer-songwriter pop"
+            "jazz pop"
           ],
           "parents": [
             "pop"
           ]
         }
       },
+      "716": {
+        "pk": 716,
+        "name": "Sierra Ferrell",
+        "image": "https://assets-global.website-files.com/6590575acec6558ecc0b6176/65a12b0ec5f22e9280f37b6e_Sierra-About.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "new americana",
+            "alternative americana"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "717": {
+        "pk": 717,
+        "name": "Cat Clyde",
+        "image": "https://catclydemusic.com/blog/wp-content/uploads/2021/04/blueblueblue.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "canadian folk",
+            "canadian singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      "720": {
+        "pk": 720,
+        "name": "Helado Negro",
+        "image": "https://i1.sndcdn.com/avatars-eKZszcHjDducd5YF-EKcPgA-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "experimental pop",
+            "deep latin alternative"
+          ],
+          "parents": []
+        }
+      },
+      "721": {
+        "pk": 721,
+        "name": "The Strumbellas",
+        "image": "https://thestrumbellas.ca/wp-content/uploads/2023/10/share.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "folk-pop",
+            "stomp and holler",
+            "canadian indie"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      "722": {
+        "pk": 722,
+        "name": "Ty Segall",
+        "image": "http://ty-segall.com/cdn/shop/files/50-og_1200x1200.jpg?v=1614335702",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "noise rock",
+            "indie rock",
+            "garage rock",
+            "bay area indie",
+            "noise pop",
+            "lo-fi",
+            "neo-psychedelic",
+            "oc indie"
+          ],
+          "parents": [
+            "rock",
+            "experimental"
+          ]
+        }
+      },
+      "724": {
+        "pk": 724,
+        "name": "Donny Benét",
+        "image": "https://i1.sndcdn.com/avatars-vSq1MAXEJiP7Wj9E-RdBSYw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "australian alternative pop",
+            "synth funk"
+          ],
+          "parents": []
+        }
+      },
+      "725": {
+        "pk": 725,
+        "name": "Yellow Days",
+        "image": "https://i1.sndcdn.com/avatars-000512486598-ofesny-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "bedroom pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      "726": {
+        "pk": 726,
+        "name": "Katie Pruitt",
+        "image": "http://static1.squarespace.com/static/65970d0f7427b76f98324ef7/t/6597246aa0012c14b49affae/1704404074597/KP_Mantras-600.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "nashville americana"
+          ],
+          "parents": []
+        }
+      },
+      "727": {
+        "pk": 727,
+        "name": "Prateek Kuhad",
+        "image": "https://www.prateekkuhad.com/images/OG.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "folk-pop",
+            "desi pop",
+            "hindi indie",
+            "indian indie",
+            "indian singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      "729": {
+        "pk": 729,
+        "name": "The Longest Johns",
+        "image": "http://static1.squarespace.com/static/62b2fc65beb1cd5c51f04def/t/656efe4e412e0a62f1da350b/1701772878872/fancy+b%26+w.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "shanty"
+          ],
+          "parents": []
+        }
+      },
+      "730": {
+        "pk": 730,
+        "name": "Primordial",
+        "image": "http://static1.squarespace.com/static/5a65f5b74c326d48b857e859/t/611a88b95853096f6a96a3b4/1629128908986/RESURGENCE+RITUAL.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "black metal",
+            "doom metal",
+            "celtic metal",
+            "folk black metal",
+            "folk metal",
+            "irish black metal",
+            "irish metal",
+            "pagan black metal",
+            "symphonic black metal"
+          ],
+          "parents": [
+            "metal"
+          ]
+        }
+      },
+      "732": {
+        "pk": 732,
+        "name": "Ladytron",
+        "image": "https://s1.ticketm.net/dam/a/e1a/6998f2b4-9bfe-4d2d-b353-c7fcefa1de1a_RETINA_PORTRAIT_3_2.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative dance",
+            "electronica",
+            "neo-synthpop",
+            "indietronica",
+            "electroclash",
+            "dark synthpop"
+          ],
+          "parents": [
+            "rock",
+            "electronic"
+          ]
+        }
+      },
+      "733": {
+        "pk": 733,
+        "name": "Guided By Voices",
+        "image": "http://static1.squarespace.com/static/5a9453b44cde7a45c4787d8a/t/5eb1db42ba4b962488d2877a/1588714308257/gbv_youtube_banner.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative rock",
+            "indie rock",
+            "chamber pop",
+            "noise pop",
+            "lo-fi",
+            "power pop",
+            "alternative pop",
+            "modern power pop",
+            "tape club",
+            "dayton indie",
+            "gbvfi",
+            "ohio indie"
+          ],
+          "parents": [
+            "rock",
+            "experimental"
+          ]
+        }
+      },
+      "735": {
+        "pk": 735,
+        "name": "Camera Obscura",
+        "image": "http://static1.squarespace.com/static/5b734220ec4eb7cb67f1ec9a/t/655333bf40ce6b746a5dbb17/1699951551789/camera_obscura_web_logo_white.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie pop",
+            "chamber pop",
+            "scottish indie",
+            "scottish rock"
+          ],
+          "parents": [
+            "pop",
+            "rock"
+          ]
+        }
+      }
+    },
+    "sort": [
       {
         "pk": 461,
         "name": "Pigs Pigs Pigs Pigs Pigs Pigs Pigs",
@@ -2039,18 +1589,6 @@
           "parents": [
             "electronic"
           ]
-        }
-      },
-      {
-        "pk": 464,
-        "name": "Chico",
-        "image": "https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007966/artist_photo/63371.jpg",
-        "disabled": false,
-        "genres": {
-          "nodes": [
-            "anime rock"
-          ],
-          "parents": []
         }
       },
       {
@@ -3020,6 +2558,504 @@
             "rock",
             "punk",
             "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 565,
+        "name": "Mama’s Broke",
+        "image": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/266221/f45d958a06eb728a501348b9ab38e2bb778e7ace/original/mboriginal.jpg/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "canadian americana"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 567,
+        "name": "Lola Kirke",
+        "image": "http://static1.squarespace.com/static/5926542bebbd1a74b7aff511/t/64dc22e52beae00dcb226e9e/1692148453925/LolaKirke_logo_2023.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative americana"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 568,
+        "name": "Wild Party",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie rockism",
+            "hopebeat"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 569,
+        "name": "The Messthetics and James Brandon Lewis",
+        "image": "http://static1.squarespace.com/static/551bc75ce4b0c2174c3b8799/t/634802e407cbb040dccdfe6f/1665663716769/JBL_EFI_Social+Share+-+1200+x+630.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "modern free jazz"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 570,
+        "name": "Jeffrey Martin",
+        "image": "https://assets-global.website-files.com/6579b10df7dab74fc2e10b2a/6594237a4aac925284bc9f45_OG-Jeffrey-Martin.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "deep new americana",
+            "southern americana",
+            "stomp and flutter"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 573,
+        "name": "Lewis OfMan",
+        "image": "https://i1.sndcdn.com/avatars-000454098873-br629h-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "french indie pop",
+            "french indietronica"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 574,
+        "name": "Matthew Logan Vasquez",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "modern folk rock"
+          ],
+          "parents": [
+            "rock"
+          ]
+        }
+      },
+      {
+        "pk": 575,
+        "name": "Combo Chimbita and Pachyman",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "latintronica",
+            "tropical alternativo"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 576,
+        "name": "LOONY",
+        "image": "https://loonymoonchild.com/wp-content/uploads/2024/01/Loony2024-Desktop-scaled.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "canadian contemporary r&b",
+            "indie r&b"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 577,
+        "name": "Buck Meek",
+        "image": "http://static1.squarespace.com/static/64481b6232c5f60e57713644/t/645a91201ba1cc45cb47eba2/1683656992185/BuckMeekHeader.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "small room"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 578,
+        "name": "Mount Kimbie",
+        "image": "https://d1rgjmn2wmqeif.cloudfront.net/h/g/20356-1.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "electronica",
+            "indie soul",
+            "indietronica",
+            "electra",
+            "future garage",
+            "wonky"
+          ],
+          "parents": [
+            "electronic",
+            "jazz"
+          ]
+        }
+      },
+      {
+        "pk": 579,
+        "name": "Janine",
+        "image": "https://i1.sndcdn.com/avatars-UAGOop8Q8NnlWOrW-6SoLzw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "nz pop",
+            "pop r&b"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 580,
+        "name": "Humbird",
+        "image": "https://i1.sndcdn.com/avatars-000634545297-jt6xmj-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "midwest americana"
+          ],
+          "parents": [
+            "country"
+          ]
+        }
+      },
+      {
+        "pk": 584,
+        "name": "Medium Build",
+        "image": "",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alaska indie"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 586,
+        "name": "Shannon & The Clams",
+        "image": "https://shannonletthemusicplay.com/wp-content/uploads/2020/04/Shannon_Logo_Transparent.png",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "shatta",
+            "zouk riddim"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 587,
+        "name": "Hollow Coves",
+        "image": "https://i1.sndcdn.com/avatars-cvU9mLAFQx8m57ln-f1qnZA-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie folk",
+            "modern indie folk",
+            "indie anthem-folk"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      {
+        "pk": 598,
+        "name": "Rachael & Vilray",
+        "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "acoustic pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 674,
+        "name": "André 3000",
+        "image": "http://shop.amyriadofpyramids.com/cdn/shop/files/amop_og_share_adfbd2c3-d2bd-4ebd-bdbb-ff7d5fd048d4.png?v=1700146306",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "hip hop",
+            "southern hip hop",
+            "dirty south rap",
+            "atl hip hop"
+          ],
+          "parents": [
+            "hip hop",
+            "r&b"
+          ]
+        }
+      },
+      {
+        "pk": 675,
+        "name": "Rachael & Vilray",
+        "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "jazz pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 716,
+        "name": "Sierra Ferrell",
+        "image": "https://assets-global.website-files.com/6590575acec6558ecc0b6176/65a12b0ec5f22e9280f37b6e_Sierra-About.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "new americana",
+            "alternative americana"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 717,
+        "name": "Cat Clyde",
+        "image": "https://catclydemusic.com/blog/wp-content/uploads/2021/04/blueblueblue.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "canadian folk",
+            "canadian singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 720,
+        "name": "Helado Negro",
+        "image": "https://i1.sndcdn.com/avatars-eKZszcHjDducd5YF-EKcPgA-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "experimental pop",
+            "deep latin alternative"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 721,
+        "name": "The Strumbellas",
+        "image": "https://thestrumbellas.ca/wp-content/uploads/2023/10/share.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "folk-pop",
+            "stomp and holler",
+            "canadian indie"
+          ],
+          "parents": [
+            "folk"
+          ]
+        }
+      },
+      {
+        "pk": 722,
+        "name": "Ty Segall",
+        "image": "http://ty-segall.com/cdn/shop/files/50-og_1200x1200.jpg?v=1614335702",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "noise rock",
+            "indie rock",
+            "garage rock",
+            "bay area indie",
+            "noise pop",
+            "lo-fi",
+            "neo-psychedelic",
+            "oc indie"
+          ],
+          "parents": [
+            "rock",
+            "experimental"
+          ]
+        }
+      },
+      {
+        "pk": 724,
+        "name": "Donny Benét",
+        "image": "https://i1.sndcdn.com/avatars-vSq1MAXEJiP7Wj9E-RdBSYw-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "australian alternative pop",
+            "synth funk"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 725,
+        "name": "Yellow Days",
+        "image": "https://i1.sndcdn.com/avatars-000512486598-ofesny-t500x500.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "bedroom pop"
+          ],
+          "parents": [
+            "pop"
+          ]
+        }
+      },
+      {
+        "pk": 726,
+        "name": "Katie Pruitt",
+        "image": "http://static1.squarespace.com/static/65970d0f7427b76f98324ef7/t/6597246aa0012c14b49affae/1704404074597/KP_Mantras-600.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "nashville americana"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 727,
+        "name": "Prateek Kuhad",
+        "image": "https://www.prateekkuhad.com/images/OG.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "folk-pop",
+            "desi pop",
+            "hindi indie",
+            "indian indie",
+            "indian singer-songwriter"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 729,
+        "name": "The Longest Johns",
+        "image": "http://static1.squarespace.com/static/62b2fc65beb1cd5c51f04def/t/656efe4e412e0a62f1da350b/1701772878872/fancy+b%26+w.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "shanty"
+          ],
+          "parents": []
+        }
+      },
+      {
+        "pk": 730,
+        "name": "Primordial",
+        "image": "http://static1.squarespace.com/static/5a65f5b74c326d48b857e859/t/611a88b95853096f6a96a3b4/1629128908986/RESURGENCE+RITUAL.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "black metal",
+            "doom metal",
+            "celtic metal",
+            "folk black metal",
+            "folk metal",
+            "irish black metal",
+            "irish metal",
+            "pagan black metal",
+            "symphonic black metal"
+          ],
+          "parents": [
+            "metal"
+          ]
+        }
+      },
+      {
+        "pk": 732,
+        "name": "Ladytron",
+        "image": "https://s1.ticketm.net/dam/a/e1a/6998f2b4-9bfe-4d2d-b353-c7fcefa1de1a_RETINA_PORTRAIT_3_2.jpg",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative dance",
+            "electronica",
+            "neo-synthpop",
+            "indietronica",
+            "electroclash",
+            "dark synthpop"
+          ],
+          "parents": [
+            "rock",
+            "electronic"
+          ]
+        }
+      },
+      {
+        "pk": 733,
+        "name": "Guided By Voices",
+        "image": "http://static1.squarespace.com/static/5a9453b44cde7a45c4787d8a/t/5eb1db42ba4b962488d2877a/1588714308257/gbv_youtube_banner.jpg?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "alternative rock",
+            "indie rock",
+            "chamber pop",
+            "noise pop",
+            "lo-fi",
+            "power pop",
+            "alternative pop",
+            "modern power pop",
+            "tape club",
+            "dayton indie",
+            "gbvfi",
+            "ohio indie"
+          ],
+          "parents": [
+            "rock",
+            "experimental"
+          ]
+        }
+      },
+      {
+        "pk": 735,
+        "name": "Camera Obscura",
+        "image": "http://static1.squarespace.com/static/5b734220ec4eb7cb67f1ec9a/t/655333bf40ce6b746a5dbb17/1699951551789/camera_obscura_web_logo_white.png?format=1500w",
+        "disabled": false,
+        "genres": {
+          "nodes": [
+            "indie pop",
+            "chamber pop",
+            "scottish indie",
+            "scottish rock"
+          ],
+          "parents": [
+            "pop",
+            "rock"
           ]
         }
       }
