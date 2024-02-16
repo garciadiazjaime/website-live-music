@@ -132,6 +132,7 @@ export default function Home() {
     const event = events.find((event) => event.slug === slug);
     if (!event) {
       // todo: show not found event pop-up
+      return;
     }
 
     setPin(event);
