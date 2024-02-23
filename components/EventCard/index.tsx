@@ -1,15 +1,17 @@
 import Image from "next/image";
 import { Event } from "../../support/types";
 import SocialLinks from "../socialLinks";
+import ShareDialog from "../ShareDialog";
+import { useState } from "react";
 
 interface Props {
   event: Event;
-  index: number;
   selected: boolean | undefined;
   setPin: () => void;
 }
 
-const EventCard = ({ event, index, selected = false, setPin }: Props) => {
+const EventCard = ({ event, selected = false, setPin }: Props) => {
+  const [openShareDialog, setOpenShareDialog] = useState(false);
   const getImage = (event: Event): string => {
     const artist = event.artists?.find((artist) => artist.metadata?.image);
     if (artist) {
@@ -25,19 +27,6 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
 
   const directionsClickHandler = (event: Event) => {
     window.open(event.location.url, "_blank");
-  };
-
-  const shareClickHandler = async (event: Event) => {
-    if (!navigator.share) {
-      return;
-    }
-
-    const shareData = {
-      title: "Chicago Events",
-      text: event.name,
-      url: event.url,
-    };
-    await navigator.share(shareData);
   };
 
   const gotoEventPage = (event: Event) => window.open(event.url, "_blank");
@@ -87,18 +76,19 @@ const EventCard = ({ event, index, selected = false, setPin }: Props) => {
               alt=""
             />
           </button>
-          <button
-            className={`flex justify-center items-center grow opacity-60 hover:opacity-100`}
-            onClick={() => shareClickHandler(event)}
+          <div
+            className={`flex justify-center items-center grow opacity-60 hover:opacity-100 relative cursor-pointer`}
+            onClick={() => setOpenShareDialog(!openShareDialog)}
           >
             <Image
-              src="/images/share.svg"
+              src={`/images/${openShareDialog ? 'close' : 'share'}.svg`}
               width="68"
               height="54"
               className="w-4 h-auto"
               alt=""
             />
-          </button>
+            <ShareDialog url={`https://livemusic.mintitmedia.com/chicago/events#${event.slug}`} open={openShareDialog} setOpen={setOpenShareDialog}/>
+          </div>
           <button
             onClick={() => directionsClickHandler(event)}
             className={`flex justify-center items-center grow opacity-60 hover:opacity-100`}
