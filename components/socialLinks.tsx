@@ -160,9 +160,9 @@ const getLinks = (event: Event) => {
 export default function SocialLinks(props: { event: Event }) {
   const links = getLinks(props.event);
 
-  return links.map((link) => (
+  return links.map((link, index) => (
     <div
-      key={link.url}
+      key={index}
       onClick={() => clickHandler(link.url!)}
       className="cursor-pointer p-4 opacity-60 active:opacity-100 lg:hover:opacity-100"
     >
