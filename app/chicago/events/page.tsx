@@ -164,7 +164,6 @@ export default function Home() {
               >
                 <EventCard
                   event={event}
-                  index={index}
                   selected={
                     selectedEvent &&
                     getEventID(event) === getEventID(selectedEvent)
