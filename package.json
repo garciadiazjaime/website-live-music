@@ -8,9 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "r": "node support/reset",
-    "genres": "node support/genres",
-    "w": "nodemon support/workers",
-    "q": "node support/queue"
+    "genres": "node support/genres"
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",

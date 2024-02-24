@@ -97,8 +97,6 @@ async function main() {
   logger.info("reset starting");
 
   await resetEvents();
-
-  await resetArtist();
 }
 
 main().then(() => {
