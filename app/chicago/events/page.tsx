@@ -9,6 +9,8 @@ import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
 import EventCard from "@/components/EventCard";
+import useModal from "@/components/Modal/useModal";
+import Modal from "@/components/Modal";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -48,6 +50,7 @@ export default function Home() {
   );
   const [selectedEvent, setSelectedEvent] = useState<Event>();
   const [map, setMap] = useState<google.maps.Map | null>();
+  const { ref: expiredEventRef, onOpen: openExpiredEventModal, onClose:closeExpiredEventModal } = useModal();
 
   const [center, setCenter] = useState({
     lat: 41.8777569,
@@ -131,7 +134,7 @@ export default function Home() {
 
     const event = events.find((event) => event.slug === slug);
     if (!event) {
-      // todo: show not found event pop-up
+      openExpiredEventModal();
       return;
     }
 
@@ -150,6 +153,10 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} setSelectedDate={setSelectedDate} />
+      <Modal ref={expiredEventRef} onClose={closeExpiredEventModal}>
+        <h1>Hello CodeSandbox</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </Modal>
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
         <section
           id="scrollSnap"
