@@ -11,13 +11,7 @@ function useModal() {
 
   const onClose = () => {
     if (ref.current) {
-      ref.current.className = "close";
-      setTimeout(() => {
-        if (ref.current) {
-          ref.current.close();
-          ref.current.className = "";
-        }
-      }, 400); // this value will match your CSS animation timing
+      ref.current.close();
     }
   };
 

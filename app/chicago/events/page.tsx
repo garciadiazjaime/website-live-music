@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 import { useRouter } from "next/navigation";
 import TagManager from "react-gtm-module";
-
+import Image from "next/image";
 import events from "../../../public/events.json";
 import { Event } from "../../../support/types";
 import Header from "@/components/Header";
@@ -157,8 +157,24 @@ export default function Home() {
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} setSelectedDate={setSelectedDate} />
       <Modal ref={expiredEventRef} onClose={closeExpiredEventModal}>
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
+        <div className="flex flex-col gap-6 items-center sm:text-xl">
+          <Image src="/images/gigsGone.webp" width="997" height="843" className="w-2/3 sm:w-1/3 h-auto" alt="Event has expired" />
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-rose-500">Oops! That Event Has Passed <Image src="/images/notes.svg" width="0" height="0" className="w-8 h-auto inline" alt="Event has expired" /></h1>
+          <div className="md:w-2/3 gap-6 flex flex-col text-rose-200">
+            <p>Looks like you&apos;ve landed on a gig that&apos;s already played its tune. No worries, it happens!</p>
+            <p>Why not browse our site for fresh, upcoming events? From indie jams to jazz vibes, there&apos;s always something new to discover.</p>
+          <button onClick={closeExpiredEventModal} className="flex items-center justify-center text-center gap-2 sm:gap-4 text-rose-100 font-semibold hover:text-white">
+            <h2 className=" underline">Get back into the groove and find your next favorite gig!</h2>
+            <Image
+                src="/images/chevron.svg"
+                width="60"
+                height="65"
+                alt=""
+                className="w-5 sm:w-8 h-auto"
+            />
+          </button>
+          </div>
+        </div>
       </Modal>
       <main className="h-full flex flex-col-reverse lg:flex-row flex-1 overflow-hidden">
         <section
