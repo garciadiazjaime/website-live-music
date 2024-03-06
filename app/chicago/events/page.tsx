@@ -35,6 +35,9 @@ const containerStyle = {
 const getEventID = (event: Event) =>
   `${slugify(event.name)}-${event.start_date.split("T")[0]}`;
 
+const getKey = (event: Event, index: number, label?: string) =>
+  `${event.start_date.split("T")[0]}-${index}-${label}`;
+
 const filterEventsByDate = (events: Event[], date: Date) =>
   events.filter(
     (event) =>
@@ -165,7 +168,7 @@ export default function Home() {
           <div className="flex lg:flex-col gap-4 lg:gap-6">
             {selectedEvents.map((event, index) => (
               <div
-                key={getEventID(event)}
+                key={getKey(event, index)}
                 className="w-11/12 md:w-1/2 lg:w-full shrink-0 snap-center first:pl-8 lg:first:pl-0 last:pr-8 lg:last:pr-0 items-stretch"
                 id={getEventID(event)}
               >
@@ -194,7 +197,7 @@ export default function Home() {
               {selectedEvents.map((event, index) => {
                 return (
                   <MarkerF
-                    key={`${getEventID(event)}-markerF`}
+                    key={getKey(event, index, "marker")}
                     onClick={() => markerClickHandler(event)}
                     position={{
                       lat: event.location.lat,
