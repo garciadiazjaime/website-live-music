@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Event } from "../../support/types";
 import SocialLinks from "../socialLinks";
 import ShareDialog from "../ShareDialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Props {
   event: Event;
@@ -12,6 +12,7 @@ interface Props {
 
 const EventCard = ({ event, selected = false, setPin }: Props) => {
   const [openShareDialog, setOpenShareDialog] = useState(false);
+  const [eventImage, setEventImage] = useState('/images/event-placeholder.svg');
   const getImage = (event: Event): string => {
     const artist = event.artists?.find((artist) => artist.metadata?.image);
     if (artist) {
@@ -29,7 +30,14 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
     window.open(event.location.url, "_blank");
   };
 
+  useEffect(()=> {
+    setTimeout(() => {
+      setEventImage(getImage(event));
+    }, 2000);
+  }, []);
+
   const gotoEventPage = (event: Event) => window.open(event.url, "_blank");
+
   return (
     <div
       className={`flex relative flex-col w-full h-full items-end group ${
@@ -55,8 +63,9 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
         </h3>
         <div
           className="flex h-32 w-full grow bg-contain bg-white/50 bg-center"
-          // style={{ backgroundImage: `url(${getImage(event)})` }}
-        ></div>
+          style={{ backgroundImage: `url(${eventImage})` }}
+        >
+        </div>
         <div
           className={`w-16 h-32 flex flex-col transition-all duration-300 ${
             !selected && "lg:opacity-20 group-hover:opacity-100"

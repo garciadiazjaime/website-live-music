@@ -79,31 +79,6 @@ export default function Home() {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
 
-  // useEffect(() => {
-  //   const handleWindowLoad = () => {
-  //     setTimeout(() => {
-  //      setDoneLoading(true);
-  //     }, 1000);
-
-  //   };
-  //   window.addEventListener('load', handleWindowLoad);
-
-  //   return () => {
-  //     window.removeEventListener('load', handleWindowLoad);
-  //   };
-  // }, []);
-
-  useEffect(() => {
-    const handleDOMContentLoaded = () => console.log('is loaded');
-    console.log('Window exists');
-    document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
-
-    return () => {
-      document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
-    };
-  }, []);
-
-
   useEffect(() => {
     if (!map || !selectedEvents.length) {
       return;
@@ -178,6 +153,18 @@ export default function Home() {
 
     router.push(`#${selectedEvent.slug}`);
   }, [selectedEvent]);
+
+  useEffect(() => {
+    const handleDOMContentLoaded = () => setTimeout(() => setDoneLoading(true), 2000);
+    if (document.readyState !== 'loading') {
+      handleDOMContentLoaded();
+    } else {
+        document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
+    }
+
+    document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
+
+  }, []);
 
   return (
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
