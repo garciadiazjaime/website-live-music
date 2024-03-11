@@ -48,6 +48,7 @@ const filterEventsByDate = (events: Event[], date: Date) =>
 export default function Home() {
   const router = useRouter();
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [doneLoading, setDoneLoading] = useState<boolean>(false);
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(
     filterEventsByDate(events, selectedDate)
   );
@@ -153,6 +154,18 @@ export default function Home() {
     router.push(`#${selectedEvent.slug}`);
   }, [selectedEvent]);
 
+  useEffect(() => {
+    const handleDOMContentLoaded = () => setTimeout(() => setDoneLoading(true), 2000);
+    if (document.readyState !== 'loading') {
+      handleDOMContentLoaded();
+    } else {
+        document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
+    }
+
+    document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
+
+  }, []);
+
   return (
     <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
       <Header currentDay={currentDay} setSelectedDate={setSelectedDate} />
@@ -202,7 +215,7 @@ export default function Home() {
         </section>
 
         <section className="w-full lg:w-auto flex flex-1">
-          {isLoaded && (
+          {doneLoading && isLoaded && (
             <GoogleMap
               mapContainerStyle={containerStyle}
               zoom={10}
