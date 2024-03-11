@@ -55,7 +55,7 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
         </h3>
         <div
           className="flex h-32 w-full grow bg-contain bg-white/50 bg-center"
-          style={{ backgroundImage: `url(${getImage(event)})` }}
+          // style={{ backgroundImage: `url(${getImage(event)})` }}
         ></div>
         <div
           className={`w-16 h-32 flex flex-col transition-all duration-300 ${

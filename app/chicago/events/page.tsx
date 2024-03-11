@@ -48,6 +48,7 @@ const filterEventsByDate = (events: Event[], date: Date) =>
 export default function Home() {
   const router = useRouter();
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [doneLoading, setDoneLoading] = useState<boolean>(false);
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(
     filterEventsByDate(events, selectedDate)
   );
@@ -77,6 +78,31 @@ export default function Home() {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
+
+  // useEffect(() => {
+  //   const handleWindowLoad = () => {
+  //     setTimeout(() => {
+  //      setDoneLoading(true);
+  //     }, 1000);
+
+  //   };
+  //   window.addEventListener('load', handleWindowLoad);
+
+  //   return () => {
+  //     window.removeEventListener('load', handleWindowLoad);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    const handleDOMContentLoaded = () => console.log('is loaded');
+    console.log('Window exists');
+    document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
+    };
+  }, []);
+
 
   useEffect(() => {
     if (!map || !selectedEvents.length) {
@@ -202,7 +228,7 @@ export default function Home() {
         </section>
 
         <section className="w-full lg:w-auto flex flex-1">
-          {isLoaded && (
+          {doneLoading && isLoaded && (
             <GoogleMap
               mapContainerStyle={containerStyle}
               zoom={10}
