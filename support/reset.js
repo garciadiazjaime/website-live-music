@@ -7,8 +7,9 @@ const genres = require("../public/genres.json");
 
 async function resetEvents() {
   const today = moment().subtract(1, "days").format("YYYY-MM-DD");
+  const nextWeek = moment().add(8, "days").format("YYYY-MM-DD");
 
-  const query = `location_empty=false&start_date=${today}&ordering=-rank&limit=1000`;
+  const query = `location_empty=false&start_date=${today}&end_date=${nextWeek}&ordering=-rank&limit=700`;
 
   const events = await getEvents(query);
 
