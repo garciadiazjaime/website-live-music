@@ -24,17 +24,17 @@ export default function Intro({
     >
       <div>
         <p>
-          hola, we're a trio of coding aficionados by day and music enthusiasts
-          by night.
+          hola, we&apos;re a trio of coding aficionados by day and music
+          enthusiasts by night.
         </p>
         <p style={{ paddingTop: 24 }}>
           Chicago is our canvas, pulsing with art, music, and life.
         </p>
         <p style={{ paddingTop: 24 }}>
-          Our project? It's all about showcasing the vibrant music scene across
-          Chicagoland.
+          Our project? It&apos;s all about showcasing the vibrant music scene
+          across Chicagoland.
         </p>
-        <p style={{ paddingTop: 24 }}>We'd love to hear your thoughts!</p>
+        <p style={{ paddingTop: 24 }}>We&apos;d love to hear your thoughts!</p>
         <ul
           style={{
             textAlign: "center",

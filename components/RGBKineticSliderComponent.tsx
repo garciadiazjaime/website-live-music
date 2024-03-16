@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -18,12 +18,15 @@ interface RGBKineticSliderProps {
   texts: string[][];
 }
 
-const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, texts }) => {
+const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({
+  images,
+  texts,
+}) => {
   const [scriptsLoaded, setScriptsLoaded] = useState(false);
   const [sliderInstance, setSliderInstance] = useState<any>(null);
   useEffect(() => {
     const loadScript = (src: string, callback: () => void) => {
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.src = src;
       script.async = true;
       script.onload = callback;
@@ -32,11 +35,11 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
     window.images = images;
 
     // Load local PIXI script
-    loadScript('/js/pixi.min.js', () => {
+    loadScript("/js/pixi.min.js", () => {
       // Load local TweenMax script
-      loadScript('/js/TweenMax.min.js', () => {
+      loadScript("/js/TweenMax.min.js", () => {
         // Load local RGBKineticSlider script
-        loadScript('/js/rgbKineticSlider.js', () => {
+        loadScript("/js/rgbKineticSlider.js", () => {
           setScriptsLoaded(true);
         });
       });
@@ -46,11 +49,16 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
     return () => {
       // Remove script tags if needed
     };
-  }, []);
+  }, [images]);
 
   useEffect(() => {
     // Initialize RGBKineticSlider when the scripts are loaded
-    if (scriptsLoaded && window.rgbKineticSlider && window.PIXI && window.TweenMax) {
+    if (
+      scriptsLoaded &&
+      window.rgbKineticSlider &&
+      window.PIXI &&
+      window.TweenMax
+    ) {
       const slider = new window.rgbKineticSlider({
         // images and content sources
         slideImages: images, // array of images >demo size : 1920 x 1080
@@ -119,41 +127,41 @@ const RGBKineticSliderComponent: React.FC<RGBKineticSliderProps> = ({ images, te
         }
       };
     }
-  }, [scriptsLoaded, images, texts]);
+  }, [scriptsLoaded, images, texts, sliderInstance]);
 
   return <div id="rgbKineticSlider" className="rgbKineticSlider" />;
 };
 
 // Function to export video
 const exportVid = (blob: Blob) => {
-  const vid = document.createElement('video');
-  vid.style.width = '30%';
+  const vid = document.createElement("video");
+  vid.style.width = "30%";
   vid.src = URL.createObjectURL(blob);
   vid.controls = true;
   document.body.appendChild(vid);
 
-  const a = document.createElement('a');
-  a.download = 'myvid.webm';
+  const a = document.createElement("a");
+  a.download = "myvid.webm";
   a.href = vid.src;
-  a.textContent = 'download the video';
+  a.textContent = "download the video";
   document.body.appendChild(a);
 };
 
 export const startRecording = () => {
   const chunks: BlobPart[] = [];
-  const canvas = document.querySelector('#rgbKineticSlider canvas');
+  const canvas = document.querySelector("#rgbKineticSlider canvas");
 
   if (!canvas) {
-    console.error('Canvas not found');
+    console.error("Canvas not found");
     return;
   }
 
   // Load your audio file
-  const audioElement = new Audio('/audio/music_sample.mp3');
+  const audioElement = new Audio("/audio/music_sample.mp3");
 
   // Listen for the canplay event before starting recording
-  audioElement.addEventListener('canplay', () => {
-    console.log('Audio can play');
+  audioElement.addEventListener("canplay", () => {
+    console.log("Audio can play");
 
     const stream = canvas.captureStream();
 
@@ -167,7 +175,7 @@ export const startRecording = () => {
     // Connect the audio to the media recorder
     rec.ondataavailable = (e) => chunks.push(e.data);
     rec.onstop = () => {
-      exportVid(new Blob(chunks, { type: 'video/webm' }));
+      exportVid(new Blob(chunks, { type: "video/webm" }));
       audioElement.pause();
     };
 

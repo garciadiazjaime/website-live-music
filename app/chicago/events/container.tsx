@@ -57,7 +57,7 @@ export default function Home({ events }: { events: Event[] }) {
     if (value) {
       setShowMap(true);
     }
-  });
+  }, []);
 
   const onLoad = (map: google.maps.Map) => {
     setMap(map);
@@ -114,7 +114,7 @@ export default function Home({ events }: { events: Event[] }) {
   useEffect(() => {
     const _events = filterEventsByDate(events, selectedDate);
     setSelectedEvents(_events);
-  }, [selectedDate]);
+  }, [selectedDate, events]);
 
   const setPin = (event: Event) => {
     setSelectedEvent(event);
@@ -142,7 +142,7 @@ export default function Home({ events }: { events: Event[] }) {
 
     setPin(event);
     markerClickHandler(event);
-  }, []);
+  }, [events, openExpiredEventModal]);
 
   useEffect(() => {
     if (!selectedEvent) {
@@ -150,13 +150,13 @@ export default function Home({ events }: { events: Event[] }) {
     }
 
     router.push(`#${selectedEvent.slug}`);
-  }, [selectedEvent]);
-
-  const scrollHandler = () => {
-    viewEventsHandler();
-  };
+  }, [selectedEvent, router]);
 
   useEffect(() => {
+    const scrollHandler = () => {
+      viewEventsHandler();
+    };
+
     window.addEventListener("scroll", scrollHandler, {
       capture: true,
       once: true,
