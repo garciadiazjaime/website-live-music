@@ -44,19 +44,21 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
         </div>
       )}
       <div className="flex gap-0 w-full relative">
-        <h3 className="flex items-end font-bold text-sky-300  text-3xl pb-2 px-4 mb-10">
+        <div className="flex items-end font-bold text-sky-300  text-3xl pb-2 px-4 mb-10">
           {`
           ${new Date(event.start_date).toLocaleTimeString().split(":")[0]}
             `}
           <span className="text-base">PM</span>
-        </h3>
-        <h3 className="absolute left-0 bottom-0 text-white z-30 bg-rose-600 text-base mb-4 px-4 italic">
+        </div>
+        <strong className="absolute left-0 bottom-0 text-white z-30 bg-rose-600 text-base mb-4 px-4 italic">
           {event.location.name}
-        </h3>
-        <div
-          className="flex h-32 w-full grow bg-contain bg-white/50 bg-center"
-          style={{ backgroundImage: `url(${getImage(event)})` }}
-        ></div>
+        </strong>
+        <Image
+          src={getImage(event)}
+          height={256}
+          width={256}
+          alt={event.name}
+        />
         <div
           className={`w-16 h-32 flex flex-col transition-all duration-300 ${
             !selected && "lg:opacity-20 group-hover:opacity-100"
@@ -67,6 +69,7 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
             className={`flex justify-center grow items-center ${
               selected ? "bg-rose-600" : "bg-sky-300/60 hover:bg-sky-300"
             }`}
+            aria-label={`pin for ${event.name}`}
           >
             <Image
               src={`${selected ? "/images/pin-active.svg" : "/images/pin.svg"}`}
@@ -81,17 +84,22 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
             onClick={() => setOpenShareDialog(!openShareDialog)}
           >
             <Image
-              src={`/images/${openShareDialog ? 'close' : 'share'}.svg`}
+              src={`/images/${openShareDialog ? "close" : "share"}.svg`}
               width="68"
               height="54"
               className="w-4 h-auto"
               alt=""
             />
-            <ShareDialog url={`https://livemusic.mintitmedia.com/chicago/events#${event.slug}`} open={openShareDialog} setOpen={setOpenShareDialog}/>
+            <ShareDialog
+              url={`https://livemusic.mintitmedia.com/chicago/events#${event.slug}`}
+              open={openShareDialog}
+              setOpen={setOpenShareDialog}
+            />
           </div>
           <button
             onClick={() => directionsClickHandler(event)}
             className={`flex justify-center items-center grow opacity-60 hover:opacity-100`}
+            aria-label={`google maps link for ${event.name}`}
           >
             <Image
               src="/images/directions.svg"
