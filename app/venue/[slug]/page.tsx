@@ -6,7 +6,9 @@ import { LocationChart } from "@/support/types";
 import styles from "./page.module.css";
 
 async function getLocations() {
-  const res = await fetch(process.env.NEXT_PUBLIC_LOCATION_URL!);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_S3_URL!}/data/location.json`
+  );
 
   if (!res.ok) {
     return;

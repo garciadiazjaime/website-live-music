@@ -2,7 +2,7 @@ import Container from "./container";
 
 async function getEvents() {
   const res = await fetch(
-    "https://d2r5kaieomhckh.cloudfront.net/public/events.json"
+    `${process.env.NEXT_PUBLIC_S3_URL!}/public/events.json`
   );
 
   if (!res.ok) {
