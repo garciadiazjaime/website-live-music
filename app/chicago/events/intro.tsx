@@ -8,6 +8,7 @@ export default function Intro({
 }) {
   return (
     <div
+      className={styles.intro}
       style={{
         width: "100%",
         height: "95vh",
