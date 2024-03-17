@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, MarkerF } from "@react-google-maps/api";
+import { Loader } from "@googlemaps/js-api-loader";
 import { useRouter } from "next/navigation";
 import TagManager from "react-gtm-module";
 import Image from "next/image";
@@ -26,6 +27,8 @@ const containerStyle = {
 
 export default function Home({ events }: { events: Event[] }) {
   const router = useRouter();
+
+  const [isLoaded, setIsLoaded] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(
     filterEventsByDate(events, selectedDate)
@@ -91,10 +94,6 @@ export default function Home({ events }: { events: Event[] }) {
 
     map.fitBounds(bounds);
   }, [map, selectedEvents]);
-
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
-  });
 
   const markerClickHandler = (event: Event) => {
     setSelectedEvent(event);
@@ -166,6 +165,28 @@ export default function Home({ events }: { events: Event[] }) {
       window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
+
+  const initMap = async () => {
+    if (isLoaded) {
+      return;
+    }
+
+    const loader = new Loader({
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+    });
+
+    await loader.load();
+
+    setIsLoaded(true);
+  };
+
+  useEffect(() => {
+    if (!showMap) {
+      return;
+    }
+
+    initMap();
+  }, [showMap]);
 
   return (
     <>
