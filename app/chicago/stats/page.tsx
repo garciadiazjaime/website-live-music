@@ -10,7 +10,6 @@ import {
 } from "./support";
 
 async function extract(url: string) {
-  console.log(url);
   const res = await fetch(url);
 
   if (!res.ok) {

@@ -129,16 +129,7 @@ export interface EventPlain {
   created: string;
 }
 
-export interface LocationPlain {
-  id: string;
-  lat: string;
-  lng: string;
-  website: string;
-  provider: string;
-  rank: string;
-  slug: string;
-  events: string;
-  image: string;
+export interface Network {
   twitter: string;
   facebook: string;
   youtube: string;
@@ -151,20 +142,23 @@ export interface LocationPlain {
   link_tree: string;
 }
 
-export interface ArtistPlain {
+export interface LocationPlain extends Network {
+  id: string;
+  lat: string;
+  lng: string;
+  website: string;
+  provider: string;
+  rank: string;
+  slug: string;
+  events: string;
+  image: string;
+}
+
+export interface ArtistPlain extends Network {
   id: string;
   profile: string;
   genres_count: string;
   spotify: string;
   slug: string;
   image: string;
-  twitter: string;
-  facebook: string;
-  youtube: string;
-  instagram: string;
-  tiktok: string;
-  soundcloud: string;
-  appleMusic: string;
-  band_camp: string;
-  link_tree: string;
 }

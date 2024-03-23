@@ -6,9 +6,8 @@ import { LocationChart } from "@/support/types";
 import styles from "./page.module.css";
 
 async function getLocations() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_S3_URL!}/data/location.json`
-  );
+  const url = `${process.env.NEXT_PUBLIC_S3_URL!}/data/locations.json`;
+  const res = await fetch(url);
 
   if (!res.ok) {
     return;
@@ -18,14 +17,15 @@ async function getLocations() {
 }
 
 export async function generateStaticParams() {
-  const locations = await getLocations();
-  return locations.map((item: LocationChart) => ({
+  const { data: locations } = await getLocations();
+
+  return locations.slice(0, 1).map((item: LocationChart) => ({
     slug: item.slug,
   }));
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const locations = await getLocations().catch(() => []);
+  const { data: locations } = await getLocations().catch(() => []);
   const { venue, neighbors } = getData(locations, params.slug);
 
   if (!venue) {

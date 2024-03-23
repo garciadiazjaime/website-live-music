@@ -1,6 +1,11 @@
 import moment from "moment";
 
-import { EventPlain, LocationPlain, ArtistPlain } from "@/support/types";
+import {
+  EventPlain,
+  LocationPlain,
+  ArtistPlain,
+  Network,
+} from "@/support/types";
 
 export function getEventsPerDay(events: EventPlain[]) {
   const response = events.reduce(
@@ -131,6 +136,7 @@ export function getSocialNetworksSummary(
       link_tree: 0,
     },
   };
+  // todo: get keys from interface
   const networks = [
     "twitter",
     "facebook",
@@ -146,27 +152,25 @@ export function getSocialNetworksSummary(
 
   locations.map((location) => {
     networks.map((network) => {
-      const value = +location[network];
+      const value = location[network as keyof LocationPlain];
       if (!value) {
         return;
       }
 
-      summary.locations[network] += 1;
+      summary.locations[network as keyof Network] += 1;
     });
   });
-  console.log(artists);
+
   artists.map((artist) => {
     networks.map((network) => {
-      const value = +artist[network];
+      const value = +artist[network as keyof ArtistPlain];
       if (!value) {
         return;
       }
 
-      summary.artists[network] += 1;
+      summary.artists[network as keyof Network] += 1;
     });
   });
-
-  console.log(summary);
 
   return {
     labels: ["Locations", "Artists"],
