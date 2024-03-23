@@ -116,3 +116,55 @@ export interface LocationChart {
   link_tree: string;
   distance?: number;
 }
+
+export interface EventPlain {
+  id: string;
+  start_date: string;
+  provider: string;
+  price: string;
+  rank: string;
+  slug: string;
+  artists_count: string;
+  venue: string;
+  created: string;
+}
+
+export interface LocationPlain {
+  id: string;
+  lat: string;
+  lng: string;
+  website: string;
+  provider: string;
+  rank: string;
+  slug: string;
+  events: string;
+  image: string;
+  twitter: string;
+  facebook: string;
+  youtube: string;
+  instagram: string;
+  tiktok: string;
+  soundcloud: string;
+  appleMusic: string;
+  spotify: string;
+  band_camp: string;
+  link_tree: string;
+}
+
+export interface ArtistPlain {
+  id: string;
+  profile: string;
+  genres_count: string;
+  spotify: string;
+  slug: string;
+  image: string;
+  twitter: string;
+  facebook: string;
+  youtube: string;
+  instagram: string;
+  tiktok: string;
+  soundcloud: string;
+  appleMusic: string;
+  band_camp: string;
+  link_tree: string;
+}

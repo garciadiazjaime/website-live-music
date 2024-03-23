@@ -46,12 +46,12 @@ export default function Home({ events }: { events: Event[] }) {
     lat: 41.8777569,
     lng: -87.6271142,
   });
-  const [showMap, setShowMap] = useState(false);
+  const [showMap, setShowMap] = useState(true);
 
   const viewEventsHandler = () => {
     setShowMap(true);
     window.localStorage.setItem("lm_map", "true");
-    viewRef.current?.scrollIntoView({ behavior: "smooth" });
+    // viewRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -156,14 +156,14 @@ export default function Home({ events }: { events: Event[] }) {
       viewEventsHandler();
     };
 
-    window.addEventListener("scroll", scrollHandler, {
-      capture: true,
-      once: true,
-    });
+    // window.addEventListener("scroll", scrollHandler, {
+    //   capture: true,
+    //   once: true,
+    // });
 
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
+    // return () => {
+    //   window.removeEventListener("scroll", scrollHandler);
+    // };
   }, []);
 
   const initMap = async () => {
