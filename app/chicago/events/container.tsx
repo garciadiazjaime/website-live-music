@@ -15,6 +15,7 @@ import Intro from "./intro";
 import styles from "./page.module.css";
 
 import { getEventID, getKey, filterEventsByDate } from "./support";
+import { Chevron, Notes } from "@/components/svgs";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -203,15 +204,8 @@ export default function Home({ events }: { events: Event[] }) {
                 className="w-2/3 sm:w-1/3 h-auto"
                 alt="Event has expired"
               />
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-rose-500">
-                Oops! That Event Has Passed{" "}
-                <Image
-                  src="/images/notes.svg"
-                  width="0"
-                  height="0"
-                  className="w-8 h-auto inline"
-                  alt="Event has expired"
-                />
+              <h1 className="flex flex-wrap text-2xl sm:text-4xl lg:text-5xl font-bold text-rose-500 items-center">
+                Oops! That Event Has Passed
               </h1>
               <div className="md:w-2/3 gap-6 flex flex-col text-rose-200">
                 <p>
@@ -230,13 +224,9 @@ export default function Home({ events }: { events: Event[] }) {
                   <h2 className=" underline">
                     Get back into the groove and find your next favorite gig!
                   </h2>
-                  <Image
-                    src="/images/chevron.svg"
-                    width="60"
-                    height="65"
-                    alt=""
-                    className="w-5 sm:w-8 h-auto"
-                  />
+                  <div className="w-5 sm:w-8 h-auto">
+                    <Chevron />
+                  </div>
                 </button>
               </div>
             </div>
