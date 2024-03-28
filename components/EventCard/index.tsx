@@ -76,6 +76,20 @@ const EventCard = ({ event, selected = false, setPin }: Props) => {
             className="h-28 w-auto"
             alt={event.name}
           />
+          <Image
+            src={getImage(event)}
+            height={0}
+            width={0}
+            className="h-28 w-auto"
+            alt={event.name}
+          />
+          <Image
+            src={getImage(event)}
+            height={0}
+            width={0}
+            className="h-28 w-auto"
+            alt={event.name}
+          />
         </div>
         <div
           className={`w-16 h-32 flex flex-col transition-all duration-300 ${
