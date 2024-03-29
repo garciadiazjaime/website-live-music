@@ -35,7 +35,6 @@ const Header = ({ currentDay, setSelectedDate }: Props) => {
 
   return <header className="my-5 bg-blue-500/10 flex justify-between pl-2">
     <h1 className="text-sky-400 flex items-center uppercase text-2xl md:text-3xl italic font-black gap-2">
-      {/* <Image src="/images/logo.svg" width="117" height="116" className="h-auto w-12 md:w-16 -mt-2 -mb-5" alt="Live Music" /> */}
       <div className="w-16"><Logo /></div>Chicago
     </h1>
     <select
