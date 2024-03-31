@@ -1,6 +1,6 @@
 import List from "./list";
 import { getData } from "./support";
-import { chicago as tokens } from "@/support/token";
+import { tokens } from "@/support/token";
 import { LocationChart } from "@/support/types";
 
 import styles from "./page.module.css";

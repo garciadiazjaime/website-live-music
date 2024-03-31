@@ -7,7 +7,7 @@ import { getMiles } from "./support";
 import { LocationChart } from "@/support/types";
 import { LMSocialMediaLinks } from "@/components/SocialMediaLinks";
 
-import { chicago as tokens } from "@/support/token";
+import { tokens } from "@/support/token";
 import styles from "./page.module.css";
 
 export default function List({ neighbors }: { neighbors: LocationChart[] }) {

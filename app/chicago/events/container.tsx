@@ -11,11 +11,10 @@ import Header from "@/components/Header";
 import EventCard from "@/components/EventCard";
 import useModal from "@/components/Modal/useModal";
 import Modal from "@/components/Modal";
-import Intro from "./intro";
 import styles from "./page.module.css";
 
 import { getEventID, getKey, filterEventsByDate } from "./support";
-import { Chevron, Notes } from "@/components/svgs";
+import { Chevron } from "@/components/svgs";
 
 const tagManagerArgs = {
   gtmId: "GTM-5TDDZW8S",
@@ -47,21 +46,6 @@ export default function Home({ events }: { events: Event[] }) {
     lat: 41.8777569,
     lng: -87.6271142,
   });
-  const [showMap, setShowMap] = useState(true);
-
-  const viewEventsHandler = () => {
-    setShowMap(true);
-    window.localStorage.setItem("lm_map", "true");
-    // viewRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const value = window.localStorage.getItem("lm_map");
-
-    if (value) {
-      setShowMap(true);
-    }
-  }, []);
 
   const onLoad = (map: google.maps.Map) => {
     setMap(map);
@@ -148,24 +132,7 @@ export default function Home({ events }: { events: Event[] }) {
     if (!selectedEvent) {
       return;
     }
-
-    router.push(`#${selectedEvent.slug}`);
   }, [selectedEvent, router]);
-
-  useEffect(() => {
-    const scrollHandler = () => {
-      viewEventsHandler();
-    };
-
-    // window.addEventListener("scroll", scrollHandler, {
-    //   capture: true,
-    //   once: true,
-    // });
-
-    // return () => {
-    //   window.removeEventListener("scroll", scrollHandler);
-    // };
-  }, []);
 
   const initMap = async () => {
     if (isLoaded) {
@@ -182,16 +149,11 @@ export default function Home({ events }: { events: Event[] }) {
   };
 
   useEffect(() => {
-    if (!showMap) {
-      return;
-    }
-
     initMap();
-  }, [showMap]);
+  }, []);
 
   return (
     <>
-      {!showMap && <Intro viewEventsHandler={viewEventsHandler} />}
       <div className={styles.mainContent}>
         <div className="h-screen flex flex-col bg-gradient-to-t  to-blue-950 from-red-950">
           <Header currentDay={currentDay} setSelectedDate={setSelectedDate} />
@@ -257,7 +219,7 @@ export default function Home({ events }: { events: Event[] }) {
             </section>
 
             <section className="w-full lg:w-auto flex flex-1">
-              {showMap && isLoaded && (
+              {isLoaded && (
                 <GoogleMap
                   mapContainerStyle={containerStyle}
                   zoom={10}

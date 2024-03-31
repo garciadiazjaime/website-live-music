@@ -1,5 +1,7 @@
 import Container from "./container";
 
+import "@/app/globals.css";
+
 async function getEvents() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_S3_URL!}/public/events.json`
