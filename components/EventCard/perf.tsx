@@ -8,7 +8,6 @@ import { tokens } from "@/support/token";
 
 interface Props {
   event: Event;
-  setPin: () => void;
 }
 
 const EventCard = ({ event }: Props) => {
@@ -33,10 +32,7 @@ const EventCard = ({ event }: Props) => {
   const gotoEventPage = (event: Event) => window.open(event.url, "_blank");
 
   return (
-    <article
-      className={`flex relative flex-col w-full h-full items-end group bg-gradient-to-r  to-blue-950 from-red-950
-      }`}
-    >
+    <article>
       <div className="header">
         <div className="time">
           {`
@@ -130,12 +126,14 @@ const EventCard = ({ event }: Props) => {
         }
         article {
           display: flex;
+          color: white;
+          font-family: sans-serif;
           position: relative;
           flex-direction: column;
           width: 100%;
           height: 100%;
           align-items: flex-end;
-          background-image: linear-gradient(180deg, rgba(23, 37, 84, 0.2), rgba(67, 20, 7, 0.2) 100%);
+          background-image: linear-gradient(180deg, rgba(23, 37, 84, 0.2), rgba(67, 20, 7, 0.2));
           .header {
             display: flex;
             gap: 0;
@@ -171,7 +169,6 @@ const EventCard = ({ event }: Props) => {
               overflow: hidden;
               width: 100%;
               justify-content: center;
-              flex overflow-hidden w-full justify-center
               img {
                 height: 128px;
                 width: auto;
@@ -219,6 +216,7 @@ const EventCard = ({ event }: Props) => {
             .eventLink {
               h2 {
                 cursor: pointer;
+                color: white;
                 text-transform: capitalize:
                 text-align: left;
                 padding: 20px 18px 20px 16px;

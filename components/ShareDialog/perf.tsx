@@ -21,14 +21,16 @@ const ShareDialog = ({ url, open }: Props) => {
       <EmailIcon size={24} />
     </EmailShareButton>
     <style jsx>{`
-      left: -160px;
-      width: 160px;
-      position: absolute;
-      padding: 0 12px;
-      gap: 12px;
-      height: 100%;
-      background-color: rgb(23 37 84);
-      display: ${open ? 'flex' : 'hidden'}
+      .dialog {
+        left: -160px;
+        width: 160px;
+        position: absolute;
+        padding: 0 12px;
+        gap: 12px;
+        height: 100%;
+        background-color: rgb(23 37 84);
+        display: ${open ? 'flex' : 'none'}
+      }
     `}</style>
   </div>
 }
