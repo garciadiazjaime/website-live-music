@@ -1,3 +1,4 @@
+import { tokens } from "@/support/token";
 import { Event, Social, SocialMedia, Spotify } from "@/support/types";
 
 const fill = "rgb(125, 211, 252";
@@ -169,9 +170,26 @@ export default function SocialLinks(props: { event: Event }) {
     <div
       key={index}
       onClick={() => clickHandler(link.url!)}
-      className="cursor-pointer p-4 opacity-60 active:opacity-100 lg:hover:opacity-100"
+      className="socialLink"
     >
       {link.logo}
+      <style jsx>{`
+        .socialLink {
+          cursor: pointer;
+          padding: 16px;
+          opacity: 0.6;
+
+          &:active {
+            opacity: 1;
+          }
+
+          @media (min-width: ${tokens.breakpoints.lg}) {
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      `}</style>
     </div>
   ));
 }
