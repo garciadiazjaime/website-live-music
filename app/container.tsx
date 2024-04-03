@@ -39,7 +39,6 @@ export default function Home({ events }: { events: Event[] }) {
           <Logo />
           <LogoText />
         </div>
-        <Slider />
       </header>
       <nav
         style={{
@@ -106,23 +105,6 @@ export default function Home({ events }: { events: Event[] }) {
             margin-left: -15%;
           }
         }
-<<<<<<< Updated upstream
-        nav {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: .5rem 1rem;
-          gap: 1rem;
-          position: sticky;
-          top: 0;
-          z-index: 20;
-        }
-        section.eventList {
-          position: sticky;
-          top: 80px;
-        }
-=======
->>>>>>> Stashed changes
       `}</style>
     </main>
   );

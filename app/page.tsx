@@ -19,7 +19,7 @@ const Home = async () => {
     return <div>:( no events</div>;
   }
 
-  return <Container events={events} />;
+  return <Container events={events.slice(0, 10)} />;
 };
 
 export default Home;
