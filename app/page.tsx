@@ -1,4 +1,4 @@
-import Container from './container';
+import Container from "./container";
 
 async function getEvents() {
   const res = await fetch(
@@ -19,7 +19,7 @@ const Home = async () => {
     return <div>:( no events</div>;
   }
 
-  return <Container events={events.slice(0, 10)} />
-}
+  return <Container events={events} />;
+};
 
 export default Home;

@@ -1,16 +1,37 @@
+"use client";
+
 import { useState } from "react";
 
-const days =  ['Today', 'Tuesday', 'Wednesday', 'Thursday','Friday', 'Saturday', 'Sunday']
+const days = [
+  "Today",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 
 const DayPicker = () => {
   const [activeDay, setActiveDay] = useState(0);
-  return <div>
-    {days.map((day, i) => <button key={day} onClick={() => console.log('clicked')} className={`${activeDay === i ? 'active' : ''}`}>{day}</button>)}
-    <style jsx>{`
-      div {
+
+  return (
+    <div>
+      {days.map((day, i) => (
+        <button
+          key={day}
+          onClick={() => console.log("clicked")}
+          className={activeDay === i ? "active" : ""}
+        >
+          {day}
+        </button>
+      ))}
+
+      <style jsx>{`
+        div {
           border-radius: 100px;
           background-color: rgba(29, 182, 255, 0.1);
-          padding: .5rem 1rem;
+          padding: 0.5rem 1rem;
           display: flex;
           justify-content: space-between;
           flex-grow: 0;
@@ -32,18 +53,19 @@ const DayPicker = () => {
             background: none;
             cursor: pointer;
             &:hover {
-              background-color: rgba(0, 0, 0, .2);
+              background-color: rgba(0, 0, 0, 0.2);
             }
             &.active {
-              background-color: rgba(255, 49, 29, .7);
+              background-color: rgba(255, 49, 29, 0.7);
               &:hover {
-                background-color: rgba(255, 49, 29, .8);
+                background-color: rgba(255, 49, 29, 0.8);
               }
             }
           }
         }
-    `}</style>
-</div>
-}
+      `}</style>
+    </div>
+  );
+};
 
 export default DayPicker;

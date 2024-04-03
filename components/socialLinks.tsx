@@ -178,9 +178,11 @@ export default function SocialLinks(props: { event: Event }) {
           cursor: pointer;
           padding: 16px;
           opacity: 0.6;
+
           &:active {
             opacity: 1;
           }
+
           @media (min-width: ${tokens.breakpoints.lg}) {
             &:hover {
               opacity: 1;
