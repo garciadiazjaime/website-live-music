@@ -86,8 +86,6 @@ export default function Home({ events }: { events: Event[] }) {
         section.eventList {
           position: sticky;
           top: 80px;
-          overflow: scroll;
-          height: calc(100vh - 80px);
         }
       `}</style>
     </main>;
