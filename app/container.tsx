@@ -46,7 +46,7 @@ export default function Home({ events }: { events: Event[] }) {
   }, []);
 
   useEffect(() => {
-    const clientEventsReady = Object.keys(eventsByDay).length > 0;
+    const clientEventsReady = Object.keys(eventsByDay || {}).length > 0;
     if (!clientEventsReady) {
       return;
     }
