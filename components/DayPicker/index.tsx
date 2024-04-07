@@ -1,27 +1,37 @@
 "use client";
 
-import { useState } from "react";
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-const days = [
-  "Today",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
+const getDaysOfWeek = () => {
+  const day = new Date().getDay() || 1;
 
-const DayPicker = () => {
-  const [activeDay, setActiveDay] = useState(0);
+  if (day === 0) {
+    return ["Today"];
+  }
+
+  return ["Today", ...DAYS.slice(day)];
+};
+
+const DayPicker = ({
+  selectedDay,
+  setSelectedDay,
+}: {
+  selectedDay: number;
+  setSelectedDay: (day: number) => void;
+}) => {
+  const clickHandler = (index: number) => {
+    setSelectedDay(index);
+  };
+
+  const daysOfWeek = getDaysOfWeek();
 
   return (
     <div>
-      {days.map((day, i) => (
+      {daysOfWeek.map((day, i) => (
         <button
           key={day}
-          onClick={() => console.log("clicked")}
-          className={activeDay === i ? "active" : ""}
+          onClick={() => clickHandler(i)}
+          className={selectedDay === i ? "active" : ""}
         >
           {day}
         </button>

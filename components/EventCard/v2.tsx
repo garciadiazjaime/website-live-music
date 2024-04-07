@@ -47,6 +47,7 @@ const EventCard = ({ event }: Props) => {
         backgroundImage:
           "linear-gradient(180deg, rgba(23, 37, 84, 0.2), rgba(67, 20, 7, 0.2))",
       }}
+      data-date={event.start_date}
     >
       <div
         style={{
@@ -67,9 +68,7 @@ const EventCard = ({ event }: Props) => {
             margin: "0 0 20px 0",
           }}
         >
-          {`
-            ${new Date(event.start_date).toLocaleTimeString().split(":")[0]}
-          `}
+          {new Date(event.start_date).toLocaleTimeString().split(":")[0]}
           <span style={{ fontSize: "1rem" }}>PM</span>
         </div>
         <strong

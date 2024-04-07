@@ -1,13 +1,63 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import { InfoBtn, Logo, LogoText } from "@/components/svgs";
 import { tokens } from "@/support/token";
-import Slider from "@/components/Slider";
 import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
 
+export async function getEventsByDay() {
+  const url = "/.netlify/functions/events";
+  const res = await fetch(url);
+
+  if (!res.ok) {
+    return;
+  }
+
+  const data = await res.json();
+
+  return data.reduce((eventsByDay: Record<string, Event[]>, event: Event) => {
+    const day = new Date(event.start_date).toJSON().split("T")[0];
+
+    if (!eventsByDay[day]) {
+      eventsByDay[day] = [];
+    }
+
+    eventsByDay[day].push(event);
+
+    return eventsByDay;
+  }, {});
+}
+
 export default function Home({ events }: { events: Event[] }) {
+  const [selectedDay, setSelectedDay] = useState(new Date().getDay());
+  const [eventsByDay, setEventsByDay] = useState<Record<string, Event[]>>({});
+  const [selectedEvents, setSelectedEvents] = useState<Event[]>(events);
+
+  const fetchEvents = async () => {
+    const data = await getEventsByDay();
+    setEventsByDay(data);
+  };
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
+
+  useEffect(() => {
+    const clientEventsReady = Object.keys(eventsByDay).length > 0;
+    if (!clientEventsReady) {
+      return;
+    }
+
+    const newDate = new Date();
+    newDate.setDate(newDate.getDate() + selectedDay);
+    const day = newDate.toJSON().split("T")[0];
+
+    setSelectedEvents(eventsByDay[day]);
+  }, [selectedDay, eventsByDay]);
+
   return (
     <main
       style={{
@@ -61,7 +111,7 @@ export default function Home({ events }: { events: Event[] }) {
         >
           <Logo />
         </div>
-        <DayPicker />
+        <DayPicker selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
         <div
           style={{
             width: "30px",
@@ -78,7 +128,7 @@ export default function Home({ events }: { events: Event[] }) {
           top: 80,
         }}
       >
-        {events.map((event) => (
+        {selectedEvents.map((event) => (
           <EventCard key={event.slug} event={event} />
         ))}
       </section>
