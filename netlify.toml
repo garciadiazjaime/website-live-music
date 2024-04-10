@@ -6,4 +6,4 @@ publish = "out"
 directory = "netlify/functions"
 
 [[plugins]]
-package = "netlify-plugin-lighthouse"
+package = "@netlify/plugin-nextjs"

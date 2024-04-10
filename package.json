@@ -13,7 +13,6 @@
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.41",
     "@logtail/node": "^0.4.17",
-    "@netlify/plugin-nextjs": "^5.0.0",
     "@react-google-maps/api": "^2.19.2",
     "async": "^3.2.5",
     "bullmq": "^5.1.0",
@@ -36,6 +35,7 @@
     "string-similarity": "^4.0.4"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
