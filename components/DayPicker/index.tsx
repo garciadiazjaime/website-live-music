@@ -2,25 +2,48 @@
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-const getDaysOfWeek = () => {
-  const day = new Date().getDay() || 1;
+const getDate = (date: Date) => {
+  return date.toJSON().split("T")[0];
+};
 
-  if (day === 0) {
-    return ["Today"];
+const getDaysOfWeek = () => {
+  const today = new Date();
+  const response = [{ name: "Today", value: getDate(today) }];
+
+  const day = new Date().getDay() || 1;
+  const SUNDAY = 0;
+  if (day === SUNDAY) {
+    return response;
   }
 
-  return ["Today", ...DAYS.slice(day)];
+  return DAYS.slice(day).reduce((week, day, index) => {
+    const date = new Date();
+    date.setDate(date.getDate() + index + 1);
+
+    week.push({
+      name: day,
+      value: getDate(date),
+    });
+
+    return week;
+  }, response);
 };
 
 const DayPicker = ({
-  selectedDay,
-  setSelectedDay,
+  selectedDate,
+  setSelectedDate,
 }: {
-  selectedDay: number;
-  setSelectedDay: (day: number) => void;
+  selectedDate?: string;
+  setSelectedDate: (value: string) => void;
 }) => {
   const clickHandler = (index: number) => {
-    setSelectedDay(index);
+    const date = new Date();
+    date.setDate(date.getDate() + index);
+    setSelectedDate(getDate(date));
+  };
+
+  const isDaySelected = (i: number, date: string) => {
+    return (!selectedDate && i === 0) || selectedDate === date;
   };
 
   const daysOfWeek = getDaysOfWeek();
@@ -29,11 +52,11 @@ const DayPicker = ({
     <div>
       {daysOfWeek.map((day, i) => (
         <button
-          key={day}
+          key={day.value}
           onClick={() => clickHandler(i)}
-          className={selectedDay === i ? "active" : ""}
+          className={isDaySelected(i, day.value) ? "active" : ""}
         >
-          {day}
+          {day.name}
         </button>
       ))}
 

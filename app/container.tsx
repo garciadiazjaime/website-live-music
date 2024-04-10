@@ -32,9 +32,9 @@ export async function getEventsByDay() {
 }
 
 export default function Home({ events }: { events: Event[] }) {
-  const [selectedDay, setSelectedDay] = useState(new Date().getDay());
-  const [eventsByDay, setEventsByDay] = useState<Record<string, Event[]>>({});
+  const [selectedDate, setSelectedDate] = useState("");
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(events);
+  const [eventsByDay, setEventsByDay] = useState<Record<string, Event[]>>({});
 
   const fetchEvents = async () => {
     const data = await getEventsByDay();
@@ -46,17 +46,12 @@ export default function Home({ events }: { events: Event[] }) {
   }, []);
 
   useEffect(() => {
-    const clientEventsReady = Object.keys(eventsByDay || {}).length > 0;
-    if (!clientEventsReady) {
+    if (!selectedDate) {
       return;
     }
 
-    const newDate = new Date();
-    newDate.setDate(newDate.getDate() + selectedDay);
-    const day = newDate.toJSON().split("T")[0];
-
-    setSelectedEvents(eventsByDay[day]);
-  }, [selectedDay, eventsByDay]);
+    setSelectedEvents(eventsByDay[selectedDate]);
+  }, [selectedDate, eventsByDay]);
 
   return (
     <main
@@ -111,7 +106,10 @@ export default function Home({ events }: { events: Event[] }) {
         >
           <Logo />
         </div>
-        <DayPicker selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
+        <DayPicker
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />
         <div
           style={{
             width: "30px",
