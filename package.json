@@ -35,7 +35,7 @@
     "string-similarity": "^4.0.4"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.0.0",
+    "@netlify/plugin-nextjs": "^4.41.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
