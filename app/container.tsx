@@ -68,16 +68,6 @@ export default function Home({ events }: { events: Event[] }) {
           <InfoBtn />
         </div>
       </nav>
-      <section
-        style={{
-          position: "sticky",
-          top: 80,
-        }}
-      >
-        {events.map((event) => (
-          <EventCard key={event.slug} event={event} />
-        ))}
-      </section>
     </main>
   );
 }
