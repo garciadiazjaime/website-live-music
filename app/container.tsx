@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 import { InfoBtn, Logo, LogoText } from "@/components/svgs";
 import { tokens } from "@/support/token";
-import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
 
@@ -106,10 +105,7 @@ export default function Home({ events }: { events: Event[] }) {
         >
           <Logo />
         </div>
-        <DayPicker
-          selectedDate={selectedDate}
-          setSelectedDate={setSelectedDate}
-        />
+
         <div
           style={{
             width: "30px",
