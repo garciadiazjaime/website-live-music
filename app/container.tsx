@@ -1,53 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 import { InfoBtn, Logo, LogoText } from "@/components/svgs";
 import { tokens } from "@/support/token";
 import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
 
-export async function getEventsByDay() {
-  const url = "/.netlify/functions/events";
-  const res = await fetch(url);
-
-  if (!res.ok) {
-    return;
-  }
-
-  const data = await res.json();
-
-  return data.reduce((eventsByDay: Record<string, Event[]>, event: Event) => {
-    const day = new Date(event.start_date).toJSON().split("T")[0];
-
-    if (!eventsByDay[day]) {
-      eventsByDay[day] = [];
-    }
-
-    eventsByDay[day].push(event);
-
-    return eventsByDay;
-  }, {});
-}
-
 export default function Home({ events }: { events: Event[] }) {
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedEvents, setSelectedEvents] = useState<Event[]>(events);
-  const [eventsByDay, setEventsByDay] = useState<Record<string, Event[]>>({});
-
-  const fetchEvents = async () => {
-    const data = await getEventsByDay();
-    setEventsByDay(data);
-  };
-
-  useEffect(() => {
-    if (!selectedDate || !eventsByDay[selectedDate]) {
-      return;
-    }
-
-    setSelectedEvents(eventsByDay[selectedDate]);
-  }, [selectedDate, eventsByDay]);
-
   return (
     <main
       style={{
@@ -118,7 +76,7 @@ export default function Home({ events }: { events: Event[] }) {
           top: 80,
         }}
       >
-        {selectedEvents.map((event) => (
+        {events.map((event) => (
           <EventCard key={event.slug} event={event} />
         ))}
       </section>
