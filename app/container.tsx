@@ -41,10 +41,6 @@ export default function Home({ events }: { events: Event[] }) {
   };
 
   useEffect(() => {
-    fetchEvents();
-  }, []);
-
-  useEffect(() => {
     if (!selectedDate || !eventsByDay[selectedDate]) {
       return;
     }
