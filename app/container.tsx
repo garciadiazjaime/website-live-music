@@ -1,5 +1,3 @@
-"use client";
-
 import { InfoBtn, Logo, LogoText } from "@/components/svgs";
 import { tokens } from "@/support/token";
 import { Event } from "@/support/types";
@@ -80,30 +78,6 @@ export default function Home({ events }: { events: Event[] }) {
           <EventCard key={event.slug} event={event} />
         ))}
       </section>
-
-      <style jsx>{`
-        .brand {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding-top: 20%;
-          gap: 2rem;
-          width: 60vw;
-
-          @media (min-width: ${tokens.breakpoints.md}) {
-            width: 40vw;
-          }
-
-          @media (min-width: ${tokens.breakpoints.lg}) {
-            width: 25vw;
-          }
-
-          svg:first-child {
-            width: 40%;
-            margin-left: -15%;
-          }
-        }
-      `}</style>
     </main>
   );
 }
