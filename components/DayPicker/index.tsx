@@ -7,56 +7,52 @@ const getDate = (date: Date) => {
 };
 
 const getDaysOfWeek = () => {
-  const today = new Date();
-  const response = [{ name: "Today", value: getDate(today) }];
+  const response = ["Today"];
 
-  const day = new Date().getDay() || 1;
+  const today = new Date().getDay();
   const SUNDAY = 0;
-  if (day === SUNDAY) {
+  if (today === SUNDAY) {
     return response;
   }
 
-  return DAYS.slice(day).reduce((week, day, index) => {
-    const date = new Date();
-    date.setDate(date.getDate() + index + 1);
-
-    week.push({
-      name: day,
-      value: getDate(date),
-    });
-
-    return week;
-  }, response);
+  return [...response, ...DAYS.slice(today)];
 };
 
 const DayPicker = ({
   selectedDate,
   setSelectedDate,
 }: {
-  selectedDate?: string;
+  selectedDate: string;
   setSelectedDate: (value: string) => void;
 }) => {
+  const daysOfWeek = getDaysOfWeek();
+
   const clickHandler = (index: number) => {
     const date = new Date();
     date.setDate(date.getDate() + index);
     setSelectedDate(getDate(date));
   };
 
-  const isDaySelected = (i: number, date: string) => {
-    return (!selectedDate && i === 0) || selectedDate === date;
-  };
+  const isDaySelected = (index: number) => {
+    if (!selectedDate && index === 0) {
+      return true;
+    }
 
-  const daysOfWeek = getDaysOfWeek();
+    const date = new Date();
+    date.setDate(date.getDate() + index);
+
+    return getDate(date) === selectedDate;
+  };
 
   return (
     <div>
       {daysOfWeek.map((day, i) => (
         <button
-          key={day.value}
+          key={day}
           onClick={() => clickHandler(i)}
-          className={isDaySelected(i, day.value) ? "active" : ""}
+          className={isDaySelected(i) ? "active" : ""}
         >
-          {day.name}
+          {day}
         </button>
       ))}
 

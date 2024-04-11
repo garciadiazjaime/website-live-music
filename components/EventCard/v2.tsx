@@ -12,19 +12,21 @@ interface Props {
   event: Event;
 }
 
+const doHTTPS = (url: string) => url?.replace("http:", "https:");
+
 const EventCard = ({ event }: Props) => {
   const [openShareDialog, setOpenShareDialog] = useState(false);
   const getImage = (event: Event): string => {
     const artist = event.artists?.find((artist) => artist.metadata?.image);
     if (artist) {
-      return artist.metadata?.image || "";
+      return doHTTPS(artist.metadata?.image || "");
     }
 
     if (event.location?.metadata?.image) {
-      return event.location.metadata.image;
+      return doHTTPS(event.location.metadata.image);
     }
 
-    return event.image;
+    return doHTTPS(event.image);
   };
 
   const directionsClickHandler = (event: Event) => {

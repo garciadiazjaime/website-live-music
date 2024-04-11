@@ -46,7 +46,7 @@ export default function Home({ events }: { events: Event[] }) {
   }, []);
 
   useEffect(() => {
-    if (!selectedDate) {
+    if (!selectedDate || !eventsByDay[selectedDate]) {
       return;
     }
 
