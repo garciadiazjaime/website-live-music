@@ -106,7 +106,10 @@ export default function Home({ events }: { events: Event[] }) {
         >
           <Logo />
         </div>
-
+        <DayPicker
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />
         <div
           style={{
             width: "30px",
@@ -117,6 +120,16 @@ export default function Home({ events }: { events: Event[] }) {
           <InfoBtn />
         </div>
       </nav>
+      <section
+        style={{
+          position: "sticky",
+          top: 80,
+        }}
+      >
+        {selectedEvents.map((event) => (
+          <EventCard key={event.slug} event={event} />
+        ))}
+      </section>
 
       <style jsx>{`
         .brand {
