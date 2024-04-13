@@ -6,10 +6,10 @@ const getDate = (date: Date) => {
   return date.toJSON().split("T")[0];
 };
 
-const getDaysOfWeek = () => {
+const getDaysOfWeek = (date: string) => {
   const response = ["Today"];
 
-  const today = new Date().getDay();
+  const today = new Date(date).getDay();
   const SUNDAY = 0;
   if (today === SUNDAY) {
     return response;
@@ -21,11 +21,13 @@ const getDaysOfWeek = () => {
 const DayPicker = ({
   selectedDate,
   setSelectedDate,
+  today,
 }: {
   selectedDate: string;
   setSelectedDate: (value: string) => void;
+  today: string;
 }) => {
-  const daysOfWeek = getDaysOfWeek();
+  const daysOfWeek = getDaysOfWeek(today);
 
   const clickHandler = (index: number) => {
     const date = new Date();

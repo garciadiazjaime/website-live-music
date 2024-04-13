@@ -31,7 +31,13 @@ export async function getEventsByDay() {
   }, {});
 }
 
-export default function Home({ events }: { events: Event[] }) {
+export default function Home({
+  events,
+  today,
+}: {
+  events: Event[];
+  today: string;
+}) {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(events);
   const [eventsByDay, setEventsByDay] = useState<Record<string, Event[]>>({});
@@ -106,6 +112,11 @@ export default function Home({ events }: { events: Event[] }) {
         >
           <Logo />
         </div>
+        <DayPicker
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+          today={today}
+        />
         <div
           style={{
             width: "30px",

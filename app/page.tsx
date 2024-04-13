@@ -19,15 +19,16 @@ const Home = async () => {
   if (!events.length) {
     return <div>:( no events</div>;
   }
-  const today = new Date().toJSON().split("T")[0];
+  const today = new Date().toJSON();
+  const date = today.split("T")[0];
   const todayEvents = events
     .filter(
       (event: Event) =>
-        new Date(event.start_date).toJSON().split("T")[0] === today
+        new Date(event.start_date).toJSON().split("T")[0] === date
     )
     .slice(0, 10);
 
-  return <Container events={todayEvents} />;
+  return <Container events={todayEvents} today={today} />;
 };
 
 export default Home;
