@@ -92,6 +92,9 @@ export interface Event {
   location: Location;
   artists: Artist[];
   pk: number;
+  // local types
+  date: string;
+  time: string;
 }
 
 export interface LocationChart {

@@ -1,5 +1,6 @@
 import Container from "./container";
 import { Event } from "@/support/types";
+import { getEventWithDateAndTime } from "./support";
 
 async function getEvents() {
   const res = await fetch(
@@ -10,7 +11,15 @@ async function getEvents() {
     return;
   }
 
-  return res.json();
+  const events = await res.json();
+  const today = new Date();
+
+  return events
+    .filter(
+      (event: Event) => new Date(event.start_date).getDate() === today.getDate()
+    )
+    .slice(0, 10)
+    .map(getEventWithDateAndTime);
 }
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -29,21 +38,18 @@ const getDaysOfWeek = () => {
 
 const Home = async () => {
   const events = await getEvents().catch(() => []);
+
   const daysOfWeek = getDaysOfWeek();
 
   if (!events.length) {
     return <div>:( no events</div>;
   }
 
-  const today = new Date().toJSON().split("T")[0];
-  const todayEvents = events
-    .filter(
-      (event: Event) =>
-        new Date(event.start_date).toJSON().split("T")[0] === today
-    )
-    .slice(0, 10);
-
-  return <Container events={todayEvents} daysOfWeek={daysOfWeek} />;
+  return (
+    <div data-created={new Date().toTimeString()}>
+      <Container events={events} daysOfWeek={daysOfWeek} />
+    </div>
+  );
 };
 
 export default Home;

@@ -1,23 +1,5 @@
 "use client";
 
-const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
-const getDate = (date: Date) => {
-  return date.toJSON().split("T")[0];
-};
-
-const getDaysOfWeek = (date: string) => {
-  const response = ["Today"];
-
-  const today = new Date(date).getDay();
-  const SUNDAY = 0;
-  if (today === SUNDAY) {
-    return response;
-  }
-
-  return [...response, ...DAYS.slice(today)];
-};
-
 const DayPicker = ({
   selectedDate,
   setSelectedDate,
@@ -29,8 +11,9 @@ const DayPicker = ({
 }) => {
   const clickHandler = (index: number) => {
     const date = new Date();
+
     date.setDate(date.getDate() + index);
-    setSelectedDate(getDate(date));
+    setSelectedDate(date.toLocaleDateString());
   };
 
   const isDaySelected = (index: number) => {
@@ -41,7 +24,7 @@ const DayPicker = ({
     const date = new Date();
     date.setDate(date.getDate() + index);
 
-    return getDate(date) === selectedDate;
+    return date.toLocaleDateString() === selectedDate;
   };
 
   return (

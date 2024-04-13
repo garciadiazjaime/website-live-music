@@ -14,6 +14,17 @@ interface Props {
 
 const doHTTPS = (url: string) => url?.replace("http:", "https:");
 
+const DateTime = ({ time }: { time: string }) => {
+  const value = parseInt(time);
+  const hour = value % 12;
+  const meridiem = value > 12 ? "PM" : "AM";
+  return (
+    <>
+      {hour} <span style={{ fontSize: "1rem" }}>{meridiem}</span>
+    </>
+  );
+};
+
 const EventCard = ({ event }: Props) => {
   const [openShareDialog, setOpenShareDialog] = useState(false);
   const getImage = (event: Event): string => {
@@ -70,7 +81,7 @@ const EventCard = ({ event }: Props) => {
             margin: "0 0 20px 0",
           }}
         >
-          <span style={{ fontSize: "1rem" }}>PM</span>
+          <DateTime time={event.time} />
         </div>
         <strong
           style={{

@@ -7,6 +7,7 @@ import { tokens } from "@/support/token";
 import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
+import { getEventWithDateAndTime } from "./support";
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -18,14 +19,14 @@ export async function getEventsByDay() {
 
   const data = await res.json();
 
-  return data.reduce((eventsByDay: Record<string, Event[]>, event: Event) => {
-    const day = new Date(event.start_date).toJSON().split("T")[0];
+  const events = data.map(getEventWithDateAndTime);
 
-    if (!eventsByDay[day]) {
-      eventsByDay[day] = [];
+  return events.reduce((eventsByDay: Record<string, Event[]>, event: Event) => {
+    if (!eventsByDay[event.date]) {
+      eventsByDay[event.date] = [];
     }
 
-    eventsByDay[day].push(event);
+    eventsByDay[event.date].push(event);
 
     return eventsByDay;
   }, {});
