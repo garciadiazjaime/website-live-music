@@ -106,10 +106,6 @@ export default function Home({ events }: { events: Event[] }) {
         >
           <Logo />
         </div>
-        <DayPicker
-          selectedDate={selectedDate}
-          setSelectedDate={setSelectedDate}
-        />
         <div
           style={{
             width: "30px",
