@@ -33,10 +33,10 @@ export async function getEventsByDay() {
 
 export default function Home({
   events,
-  today,
+  daysOfWeek,
 }: {
   events: Event[];
-  today: string;
+  daysOfWeek: string[];
 }) {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(events);
@@ -115,7 +115,7 @@ export default function Home({
         <DayPicker
           selectedDate={selectedDate}
           setSelectedDate={setSelectedDate}
-          today={today}
+          daysOfWeek={daysOfWeek}
         />
         <div
           style={{

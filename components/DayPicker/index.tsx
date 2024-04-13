@@ -21,14 +21,12 @@ const getDaysOfWeek = (date: string) => {
 const DayPicker = ({
   selectedDate,
   setSelectedDate,
-  today,
+  daysOfWeek,
 }: {
   selectedDate: string;
   setSelectedDate: (value: string) => void;
-  today: string;
+  daysOfWeek: string[];
 }) => {
-  const daysOfWeek = getDaysOfWeek(today);
-
   const clickHandler = (index: number) => {
     const date = new Date();
     date.setDate(date.getDate() + index);
