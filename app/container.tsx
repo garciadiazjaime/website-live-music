@@ -127,6 +127,16 @@ export default function Home({
           <InfoBtn />
         </div>
       </nav>
+      <section
+        style={{
+          position: "sticky",
+          top: 80,
+        }}
+      >
+        {selectedEvents.map((event) => (
+          <EventCard key={event.slug} event={event} />
+        ))}
+      </section>
 
       <style jsx>{`
         .brand {
