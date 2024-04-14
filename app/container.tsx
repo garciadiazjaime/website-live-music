@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ReactGA from "react-ga4";
 
 import { InfoBtn, Logo, LogoText } from "@/components/svgs";
 import { tokens } from "@/support/token";
@@ -48,8 +49,13 @@ export default function Home({
     setEventsByDay(data);
   };
 
+  const initGA = () => {
+    ReactGA.initialize("G-KZCQP5FKYK");
+  };
+
   useEffect(() => {
     fetchEvents();
+    initGA();
   }, []);
 
   useEffect(() => {
