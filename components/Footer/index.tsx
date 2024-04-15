@@ -4,8 +4,8 @@ const Footer = () => (
       padding: 20,
       margin: 20,
       fontSize: 20,
-      width: '100%',
-      maxWidth: '740px',
+      width: 'ca;c(100% - 40px)',
+      maxWidth: '780px',
       fontFamily: 'sans-serif',
       backgroundImage: "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
     }}

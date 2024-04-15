@@ -224,6 +224,7 @@ export default function Home({
       <section
         style={{
           maxWidth: '780px',
+          width: "100%",
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'stretch',
@@ -233,10 +234,7 @@ export default function Home({
 ,        }}
       >
         {selectedEvents.map((event) => (
-          <div key={event.slug}
-            style={{
-              width: 'calc(50% - 10px)',
-            }}
+          <div key={event.slug} className="show"
           >
             <EventCard event={event} />
           </div>
@@ -269,6 +267,12 @@ export default function Home({
           svg:first-child {
             width: 40%;
             margin-left: -15%;
+          }
+        }
+        .show {
+          width: 100%;
+          @media (min-width: ${tokens.breakpoints.md}) {
+            width: calc(50% - 10px);
           }
         }
       `}</style>
