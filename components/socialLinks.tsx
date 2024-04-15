@@ -175,6 +175,7 @@ export default function SocialLinks(props: { event: Event }) {
       {link.logo}
       <style jsx>{`
         .socialLink {
+          display: flex;
           cursor: pointer;
           padding: 16px;
           opacity: 0.6;

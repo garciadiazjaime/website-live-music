@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import StyledJsxRegistry from "./registry";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Live Music",
