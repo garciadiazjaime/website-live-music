@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
-
-import { InfoBtn, Logo, LogoText } from "@/components/svgs";
 import { tokens } from "@/support/token";
 import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
+
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -66,6 +68,11 @@ export default function Home({
     setSelectedEvents(eventsByDay[selectedDate]);
   }, [selectedDate, eventsByDay]);
 
+  const scrolltoHash = function (element_id: string) {
+    const element = document.getElementById(element_id)
+    element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  }
+
   return (
     <main
       style={{
@@ -78,14 +85,15 @@ export default function Home({
         width: "100%",
         color: tokens.color.white,
         fontSize: 48,
-        height: "100vh",
-        overflow: "scroll",
+        display: "flex",
         flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <header
         style={{
           display: "flex",
+          position: 'relative',
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-around",
@@ -95,76 +103,86 @@ export default function Home({
       >
         <div className="brand">
           <Logo />
-          <LogoText />
+          <h1
+            style={{
+              textTransform: 'uppercase',
+              fontFamily: 'Poppins',
+              color: 'white',
+              display: 'flex',
+              flexDirection: 'column',
+              lineHeight: 0.9,
+              textAlign: 'center',
+            }}
+          >
+            Chicago
+            <span
+              style={{
+                fontFamily: 'Barlow Condensed',
+                color: '#64C7F9',
+                letterSpacing: '0',
+              }}
+            >Music Compass</span>
+          </h1>
         </div>
       </header>
-      <nav
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0.5rem 1rem",
-          gap: "1rem",
-          position: "sticky",
-          top: 0,
-          zIndex: 20,
-        }}
-      >
-        <div
-          style={{
-            width: "60px",
-            display: "flex",
-            flexShrink: "0",
-          }}
-        >
-          <Logo />
-        </div>
+      <Nav>
         <DayPicker
           selectedDate={selectedDate}
           setSelectedDate={setSelectedDate}
           daysOfWeek={daysOfWeek}
         />
-        <div
-          style={{
-            width: "30px",
-            display: "flex",
-            flexShrink: "0",
-          }}
-        >
-          <InfoBtn />
-        </div>
-      </nav>
-      <section
+      </Nav>
+      <section className="shows"
         style={{
-          position: "sticky",
-          top: 80,
-        }}
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'stretch',
+          padding: '3rem 0',
+          gap: '20px',
+          width: 'calc(100% - 40px)',
+          maxWidth: '780px'
+,        }}
       >
         {selectedEvents.map((event) => (
-          <EventCard key={event.slug} event={event} />
+          <div key={event.slug} className="show"
+          >
+            <EventCard event={event} />
+          </div>
         ))}
       </section>
-
+      <Footer />
       <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Barlow+Condensed:wght@400&display=swap');
         .brand {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-top: 20%;
+          padding-top: 10%;
           gap: 2rem;
-          width: 60vw;
-
-          @media (min-width: ${tokens.breakpoints.md}) {
-            width: 40vw;
-          }
-
-          @media (min-width: ${tokens.breakpoints.lg}) {
-            width: 25vw;
+          h1 {
+            font-size: 2.8rem;
+            letter-spacing: .28rem;
+            @media (min-width: ${tokens.breakpoints.md}) {
+              font-size: 4rem;
+              letter-spacing: .4rem;
+            }
+            span {
+              font-size: 2.8rem;
+              @media (min-width: ${tokens.breakpoints.md}) {
+                font-size: 4rem;
+              }
+            }
           }
 
           svg:first-child {
             width: 40%;
             margin-left: -15%;
+          }
+        }
+        .show {
+          width: 100%;
+          @media (min-width: ${tokens.breakpoints.md}) {
+            width: calc(50% - 10px);
           }
         }
       `}</style>

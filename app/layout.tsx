@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import StyledJsxRegistry from "./registry";
 
 export const metadata: Metadata = {

@@ -55,10 +55,8 @@ const EventCard = ({ event }: Props) => {
         position: "relative",
         flexDirection: "column",
         width: "100%",
-        height: "100%",
-        alignItems: "flex-end",
         backgroundImage:
-          "linear-gradient(180deg, rgba(23, 37, 84, 0.2), rgba(67, 20, 7, 0.2))",
+          "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
       }}
       data-date={event.start_date}
     >
@@ -77,7 +75,7 @@ const EventCard = ({ event }: Props) => {
             fontWeight: "bold",
             color: "rgb(125 211 252)",
             fontSize: "2rem",
-            padding: "0 16px 10px",
+            padding: "0 16px 20px",
             margin: "0 0 20px 0",
           }}
         >
@@ -95,6 +93,7 @@ const EventCard = ({ event }: Props) => {
             marginBottom: 16,
             padding: "0 8px",
             fontStyle: "italic",
+            flexShrink: 0,
           }}
         >
           {event.location.name}
@@ -113,34 +112,20 @@ const EventCard = ({ event }: Props) => {
         </div>
         <div
           style={{
-            width: 40,
-            height: 120,
+            height: "auto",
             display: "flex",
             flexDirection: "column",
+            alignItems: "stretch",
             transitionProperty: "all",
             transitionDuration: "300ms",
+            flexShrink: 0,
           }}
         >
-          <button
-            onClick={() => console.log("go to map with slug")}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flexGrow: 1,
-              alignItems: "center",
-              backgroundColor: "rgb(225 29 72)",
-            }}
-            aria-label={`pin for ${event.name}`}
-          >
-            <div style={{ width: 20 }}>
-              <PinActive />
-            </div>
-          </button>
           <div
             className="actionBtn"
             onClick={() => setOpenShareDialog(!openShareDialog)}
           >
-            <div style={{ width: 20 }}>
+            <div style={{ width: 15, padding: 15, display: 'flex' }}>
               {openShareDialog ? <Close /> : <Share />}
             </div>
             <ShareDialog
@@ -154,7 +139,7 @@ const EventCard = ({ event }: Props) => {
             className="actionBtn"
             aria-label={`google maps link for ${event.name}`}
           >
-            <div style={{ width: 20 }}>
+            <div style={{ width: 15, padding: 15, display: 'flex' }}>
               <Directions />
             </div>
           </button>
@@ -173,11 +158,30 @@ const EventCard = ({ event }: Props) => {
         }}
       >
         <button className="eventLink" onClick={() => gotoEventPage(event)}>
-          <h2>
-            <span className="line-clamp">{event.name.toLowerCase()}</span>
+          <h2
+            style={{
+              cursor: "pointer",
+              color: "white",
+              textTransform: "capitalize",
+              textAlign: "left",
+              padding: "20px 18px 20px 16px",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              textOverflow: "ellipsis",
+              margin: "0",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              height: "80px"
+            }}
+          >
+            <span style={{
+              textOverflow: "hidden"
+            }}
+            >{event.name.toLowerCase()}</span>
             <div
               style={{
-                width: 20,
+                width: 35,
                 marginLeft: 16,
                 flexShrink: 0,
               }}
@@ -216,7 +220,6 @@ const EventCard = ({ event }: Props) => {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
             opacity: 0.6;
             position: relative;
             cursor: pointer;
@@ -227,30 +230,11 @@ const EventCard = ({ event }: Props) => {
           }
 
           h2 {
-            cursor: pointer;
-            color: white;
-            text-transform: capitalize:
-            text-align: left;
-            padding: 20px 18px 20px 16px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-overflow: ellipsis;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
             @media (min-width: ${tokens.breakpoints.lg}) {
               opacity: 0.8;
               &:hover {
                 opacity: 1;
               }
-            }
-
-            .line-clamp {
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 2;
             }
           }
         }
