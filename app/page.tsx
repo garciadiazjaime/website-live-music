@@ -46,7 +46,10 @@ const Home = async () => {
   }
 
   return (
-    <div data-created={new Date().toTimeString()}>
+    <div
+      date-date={new Date().toLocaleString()}
+      data-time={new Date().toTimeString()}
+    >
       <Container events={events} daysOfWeek={daysOfWeek} />
     </div>
   );

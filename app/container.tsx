@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Flaminfo, Logo } from "@/components/svgs";
+import ReactGA from "react-ga4";
 import { tokens } from "@/support/token";
 import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
@@ -50,8 +51,13 @@ export default function Home({
     setEventsByDay(data);
   };
 
+  const initGA = () => {
+    ReactGA.initialize("G-KZCQP5FKYK");
+  };
+
   useEffect(() => {
     fetchEvents();
+    initGA();
   }, []);
 
   useEffect(() => {

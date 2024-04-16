@@ -35,6 +35,7 @@
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
+    "react-ga4": "^2.1.0",
     "react-gtm-module": "^2.0.11",
     "react-share": "^5.1.0",
     "slugify": "^1.6.6",
