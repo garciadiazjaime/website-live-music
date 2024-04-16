@@ -1,10 +1,10 @@
 const Footer = () => (
-  <footer className="footer"
+  <footer className="footer" id="cmc"
     style={{
       padding: 20,
-      margin: 20,
+      margin: "0 20px 20px",
       fontSize: 20,
-      width: 'ca;c(100% - 40px)',
+      width: 'calc(100% - 80px)',
       maxWidth: '780px',
       fontFamily: 'sans-serif',
       backgroundImage: "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
@@ -17,27 +17,25 @@ const Footer = () => (
       <h2 style={{
         fontSize: "1.5rem",
         color: "#64C7F9",
+        marginTop: 0,
       }}
       >
         About Us:
       </h2>
       <p>
-        Welcome to Chicago Music Compass! 🎶 We&apos;re not just another tech team – we're a group of music enthusiasts, former bandmates, and software wizards on a mission to shake up the live music scene in the Windy City. 🌬️🎸
+        Welcome to Chicago Music Compass! 🎶 We&apos;re not just another tech team – we&apos;re music enthusiasts, bandmates, and tech wizards on a mission to shake up the Windy City&apos;s live music scene. 🌬️🎸
       </p>
       <p>
-        Our journey began with a simple passion for live music, fueled by our own experiences jamming on stage and grooving in the crowd. Now, armed with our tech expertise, we&apos;re ready to give back to the community that has given us so much joy.
+        Our journey began with a passion for live music, fueled by our experiences on stage and in the crowd. Now, armed with our tech expertise, we&apos;re ready to give back to the community that brings us so much joy.
       </p>
       <p>
-        At Chicago Music Compass, we&apos;re all about data-driven insights and rockin&apos; revelations. 📊🎤 We&apos;ve scoured the city to compile a treasure trove of live show data – dates, venues, artists, and more – all served up on a silver platter for your browsing pleasure.
+        At Chicago Music Compass, we&apos;re all about data-driven insights and rockin&apos; revelations. 📊🎤 We&apos;ve scoured the city to compile live show data – dates, venues, artists, and more – all served up for your browsing pleasure.
       </p>
       <p>
-        But we&apos;re not stopping there. 🛑 Our next riff? To dive deep into the data, uncovering hidden gems and shining a spotlight on the heartbeat of Chicago&apos;s music scene. 🌟 From interactive dashboards to insightful correlations, we&apos;re here to help venues fine-tune their tunes and fans discover their next favorite gig.
+        But we&apos;re not stopping there. 🛑 Our next riff? Dive deep into the data, spotlighting Chicago&apos;s music scene. 🌟 From interactive dashboards to insightful correlations, we&apos;re here to help venues fine-tune their tunes and fans discover their next favorite gig.
       </p>
       <p>
-        But hey, we can&apos;t do it alone. 🤝 We&apos;re calling on all music mavens, gig-goers, and scene-stealers to join us on this wild ride. Have an idea for a killer feature? Want to share your insights? Hit us up – we&apos;re all ears! 🎶
-      </p>
-      <p>
-        Why Chicago? Because this city isn&apos;t just a backdrop – it&apos;s our muse, our home, and our heartstrings. 🏙️ So come on, dive in, and let&apos;s make some magic together. 🌟
+        Join us on this wild ride. Have an idea for a killer feature? Hit us up – we&apos;re all ears! 🎶
       </p>
       <br />
       <h2 style={{
@@ -53,7 +51,7 @@ const Footer = () => (
           listStyle: "none",
           flexWrap: "wrap",
           margin: 0,
-          padding: "12px 0 0",
+          padding: 0,
           justifyContent: "space-between",
         }}
       >
