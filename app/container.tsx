@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Flaminfo, Logo } from "@/components/svgs";
+import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
 import { tokens } from "@/support/token";
 import DayPicker from "@/components/DayPicker";
@@ -101,18 +101,6 @@ export default function Home({
           height: "calc(100vh - 80px)",
         }}
       >
-        <div
-          onClick={() => scrolltoHash('cmc')}
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            right: '1rem',
-            width: '2rem',
-            cursor: 'pointer',
-          }}
-        >
-          <Flaminfo />
-        </div>
         <div className="brand">
           <Logo />
           <h1
@@ -150,7 +138,9 @@ export default function Home({
           flexWrap: 'wrap',
           alignItems: 'stretch',
           padding: '3rem 0',
-          gap: '20px'
+          gap: '20px',
+          width: 'calc(100% - 40px)',
+          maxWidth: '780px'
 ,        }}
       >
         {selectedEvents.map((event) => (
@@ -188,10 +178,6 @@ export default function Home({
             width: 40%;
             margin-left: -15%;
           }
-        }
-        .shows {
-          width: calc(100% - 40px);
-          max-width: 780px;
         }
         .show {
           width: 100%;
