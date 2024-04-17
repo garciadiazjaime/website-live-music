@@ -1,4 +1,4 @@
-export const handler = async () => {
+module.exports.handler = async () => {
   const url = `${process.env.NEXT_PUBLIC_S3_URL}/public/events.json`;
 
   const res = await fetch(url);
