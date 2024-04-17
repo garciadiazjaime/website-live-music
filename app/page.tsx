@@ -14,6 +14,8 @@ async function getEvents() {
   const events = await res.json();
   const today = new Date();
 
+  console.log({ today, total: events.length });
+
   return events
     .filter(
       (event: Event) => new Date(event.start_date).getDate() === today.getDate()
@@ -37,10 +39,13 @@ const getDaysOfWeek = () => {
 };
 
 const Home = async () => {
-  const events = await getEvents().catch(() => []);
+  const events = await getEvents().catch((error) => {
+    console.log(error);
+    return [];
+  });
 
   const daysOfWeek = getDaysOfWeek();
-
+  console.log({ daysOfWeek, total: events.length });
   if (!events.length) {
     return <div>:( no events</div>;
   }
