@@ -78,7 +78,11 @@ const Footer = () => (
         }}
       >
         <li>
-          <a href="https://www.tiktok.com/@livemusic210" rel="nofollow">
+          <a
+            href="https://www.tiktok.com/@livemusic210"
+            rel="nofollow"
+            aria-label="follow us on Tiktok"
+          >
             {logos.tiktok}
           </a>
         </li>
@@ -86,6 +90,7 @@ const Footer = () => (
           <a
             href="https://www.facebook.com/people/ChicagoMusic-Compass/pfbid0kWe8UUC8ZtAowz5wx5S4ygKrZ3eTGAnYhhB95x5obRLwuD8vN5JZ3G16k4S3DWZRl/"
             rel="nofollow"
+            aria-label="follow us on Facebook"
           >
             {logos.facebook}
           </a>
@@ -94,12 +99,17 @@ const Footer = () => (
           <a
             href="https://www.instagram.com/chicagomusiccompass/"
             rel="nofollow"
+            aria-label="follow us on Instagram"
           >
             {logos.instagram}
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/livemusic210" rel="nofollow">
+          <a
+            href="https://twitter.com/livemusic210"
+            rel="nofollow"
+            aria-label="follow us on Twitter"
+          >
             {logos.twitter}
           </a>
         </li>
@@ -107,6 +117,7 @@ const Footer = () => (
           <a
             href="https://www.youtube.com/channel/UCWJE0M7LgZjKBvvceSmSEBw"
             rel="nofollow"
+            aria-label="follow us on Youtube"
           >
             {logos.youtube}
           </a>
