@@ -1,3 +1,6 @@
+import { tokens } from "@/support/token";
+import { logos } from "@/components/socialLinks";
+
 const Footer = () => (
   <footer
     className="footer"
@@ -15,23 +18,23 @@ const Footer = () => (
   >
     <div
       style={{
-        border: "solid 1px #ff2751",
+        border: `solid 1px ${tokens.color.red}`,
         padding: 20,
       }}
     >
       <h2
         style={{
           fontSize: "1.5rem",
-          color: "#64C7F9",
+          color: tokens.color.lightBlue,
           marginTop: 0,
         }}
       >
         About Us:
       </h2>
       <p>
-        Welcome to Chicago Music Compass! 🎶 We&apos;re not just another tech
-        team – we&apos;re music enthusiasts, bandmates, and tech wizards on a
-        mission to shake up the Windy City&apos;s live music scene. 🌬️🎸
+        Welcome to Chicago Music Compass! We&apos;re not just another tech team
+        – we&apos;re music enthusiasts, bandmates, and tech wizards on a mission
+        to shake up the Windy City&apos;s live music scene.
       </p>
       <p>
         Our journey began with a passion for live music, fueled by our
@@ -41,19 +44,19 @@ const Footer = () => (
       </p>
       <p>
         At Chicago Music Compass, we&apos;re all about data-driven insights and
-        rockin&apos; revelations. 📊🎤 We&apos;ve scoured the city to compile
-        live show data – dates, venues, artists, and more – all served up for
-        your browsing pleasure.
+        rocking revelations. We&apos;ve scoured the city to compile live show
+        data – dates, venues, artists, and more – all served up for your
+        browsing pleasure.
       </p>
       <p>
-        But we&apos;re not stopping there. 🛑 Our next riff? Dive deep into the
-        data, spotlighting Chicago&apos;s music scene. 🌟 From interactive
+        But we&apos;re not stopping there. Our next riff? Dive deep into the
+        data, spotlighting Chicago&apos;s music scene. From interactive
         dashboards to insightful correlations, we&apos;re here to help venues
         fine-tune their tunes and fans discover their next favorite gig.
       </p>
       <p>
         Join us on this wild ride. Have an idea for a killer feature? Hit us up
-        – we&apos;re all ears! 🎶
+        – we&apos;re all ears!
       </p>
       <br />
       <h2
@@ -76,25 +79,28 @@ const Footer = () => (
       >
         <li>
           <a href="https://www.tiktok.com/@livemusic210" rel="nofollow">
-            TikTok
+            {logos.tiktok}
           </a>
         </li>
         <li>
           <a
-            href="https://www.facebook.com/people/Playami-Town/pfbid0km55nti3TSQbd1Nu1FoiDREZfpu1adEG3CAzzVaKAuw4SLZoz7vKwUAZ2UZyEejjl/"
+            href="https://www.facebook.com/people/ChicagoMusic-Compass/pfbid0kWe8UUC8ZtAowz5wx5S4ygKrZ3eTGAnYhhB95x5obRLwuD8vN5JZ3G16k4S3DWZRl/"
             rel="nofollow"
           >
-            Facebook
+            {logos.facebook}
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/playamitown/" rel="nofollow">
-            Instagram
+          <a
+            href="https://www.instagram.com/chicagomusiccompass/"
+            rel="nofollow"
+          >
+            {logos.instagram}
           </a>
         </li>
         <li>
           <a href="https://twitter.com/livemusic210" rel="nofollow">
-            Twitter
+            {logos.twitter}
           </a>
         </li>
         <li>
@@ -102,7 +108,7 @@ const Footer = () => (
             href="https://www.youtube.com/channel/UCWJE0M7LgZjKBvvceSmSEBw"
             rel="nofollow"
           >
-            Youtube
+            {logos.youtube}
           </a>
         </li>
       </ul>

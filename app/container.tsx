@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
 import { tokens } from "@/support/token";
@@ -110,7 +110,7 @@ export default function Home({
             style={{
               textTransform: "uppercase",
               fontFamily: "Poppins",
-              color: "white",
+              color: tokens.color.white,
               display: "flex",
               flexDirection: "column",
               lineHeight: 0.9,
@@ -121,8 +121,8 @@ export default function Home({
             <span
               style={{
                 fontFamily: "Barlow Condensed",
-                color: "#64C7F9",
-                letterSpacing: "0",
+                color: tokens.color.lightBlue,
+                letterSpacing: 0,
               }}
             >
               Music Compass
@@ -144,9 +144,9 @@ export default function Home({
           flexWrap: "wrap",
           alignItems: "stretch",
           padding: "3rem 0",
-          gap: "20px",
+          gap: 20,
           width: "calc(100% - 40px)",
-          maxWidth: "780px",
+          maxWidth: 780,
         }}
       >
         {selectedEvents.map((event) => (

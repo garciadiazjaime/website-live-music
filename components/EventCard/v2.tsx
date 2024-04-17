@@ -161,18 +161,18 @@ const EventCard = ({ event }: Props) => {
           <h2
             style={{
               cursor: "pointer",
-              color: "white",
+              color: tokens.color.white,
               textTransform: "capitalize",
               textAlign: "left",
               padding: "20px 18px 20px 16px",
               fontSize: "1.5rem",
               fontWeight: "bold",
               textOverflow: "ellipsis",
-              margin: "0",
+              margin: 0,
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              height: "80px",
+              height: 80,
             }}
           >
             <span

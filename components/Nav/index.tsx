@@ -51,10 +51,10 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
         className="nav-logo"
         style={{
           display: "flex",
-          flexShrink: "0",
+          flexShrink: 0,
           paddingLeft: "1rem",
           transition: "opacity ease-in-out 0.3s",
-          opacity: isStuck ? "1" : "0",
+          opacity: isStuck ? 1 : 0,
         }}
       >
         <Logo />
@@ -66,9 +66,9 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
         style={{
           display: "flex",
           paddingRight: "1rem",
-          flexShrink: "0",
+          flexShrink: 0,
           transition: "opacity ease-in-out 0.3s",
-          opacity: isStuck ? "1" : "0",
+          opacity: isStuck ? 1 : 0,
         }}
       >
         <MapIcon />
