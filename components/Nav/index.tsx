@@ -70,6 +70,7 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
           transition: "opacity ease-in-out 0.3s",
           opacity: isStuck ? 1 : 0,
         }}
+        aria-label="Map about Events in Chicago"
       >
         <MapIcon />
       </a>

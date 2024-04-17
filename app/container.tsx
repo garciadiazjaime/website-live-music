@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Poppins, Barlow_Condensed } from "next/font/google";
+
 import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
 import { tokens } from "@/support/token";
@@ -10,6 +12,20 @@ import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+
+const fontPoppins = Poppins({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fontBarlow_Condensed = Barlow_Condensed({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -107,9 +123,9 @@ export default function Home({
         <div className="brand">
           <Logo />
           <h1
+            className={fontPoppins.className}
             style={{
               textTransform: "uppercase",
-              fontFamily: "Poppins",
               color: tokens.color.white,
               display: "flex",
               flexDirection: "column",
@@ -119,8 +135,8 @@ export default function Home({
           >
             Chicago
             <span
+              className={fontBarlow_Condensed.className}
               style={{
-                fontFamily: "Barlow Condensed",
                 color: tokens.color.lightBlue,
                 letterSpacing: 0,
               }}
@@ -157,7 +173,6 @@ export default function Home({
       </section>
       <Footer />
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Barlow+Condensed:wght@400&display=swap");
         .brand {
           display: flex;
           flex-direction: column;
