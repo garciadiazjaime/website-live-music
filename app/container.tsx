@@ -83,15 +83,6 @@ export default function Home({
     setSelectedEvents(eventsByDay[selectedDate]);
   }, [selectedDate, eventsByDay]);
 
-  const scrolltoHash = function (element_id: string) {
-    const element = document.getElementById(element_id);
-    element?.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
-
   return (
     <main
       style={{

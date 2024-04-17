@@ -3,9 +3,9 @@ import { Event } from "@/support/types";
 import { getEventWithDateAndTime } from "./support";
 
 async function getEvents() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_S3_URL!}/public/events.json`
-  );
+  const url = `${process.env.NEXT_PUBLIC_S3_URL!}/public/events.json`;
+  console.log({ url });
+  const res = await fetch(url);
 
   if (!res.ok) {
     return;
@@ -13,13 +13,20 @@ async function getEvents() {
 
   const events = await res.json();
   const today = new Date();
+  console.log(JSON.stringify(events[0], null, 2));
 
   console.log({ today, total: events.length });
 
   return events
-    .filter(
-      (event: Event) => new Date(event.start_date).getDate() === today.getDate()
-    )
+    .filter((event: Event) => {
+      const eventDate = new Date(event.start_date).getDate();
+      console.log({
+        eventDate,
+        today: today.getDate(),
+        value: eventDate === today.getDate(),
+      });
+      return eventDate === today.getDate();
+    })
     .slice(0, 10)
     .map(getEventWithDateAndTime);
 }
