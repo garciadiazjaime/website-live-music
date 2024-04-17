@@ -12,7 +12,6 @@ async function getEvents() {
   }
 
   const data = await res.json();
-  console.log(JSON.stringify(data[0], null, 2));
   console.log({ created: data.created, total: data.events?.length });
   const today = new Date();
 

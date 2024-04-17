@@ -58,7 +58,6 @@ const EventCard = ({ event }: Props) => {
         backgroundImage:
           "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
       }}
-      data-date={event.start_date}
     >
       <div
         style={{

@@ -156,8 +156,12 @@ export default function Home({
           maxWidth: 780,
         }}
       >
-        {selectedEvents.map((event) => (
-          <div key={event.slug} className="show">
+        {selectedEvents.map((event, index) => (
+          <div
+            key={`${index}_${event.slug}`}
+            className="show"
+            date-date={new Date(event.start_date).toLocaleString()}
+          >
             <EventCard event={event} />
           </div>
         ))}
