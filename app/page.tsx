@@ -11,22 +11,15 @@ async function getEvents() {
     return;
   }
 
-  const events = await res.json();
+  const data = await res.json();
+  console.log(JSON.stringify(data[0], null, 2));
+  console.log({ created: data.created, total: data.events?.length });
   const today = new Date();
-  console.log(JSON.stringify(events[0], null, 2));
 
-  console.log({ today, total: events.length });
-
-  return events
-    .filter((event: Event) => {
-      const eventDate = new Date(event.start_date).getDate();
-      console.log({
-        eventDate,
-        today: today.getDate(),
-        value: eventDate === today.getDate(),
-      });
-      return eventDate === today.getDate();
-    })
+  return data.events
+    .filter(
+      (event: Event) => new Date(event.start_date).getDate() === today.getDate()
+    )
     .slice(0, 10)
     .map(getEventWithDateAndTime);
 }
@@ -46,16 +39,9 @@ const getDaysOfWeek = () => {
 };
 
 const Home = async () => {
-  const events = await getEvents().catch((error) => {
-    console.log(error);
-    return [];
-  });
+  const events = await getEvents().catch(() => []);
 
   const daysOfWeek = getDaysOfWeek();
-  console.log({ daysOfWeek, total: events.length });
-  if (!events.length) {
-    return <div>:( no events</div>;
-  }
 
   return (
     <div
