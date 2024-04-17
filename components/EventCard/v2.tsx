@@ -125,7 +125,7 @@ const EventCard = ({ event }: Props) => {
             className="actionBtn"
             onClick={() => setOpenShareDialog(!openShareDialog)}
           >
-            <div style={{ width: 15, padding: 15, display: 'flex' }}>
+            <div style={{ width: 15, padding: 15, display: "flex" }}>
               {openShareDialog ? <Close /> : <Share />}
             </div>
             <ShareDialog
@@ -139,7 +139,7 @@ const EventCard = ({ event }: Props) => {
             className="actionBtn"
             aria-label={`google maps link for ${event.name}`}
           >
-            <div style={{ width: 15, padding: 15, display: 'flex' }}>
+            <div style={{ width: 15, padding: 15, display: "flex" }}>
               <Directions />
             </div>
           </button>
@@ -172,13 +172,16 @@ const EventCard = ({ event }: Props) => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              height: "80px"
+              height: "80px",
             }}
           >
-            <span style={{
-              textOverflow: "hidden"
-            }}
-            >{event.name.toLowerCase()}</span>
+            <span
+              style={{
+                textOverflow: "hidden",
+              }}
+            >
+              {event.name.toLowerCase()}
+            </span>
             <div
               style={{
                 width: 35,

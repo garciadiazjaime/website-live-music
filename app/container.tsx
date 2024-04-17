@@ -11,7 +11,6 @@ import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 
-
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
   const res = await fetch(url);
@@ -69,9 +68,13 @@ export default function Home({
   }, [selectedDate, eventsByDay]);
 
   const scrolltoHash = function (element_id: string) {
-    const element = document.getElementById(element_id)
-    element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-  }
+    const element = document.getElementById(element_id);
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
 
   return (
     <main
@@ -93,7 +96,7 @@ export default function Home({
       <header
         style={{
           display: "flex",
-          position: 'relative',
+          position: "relative",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-around",
@@ -105,23 +108,25 @@ export default function Home({
           <Logo />
           <h1
             style={{
-              textTransform: 'uppercase',
-              fontFamily: 'Poppins',
-              color: 'white',
-              display: 'flex',
-              flexDirection: 'column',
+              textTransform: "uppercase",
+              fontFamily: "Poppins",
+              color: "white",
+              display: "flex",
+              flexDirection: "column",
               lineHeight: 0.9,
-              textAlign: 'center',
+              textAlign: "center",
             }}
           >
             Chicago
             <span
               style={{
-                fontFamily: 'Barlow Condensed',
-                color: '#64C7F9',
-                letterSpacing: '0',
+                fontFamily: "Barlow Condensed",
+                color: "#64C7F9",
+                letterSpacing: "0",
               }}
-            >Music Compass</span>
+            >
+              Music Compass
+            </span>
           </h1>
         </div>
       </header>
@@ -132,27 +137,27 @@ export default function Home({
           daysOfWeek={daysOfWeek}
         />
       </Nav>
-      <section className="shows"
+      <section
+        className="shows"
         style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'stretch',
-          padding: '3rem 0',
-          gap: '20px',
-          width: 'calc(100% - 40px)',
-          maxWidth: '780px'
-,        }}
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "stretch",
+          padding: "3rem 0",
+          gap: "20px",
+          width: "calc(100% - 40px)",
+          maxWidth: "780px",
+        }}
       >
         {selectedEvents.map((event) => (
-          <div key={event.slug} className="show"
-          >
+          <div key={event.slug} className="show">
             <EventCard event={event} />
           </div>
         ))}
       </section>
       <Footer />
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Barlow+Condensed:wght@400&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Barlow+Condensed:wght@400&display=swap");
         .brand {
           display: flex;
           flex-direction: column;
@@ -161,10 +166,10 @@ export default function Home({
           gap: 2rem;
           h1 {
             font-size: 2.8rem;
-            letter-spacing: .28rem;
+            letter-spacing: 0.28rem;
             @media (min-width: ${tokens.breakpoints.md}) {
               font-size: 4rem;
-              letter-spacing: .4rem;
+              letter-spacing: 0.4rem;
             }
             span {
               font-size: 2.8rem;
