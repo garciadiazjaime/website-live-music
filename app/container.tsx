@@ -76,7 +76,7 @@ export default function Home({
   }, []);
 
   useEffect(() => {
-    if (!selectedDate || !eventsByDay[selectedDate]) {
+    if (!selectedDate || !eventsByDay || !eventsByDay[selectedDate]) {
       return;
     }
 
