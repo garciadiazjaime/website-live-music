@@ -4,7 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 import React, { useEffect, useState } from "react";
 import "@/app/globals.css";
 
-const MODEL_URL = "http://localhost:3000/tfjs-models/tfjs/model.json";
+const MODEL_URL = "https://d2r5kaieomhckh.cloudfront.net/public/model.json";
 
 const getTfModel = async () => {
   return await tf.loadGraphModel(MODEL_URL);
