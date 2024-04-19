@@ -5,10 +5,6 @@ import React, { useEffect, useState } from "react";
 
 const MODEL_URL = "https://d2r5kaieomhckh.cloudfront.net/public/model.json";
 
-const getTfModel = async () => {
-  return await tf.loadGraphModel(MODEL_URL);
-};
-
 export default function Page() {
   const [followCount, setFollowCount] = useState("");
   const [popularity, setPopularity] = useState(0);
@@ -26,7 +22,6 @@ export default function Page() {
 
   const predict = () => {
     if (!tfModel || !followCount) {
-      console.log("Model not set or followCount empty");
       return;
     }
 
@@ -39,7 +34,7 @@ export default function Page() {
   };
 
   useEffect(() => {
-    getTfModel().catch(console.error);
+    getTfModel();
   }, []);
 
   return (
