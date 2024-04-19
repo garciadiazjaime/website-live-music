@@ -16,7 +16,7 @@ const doHTTPS = (url: string) => url?.replace("http:", "https:");
 
 const DateTime = ({ time }: { time: string }) => {
   const value = parseInt(time);
-  const hour = value % 12;
+  const hour = value > 12 ? value % 12 : value;
   const meridiem = value > 12 ? "PM" : "AM";
   return (
     <>
