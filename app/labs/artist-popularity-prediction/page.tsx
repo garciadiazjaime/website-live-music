@@ -2,7 +2,6 @@
 
 import * as tf from "@tensorflow/tfjs";
 import React, { useEffect, useState } from "react";
-import "@/app/globals.css";
 
 const MODEL_URL = "https://d2r5kaieomhckh.cloudfront.net/public/model.json";
 
@@ -15,6 +14,11 @@ export default function Page() {
   const [popularity, setPopularity] = useState(0);
   const [tfModel, setTfModel] = useState<tf.GraphModel>();
 
+  const getTfModel = async () => {
+    const model = await tf.loadGraphModel(MODEL_URL);
+    setTfModel(model);
+  };
+
   const inputOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     setFollowCount(value);
@@ -26,42 +30,29 @@ export default function Page() {
       return;
     }
 
-    const modelInput = tf.tensor(parseFloat(followCount)).reshape([-1, 1]);
-    console.log("Input:", modelInput.toString());
+    const formattedInput = Math.log(parseFloat(followCount));
+    const modelInput = tf.tensor(formattedInput).reshape([-1, 1]);
     const prediction: any = tfModel.predict(modelInput);
-    console.log("Prediction:", prediction.toString());
     const predictionValues = prediction.arraySync();
-    const formattedPopularity = predictionValues[0][0].toFixed(2);
+    const formattedPopularity = predictionValues[0][0].toFixed(2) * 100;
     setPopularity(formattedPopularity);
   };
 
   useEffect(() => {
-    const fetchModel = async () => {
-      const model = await getTfModel();
-      setTfModel(model);
-    };
-    fetchModel().catch(console.error);
+    getTfModel().catch(console.error);
   }, []);
 
   return (
-    <div className="mt-12 w-1/2 mx-auto flex flex-col items-center">
-      <h1 className="text-4xl font-extrabold">How popular are you?</h1>
+    <>
+      <h1>How popular are you?</h1>
       <input
-        className="h-10 w-full mt-12 pl-2 border-solid border-2 rounded-md"
         placeholder="Enter your twitter followers"
         value={followCount}
         onChange={inputOnChange}
         type="number"
       />
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-6 rounded-md h-10 w-full"
-        onClick={predict}
-      >
-        Predict
-      </button>
-      {popularity > 0 && (
-        <div className="mt-12 font-bold">Popularity: {popularity}</div>
-      )}
-    </div>
+      <button onClick={predict}>Predict</button>
+      {popularity > 0 && <div>Popularity: {popularity}</div>}
+    </>
   );
 }
