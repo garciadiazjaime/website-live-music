@@ -43,22 +43,33 @@ const Slider = () => {
         gap: 20,
       }}
     >
-      <button onClick={goToPrevSlide}>
+      <button
+        onClick={goToPrevSlide}
+        style={{
+          background: "none",
+          borderRadius: 0,
+          border: "none",
+          padding: 0,
+          width: 40,
+        }}
+      >
         <SlickArrowLeft />
       </button>
       <p className={transition}>{phrases[activeSlide]}</p>
-      <button onClick={goToNextSlide}>
+      <button
+        onClick={goToNextSlide}
+        style={{
+          background: "none",
+          borderRadius: 0,
+          border: "none",
+          padding: 0,
+          width: 40,
+        }}
+      >
         <SlickArrowRight />
       </button>
 
       <style jsx>{`
-        button {
-          background: none;
-          border-radius: 0;
-          border: none;
-          width: 40px;
-          padding: 0;
-        }
         p {
           padding: 0;
           font-family: sans-serif;

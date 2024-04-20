@@ -77,12 +77,15 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
       <style jsx>{`
         .nav-logo {
           width: 30px;
+
           @media (min-width: ${tokens.breakpoints.md}) {
             width: 50px;
           }
         }
+
         .nav-map {
           width: 25px;
+
           @media (min-width: ${tokens.breakpoints.md}) {
             width: 30px;
           }

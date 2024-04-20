@@ -105,9 +105,27 @@ const EventCard = ({ event }: Props) => {
             justifyContent: "center",
           }}
         >
-          <Image src={getImage(event)} height={0} width={0} alt={event.name} />
-          <Image src={getImage(event)} height={0} width={0} alt={event.name} />
-          <Image src={getImage(event)} height={0} width={0} alt={event.name} />
+          <Image
+            src={getImage(event)}
+            height={128}
+            width={0}
+            alt={event.name}
+            style={{ width: "auto" }}
+          />
+          <Image
+            src={getImage(event)}
+            height={128}
+            width={0}
+            alt={event.name}
+            style={{ width: "auto" }}
+          />
+          <Image
+            src={getImage(event)}
+            height={128}
+            width={0}
+            alt={event.name}
+            style={{ width: "auto" }}
+          />
         </div>
         <div
           style={{
@@ -137,6 +155,13 @@ const EventCard = ({ event }: Props) => {
             onClick={() => directionsClickHandler(event)}
             className="actionBtn"
             aria-label={`google maps link for ${event.name}`}
+            style={{
+              background: "none",
+              border: "none",
+              padding: 0,
+              margin: 0,
+              borderRadius: 0,
+            }}
           >
             <div style={{ width: 15, padding: 15, display: "flex" }}>
               <Directions />
@@ -156,7 +181,16 @@ const EventCard = ({ event }: Props) => {
           position: "relative",
         }}
       >
-        <button className="eventLink" onClick={() => gotoEventPage(event)}>
+        <button
+          onClick={() => gotoEventPage(event)}
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            margin: 0,
+            borderRadius: 0,
+          }}
+        >
           <h2
             style={{
               cursor: "pointer",
@@ -204,39 +238,25 @@ const EventCard = ({ event }: Props) => {
       </div>
 
       <style jsx>{`
-        article {
-          button {
-            background: none;
-            border: none;
-            padding: 0;
-            margin: 0;
-            border-radius: 0;
-          }
+        .actionBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0.6;
+          position: relative;
+          cursor: pointer;
 
-          img {
-            height: 128px;
-            width: auto;
+          &:hover {
+            opacity: 1;
           }
+        }
 
-          .actionBtn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.6;
-            position: relative;
-            cursor: pointer;
+        h2 {
+          @media (min-width: ${tokens.breakpoints.lg}) {
+            opacity: 0.8;
 
             &:hover {
               opacity: 1;
-            }
-          }
-
-          h2 {
-            @media (min-width: ${tokens.breakpoints.lg}) {
-              opacity: 0.8;
-              &:hover {
-                opacity: 1;
-              }
             }
           }
         }

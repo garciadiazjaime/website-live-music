@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { tokens } from "@/support/token";
 import { logos } from "@/components/socialLinks";
 
@@ -123,19 +125,56 @@ const Footer = () => (
           </a>
         </li>
       </ul>
+
+      <h2
+        style={{
+          fontSize: "1.5rem",
+          color: "#64C7F9",
+        }}
+      >
+        More about the project
+      </h2>
+
+      <ul
+        style={{
+          display: "flex",
+          listStyle: "none",
+          flexWrap: "wrap",
+          margin: 0,
+          padding: 0,
+          flexDirection: "column",
+        }}
+      >
+        <li>
+          <Link
+            href="/blog/artists-popularity-model"
+            style={{ color: tokens.color.white, textDecoration: "none" }}
+          >
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/labs/artist-popularity-prediction"
+            style={{ color: tokens.color.white, textDecoration: "none" }}
+          >
+            Labs
+          </Link>
+        </li>
+      </ul>
     </div>
     <style jsx>{`
-      .footer {
-        a {
-          color: white;
-          text-decoration: none;
-          &:hover {
-            color: #ff2751;
-          }
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: #ff2751;
         }
-        p {
-          font-size: 16px;
-        }
+      }
+
+      p {
+        font-size: 16px;
       }
     `}</style>
   </footer>

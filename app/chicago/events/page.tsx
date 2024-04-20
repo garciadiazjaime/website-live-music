@@ -11,7 +11,9 @@ async function getEvents() {
     return;
   }
 
-  return res.json();
+  const data = await res.json();
+
+  return data.events;
 }
 
 export default async function Home() {

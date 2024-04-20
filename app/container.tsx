@@ -111,8 +111,16 @@ export default function Home({
           height: "calc(100vh - 80px)",
         }}
       >
-        <div className="brand">
-          <Logo />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingTop: "10%",
+            gap: "2rem",
+          }}
+        >
+          <Logo style={{ width: "40%" }} />
           <h1
             className={fontPoppins.className}
             style={{
@@ -168,36 +176,29 @@ export default function Home({
       </section>
       <Footer />
       <style jsx>{`
-        .brand {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding-top: 10%;
-          gap: 2rem;
-          h1 {
-            font-size: 2.8rem;
-            letter-spacing: 0.28rem;
-            @media (min-width: ${tokens.breakpoints.md}) {
-              font-size: 4rem;
-              letter-spacing: 0.4rem;
-            }
-            span {
-              font-size: 2.8rem;
-              @media (min-width: ${tokens.breakpoints.md}) {
-                font-size: 4rem;
-              }
-            }
-          }
-
-          svg:first-child {
-            width: 40%;
-            margin-left: -15%;
-          }
-        }
         .show {
           width: 100%;
+
           @media (min-width: ${tokens.breakpoints.md}) {
             width: calc(50% - 10px);
+          }
+        }
+
+        h1 {
+          font-size: 2.8rem;
+          letter-spacing: 0.28rem;
+
+          @media (min-width: ${tokens.breakpoints.md}) {
+            font-size: 4rem;
+            letter-spacing: 0.4rem;
+          }
+        }
+
+        span {
+          font-size: 2.8rem;
+
+          @media (min-width: ${tokens.breakpoints.md}) {
+            font-size: 4rem;
           }
         }
       `}</style>

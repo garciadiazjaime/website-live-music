@@ -49,29 +49,35 @@ const DayPicker = ({
           flex-grow: 0;
           overflow: scroll;
           gap: 1rem;
+
           &::-webkit-scrollbar {
             width: 0;
             height: 0;
           }
+
           &::-webkit-scrollbar-thumb {
             background-color: #rgba(255, 255, 255, 0);
           }
-          button {
-            border-radius: 5px;
-            padding: 10px 15px;
-            border: none;
-            color: white;
-            font-weight: bold;
-            background: none;
-            cursor: pointer;
+        }
+
+        button {
+          border-radius: 5px;
+          padding: 10px 15px;
+          border: none;
+          color: white;
+          font-weight: bold;
+          background: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+
+          &.active {
+            background-color: rgba(255, 49, 29, 0.7);
+
             &:hover {
-              background-color: rgba(0, 0, 0, 0.2);
-            }
-            &.active {
-              background-color: rgba(255, 49, 29, 0.7);
-              &:hover {
-                background-color: rgba(255, 49, 29, 0.8);
-              }
+              background-color: rgba(255, 49, 29, 0.8);
             }
           }
         }
