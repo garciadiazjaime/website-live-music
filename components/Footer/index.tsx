@@ -76,7 +76,8 @@ const Footer = () => (
           flexWrap: "wrap",
           margin: 0,
           padding: 0,
-          justifyContent: "space-between",
+          justifyContent: "center",
+          gap: '30px',
         }}
       >
         <li>
