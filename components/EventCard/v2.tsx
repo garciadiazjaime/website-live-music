@@ -80,7 +80,7 @@ const EventCard = ({ event }: Props) => {
         >
           <DateTime time={event.time} />
         </div>
-        <strong
+        <div
           style={{
             position: "absolute",
             left: 0,
@@ -90,13 +90,17 @@ const EventCard = ({ event }: Props) => {
             backgroundColor: "rgb(225 29 72)",
             fontSize: "1rem",
             marginBottom: 16,
-            padding: "0 8px",
+            padding: "2px 8px",
             fontStyle: "italic",
             flexShrink: 0,
+            maxWidth: "66%",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
           }}
         >
           {event.location.name}
-        </strong>
+        </div>
         <div
           style={{
             display: "flex",
