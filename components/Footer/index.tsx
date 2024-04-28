@@ -8,7 +8,6 @@ const Footer = () => (
     className="footer"
     id="cmc"
     style={{
-      padding: 20,
       margin: "0 20px 20px",
       fontSize: 20,
       width: "calc(100% - 80px)",
@@ -22,6 +21,7 @@ const Footer = () => (
       style={{
         border: `solid 1px ${tokens.color.red}`,
         padding: 20,
+        margin: 20,
       }}
     >
       <h2

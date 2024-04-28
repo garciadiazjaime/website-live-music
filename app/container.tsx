@@ -12,6 +12,7 @@ import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import MessageCard, { MessageLink } from "@/components/MessageCard";
 
 const fontPoppins = Poppins({
   weight: ["400"],
@@ -158,27 +159,32 @@ export default function Home({
           display: "flex",
           flexWrap: "wrap",
           alignItems: "stretch",
-          padding: "3rem 0",
+          padding: "3rem 0 1rem",
           gap: 20,
           width: "calc(100% - 40px)",
           maxWidth: 780,
         }}
       >
-        {selectedEvents.map((event, index) => (
-          <div
+        {selectedEvents.map((event, index) => {
+          return <div
             key={`${index}_${event.slug}`}
             className="show"
             date-date={new Date(event.start_date).toLocaleString()}
           >
             <EventCard event={event} />
           </div>
-        ))}
+        })}
       </section>
+      <MessageCard>
+        Message goes here
+        <MessageLink href="/">
+          Read more
+        </MessageLink>
+      </MessageCard>
       <Footer />
       <style jsx>{`
         .show {
           width: 100%;
-
           @media (min-width: ${tokens.breakpoints.md}) {
             width: calc(50% - 10px);
           }
