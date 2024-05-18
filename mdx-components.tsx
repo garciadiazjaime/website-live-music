@@ -1,5 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
+import { codeToHtml } from "shiki";
+
 import { tokens } from "@/support/token";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -23,19 +25,16 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </em>
     ),
-    code: ({ children }) => (
-      <code
-        style={{
-          fontSize: 18,
-          background: "#EEE",
-          display: "block",
-          padding: "20px 12px",
-          overflowX: "scroll",
-        }}
-      >
-        {children}
-      </code>
-    ),
+    code: async (props) => {
+      const lang = props.className?.split("-")[1] || "javascript";
+
+      const html = await codeToHtml(props.children as string, {
+        lang,
+        theme: "solarized-light",
+      });
+
+      return <code dangerouslySetInnerHTML={{ __html: html }} />;
+    },
     img: (props) => (
       <Image
         width={400}
@@ -45,6 +44,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {...(props as ImageProps)}
       />
     ),
+    li: ({ children }) => <li style={{ fontSize: 24 }}>{children}</li>,
     ...components,
   };
 }
