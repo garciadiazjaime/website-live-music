@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { Poppins, Barlow_Condensed } from "next/font/google";
-
 import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
 import { tokens } from "@/support/token";
@@ -11,7 +10,7 @@ import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
+import Nav from "@/components/StickyNav";
 import MessageCard, { MessageLink } from "@/components/MessageCard";
 
 const fontPoppins = Poppins({
@@ -27,6 +26,23 @@ const fontBarlow_Condensed = Barlow_Condensed({
   subsets: ["latin"],
   display: "swap",
 });
+
+const messages = [
+  {
+    text: 'We’re studying data, help us learn more',
+    link: {
+      url: '/blog',
+      title: 'Read more',
+    }
+  },
+  {
+    text: 'Check out our labs',
+    link: {
+      url: '/labs',
+      title: 'Read more',
+    }
+  },
+]
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -166,21 +182,21 @@ export default function Home({
         }}
       >
         {selectedEvents.map((event, index) => {
-          return <div
-            key={`${index}_${event.slug}`}
-            className="show"
-            date-date={new Date(event.start_date).toLocaleString()}
-          >
-            <EventCard event={event} />
-          </div>
+          const messageIndex = Math.floor(index / 4) % messages.length;
+          return <Fragment key={`${index}_${event.slug}`}>
+            <div
+              className="show"
+              date-date={new Date(event.start_date).toLocaleString()}
+            >
+              <EventCard event={event} />
+            </div>
+            {(index + 1) % 4 === 0 && messages.length > 0 ?
+              <MessageCard message={messages[messageIndex]} theme={!!messageIndex}/>
+            : ''}
+          </Fragment>
         })}
+
       </section>
-      <MessageCard>
-        Message goes here
-        <MessageLink href="/">
-          Read more
-        </MessageLink>
-      </MessageCard>
       <Footer />
       <style jsx>{`
         .show {
