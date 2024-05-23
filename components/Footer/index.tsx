@@ -1,27 +1,28 @@
+'use client'
 import Link from "next/link";
 
 import { tokens } from "@/support/token";
 import { logos } from "@/components/socialLinks";
 
-const Footer = () => (
+const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
   <footer
     className="footer"
     id="cmc"
     style={{
-      padding: 20,
       margin: "0 20px 20px",
       fontSize: 20,
       width: "calc(100% - 80px)",
       maxWidth: "780px",
       fontFamily: "sans-serif",
-      backgroundImage:
-        "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
+      color: theme === 'light' ? 'black' : 'white',
+      backgroundImage: theme === 'light' ? tokens.gradients.redLight : tokens.gradients.red,
     }}
   >
     <div
       style={{
         border: `solid 1px ${tokens.color.red}`,
         padding: 20,
+        margin: 20,
       }}
     >
       <h2
@@ -144,22 +145,31 @@ const Footer = () => (
           margin: 0,
           padding: 0,
           flexDirection: "column",
+          gap: 10,
         }}
       >
         <li>
           <Link
             href="/blog/artists-popularity-model"
-            style={{ color: tokens.color.white, textDecoration: "none" }}
+            style={{ color: theme === 'light' ? tokens.color.black : tokens.color.white, textDecoration: "none" }}
           >
-            Blog
+            Blog: Artist Polularity Model
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/blog/how-cmc-was-built"
+            style={{ color: theme === 'light' ? tokens.color.black : tokens.color.white, textDecoration: "none" }}
+          >
+            Blog: How Chicago Music Compass was built
           </Link>
         </li>
         <li>
           <Link
             href="/labs/artist-popularity-prediction"
-            style={{ color: tokens.color.white, textDecoration: "none" }}
+            style={{ color: theme === 'light' ? tokens.color.black : tokens.color.white, textDecoration: "none" }}
           >
-            Labs
+            Labs: Artist Popularity Prediction
           </Link>
         </li>
       </ul>

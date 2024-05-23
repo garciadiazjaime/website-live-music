@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { Poppins, Barlow_Condensed } from "next/font/google";
-
 import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
 import { tokens } from "@/support/token";
@@ -12,6 +11,7 @@ import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import MessageCard, { MessageLink } from "@/components/MessageCard";
 
 const fontPoppins = Poppins({
   weight: ["400"],
@@ -26,6 +26,30 @@ const fontBarlow_Condensed = Barlow_Condensed({
   subsets: ["latin"],
   display: "swap",
 });
+
+const messages = [
+  {
+    text: 'Learn how we built this site',
+    link: {
+      url: '/blog/how-cmc-was-built',
+      title: 'Read more',
+    }
+  },
+  {
+    text: 'We’re building ML models with the data we’re collecting',
+    link: {
+      url: '/blog/artists-popularity-model',
+      title: 'See how',
+    }
+  },
+  {
+    text: 'Test the popularity model yourself',
+    link: {
+      url: '/labs/artist-popularity-prediction',
+      title: 'Try it',
+    }
+  },
+]
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -113,7 +137,7 @@ export default function Home({
       >
         <div
           style={{
-            display: "flex",
+            display: "sticky",
             flexDirection: "column",
             alignItems: "center",
             paddingTop: "10%",
@@ -158,27 +182,32 @@ export default function Home({
           display: "flex",
           flexWrap: "wrap",
           alignItems: "stretch",
-          padding: "3rem 0",
+          padding: "3rem 0 1rem",
           gap: 20,
           width: "calc(100% - 40px)",
           maxWidth: 780,
         }}
       >
-        {selectedEvents.map((event, index) => (
-          <div
-            key={`${index}_${event.slug}`}
-            className="show"
-            date-date={new Date(event.start_date).toLocaleString()}
-          >
-            <EventCard event={event} />
-          </div>
-        ))}
+        {selectedEvents.map((event, index) => {
+          const messageIndex = Math.floor(index / 4) % messages.length;
+          return <Fragment key={`${index}_${event.slug}`}>
+            <div
+              className="show"
+              date-date={new Date(event.start_date).toLocaleString()}
+            >
+              <EventCard event={event} />
+            </div>
+            {(index + 1) % 4 === 0 && messages.length > 0 ?
+              <MessageCard message={messages[messageIndex]} theme={messageIndex % 2 === 0}/>
+            : ''}
+          </Fragment>
+        })}
+
       </section>
       <Footer />
       <style jsx>{`
         .show {
           width: 100%;
-
           @media (min-width: ${tokens.breakpoints.md}) {
             width: calc(50% - 10px);
           }

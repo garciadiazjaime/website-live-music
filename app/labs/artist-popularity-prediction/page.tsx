@@ -1,5 +1,9 @@
 "use client";
 
+import ArticleLayout from "@/components/ArticleLayout";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
+import { tokens } from "@/support/token";
 import * as tf from "@tensorflow/tfjs";
 import React, { useEffect, useState } from "react";
 
@@ -38,7 +42,7 @@ export default function Page() {
   }, []);
 
   return (
-    <>
+    <ArticleLayout title="Labs">
       <h1>How popular are you?</h1>
       <input
         placeholder="Enter your twitter followers"
@@ -48,6 +52,6 @@ export default function Page() {
       />
       <button onClick={predict}>Predict</button>
       {popularity > 0 && <div>Popularity: {popularity}</div>}
-    </>
+    </ArticleLayout>
   );
 }
