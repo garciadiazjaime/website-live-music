@@ -55,6 +55,7 @@ const EventCard = ({ event }: Props) => {
         position: "relative",
         flexDirection: "column",
         width: "100%",
+        height: "100%",
         backgroundImage:
           "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
       }}
@@ -234,7 +235,7 @@ const EventCard = ({ event }: Props) => {
           style={{
             display: "flex",
             transitionProperty: "all",
-            transitionDuration: "300mx",
+            transitionDuration: "300ms",
           }}
         >
           <SocialLinks event={event} />

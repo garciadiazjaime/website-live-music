@@ -10,7 +10,7 @@ import { Event } from "@/support/types";
 import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
-import Nav from "@/components/StickyNav";
+import Nav from "@/components/Nav";
 import MessageCard, { MessageLink } from "@/components/MessageCard";
 
 const fontPoppins = Poppins({
@@ -29,17 +29,24 @@ const fontBarlow_Condensed = Barlow_Condensed({
 
 const messages = [
   {
-    text: 'We’re studying data, help us learn more',
+    text: 'Learn how we built this site',
     link: {
-      url: '/blog',
+      url: '/blog/how-cmc-was-built',
       title: 'Read more',
     }
   },
   {
-    text: 'Check out our labs',
+    text: 'We’re building ML models with the data we’re collecting',
     link: {
-      url: '/labs',
-      title: 'Read more',
+      url: '/blog/artists-popularity-model',
+      title: 'See how',
+    }
+  },
+  {
+    text: 'Test the popularity model yourself',
+    link: {
+      url: '/labs/artist-popularity-prediction',
+      title: 'Try it',
     }
   },
 ]
@@ -130,7 +137,7 @@ export default function Home({
       >
         <div
           style={{
-            display: "flex",
+            display: "sticky",
             flexDirection: "column",
             alignItems: "center",
             paddingTop: "10%",
@@ -191,7 +198,7 @@ export default function Home({
               <EventCard event={event} />
             </div>
             {(index + 1) % 4 === 0 && messages.length > 0 ?
-              <MessageCard message={messages[messageIndex]} theme={!!messageIndex}/>
+              <MessageCard message={messages[messageIndex]} theme={messageIndex % 2 === 0}/>
             : ''}
           </Fragment>
         })}
