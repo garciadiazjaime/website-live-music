@@ -19,6 +19,10 @@ async function getEvents() {
     .filter(
       (event: Event) => new Date(event.start_date).getDate() === today.getDate()
     )
+    .sort(
+      (a: Event, b: Event) =>
+        new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
+    )
     .slice(0, 10)
     .map(getEventWithDateAndTime);
 }

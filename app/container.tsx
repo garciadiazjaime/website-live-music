@@ -37,7 +37,12 @@ export async function getEventsByDay() {
 
   const data = await res.json();
 
-  const events = data.events.map(getEventWithDateAndTime);
+  const events = data.events
+    .sort(
+      (a: Event, b: Event) =>
+        new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
+    )
+    .map(getEventWithDateAndTime);
 
   return events.reduce((eventsByDay: Record<string, Event[]>, event: Event) => {
     if (!eventsByDay[event.date]) {
