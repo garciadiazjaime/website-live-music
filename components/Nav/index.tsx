@@ -1,4 +1,3 @@
-'use client'
 import { ReactNode } from "react";
 import { Logo, MapIcon } from "@/components/svgs";
 import { tokens } from "@/support/token";
@@ -9,21 +8,29 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
     <nav
       style={{
         width: "100%",
-        display: 'flex',
+        display: "flex",
         justifyContent: "center",
-        textTransform: 'uppercase',
-        fontWeight: 'bold',
-        letterSpacing: '.1rem',
-        backdropFilter: 'blur(5px)',
-        boxShadow: '0 0 2rem 0 rgba(0, 0, 0, .08)',
+        textTransform: "uppercase",
+        fontWeight: "bold",
+        letterSpacing: ".1rem",
+        backdropFilter: "blur(5px)",
+        boxShadow: "0 0 2rem 0 rgba(0, 0, 0, .08)",
         padding: ".5rem 0",
         top: 0,
         zIndex: 40,
-        position: 'sticky'
+        position: "sticky",
       }}
     >
-      <div style={{ width: '100%', maxWidth: '780px', display: "flex", justifyContent: "space-between",
-        alignItems: "center", gap: "1rem",}}>
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "780px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "1rem",
+        }}
+      >
         <Link
           className="nav-logo"
           href="/"
@@ -31,7 +38,7 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
             display: "flex",
             flexShrink: 0,
             paddingLeft: ".5rem",
-            width: '50px',
+            width: "50px",
           }}
         >
           <Logo />
