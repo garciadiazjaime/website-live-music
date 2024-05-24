@@ -10,14 +10,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h1
         style={{
           fontSize: 42,
-          borderBottom: `2px solid ${tokens.color.primary}`,
+          textAlign: 'center',
+          marginTop: '0',
         }}
       >
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 style={{ fontSize: 28, marginTop: 86 }}>{children}</h2>
+      <h2 style={{ fontSize: 28, marginTop: 0 }}>{children}</h2>
     ),
     p: ({ children }) => <p style={{ fontSize: 24 }}>{children}</p>,
     em: ({ children }) => (
@@ -44,6 +45,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {...(props as ImageProps)}
       />
     ),
+    hr: () => <hr style={{ border: 'none', backgroundColor: 'white', marginBottom: '60px'}} />,
     li: ({ children }) => <li style={{ fontSize: 24 }}>{children}</li>,
     ...components,
   };

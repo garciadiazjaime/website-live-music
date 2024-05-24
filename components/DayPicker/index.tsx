@@ -74,10 +74,10 @@ const DayPicker = ({
           }
 
           &.active {
-            background-color: rgba(255, 49, 29, 0.7);
+            background-color: rgba(225, 29, 72, 0.7);
 
             &:hover {
-              background-color: rgba(255, 49, 29, 0.8);
+              background-color: rgba(255, 49, 92, 0.8);
             }
           }
         }

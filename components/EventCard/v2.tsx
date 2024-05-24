@@ -18,15 +18,9 @@ const DateTime = ({ time }: { time: string }) => {
   const value = parseInt(time);
   const hour = value > 12 ? value % 12 : value;
   const meridiem = value > 12 ? "PM" : "AM";
-  const timeInValidRange = value > 5;
-
   return (
     <>
-      {timeInValidRange && (
-        <>
-          {hour} <span style={{ fontSize: "1rem" }}>{meridiem}</span>
-        </>
-      )}
+      {hour} <span style={{ fontSize: "1rem" }}>{meridiem}</span>
     </>
   );
 };
@@ -61,6 +55,7 @@ const EventCard = ({ event }: Props) => {
         position: "relative",
         flexDirection: "column",
         width: "100%",
+        height: "100%",
         backgroundImage:
           "linear-gradient(90deg, rgba(23, 37, 84), rgba(67, 20, 7, 1))",
       }}
@@ -240,7 +235,7 @@ const EventCard = ({ event }: Props) => {
           style={{
             display: "flex",
             transitionProperty: "all",
-            transitionDuration: "300mx",
+            transitionDuration: "300ms",
           }}
         >
           <SocialLinks event={event} />

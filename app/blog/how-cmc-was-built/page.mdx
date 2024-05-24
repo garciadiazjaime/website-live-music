@@ -1,29 +1,9 @@
 import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 import Script from "next/script";
 import { codeToHtml } from 'shiki'
+import ArticleLayout from "@/components/ArticleLayout"
 
-
-import { tokens } from "@/support/token";
-
-<style jsx="true" global="true">{`
-  body {
-    background-color: #172554;
-  }
-  pre {
-    overflow-x: scroll;
-    font-size: 24px;
-    margin: 0;
-    padding: 6px;
-  }
-  svg {
-    max-width: 100%!important;
-  }
-`}</style>
-
-
-<section style={{width: "100%", height: "100%", fontFamily: "system-ui"}}>
-
-<article style={{maxWidth: 800, margin: '0 auto', padding: '12px 12px 40px', backgroundColor: "white"}}>
+<ArticleLayout title="Our Blog">
 # Chicago Music Compass
 
 <small><strong>Author: Jaime Garcia Diaz <br />May 2024</strong></small>
@@ -403,5 +383,4 @@ const prediction = model.predict(x);
 
 - [Octavio Fuentes](https://www.tavofuentes.com/) <small>[Mexico City]</small>
 
-</article>
-</section>
+</ArticleLayout>
