@@ -1,7 +1,7 @@
 "use client";
 
-import * as tf from "@tensorflow/tfjs";
 import React, { useEffect, useState } from "react";
+import * as tf from "@tensorflow/tfjs";
 
 const MODEL_URL = `${process.env.NEXT_PUBLIC_MODEL_URL!}/model.json`;
 
@@ -17,37 +17,39 @@ const getTwitter = async (username: string) => {
 export default function Container() {
   const [twitterHandle, setTwitterHandle] = useState("");
   const [popularity, setPopularity] = useState(0);
-  const [tfModel, setTfModel] = useState<tf.GraphModel>();
+  const [model, setModel] = useState<tf.GraphModel>();
 
-  const getTfModel = async () => {
+  const getModel = async () => {
     const model = await tf.loadGraphModel(MODEL_URL);
-    setTfModel(model);
+
+    setModel(model);
   };
 
   const inputOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setTwitterHandle(value);
+    setTwitterHandle(event.target.value);
   };
 
   const predict = async () => {
     const twitter = await getTwitter(twitterHandle);
 
-    if (!twitter || !tfModel || !twitterHandle) {
+    if (!twitter || !model || !twitterHandle) {
       return;
     }
 
     const { followers_count: followers } = twitter.legacy;
     console.log({ followers });
-    const formattedInput = Math.log(parseFloat(followers));
-    const modelInput = tf.tensor(formattedInput).reshape([-1, 1]);
-    const prediction: any = tfModel.predict(modelInput);
-    const predictionValues = prediction.arraySync();
-    const formattedPopularity = predictionValues[0][0].toFixed(2) * 100;
-    setPopularity(formattedPopularity);
+
+    const normalized = Math.log(parseFloat(followers));
+    const x = tf.tensor(normalized).reshape([-1, 1]);
+    const result: any = model.predict(x);
+    const values = result.arraySync();
+    const y = values[0][0].toFixed(2) * 100;
+
+    setPopularity(y);
   };
 
   useEffect(() => {
-    getTfModel();
+    getModel();
   }, []);
 
   return (
