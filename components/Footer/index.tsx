@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import Link from "next/link";
 
 import { tokens } from "@/support/token";
 import { logos } from "@/components/socialLinks";
 
-const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
+const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
   <footer
     className="footer"
     id="cmc"
@@ -14,8 +14,9 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
       width: "calc(100% - 80px)",
       maxWidth: "780px",
       fontFamily: "sans-serif",
-      color: theme === 'light' ? 'black' : 'white',
-      backgroundImage: theme === 'light' ? tokens.gradients.redLight : tokens.gradients.red,
+      color: theme === "light" ? "black" : "white",
+      backgroundImage:
+        theme === "light" ? tokens.gradients.redLight : tokens.gradients.red,
     }}
   >
     <div
@@ -78,25 +79,16 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
           margin: 0,
           padding: 0,
           justifyContent: "center",
-          gap: '30px',
+          gap: "30px",
         }}
       >
         <li>
           <a
-            href="https://www.tiktok.com/@livemusic210"
+            href="https://twitter.com/chimusiccompass"
             rel="nofollow"
-            aria-label="follow us on Tiktok"
+            aria-label="follow us on Twitter"
           >
-            {logos.tiktok}
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/people/ChicagoMusic-Compass/pfbid0kWe8UUC8ZtAowz5wx5S4ygKrZ3eTGAnYhhB95x5obRLwuD8vN5JZ3G16k4S3DWZRl/"
-            rel="nofollow"
-            aria-label="follow us on Facebook"
-          >
-            {logos.facebook}
+            {logos.twitter}
           </a>
         </li>
         <li>
@@ -110,11 +102,11 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
         </li>
         <li>
           <a
-            href="https://twitter.com/livemusic210"
+            href="https://www.facebook.com/people/ChicagoMusic-Compass/pfbid0kWe8UUC8ZtAowz5wx5S4ygKrZ3eTGAnYhhB95x5obRLwuD8vN5JZ3G16k4S3DWZRl/"
             rel="nofollow"
-            aria-label="follow us on Twitter"
+            aria-label="follow us on Facebook"
           >
-            {logos.twitter}
+            {logos.facebook}
           </a>
         </li>
         <li>
@@ -124,6 +116,15 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
             aria-label="follow us on Youtube"
           >
             {logos.youtube}
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@livemusic210"
+            rel="nofollow"
+            aria-label="follow us on Tiktok"
+          >
+            {logos.tiktok}
           </a>
         </li>
       </ul>
@@ -151,7 +152,11 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
         <li>
           <Link
             href="/blog/artists-popularity-model"
-            style={{ color: theme === 'light' ? tokens.color.black : tokens.color.white, textDecoration: "none" }}
+            style={{
+              color:
+                theme === "light" ? tokens.color.black : tokens.color.white,
+              textDecoration: "none",
+            }}
           >
             Blog: Artist Polularity Model
           </Link>
@@ -159,7 +164,11 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
         <li>
           <Link
             href="/blog/how-cmc-was-built"
-            style={{ color: theme === 'light' ? tokens.color.black : tokens.color.white, textDecoration: "none" }}
+            style={{
+              color:
+                theme === "light" ? tokens.color.black : tokens.color.white,
+              textDecoration: "none",
+            }}
           >
             Blog: How Chicago Music Compass was built
           </Link>
@@ -167,7 +176,11 @@ const Footer = ({theme}: { theme?: 'dark' | 'light' }) => (
         <li>
           <Link
             href="/labs/artist-popularity-prediction"
-            style={{ color: theme === 'light' ? tokens.color.black : tokens.color.white, textDecoration: "none" }}
+            style={{
+              color:
+                theme === "light" ? tokens.color.black : tokens.color.white,
+              textDecoration: "none",
+            }}
           >
             Labs: Artist Popularity Prediction
           </Link>

@@ -21,6 +21,28 @@ const getTwitter = async (username: string) => {
   return data;
 };
 
+const getTweet = (popularity: number) => {
+  const jokes = () => {
+    if (!popularity || popularity < 10) {
+      return `—so low that even my mom would say, "Who?"`;
+    }
+
+    if (popularity < 40) {
+      return "—basically, somewhere between a backup dancer in a flash mob and a meme that hasn’t gone viral yet";
+    }
+
+    if (popularity < 80) {
+      return "—right in that sweet spot between a one-hit wonder and the opening act everyone actually showed up early for!";
+    }
+
+    return "—I'd be be so famous even my selfies would have their own fan club!";
+  };
+
+  return encodeURIComponent(
+    `If I were an artist, my popularity would be ${popularity} out of 100 ${jokes()}. @chimusiccompass https://shorturl.at/WFh60`
+  );
+};
+
 export default function Container() {
   const [handle, setHandle] = useState("");
   const [popularity, setPopularity] = useState(0);
@@ -82,6 +104,8 @@ export default function Container() {
   useEffect(() => {
     getModel();
   }, []);
+
+  const tweet = getTweet(popularity);
 
   return (
     <>
@@ -150,6 +174,27 @@ export default function Container() {
         {loading && <Loader />}
         {message && message}
       </div>
+
+      {popularity ? (
+        <a
+          href={`https://twitter.com/intent/tweet?text=${tweet}`}
+          target="_blank"
+          style={{
+            display: "block",
+            padding: 12,
+            background: "black",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: 10,
+            textAlign: "center",
+            fontSize: 24,
+          }}
+        >
+          Tweet my result
+        </a>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

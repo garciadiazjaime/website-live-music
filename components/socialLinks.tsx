@@ -7,8 +7,8 @@ export const logos = {
   twitter: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
     >
       <path
@@ -20,8 +20,8 @@ export const logos = {
   facebook: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
     >
       <path
@@ -33,8 +33,8 @@ export const logos = {
   youtube: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
     >
       <path
@@ -46,8 +46,8 @@ export const logos = {
   instagram: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
     >
       <path
@@ -59,8 +59,8 @@ export const logos = {
   tiktok: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 449.45 515.38"
     >
       <path
@@ -72,8 +72,8 @@ export const logos = {
   soundcloud: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
     >
       <path
@@ -84,8 +84,8 @@ export const logos = {
   ),
   spotify: (
     <svg
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -98,8 +98,8 @@ export const logos = {
   appleMusic: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
     >
       <path
