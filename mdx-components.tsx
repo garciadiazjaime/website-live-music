@@ -18,7 +18,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 style={{ fontSize: 28, marginTop: 0 }}>{children}</h2>
+      <h2 style={{ fontSize: 28, margin: "60px 0 20px" }}>{children}</h2>
     ),
     p: ({ children }) => <p style={{ fontSize: 24 }}>{children}</p>,
     em: ({ children }) => (

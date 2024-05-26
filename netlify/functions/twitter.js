@@ -1,3 +1,5 @@
+const MOCK_TWITTER = require("../../mock/twitter");
+
 require("dotenv").config();
 
 async function getTwitter(username) {
@@ -14,16 +16,23 @@ async function getTwitter(username) {
 
   const data = await response.json();
 
-  return data.data.user.result;
+  return data.data.user?.result;
 }
 
 module.exports.handler = async (event) => {
+  if (process.env.USE_TWITTER_MOCK) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify(MOCK_TWITTER),
+    };
+  }
+
   const { username } = event.queryStringParameters;
 
   if (!username) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: "empty user" }),
+      body: JSON.stringify({ code: "EMPTY_USER" }),
     };
   }
 
@@ -32,7 +41,7 @@ module.exports.handler = async (event) => {
   if (!twitter) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: "invalid request" }),
+      body: JSON.stringify({ code: "INVALID_REQUEST" }),
     };
   }
 
