@@ -37,21 +37,13 @@ const ArticleLayout = ({
       <article
         style={{
           maxWidth: 780,
-          width: "calc(100% - 80px)",
-          margin: "20px",
+          width: "calc(100% - 0px)",
           backgroundColor: "rgba(255, 255, 255, .6)",
           boxSizing: "border-box",
+          padding: "40px 12px",
         }}
       >
-        <div
-          style={{
-            padding: "20px",
-            margin: "20px",
-            border: "solid 1px #ffc2d1",
-          }}
-        >
-          {children}
-        </div>
+        {children}
       </article>
     </section>
     <Footer theme="light" />

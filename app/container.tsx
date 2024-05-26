@@ -11,7 +11,7 @@ import EventCard from "@/components/EventCard/v2";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import MessageCard, { MessageLink } from "@/components/MessageCard";
+import MessageCard from "@/components/MessageCard";
 
 const fontPoppins = Poppins({
   weight: ["400"],
@@ -29,27 +29,27 @@ const fontBarlow_Condensed = Barlow_Condensed({
 
 const messages = [
   {
-    text: 'Learn how we built this site',
+    text: "Learn how we built this site",
     link: {
-      url: '/blog/how-cmc-was-built',
-      title: 'Read more',
-    }
+      url: "/blog/how-cmc-was-built",
+      title: "Read more",
+    },
   },
   {
-    text: 'We’re building ML models with the data we’re collecting',
+    text: "We’re building ML models with the data we’re collecting",
     link: {
-      url: '/blog/artists-popularity-model',
-      title: 'See how',
-    }
+      url: "/blog/artists-popularity-model",
+      title: "See how",
+    },
   },
   {
-    text: 'Test the popularity model yourself',
+    text: "Test the popularity model yourself",
     link: {
-      url: '/labs/artist-popularity-prediction',
-      title: 'Try it',
-    }
+      url: "/labs/artist-popularity-prediction",
+      title: "Try it",
+    },
   },
-]
+];
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -149,7 +149,9 @@ export default function Home({
             gap: "2rem",
           }}
         >
-          <Logo style={{ width: "40%" }} />
+          <div style={{ textAlign: "center" }}>
+            <Logo style={{ width: "40%" }} />
+          </div>
           <h1
             className={fontPoppins.className}
             style={{
@@ -189,25 +191,28 @@ export default function Home({
           alignItems: "stretch",
           padding: "3rem 0 1rem",
           gap: 20,
-          width: "calc(100% - 40px)",
+          width: "calc(100% - 0px)",
           maxWidth: 780,
         }}
       >
         {selectedEvents.map((event, index) => {
           const messageIndex = Math.floor(index / 4) % messages.length;
-          return <Fragment key={`${index}_${event.slug}`}>
-            <div
-              className="show"
-              date-date={new Date(event.start_date).toLocaleString()}
-            >
-              <EventCard event={event} />
-            </div>
-            {(index + 1) % 4 === 0 && messages.length > 0 ?
-              <MessageCard message={messages[messageIndex]} theme={messageIndex % 2 === 0}/>
-            : ''}
-          </Fragment>
+          return (
+            <Fragment key={`${index}_${event.slug}`}>
+              <div
+                className="show"
+                date-date={new Date(event.start_date).toLocaleString()}
+              >
+                <EventCard event={event} />
+              </div>
+              {(index + 1) % 4 === 0 && messages.length > 0 ? (
+                <MessageCard message={messages[messageIndex]} />
+              ) : (
+                ""
+              )}
+            </Fragment>
+          );
         })}
-
       </section>
       <Footer />
       <style jsx>{`

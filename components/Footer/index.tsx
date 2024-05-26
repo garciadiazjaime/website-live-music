@@ -9,9 +9,10 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
     className="footer"
     id="cmc"
     style={{
-      margin: "0 20px 20px",
+      marginTop: 40,
+      paddingBottom: 12,
       fontSize: 20,
-      width: "calc(100% - 80px)",
+      width: "calc(100% - 0px)",
       maxWidth: "780px",
       fontFamily: "sans-serif",
       color: theme === "light" ? "black" : "white",
@@ -19,13 +20,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
         theme === "light" ? tokens.gradients.redLight : tokens.gradients.red,
     }}
   >
-    <div
-      style={{
-        border: `solid 1px ${tokens.color.red}`,
-        padding: 20,
-        margin: 20,
-      }}
-    >
+    <div style={{ padding: "12px" }}>
       <h2
         style={{
           fontSize: "1.5rem",
@@ -84,9 +79,20 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
       >
         <li>
           <a
+            href="https://discord.com/channels/1099362050855149638/1099362050855149641"
+            rel="nofollow"
+            aria-label="Discord Channel"
+            target="_blank"
+          >
+            {logos.discord}
+          </a>
+        </li>
+        <li>
+          <a
             href="https://twitter.com/chimusiccompass"
             rel="nofollow"
             aria-label="follow us on Twitter"
+            target="_blank"
           >
             {logos.twitter}
           </a>
@@ -96,6 +102,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
             href="https://www.instagram.com/chicagomusiccompass/"
             rel="nofollow"
             aria-label="follow us on Instagram"
+            target="_blank"
           >
             {logos.instagram}
           </a>
@@ -105,6 +112,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
             href="https://www.facebook.com/people/ChicagoMusic-Compass/pfbid0kWe8UUC8ZtAowz5wx5S4ygKrZ3eTGAnYhhB95x5obRLwuD8vN5JZ3G16k4S3DWZRl/"
             rel="nofollow"
             aria-label="follow us on Facebook"
+            target="_blank"
           >
             {logos.facebook}
           </a>
@@ -114,6 +122,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
             href="https://www.youtube.com/channel/UCWJE0M7LgZjKBvvceSmSEBw"
             rel="nofollow"
             aria-label="follow us on Youtube"
+            target="_blank"
           >
             {logos.youtube}
           </a>
@@ -123,6 +132,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
             href="https://www.tiktok.com/@livemusic210"
             rel="nofollow"
             aria-label="follow us on Tiktok"
+            target="_blank"
           >
             {logos.tiktok}
           </a>
@@ -133,6 +143,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
         style={{
           fontSize: "1.5rem",
           color: "#64C7F9",
+          marginTop: 42,
         }}
       >
         More about the project

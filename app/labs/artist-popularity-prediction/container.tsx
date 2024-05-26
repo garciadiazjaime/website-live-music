@@ -117,7 +117,13 @@ export default function Container() {
           <input
             value={handle}
             onChange={inputOnChange}
-            style={{ fontSize: 42, width: "100%", border: "none", height: 48 }}
+            style={{
+              fontSize: 42,
+              width: "calc(100% - 24px)",
+              border: "none",
+              height: 48,
+              padding: 12,
+            }}
           />
         </fieldset>
         <button onClick={predict} style={{ fontSize: 42 }}>
