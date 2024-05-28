@@ -35,7 +35,7 @@ export const MessageLink = ({
   </Link>
 );
 
-const MessageCard = ({ message, theme }: { message: any; theme: boolean }) => (
+const MessageCard = ({ message }: { message: any }) => (
   <div
     style={{
       width: "100%",
