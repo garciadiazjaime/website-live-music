@@ -5,7 +5,7 @@ import { Event } from "../../support/types";
 import SocialLinks from "../socialLinks";
 import ShareDialog from "../ShareDialog/perf";
 import { useState } from "react";
-import { Chevron, Close, Directions, PinActive, Share } from "../svgs";
+import { Chevron, Close, Directions, Share } from "../svgs";
 import { tokens } from "@/support/token";
 
 interface Props {
@@ -18,9 +18,15 @@ const DateTime = ({ time }: { time: string }) => {
   const value = parseInt(time);
   const hour = value > 12 ? value % 12 : value;
   const meridiem = value > 12 ? "PM" : "AM";
+  const timeInValidRange = value > 5;
+
   return (
     <>
-      {hour} <span style={{ fontSize: "1rem" }}>{meridiem}</span>
+      {timeInValidRange && (
+        <>
+          {hour} <span style={{ fontSize: "1rem" }}>{meridiem}</span>
+        </>
+      )}
     </>
   );
 };
