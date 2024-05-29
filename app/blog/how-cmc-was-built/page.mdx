@@ -10,6 +10,10 @@ import ArticleLayout from "@/components/ArticleLayout"
     margin: 0;
     padding: 6px;
   }
+
+  svg {
+    max-width: none !important;
+  }
 `}</style>
 
 <ArticleLayout title="CMC Blog">
@@ -237,7 +241,7 @@ When Next.js generates the static version, it pulls the JSON hosted in S3 to bui
   chart={`sequenceDiagram
     Netlify->>Github: get code
     Netlify->>Netlify: build
-    Netlify->>Bucket: get events
+    Netlify->>CDN: get events
     Netlify->>AWS: publish site
   `}
 />
@@ -250,14 +254,14 @@ When Next.js generates the static version, it pulls the JSON hosted in S3 to bui
     participant Browser
     participant CDN
     participant lambda
-    participant Bucket
+    participant Cloudfront
 
     Note right of lambda: nodejs
 
     Browser->>CDN: load page
     Browser->>lambda: fetch events
     Note right of Browser: useEffect
-    lambda->>Bucket: fetch events
+    lambda->>Cloudfront: fetch events
 
     lambda->>Browser: events
 

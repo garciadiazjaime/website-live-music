@@ -46,6 +46,7 @@ const getTweet = (popularity: number) => {
 export default function Container() {
   const [handle, setHandle] = useState("");
   const [popularity, setPopularity] = useState(0);
+  const [followers, setFollowers] = useState(0);
   const [model, setModel] = useState<tf.GraphModel>();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -66,6 +67,7 @@ export default function Container() {
 
   const reset = () => {
     setPopularity(0);
+    setFollowers(0);
     setMessage("");
   };
 
@@ -90,6 +92,7 @@ export default function Container() {
     }
 
     const { followers_count: followers } = twitter.legacy;
+    setFollowers(followers);
     console.log({ followers });
 
     const normalized = Math.log(parseFloat(followers));
@@ -132,7 +135,12 @@ export default function Container() {
       </div>
 
       <div style={{ fontSize: 42 }}>
-        <div>Popularity: {popularity && <strong> {popularity}</strong>}</div>
+        <div style={{ fontSize: 32, opacity: 0.6 }}>
+          Followers: {followers ? <strong> {followers}</strong> : <></>}
+        </div>
+        <div>
+          Popularity: {popularity ? <strong> {popularity}</strong> : <></>}
+        </div>
 
         <div
           style={{
