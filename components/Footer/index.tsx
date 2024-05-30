@@ -138,7 +138,6 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
           </a>
         </li>
       </ul>
-
       <h2
         style={{
           fontSize: "1.5rem",
@@ -148,7 +147,6 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
       >
         More about the project
       </h2>
-
       <ul
         style={{
           display: "flex",
@@ -197,6 +195,8 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
           </Link>
         </li>
       </ul>
+      <br />
+      <small>We feature affiliate links in partnership with Awin.</small>
     </div>
     <style jsx>{`
       a {
