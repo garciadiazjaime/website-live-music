@@ -1,8 +1,10 @@
-import Head from "next/head";
+import type { Metadata } from "next";
 
+import Splash from "@/components/Splash";
 import Container from "./container";
 import { Event } from "@/support/types";
 import { getEventWithDateAndTime } from "./support";
+import { tokens } from "@/support/token";
 
 async function getEvents() {
   const url = `${process.env.NEXT_PUBLIC_S3_URL!}/public/events.json`;
@@ -43,9 +45,40 @@ const getDaysOfWeek = () => {
   return [...response, ...DAYS.slice(today)];
 };
 
+const getEventsJsonLD = (events: Event[]) => {
+  return events.map((event) => ({
+    "@context": "https://www.schema.org",
+    "@type": "Event",
+    name: event.name,
+    url: event.url,
+    description: event.description,
+    startDate: event.start_date,
+    location: {
+      "@type": "Place",
+      name: event.location.name,
+      sameAs: event.location.website,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: event.location.address,
+        addressCountry: "USA",
+      },
+    },
+  }));
+};
+
+export const metadata: Metadata = {
+  title: "Chicago Music Compass | Live Music Events in Chicago",
+  description:
+    "Welcome to Chicago Music Compass! We're not just another tech team – we're music enthusiasts, bandmates, and tech wizards on a mission to shake up the Windy City's live music scene",
+  openGraph: {
+    url: "https://www.chicagomusiccompass.com/",
+    images: "https://www.chicagomusiccompass.com/social/FB-Cover.jpg",
+  },
+};
+
 const Home = async () => {
   const events = await getEvents().catch(() => []);
-
+  const eventsJsonLD = getEventsJsonLD(events);
   const daysOfWeek = getDaysOfWeek();
 
   return (
@@ -53,26 +86,30 @@ const Home = async () => {
       date-date={new Date().toLocaleString()}
       data-time={new Date().toTimeString()}
     >
-      <Head>
-        <title>Chicago Music Compass | Live Music Events in Chicago</title>
-        <meta
-          property="og:title"
-          content="Chicago Music Compass | Live Music Events in Chicago"
-        />
-        <meta
-          property="og:description"
-          content="Welcome to Chicago Music Compass! We're not just another tech team – we're music enthusiasts, bandmates, and tech wizards on a mission to shake up the Windy City's live music scene"
-        />
-        <meta
-          property="og:url"
-          content="https://www.chicagomusiccompass.com/"
-        />
-        <meta
-          property="og:image"
-          content="https://www.chicagomusiccompass.com/social/FB-Cover.jpg"
-        />
-      </Head>
-      <Container events={events} daysOfWeek={daysOfWeek} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLD) }}
+      />
+
+      <main
+        style={{
+          backgroundImage: `linear-gradient(
+          180deg,
+          #00050c 0%,
+          #001126 70%,
+          #001e43 100%
+        )`,
+          width: "100%",
+          color: tokens.color.white,
+          fontSize: 48,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Splash />
+        <Container events={events} daysOfWeek={daysOfWeek} />
+      </main>
     </div>
   );
 };

@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useEffect, Fragment } from "react";
-import { Poppins, Barlow_Condensed } from "next/font/google";
-import { Logo } from "@/components/svgs";
 import ReactGA from "react-ga4";
+
 import { tokens } from "@/support/token";
 import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
@@ -12,20 +11,6 @@ import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import MessageCard from "@/components/MessageCard";
-
-const fontPoppins = Poppins({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const fontBarlow_Condensed = Barlow_Condensed({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const messages = [
   {
@@ -113,69 +98,7 @@ export default function Home({
   }, [selectedDate, eventsByDay]);
 
   return (
-    <main
-      style={{
-        backgroundImage: `linear-gradient(
-          180deg,
-          #00050c 0%,
-          #001126 70%,
-          #001e43 100%
-        )`,
-        width: "100%",
-        color: tokens.color.white,
-        fontSize: 48,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <header
-        style={{
-          display: "flex",
-          position: "relative",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-around",
-          width: "100vw",
-          height: "calc(100vh - 80px)",
-        }}
-      >
-        <div
-          style={{
-            display: "sticky",
-            flexDirection: "column",
-            alignItems: "center",
-            paddingTop: "10%",
-            gap: "2rem",
-          }}
-        >
-          <div style={{ textAlign: "center" }}>
-            <Logo style={{ width: "40%" }} />
-          </div>
-          <h1
-            className={fontPoppins.className}
-            style={{
-              textTransform: "uppercase",
-              color: tokens.color.white,
-              display: "flex",
-              flexDirection: "column",
-              lineHeight: 0.9,
-              textAlign: "center",
-            }}
-          >
-            Chicago
-            <span
-              className={fontBarlow_Condensed.className}
-              style={{
-                color: tokens.color.lightBlue,
-                letterSpacing: 0,
-              }}
-            >
-              Music Compass
-            </span>
-          </h1>
-        </div>
-      </header>
+    <>
       <Nav>
         <DayPicker
           selectedDate={selectedDate}
@@ -241,6 +164,6 @@ export default function Home({
           }
         }
       `}</style>
-    </main>
+    </>
   );
 }
