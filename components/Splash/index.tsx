@@ -51,6 +51,7 @@ export default function Splash() {
             flexDirection: "column",
             lineHeight: 0.9,
             textAlign: "center",
+            fontSize: 64,
           }}
         >
           Chicago
