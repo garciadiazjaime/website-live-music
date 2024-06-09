@@ -1,5 +1,5 @@
 module.exports.handler = async () => {
-  const url = `${process.env.NEXT_PUBLIC_S3_URL}/report_last_30_days_events.json`;
+  const url = `${process.env.NEXT_PUBLIC_S3_URL}/data/report_last_30_days_events.json`;
 
   const res = await fetch(url);
 
