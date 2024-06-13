@@ -113,9 +113,9 @@ export default function Home({
           display: "flex",
           flexWrap: "wrap",
           alignItems: "stretch",
-          padding: "3rem 0 1rem",
+          padding: "3rem 1rem 1rem",
           gap: 20,
-          width: "calc(100% - 0px)",
+          width: "calc(100% - 2rem)",
           maxWidth: 780,
         }}
       >

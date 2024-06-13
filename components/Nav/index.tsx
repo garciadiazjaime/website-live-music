@@ -29,6 +29,7 @@ const Nav = ({ children }: { children: ReactNode | ReactNode[] }) => {
           justifyContent: "space-between",
           alignItems: "center",
           gap: "1rem",
+          margin: '0 1rem',
         }}
       >
         <Link

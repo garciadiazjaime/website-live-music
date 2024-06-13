@@ -14,7 +14,6 @@ const Newsletter = () => {
     display: "flex",
     flexWrap: "wrap",
     alignItems: "stretch",
-    padding: "1rem 0",
     gap: 20,
     justifyContent: 'center',
     width: "calc(100% - 0px)",
@@ -26,6 +25,7 @@ const Newsletter = () => {
       justifyContent: 'center',
       gap: '10px',
       maxWidth: 500,
+      margin: '1rem',
     }}>
       <input type="text" value={email} onChange={handleChange} placeholder="Join our mailing list" style={{
         padding: '6px 12px',
