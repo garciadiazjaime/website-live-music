@@ -9,10 +9,10 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
     className="footer"
     id="cmc"
     style={{
-      marginTop: 40,
+      margin: '1rem',
       paddingBottom: 12,
       fontSize: 20,
-      width: "calc(100% - 0px)",
+      width: "calc(100% - 2rem)",
       maxWidth: "780px",
       fontFamily: "sans-serif",
       color: theme === "light" ? "black" : "white",

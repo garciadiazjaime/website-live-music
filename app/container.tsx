@@ -11,6 +11,7 @@ import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import MessageCard from "@/components/MessageCard";
+import Newsletter from '@/components/Newsletter';
 
 const messages = [
   {
@@ -112,9 +113,9 @@ export default function Home({
           display: "flex",
           flexWrap: "wrap",
           alignItems: "stretch",
-          padding: "3rem 0 1rem",
+          padding: "3rem 1rem 1rem",
           gap: 20,
-          width: "calc(100% - 0px)",
+          width: "calc(100% - 2rem)",
           maxWidth: 780,
         }}
       >
@@ -137,6 +138,7 @@ export default function Home({
           );
         })}
       </section>
+      <Newsletter />
       <Footer />
       <style jsx>{`
         .show {
