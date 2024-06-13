@@ -11,6 +11,7 @@ import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import MessageCard from "@/components/MessageCard";
+import Newsletter from '@/components/Newsletter';
 
 const messages = [
   {
@@ -137,6 +138,7 @@ export default function Home({
           );
         })}
       </section>
+      <Newsletter />
       <Footer />
       <style jsx>{`
         .show {
