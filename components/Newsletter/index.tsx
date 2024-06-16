@@ -1,8 +1,38 @@
 import { ChangeEvent, useState } from "react";
+import { getCookie } from "../../support/cookie";
+
+const validateEmail = (email: string) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 const Newsletter = () => {
-  const [email, setEmail] = useState("");
-  const handleSubmit = () => {};
+  const [email, setEmail] = useState("test@gmail.com");
+  const handleSubmit = async () => {
+    if (!validateEmail(email)) {
+      return;
+    }
+
+    const csrfToken = getCookie("csrftoken", document.cookie);
+
+    const url = "/.netlify/functions/newsletter";
+    const response = await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": csrfToken,
+      },
+      method: "POST",
+      body: JSON.stringify({ email }),
+      credentials: "same-origin",
+    });
+
+    const result = await response.json();
+
+    console.log({ result });
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -20,8 +50,7 @@ const Newsletter = () => {
         maxWidth: 780,
       }}
     >
-      <form
-        onSubmit={handleSubmit}
+      <div
         style={{
           width: "100%",
           display: "flex",
@@ -45,17 +74,18 @@ const Newsletter = () => {
         <input
           type="submit"
           value="Join"
+          onClick={handleSubmit}
           style={{
             background: "red",
             color: "white",
             padding: "6px 20px",
             fontSize: "18px",
             border: "none",
+            cursor: "pointer",
           }}
         />
-      </form>
+      </div>
       <style jsx>
-        {" "}
         {`
           input::placeholder {
             font-style: italic;
