@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from "react";
-import { getCookie } from "../../support/cookie";
 
 const validateEmail = (email: string) => {
   return String(email)
@@ -10,28 +9,28 @@ const validateEmail = (email: string) => {
 };
 
 const Newsletter = () => {
-  const [email, setEmail] = useState("test@gmail.com");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async () => {
     if (!validateEmail(email)) {
       return;
     }
 
-    const csrfToken = getCookie("csrftoken", document.cookie);
+    setLoading(true);
 
     const url = "/.netlify/functions/newsletter";
-    const response = await fetch(url, {
+    await fetch(url, {
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
       },
       method: "POST",
       body: JSON.stringify({ email }),
       credentials: "same-origin",
     });
 
-    const result = await response.json();
-
-    console.log({ result });
+    setTimeout(() => {
+      setLoading(false);
+    }, 3_000);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -65,6 +64,7 @@ const Newsletter = () => {
           value={email}
           onChange={handleChange}
           placeholder="Join our mailing list"
+          disabled={loading}
           style={{
             padding: "6px 12px",
             fontSize: "18px",
@@ -75,16 +75,18 @@ const Newsletter = () => {
           type="submit"
           value="Join"
           onClick={handleSubmit}
+          disabled={loading}
           style={{
             background: "red",
             color: "white",
             padding: "6px 20px",
             fontSize: "18px",
             border: "none",
-            cursor: "pointer",
+            cursor: !loading ? "pointer" : "default",
           }}
         />
       </div>
+      <div>{loading && "loading..."}</div>
       <style jsx>
         {`
           input::placeholder {
