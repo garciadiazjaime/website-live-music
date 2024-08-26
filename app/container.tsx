@@ -1,41 +1,15 @@
 "use client";
 
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import ReactGA from "react-ga4";
 
-import { tokens } from "@/support/token";
 import DayPicker from "@/components/DayPicker";
 import { Event } from "@/support/types";
-import EventCard from "@/components/EventCard/v2";
+import EventCard from "@/components/EventCard/v3";
 import { getEventWithDateAndTime } from "./support";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import MessageCard from "@/components/MessageCard";
-import Newsletter from '@/components/Newsletter';
-
-const messages = [
-  {
-    text: "Learn how we built this site",
-    link: {
-      url: "/blog/how-cmc-was-built",
-      title: "Read more",
-    },
-  },
-  {
-    text: "We’re building ML models with the data we’re collecting",
-    link: {
-      url: "/blog/artists-popularity-model",
-      title: "See how",
-    },
-  },
-  {
-    text: "Test the popularity model yourself",
-    link: {
-      url: "/labs/artist-popularity-prediction",
-      title: "Try it",
-    },
-  },
-];
+import Newsletter from "@/components/Newsletter";
 
 export async function getEventsByDay() {
   const url = "/.netlify/functions/events";
@@ -108,64 +82,28 @@ export default function Home({
         />
       </Nav>
       <section
-        className="shows"
         style={{
           display: "flex",
           flexWrap: "wrap",
-          alignItems: "stretch",
           padding: "3rem 1rem 1rem",
           gap: 20,
-          width: "calc(100% - 2rem)",
           maxWidth: 780,
         }}
       >
         {selectedEvents.map((event, index) => {
-          const messageIndex = Math.floor(index / 4) % messages.length;
           return (
-            <Fragment key={`${index}_${event.slug}`}>
-              <div
-                className="show"
-                date-date={new Date(event.start_date).toLocaleString()}
-              >
-                <EventCard event={event} />
-              </div>
-              {(index + 1) % 4 === 0 && messages.length > 0 ? (
-                <MessageCard message={messages[messageIndex]} />
-              ) : (
-                ""
-              )}
-            </Fragment>
+            <div
+              key={`${index}_${event.slug}`}
+              date-date={new Date(event.start_date).toLocaleString()}
+              style={{ width: "100%" }}
+            >
+              <EventCard event={event} />
+            </div>
           );
         })}
       </section>
       <Newsletter />
       <Footer />
-      <style jsx>{`
-        .show {
-          width: 100%;
-          @media (min-width: ${tokens.breakpoints.md}) {
-            width: calc(50% - 10px);
-          }
-        }
-
-        h1 {
-          font-size: 2.8rem;
-          letter-spacing: 0.28rem;
-
-          @media (min-width: ${tokens.breakpoints.md}) {
-            font-size: 4rem;
-            letter-spacing: 0.4rem;
-          }
-        }
-
-        span {
-          font-size: 2.8rem;
-
-          @media (min-width: ${tokens.breakpoints.md}) {
-            font-size: 4rem;
-          }
-        }
-      `}</style>
     </>
   );
 }

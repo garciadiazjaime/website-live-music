@@ -6,6 +6,7 @@ export interface Spotify {
   pk: number;
   followers: number;
   genres: Genre[];
+  name: string;
   popularity: number;
   url: string;
 }
@@ -82,6 +83,7 @@ export interface Event {
   description: string;
   image: string;
   url: string;
+  buyUrl: string;
   start_date: string;
   end_date: string | null;
   provider: string;
@@ -92,6 +94,7 @@ export interface Event {
   location: Location;
   artists: Artist[];
   pk: number;
+  price: number;
   // local types
   date: string;
   time: string;

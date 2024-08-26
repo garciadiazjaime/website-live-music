@@ -9,7 +9,7 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
     className="footer"
     id="cmc"
     style={{
-      margin: '1rem',
+      margin: "1rem",
       paddingBottom: 12,
       fontSize: 20,
       width: "calc(100% - 2rem)",
@@ -195,8 +195,6 @@ const Footer = ({ theme }: { theme?: "dark" | "light" }) => (
           </Link>
         </li>
       </ul>
-      <br />
-      <small>We feature affiliate links in partnership with Awin.</small>
     </div>
     <style jsx>{`
       a {

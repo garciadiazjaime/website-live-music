@@ -27,7 +27,6 @@ async function getEvents() {
       (a: Event, b: Event) =>
         new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
     )
-    .slice(0, 10)
     .map(getEventWithDateAndTime);
 }
 
@@ -67,9 +66,9 @@ const getEventsJsonLD = (events: Event[]) => {
 };
 
 export const metadata: Metadata = {
-  title: "Chicago Music Compass | Live Music Events in Chicago",
+  title: "Chicago Events, Live Concerts, Festivals, & Nightlife Today",
   description:
-    "Welcome to Chicago Music Compass! We're not just another tech team – we're music enthusiasts, bandmates, and tech wizards on a mission to shake up the Windy City's live music scene",
+    "Discover the best things to do in Chicago today, including live music, events, concerts, festivals, and nightlife. Explore top activities happening near you in Chicago.",
   openGraph: {
     url: "https://www.chicagomusiccompass.com/",
     images: "https://www.chicagomusiccompass.com/social/FB-Cover.jpg",

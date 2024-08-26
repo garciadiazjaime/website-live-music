@@ -27,6 +27,7 @@ export default function Splash() {
         alignItems: "center",
         justifyContent: "space-around",
         width: "100vw",
+        maxWidth: 800,
         height: "calc(100vh - 80px)",
       }}
     >
@@ -39,9 +40,6 @@ export default function Splash() {
           gap: "2rem",
         }}
       >
-        <div style={{ textAlign: "center" }}>
-          <Logo style={{ width: "40%" }} />
-        </div>
         <h1
           className={fontPoppins.className}
           style={{
@@ -54,7 +52,6 @@ export default function Splash() {
             fontSize: 64,
           }}
         >
-          Chicago
           <span
             className={fontBarlow_Condensed.className}
             style={{
@@ -62,9 +59,16 @@ export default function Splash() {
               letterSpacing: 0,
             }}
           >
-            Music Compass
-          </span>
+            Chicago
+          </span>{" "}
+          Live Events, Concerts, Festivals, & Nightlife
         </h1>
+
+        <div style={{ fontSize: 30, textAlign: "center", opacity: 0.9 }}>
+          Discover the best things to do in Chicago today, from live music and
+          concerts to festivals and nightlife. Stay updated on all the exciting
+          events happening near you in the city.
+        </div>
       </div>
     </header>
   );
