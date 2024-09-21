@@ -15,18 +15,19 @@ export default function EventCard({ event }: Props) {
     <article
       style={{
         display: "flex",
+        flexDirection: "column",
         border: "1px dashed white",
         position: "relative",
+        minHeight: 420,
+        width: "100%",
       }}
-      className="article"
     >
       <Image
         src={getImage(event)}
         height={220}
         width={220}
         alt={event.name}
-        style={{ objectFit: "cover" }}
-        className="event-image"
+        style={{ objectFit: "cover", width: "100%" }}
       />
 
       <div
@@ -44,8 +45,8 @@ export default function EventCard({ event }: Props) {
               maxHeight: 70,
               overflow: "hidden",
               textTransform: "uppercase",
+              wordBreak: "break-all",
             }}
-            className="event-name"
           >
             {event.name.toLowerCase()}
           </h3>
@@ -71,8 +72,9 @@ export default function EventCard({ event }: Props) {
             display: "flex",
             flexDirection: "column",
             paddingLeft: 12,
+            width: "calc(100% - 140px - 36px)",
+            overflow: "hidden",
           }}
-          className="event-social"
         >
           <SocialLinks event={event} />
         </div>
@@ -125,29 +127,6 @@ export default function EventCard({ event }: Props) {
           </a>
         )}
       </div>
-
-      <style jsx>{`
-        article {
-          flex-direction: column;
-
-          img {
-            width: 100%;
-          }
-
-          h3 {
-            word-break: break-all;
-          }
-
-          .event-social {
-            width: calc(100% - 140px - 36px);
-            overflow: hidden;
-
-            a {
-              font-size: 16px;
-            }
-          }
-        }
-      `}</style>
     </article>
   );
 }

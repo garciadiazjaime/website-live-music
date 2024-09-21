@@ -281,6 +281,7 @@ export function SocialLinksV2(props: { event: Event }) {
             textDecoration: "none",
             gap: 6,
             padding: "6px 0",
+            fontSize: 16,
           }}
         >
           <span>{link.logo}</span>

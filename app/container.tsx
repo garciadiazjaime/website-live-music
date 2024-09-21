@@ -85,20 +85,17 @@ export default function Home({
         style={{
           display: "flex",
           flexWrap: "wrap",
-          padding: "3rem 1rem 1rem",
+          padding: "20px 6px",
           gap: 20,
           maxWidth: 780,
         }}
       >
-        {selectedEvents.map((event, index) => {
+        {selectedEvents.map((event) => {
           return (
-            <div
-              key={`${index}_${event.slug}`}
-              date-date={new Date(event.start_date).toLocaleString()}
-              style={{ width: "100%" }}
-            >
-              <EventCard event={event} />
-            </div>
+            <EventCard
+              event={event}
+              key={`${event.start_date}_${event.slug}`}
+            />
           );
         })}
       </section>

@@ -1,6 +1,5 @@
 import { Poppins, Barlow_Condensed } from "next/font/google";
 
-import { Logo } from "@/components/svgs";
 import { tokens } from "@/support/token";
 
 const fontPoppins = Poppins({
@@ -49,7 +48,7 @@ export default function Splash() {
             flexDirection: "column",
             lineHeight: 0.9,
             textAlign: "center",
-            fontSize: 64,
+            fontSize: 52,
           }}
         >
           <span
@@ -64,7 +63,7 @@ export default function Splash() {
           Live Events, Concerts, Festivals, & Nightlife
         </h1>
 
-        <div style={{ fontSize: 30, textAlign: "center", opacity: 0.9 }}>
+        <div style={{ fontSize: 28, textAlign: "center", opacity: 0.9 }}>
           Discover the best things to do in Chicago today, from live music and
           concerts to festivals and nightlife. Stay updated on all the exciting
           events happening near you in the city.
