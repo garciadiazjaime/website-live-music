@@ -3,6 +3,10 @@ import { Event } from "../../support/types";
 const doHTTPS = (url: string) => url?.replace("http:", "https:");
 
 export const getImage = (event: Event): string => {
+  if (event.image) {
+    return doHTTPS(event.image);
+  }
+
   const artist = event.artists?.find((artist) => artist.metadata?.image);
   if (artist) {
     return doHTTPS(artist.metadata?.image || "");
@@ -12,7 +16,7 @@ export const getImage = (event: Event): string => {
     return doHTTPS(event.location.metadata.image);
   }
 
-  return doHTTPS(event.image);
+  return "/social/FB-Cover.jpg";
 };
 
 export const DateTime = ({ time }: { time: string }) => {

@@ -10,6 +10,18 @@ interface Props {
   event: Event;
 }
 
+function Price({ price }: { price: number }) {
+  if (price === 0.0) {
+    return <span>/ Free</span>
+  }
+
+  if (price) {
+    return <span>/ ${price}</span>
+  }
+
+  return <></>
+}
+
 export default function EventCard({ event }: Props) {
   return (
     <article
@@ -21,6 +33,7 @@ export default function EventCard({ event }: Props) {
         minHeight: 420,
         width: "100%",
       }}
+      data-event={event.pk}
     >
       <Image
         src={getImage(event)}
@@ -62,7 +75,7 @@ export default function EventCard({ event }: Props) {
           </h4>
           <div style={{ fontSize: 18 }}>
             <DateTime time={event.time} />{" "}
-            {event.price && <span>/ ${event.price}</span>}
+            <Price price={event.price} />
           </div>
         </div>
 
