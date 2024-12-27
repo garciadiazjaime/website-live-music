@@ -35,14 +35,15 @@ export default function EventCard({ event }: Props) {
       }}
       data-event={event.pk}
     >
-      <Image
-        src={getImage(event)}
-        height={220}
-        width={220}
-        alt={event.name}
-        style={{ objectFit: "cover", width: "100%" }}
-      />
-
+      <div style={{ backgroundImage: `url(/social/FB-Cover.jpg)`, textAlign: "center", width: 220, margin: "0 auto" }}>
+        <Image
+          src={getImage(event)}
+          height={220}
+          width={220}
+          alt={event.name}
+          style={{ objectFit: "cover", width: "100%", maxWidth: 220, display: "block", margin: "0 auto" }}
+        />
+      </div>
       <div
         style={{
           display: "flex",
