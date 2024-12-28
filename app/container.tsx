@@ -42,13 +42,33 @@ export async function getEventsByDay() {
 export default function Home({
   events,
   daysOfWeek,
+  genres,
 }: {
   events: Event[];
   daysOfWeek: string[];
+  genres: (string | number)[][];
 }) {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedEvents, setSelectedEvents] = useState<Event[]>(events);
   const [eventsByDay, setEventsByDay] = useState<Record<string, Event[]>>({});
+  const [selectedGenres, setSelectedGenres] = useState<Record<string, boolean>>(
+    {}
+  );
+
+  const genreClickHandler = (e: React.MouseEvent<HTMLSpanElement>) => {
+    const genre = e.currentTarget.textContent;
+    if (!genre) {
+      return;
+    }
+
+    const newValue = !selectedGenres[genre];
+
+    const newSelectedGenres = { ...selectedGenres };
+
+    newSelectedGenres[genre] = newValue;
+
+    setSelectedGenres(newSelectedGenres);
+  };
 
   const fetchEvents = async () => {
     const data = await getEventsByDay();
@@ -66,14 +86,70 @@ export default function Home({
 
   useEffect(() => {
     if (!selectedDate || !eventsByDay || !eventsByDay[selectedDate]) {
+      if (!Object.keys(selectedGenres).length) {
+        return;
+      }
+
+      const filters = Object.keys(selectedGenres).reduce((acc, genre) => {
+        if (selectedGenres[genre]) {
+          acc += 1;
+        }
+
+        return acc;
+      }, 0);
+
+      if (!filters) {
+        setSelectedEvents(events);
+        return;
+      }
+
+      const filterEvents = events.filter((event) => {
+        return event.generativemetadata_set.find(
+          (metadata) => selectedGenres[metadata.genre]
+        );
+      });
+
+      setSelectedEvents(filterEvents);
+
       return;
     }
 
-    setSelectedEvents(eventsByDay[selectedDate]);
-  }, [selectedDate, eventsByDay]);
+    const items = eventsByDay[selectedDate];
+
+    items.filter((event) => {
+      if (!Object.keys(selectedGenres)) {
+        return true;
+      }
+
+      return event.generativemetadata_set.find(
+        (metadata) => selectedGenres[metadata.genre]
+      );
+    });
+
+    setSelectedEvents(items);
+  }, [selectedDate, eventsByDay, selectedGenres]);
 
   return (
     <>
+      <div style={{ textAlign: "center" }}>
+        {genres.map(([genre]) => (
+          <span
+            key={genre}
+            style={{
+              display: "inline-block",
+              padding: "6px 12px",
+              margin: 6,
+              cursor: "pointer",
+              border: selectedGenres[genre]
+                ? "1px dotted white"
+                : "1px dotted transparent",
+            }}
+            onClick={genreClickHandler}
+          >
+            {genre}
+          </span>
+        ))}
+      </div>
       <Nav>
         <DayPicker
           selectedDate={selectedDate}
@@ -91,12 +167,7 @@ export default function Home({
         }}
       >
         {selectedEvents.map((event) => {
-          return (
-            <EventCard
-              event={event}
-              key={`${event.start_date}_${event.slug}`}
-            />
-          );
+          return <EventCard event={event} key={event.pk} />;
         })}
       </section>
       <Newsletter />

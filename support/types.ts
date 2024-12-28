@@ -77,6 +77,12 @@ export interface Artist {
   spotify: Spotify | null;
 }
 
+interface GenerativeMetadata {
+  genre: string;
+  subgenre: string;
+  type: string;
+}
+
 export interface Event {
   rank: number;
   name: string;
@@ -95,6 +101,7 @@ export interface Event {
   artists: Artist[];
   pk: number;
   price: number;
+  generativemetadata_set: GenerativeMetadata[];
   // local types
   date: string;
   time: string;

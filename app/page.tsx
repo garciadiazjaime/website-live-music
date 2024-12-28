@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Splash from "@/components/Splash";
 import Container from "./container";
 import { Event } from "@/support/types";
-import { getEventWithDateAndTime } from "./support";
+import { getEventWithDateAndTime, getGenerativeMetadata } from "./support";
 import { tokens } from "@/support/token";
 
 async function getEvents() {
@@ -79,6 +79,7 @@ const Home = async () => {
   const events = await getEvents().catch(() => []);
   const eventsJsonLD = getEventsJsonLD(events);
   const daysOfWeek = getDaysOfWeek();
+  const generatedMetadata = getGenerativeMetadata(events);
 
   return (
     <div
@@ -88,6 +89,10 @@ const Home = async () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generatedMetadata) }}
       />
 
       <main
@@ -107,7 +112,7 @@ const Home = async () => {
         }}
       >
         <Splash />
-        <Container events={events} daysOfWeek={daysOfWeek} />
+        <Container events={events} daysOfWeek={daysOfWeek} genres={generatedMetadata.genres} />
       </main>
     </div>
   );
