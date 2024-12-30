@@ -20,6 +20,10 @@ export const getImage = (event: Event): string => {
 };
 
 export const DateTime = ({ time }: { time: string }) => {
+  if (time === "24") {
+    return <></>;
+  }
+
   const value = parseInt(time);
   const hour = value > 12 ? value % 12 : value;
   const meridiem = value > 12 ? "PM" : "AM";

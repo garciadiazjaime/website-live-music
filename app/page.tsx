@@ -23,11 +23,10 @@ async function getEvents() {
     .filter(
       (event: Event) => new Date(event.start_date).getDate() === today.getDate()
     )
+    .map(getEventWithDateAndTime)
     .sort(
-      (a: Event, b: Event) =>
-        new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
+      (a: Event, b: Event) => Number(a.time) - Number(b.time)
     )
-    .map(getEventWithDateAndTime);
 }
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];

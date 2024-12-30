@@ -104,9 +104,15 @@ export default function Home({
       }
 
       const filterEvents = events.filter((event) => {
-        return event.generativemetadata_set.find(
+        const genreFound = event.generativemetadata_set.find(
           (metadata) => selectedGenres[metadata.genre]
-        );
+        )
+
+        const subGenreFound = event.generativemetadata_set.find(
+          (metadata) => selectedGenres[metadata.subgenre]
+        )
+
+        return genreFound || subGenreFound;
       });
 
       setSelectedEvents(filterEvents);
@@ -131,7 +137,7 @@ export default function Home({
 
   return (
     <>
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", maxWidth: 780, margin: "0 auto" }}>
         {genres.map(([genre]) => (
           <span
             key={genre}

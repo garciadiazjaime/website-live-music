@@ -6,20 +6,30 @@ export const getEventWithDateAndTime = (event: Event) => {
   return {
     ...event,
     date: startDate.toLocaleDateString(),
-    time: startDate.toTimeString().split(":")[0],
+    time: startDate.toTimeString().split(":")[0].replace("00", "24"),
   };
 };
 
 export const getGenerativeMetadata = (events: Event[]) => {
+  const invalidGenres = ["Music"];
+
   const countByGenre = events.reduce(
     (acc: { [key: string]: number }, event) => {
-      const genre = event.generativemetadata_set?.[0]?.genre;
+      const value = event.generativemetadata_set?.[0]?.genre;
+      if (!value) {
+        return acc;
+      }
+
+      const genre = invalidGenres.includes(value)
+        ? event.generativemetadata_set?.[0]?.subgenre
+        : value;
+
       if (!genre) {
         return acc;
       }
 
       if (!acc[genre]) {
-        acc[genre] = 1;
+        acc[genre] = 0;
       }
 
       acc[genre] += 1;
