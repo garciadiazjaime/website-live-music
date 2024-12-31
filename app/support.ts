@@ -11,7 +11,8 @@ export const getEventWithDateAndTime = (event: Event) => {
 };
 
 export const getGenerativeMetadata = (events: Event[]) => {
-  const invalidGenres = ["Music"];
+  const invalidGenres = ["Music", "Variety"];
+  const invalidSubGenres = ["Unspecified"];
 
   const countByGenre = events.reduce(
     (acc: { [key: string]: number }, event) => {
@@ -20,9 +21,15 @@ export const getGenerativeMetadata = (events: Event[]) => {
         return acc;
       }
 
-      const genre = invalidGenres.includes(value)
-        ? event.generativemetadata_set?.[0]?.subgenre
-        : value;
+      let genre = value;
+
+      if (invalidGenres.includes(genre)) {
+        genre = event.generativemetadata_set?.[0]?.subgenre;
+      }
+
+      if (invalidSubGenres.includes(genre)) {
+        genre = event.generativemetadata_set?.[0]?.type;
+      }
 
       if (!genre) {
         return acc;
